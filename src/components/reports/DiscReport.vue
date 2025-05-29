@@ -224,7 +224,7 @@ const styleScores = computed(() => {
   const scores = { D: 0, I: 0, S: 0, C: 0 }
   const styles = ['D', 'I', 'S', 'C']
   
-  Object.values(props.results).forEach((answer, index) => {
+  Object.values(props.results).forEach((answer) => {
     const style = styles[answer] as keyof typeof scores
     if (style) scores[style]++
   })

@@ -342,7 +342,8 @@ const typeScores = computed(() => {
   const maxScore = Math.max(...Object.values(scores))
   if (maxScore > 0) {
     Object.keys(scores).forEach(type => {
-      scores[type as keyof typeof scores] = Math.round((scores[type as keyof typeof scores] / maxScore) * 100)
+      const typeNum = Number(type) as keyof typeof scores;
+      scores[typeNum] = Math.round((scores[typeNum] / maxScore) * 100);
     })
   }
   
@@ -350,11 +351,11 @@ const typeScores = computed(() => {
 })
 
 const dominantType = computed(() => {
-  const scores = typeScores.value
-  return Object.entries(scores).reduce((a, b) => 
-    scores[a[0] as keyof typeof scores] > scores[b[0] as keyof typeof scores] ? a : b
-  )[0]
-})
+  const scores = typeScores.value;
+  return Number(Object.entries(scores).reduce((a, b) =>
+    scores[Number(a[0]) as keyof typeof scores] > scores[Number(b[0]) as keyof typeof scores] ? a : b
+  )[0]);
+});
 
 const typeData = computed(() => enneagramTypes[dominantType.value as keyof typeof enneagramTypes] || enneagramTypes[1])
 </script>
