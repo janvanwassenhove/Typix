@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import App from './App.vue'
 import HomePage from './views/HomePage.vue'
 import SurveyWizard from './views/SurveyWizard.vue'
@@ -7,7 +7,7 @@ import SurveyReport from './views/SurveyReport.vue'
 import './style.css'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/',
