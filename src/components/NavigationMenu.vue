@@ -53,7 +53,6 @@ const { t } = useTranslations()
 <style scoped>
 .navigation-menu {
   background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(249, 166, 7, 0.1);
   position: sticky;
   top: 0;

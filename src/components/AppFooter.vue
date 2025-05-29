@@ -27,11 +27,12 @@
         <div class="footer-divider"></div>
         <div class="footer-meta">
           <span class="footer-copyright">© 2024 {{ t('app_title') }}. All rights reserved.</span>
-          <div class="footer-badges">
-            <span class="badge">Secure</span>
-            <span class="badge">GDPR Compliant</span>
-            <span class="badge">ISO Certified</span>
-          </div>
+          <p class="mb-0">Follow mITy.John on
+          <a href="https://www.instagram.com/mity.john/" class="text-white"><i class="fab fa-instagram"></i></a>&nbsp;
+          <a href="https://www.linkedin.com/in/jan-van-wassenhove-9b49893/" class="text-white"><i class="fab fa-linkedin"></i></a>&nbsp;
+          <a href="https://mityjohn.com/" class="text-white"><i class="fab fa-wordpress"></i></a>&nbsp;
+          <a href="https://x.com/mity_john" class="text-white"><i class="fab fa-twitter"></i></a>&nbsp;
+          </p>
         </div>
       </div>
     </div>
@@ -47,10 +48,9 @@ const { t } = useTranslations()
 <style scoped>
 .app-footer {
   background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(20px);
   border-top: 1px solid rgba(249, 166, 7, 0.1);
   margin-top: auto;
-  padding: 48px 0 24px;
+  padding: 10px 0 24px;
 }
 
 .footer-container {
@@ -62,7 +62,7 @@ const { t } = useTranslations()
 .footer-content {
   display: grid;
   gap: 64px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .footer-brand {
@@ -139,7 +139,7 @@ const { t } = useTranslations()
 }
 
 .footer-bottom {
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .footer-divider {
