@@ -1,36 +1,43 @@
 <template>
   <div class="container">
     <div class="card">
-      <div class="survey-header">
-        <h2 class="survey-title">{{ getSurveyTitle() }}</h2>
-        <div class="progress-bar">
-          <div class="progress-fill" :style="{ width: progressPercentage + '%' }"></div>
-        </div>
-        <p class="progress-text">{{ t('question') }} {{ currentStep + 1 }} {{ t('of') }} {{ totalSteps }}</p>
+      <div v-if="nameStep" class="name-step">
+        <h2>{{ t('your_name') }}</h2>
+        <input v-model="userName" class="input" :placeholder="t('enter_name')" />
+        <button class="btn btn-primary" :disabled="!userName.trim()" @click="startSurvey">{{ t('start_survey') }}</button>
       </div>
+      <div v-else>
+        <div class="survey-header">
+          <h2 class="survey-title">{{ getSurveyTitle() }}</h2>
+          <div class="progress-bar">
+            <div class="progress-fill" :style="{ width: progressPercentage + '%' }"></div>
+          </div>
+          <p class="progress-text">{{ t('question') }} {{ currentStep + 1 }} {{ t('of') }} {{ totalSteps }}</p>
+        </div>
 
-      <component 
-        :is="currentSurveyComponent" 
-        :current-step="currentStep"
-        :answers="answers"
-        @answer="handleAnswer"
-      />
+        <component 
+          :is="currentSurveyComponent" 
+          :current-step="currentStep"
+          :answers="answers"
+          @answer="handleAnswer"
+        />
 
-      <div class="navigation-buttons">
-        <button 
-          v-if="currentStep > 0" 
-          @click="previousStep" 
-          class="btn btn-secondary"
-        >
-          {{ t('previous') }}
-        </button>
-        <router-link 
-          v-if="currentStep === totalSteps - 1 && hasCurrentAnswer"
-          :to="`/report/${surveyType}`" 
-          class="btn btn-primary"
-        >
-          {{ t('your_results') }}
-        </router-link>
+        <div class="navigation-buttons">
+          <button 
+            v-if="currentStep > 0" 
+            @click="previousStep" 
+            class="btn btn-secondary"
+          >
+            {{ t('previous') }}
+          </button>
+          <router-link 
+            v-if="currentStep === totalSteps - 1 && hasCurrentAnswer"
+            :to="`/report/${surveyType}`" 
+            class="btn btn-primary"
+          >
+            {{ t('your_results') }}
+          </router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -52,6 +59,8 @@ const { t } = useTranslations()
 const surveyType = computed(() => props.type)
 const currentStep = ref(0)
 const answers = ref<Record<number, any>>({})
+const userName = ref('')
+const nameStep = ref(true)
 
 // Update totalSteps based on survey type
 const totalSteps = computed(() => {
@@ -111,6 +120,18 @@ const resetSurvey = () => {
   answers.value = {}
   // Clear any saved answers from localStorage
   localStorage.removeItem(`${surveyType.value}_answers`)
+}
+
+// On mount, try to load name from localStorage
+onMounted(() => {
+  const stored = localStorage.getItem('user_name')
+  if (stored) userName.value = stored
+  resetSurvey()
+})
+
+function startSurvey() {
+  nameStep.value = false
+  localStorage.setItem('user_name', userName.value)
 }
 
 // Initialize survey on component mount
@@ -198,6 +219,21 @@ onMounted(() => {
   background: #1A4731;
   color: white;
   transform: translateY(-2px);
+}
+
+.name-step {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 16px;
+  border: 2px solid #1A4731;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {

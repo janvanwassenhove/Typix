@@ -4,6 +4,8 @@
       <div class="footer-content">
         <div class="footer-brand">
           <div class="brand-icon">
+            <!-- <img src="../assets/image.png" alt="Typix Logo" width="28" height="28" /> -->
+
             <svg width="28" height="28" viewBox="0 0 100 100" fill="currentColor">
               <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="2"/>
               <rect x="20" y="20" width="25" height="60" fill="currentColor" opacity="0.8"/>

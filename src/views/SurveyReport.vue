@@ -2,13 +2,14 @@
   <div class="container">
     <div class="card">
       <div class="report-header">
-        <h2 class="report-title">{{ t('your_results') }}</h2>
+        <h2 class="report-title">{{ t('your_results') }}<span v-if="userName">, {{ userName }}</span></h2>
         <p class="report-subtitle">{{ getSurveyTitle() }}</p>
       </div>
 
       <component 
         :is="currentReportComponent" 
-        :results="mockResults"
+        :results="results" 
+        :userName="userName" 
       />
 
       <div class="report-actions">
@@ -19,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useTranslations } from '../composables/useTranslations'
 import EnneagramReport from '../components/reports/EnneagramReport.vue'
 import DiscReport from '../components/reports/DiscReport.vue'
@@ -31,21 +32,39 @@ const props = defineProps<{
 
 const { t } = useTranslations()
 
-// Mock results for demonstration
-const mockResults = {
-  0: 4,
-  1: 3,
-  2: 5,
-  3: 2,
-  4: 4,
-  5: 3,
-  6: 5,
-  7: 4,
-  8: 3,
-  9: 2
-}
-
 const surveyType = computed(() => props.type)
+
+// Load real results from localStorage based on survey type
+const results = ref<Record<number, any>>({})
+const userName = ref('')
+
+onMounted(() => {
+  userName.value = localStorage.getItem('user_name') || ''
+  const key = `${surveyType.value}_answers`
+  const stored = localStorage.getItem(key)
+  // Insights expects results as an array of answer indices
+  if (surveyType.value === 'insights' && stored) {
+    try {
+      const parsed = JSON.parse(stored)
+      // Extract answerIndex from each answer object
+      if (typeof parsed === 'object' && !Array.isArray(parsed)) {
+        results.value = Object.values(parsed).map((v: any) =>
+          typeof v === 'object' && v !== null && typeof v.answerIndex === 'number' ? v.answerIndex : (typeof v === 'number' ? v : null)
+        ).filter(v => v !== null)
+      } else if (Array.isArray(parsed)) {
+        results.value = parsed.map((v: any) =>
+          typeof v === 'object' && v !== null && typeof v.answerIndex === 'number' ? v.answerIndex : (typeof v === 'number' ? v : null)
+        ).filter(v => v !== null)
+      } else {
+        results.value = []
+      }
+    } catch {
+      results.value = []
+    }
+  } else {
+    results.value = stored ? JSON.parse(stored) : {}
+  }
+})
 
 const reportComponents = {
   enneagram: EnneagramReport,

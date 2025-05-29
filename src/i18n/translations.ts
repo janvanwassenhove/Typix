@@ -11,7 +11,7 @@ export const translations = {
     enneagram_description: 'Discover your core motivations and personality type through this comprehensive assessment.',
     disc_title: 'DISC Assessment',
     disc_description: 'Understand your behavioral style and communication preferences in work and life.',
-    insights_title: 'Insights Discovery',
+    insights_title: 'Typix Discovery',
     insights_description: 'Explore your thinking preferences through color psychology and cognitive styles.',
     
     // Features
@@ -33,7 +33,16 @@ export const translations = {
     of: 'of',
     your_results: 'Your Results',
     download_report: 'Download Report',
-    take_another_survey: 'Take Another Assessment'
+    take_another_survey: 'Take Another Assessment',
+
+    // Insights Report Labels
+    insights_pitfalls: 'Your Pitfalls',
+    insights_good_day: 'Your Good Day',
+    insights_strong_day: 'Your Strong Day',
+
+    // Name Input Step
+    your_name: 'Your Name',
+    enter_name: 'Enter your name'
   },
   es: {
     // App & Navigation
@@ -47,7 +56,7 @@ export const translations = {
     enneagram_description: 'Descubre tus motivaciones centrales y tipo de personalidad a través de esta evaluación integral.',
     disc_title: 'Evaluación DISC',
     disc_description: 'Comprende tu estilo de comportamiento y preferencias de comunicación en el trabajo y la vida.',
-    insights_title: 'Insights Discovery',
+    insights_title: 'Typix Discovery',
     insights_description: 'Explora tus preferencias de pensamiento a través de la psicología del color y estilos cognitivos.',
     
     // Features
@@ -69,7 +78,16 @@ export const translations = {
     of: 'de',
     your_results: 'Tus Resultados',
     download_report: 'Descargar Reporte',
-    take_another_survey: 'Realizar Otra Evaluación'
+    take_another_survey: 'Realizar Otra Evaluación',
+
+    // Insights Report Labels
+    insights_pitfalls: 'Tus Trampas',
+    insights_good_day: 'Tu Buen Día',
+    insights_strong_day: 'Tu Día Fuerte',
+
+    // Name Input Step
+    your_name: 'Tu Nombre',
+    enter_name: 'Introduce tu nombre'
   },
   fr: {
     // App & Navigation
@@ -83,7 +101,7 @@ export const translations = {
     enneagram_description: 'Découvrez vos motivations centrales et votre type de personnalité grâce à cette évaluation complète.',
     disc_title: 'Évaluation DISC',
     disc_description: 'Comprenez votre style comportemental et vos préférences de communication au travail et dans la vie.',
-    insights_title: 'Insights Discovery',
+    insights_title: 'Typix Discovery',
     insights_description: 'Explorez vos préférences de pensée à travers la psychologie des couleurs et les styles cognitifs.',
     
     // Features
@@ -105,7 +123,16 @@ export const translations = {
     of: 'sur',
     your_results: 'Vos Résultats',
     download_report: 'Télécharger le Rapport',
-    take_another_survey: 'Passer une Autre Évaluation'
+    take_another_survey: 'Passer une Autre Évaluation',
+
+    // Insights Report Labels
+    insights_pitfalls: 'Vos Pièges',
+    insights_good_day: 'Votre Bonne Journée',
+    insights_strong_day: 'Votre Journée Forte',
+
+    // Name Input Step
+    your_name: 'Votre Nom',
+    enter_name: 'Entrez votre nom'
   },
   de: {
     // App & Navigation
@@ -119,7 +146,7 @@ export const translations = {
     enneagram_description: 'Entdecken Sie Ihre Kernmotivationen und Ihren Persönlichkeitstyp durch diese umfassende Bewertung.',
     disc_title: 'DISC-Bewertung',
     disc_description: 'Verstehen Sie Ihren Verhaltensstil und Ihre Kommunikationspräferenzen in Arbeit und Leben.',
-    insights_title: 'Insights Discovery',
+    insights_title: 'Typix Discovery',
     insights_description: 'Erkunden Sie Ihre Denkpräferenzen durch Farbpsychologie und kognitive Stile.',
     
     // Features
@@ -141,7 +168,16 @@ export const translations = {
     of: 'von',
     your_results: 'Ihre Ergebnisse',
     download_report: 'Bericht Herunterladen',
-    take_another_survey: 'Weitere Bewertung Durchführen'
+    take_another_survey: 'Weitere Bewertung Durchführen',
+
+    // Insights Report Labels
+    insights_pitfalls: 'Ihre Stolpersteine',
+    insights_good_day: 'Ihr Guter Tag',
+    insights_strong_day: 'Ihr Starker Tag',
+
+    // Name Input Step
+    your_name: 'Ihr Name',
+    enter_name: 'Geben Sie Ihren Namen ein'
   },
   nl: {
     // App & Navigation
@@ -155,7 +191,7 @@ export const translations = {
     enneagram_description: 'Ontdek je kernmotivaties en persoonlijkheidstype door deze uitgebreide beoordeling.',
     disc_title: 'DISC Beoordeling',
     disc_description: 'Begrijp je gedragsstijl en communicatievoorkeuren in werk en leven.',
-    insights_title: 'Insights Discovery',
+    insights_title: 'Typix Discovery',
     insights_description: 'Verken je denkvoorkeuren door kleurpsychologie en cognitieve stijlen.',
     
     // Features
@@ -177,6 +213,15 @@ export const translations = {
     of: 'van',
     your_results: 'Je Resultaten',
     download_report: 'Download Rapport',
-    take_another_survey: 'Doe Nog Een Beoordeling'
+    take_another_survey: 'Doe Nog Een Beoordeling',
+
+    // Insights Report Labels
+    insights_pitfalls: 'Jouw Valkuilen',
+    insights_good_day: 'Jouw Goede Dag',
+    insights_strong_day: 'Jouw Sterke Dag',
+
+    // Name Input Step
+    your_name: 'Jouw Naam',
+    enter_name: 'Vul je naam in'
   }
 }

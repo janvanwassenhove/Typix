@@ -9,7 +9,6 @@
         :class="{ active: selectedAnswer === index }"
         @click="selectAnswer(index)"
       >
-        <div class="option-letter">{{ ['D', 'I', 'S', 'C'][index] }}</div>
         <div class="option-text">{{ option }}</div>
       </div>
     </div>

@@ -2,11 +2,28 @@
   <div class="card">
     <div id="insights-report-content" class="report-content">
       <div class="insights-circle">
-        <canvas ref="circleCanvas" width="400" height="400"></canvas>
+        <canvas ref="circleCanvas" width="500" height="500"></canvas>
+      </div>
+
+      <!-- Energy Dynamics Visualization -->
+      <div class="energy-dynamics">
+        <h4>Energy Dynamics</h4>
+        <canvas ref="dynamicsCanvas" width="700" height="350"></canvas>
+        <div class="dynamics-labels">
+          <div>
+            <strong>Persona<br>(Conscious)</strong>
+          </div>
+          <div>
+            <strong>Preference<br>Flow</strong>
+          </div>
+          <div>
+            <strong>Persona<br>(Less Conscious)</strong>
+          </div>
+        </div>
       </div>
 
       <div class="primary-color">
-        <h3>Your Primary Color: {{ dominantColor.name }}</h3>
+        <h3>Your Primary Color: {{ userName ? userName + ", " : '' }}{{ dominantColor.name }}</h3>
         <div class="color-indicator" :style="{ backgroundColor: dominantColor.hex }"></div>
         <p class="color-description">{{ dominantColor.description }}</p>
         <div class="position-info">
@@ -60,6 +77,24 @@
           <li v-for="area in dominantColor.development" :key="area">{{ area }}</li>
         </ul>
       </div>
+
+      <!-- Nieuwe secties: Pitfalls, Goede Dag, en Sterke Dag -->
+      <div class="insights-extras">
+        <div class="pitfalls-section">
+          <h4>{{ t('insights_pitfalls') }}</h4>
+          <ul>
+            <li v-for="pitfall in dominantColor.pitfalls" :key="pitfall">{{ pitfall }}</li>
+          </ul>
+        </div>
+        <div class="good-day-section">
+          <h4>{{ t('insights_good_day') }}</h4>
+          <p>{{ dominantColor.goodDay }}</p>
+        </div>
+        <div class="strong-day-section">
+          <h4>{{ t('insights_strong_day') }}</h4>
+          <p>{{ dominantColor.strongDay }}</p>
+        </div>
+      </div>
     </div>
 
     <div class="pdf-actions">
@@ -76,15 +111,19 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { usePdfExport } from '../../composables/usePdfExport'
+import { useTranslations } from '../../composables/useTranslations'
 
 const props = defineProps<{
-  results: Record<number, number>
+  results: Record<number, number>,
+  userName?: string
 }>()
 
 const circleCanvas = ref<HTMLCanvasElement>()
+const dynamicsCanvas = ref<HTMLCanvasElement>()
 const { generatePDF, isGeneratingPDF } = usePdfExport()
+const { t, currentLanguage } = useTranslations()
 
 const downloadPDF = async () => {
   try {
@@ -106,7 +145,15 @@ const colorData = [
       "Consider others' feelings in decisions", 
       "Delegate more effectively",
       "Balance task focus with relationship building"
-    ]
+    ],
+    pitfalls: [
+      "Impulsiveness in decision making",
+      "Overly critical of inefficiency",
+      "Struggle to relax and go with the flow",
+      "Tendency to overlook details"
+    ],
+    goodDay: "Today is a great day to take charge and lead initiatives. Your energy is high, and your ability to inspire others is enhanced.",
+    strongDay: "You will excel in situations that require strategic thinking and problem-solving. Your natural analytical skills are heightened."
   },
   {
     name: "Yellow", 
@@ -118,7 +165,15 @@ const colorData = [
       "Focus on details and accuracy",
       "Listen more, talk less sometimes", 
       "Manage time and priorities better"
-    ]
+    ],
+    pitfalls: [
+      "Tendency to avoid conflict, leading to unresolved issues",
+      "Overcommitment due to eagerness to please",
+      "Difficulty in saying no",
+      "May overlook practical details"
+    ],
+    goodDay: "Embrace your creativity and share your ideas with the world. It's a perfect day for collaboration and socializing.",
+    strongDay: "Your ability to connect with others and inspire them is at its peak. Use this energy to motivate your team or community."
   },
   {
     name: "Blue",
@@ -130,7 +185,15 @@ const colorData = [
       "Express emotions more openly",
       "Take calculated risks",
       "Communicate in simpler terms"
-    ]
+    ],
+    pitfalls: [
+      "Overly critical of oneself and others",
+      "Tendency to dwell on problems rather than solutions",
+      "May come across as aloof or detached",
+      "Struggle to adapt to sudden changes"
+    ],
+    goodDay: "Today is ideal for tackling complex problems and focusing on details. Your analytical skills will lead to significant insights.",
+    strongDay: "You will perform exceptionally well in tasks that require precision and careful planning. Trust your systematic approach."
   },
   {
     name: "Green",
@@ -142,27 +205,49 @@ const colorData = [
       "Embrace change and new ideas",
       "Set personal boundaries", 
       "Take initiative when needed"
-    ]
+    ],
+    pitfalls: [
+      "Tendency to avoid confrontation, leading to pent-up frustration",
+      "Overly accommodating, may neglect personal needs",
+      "Difficulty in making quick decisions",
+      "May resist necessary change or innovation"
+    ],
+    goodDay: "Focus on nurturing your relationships and creating a positive atmosphere. Your supportive nature will shine through.",
+    strongDay: "You will excel in roles that require patience and a steady hand. Your ability to maintain harmony will be a key asset."
   }
 ]
 
 const colorScores = computed(() => {
   if (!props.results) return { Red: 25, Yellow: 25, Blue: 25, Green: 25 }
-  
+
+  // Extract answerIndex from each answer object or use the number directly
+  let answers: number[] = []
+  if (Array.isArray(props.results)) {
+    answers = props.results.map(v => typeof v === 'number' ? v : (v && typeof v.answerIndex === 'number' ? v.answerIndex : null)).filter(v => v !== null) as number[]
+  } else if (typeof props.results === 'object') {
+    answers = Object.values(props.results).map((ans: any) => {
+      if (typeof ans === 'number') return ans
+      if (ans && typeof ans === 'object' && typeof ans.answerIndex === 'number') return ans.answerIndex
+      return null
+    }).filter(v => v !== null) as number[]
+  }
+
+  // Map answer indices to color names: 0=Red, 1=Yellow, 2=Blue, 3=Green
   const scores = { Red: 0, Yellow: 0, Blue: 0, Green: 0 }
   const colorMapping = ['Red', 'Yellow', 'Blue', 'Green']
-  
-  Object.values(props.results).forEach((answer) => {
-    const color = colorMapping[answer] as keyof typeof scores
+
+  answers.forEach((answer) => {
+    const color = colorMapping[answer]
     if (color) scores[color]++
   })
-  
-  const total = Object.values(scores).reduce((sum, score) => sum + score, 0)
-  
+
+  const total = answers.length
+  if (total === 0) return { Red: 25, Yellow: 25, Blue: 25, Green: 25 }
+
   return {
     Red: Math.round((scores.Red / total) * 100),
     Yellow: Math.round((scores.Yellow / total) * 100),
-    Blue: Math.round((scores.Blue / total) * 100), 
+    Blue: Math.round((scores.Blue / total) * 100),
     Green: Math.round((scores.Green / total) * 100)
   }
 })
@@ -229,31 +314,64 @@ onMounted(() => {
   if (circleCanvas.value) {
     drawInsightsCircle()
   }
+  drawEnergyDynamics()
 })
+
+watch(() => props.results, () => {
+  drawInsightsCircle()
+  drawEnergyDynamics()
+})
+
+const allTypes = [
+  'REFORMER',    // Blue-Red (top, purple)
+  'DIRECTOR',    // Red (top-right)
+  'MOTIVATOR',   // Red-Yellow (right)
+  'INSPIRER',    // Yellow (bottom-right)
+  'HELPER',      // Yellow-Green (bottom)
+  'SUPPORTER',   // Green (bottom-left)
+  'COORDINATOR', // Green-Blue (left)
+  'OBSERVER'     // Blue (top-left)
+];
+const typeColors = [
+  '#9B59B6', // REFORMER (Blue-Red, Purple)
+  '#E74C3C', // DIRECTOR (Red)
+  '#E67E22', // MOTIVATOR (Red-Yellow, Orange)
+  '#F7CA18', // INSPIRER (Yellow)
+  '#B6D957', // HELPER (Yellow-Green)
+  '#27AE60', // SUPPORTER (Green)
+  '#00B5B5', // COORDINATOR (Green-Blue, Teal)
+  '#3498DB'  // OBSERVER (Blue)
+];
+// Angles for each type (radians, starting from top, going clockwise)
+const typeAngles = [
+  -Math.PI/2,           // REFORMER (top, 270°)
+  -Math.PI/4,           // DIRECTOR (top-right, 315°)
+  0,                    // MOTIVATOR (right, 0°)
+  Math.PI/4,            // INSPIRER (bottom-right, 45°)
+  Math.PI/2,            // HELPER (bottom, 90°)
+  3*Math.PI/4,          // SUPPORTER (bottom-left, 135°)
+  Math.PI,              // COORDINATOR (left, 180°)
+  -3*Math.PI/4          // OBSERVER (top-left, 225°)
+];
 
 const drawInsightsCircle = () => {
   const canvas = circleCanvas.value
   if (!canvas) return
-  
   const ctx = canvas.getContext('2d')
   if (!ctx) return
-  
   const centerX = canvas.width / 2
   const centerY = canvas.height / 2
-  const radius = 180
-  
-  // Clear canvas
+  // Fit everything inside the .insights-circle div, so shrink radius if needed
+  const maxRadius = Math.min(canvas.width, canvas.height) / 2 - 60; // 60px margin for labels
+  const radius = Math.min(180, maxRadius);
   ctx.clearRect(0, 0, canvas.width, canvas.height)
-  
-  // Draw quadrants
+  // Draw quadrants (colors only)
   const quadrants = [
-    { color: '#FF6B6B', name: 'Red', startAngle: -Math.PI/2, endAngle: 0, label: 'LEADER' },
-    { color: '#FFD93D', name: 'Yellow', startAngle: 0, endAngle: Math.PI/2, label: 'MOTIVATOR' },
-    { color: '#96CEB4', name: 'Green', startAngle: Math.PI/2, endAngle: Math.PI, label: 'SUPPORTER' },
-    { color: '#45B7D1', name: 'Blue', startAngle: Math.PI, endAngle: 3*Math.PI/2, label: 'ANALYST' }
+    { color: '#FF6B6B', startAngle: -Math.PI/2, endAngle: 0 },
+    { color: '#FFD93D', startAngle: 0, endAngle: Math.PI/2 },
+    { color: '#96CEB4', startAngle: Math.PI/2, endAngle: Math.PI },
+    { color: '#45B7D1', startAngle: Math.PI, endAngle: 3*Math.PI/2 }
   ]
-  
-  // Draw outer ring with color sections
   quadrants.forEach(quadrant => {
     ctx.beginPath()
     ctx.arc(centerX, centerY, radius, quadrant.startAngle, quadrant.endAngle)
@@ -263,36 +381,41 @@ const drawInsightsCircle = () => {
     ctx.globalAlpha = 0.3
     ctx.fill()
     ctx.globalAlpha = 1
-    
-    // Draw quadrant borders
     ctx.beginPath()
     ctx.arc(centerX, centerY, radius, quadrant.startAngle, quadrant.endAngle)
     ctx.lineTo(centerX, centerY)
     ctx.strokeStyle = quadrant.color
     ctx.lineWidth = 3
     ctx.stroke()
-    
-    // Add quadrant labels
-    const labelAngle = (quadrant.startAngle + quadrant.endAngle) / 2
-    const labelRadius = radius - 30
-    const labelX = centerX + Math.cos(labelAngle) * labelRadius
-    const labelY = centerY + Math.sin(labelAngle) * labelRadius
-    
-    ctx.fillStyle = quadrant.color
-    ctx.font = 'bold 14px Arial'
-    ctx.textAlign = 'center'
-    ctx.textBaseline = 'middle'
-    ctx.fillText(quadrant.label, labelX, labelY)
-    
-    // Add color names
-    const nameRadius = radius + 25
-    const nameX = centerX + Math.cos(labelAngle) * nameRadius
-    const nameY = centerY + Math.sin(labelAngle) * nameRadius
-    
-    ctx.font = 'bold 16px Arial'
-    ctx.fillText(quadrant.name, nameX, nameY)
   })
-  
+  // Draw 8 types evenly spaced (octants), starting with REFORMER at top
+  for (let i = 0; i < 8; i++) {
+    const angle = typeAngles[i];
+    const labelRadius = radius + 38; // closer to circle, fits in div
+    ctx.save();
+    ctx.translate(centerX, centerY);
+    ctx.rotate(angle);
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.font = 'bold 18px Arial';
+    // Draw colored background arc behind the text
+    ctx.beginPath();
+    // Make each arc 1/8th of the circle (45deg = Math.PI/4), so they touch and are equal
+    ctx.arc(0, 0, labelRadius, -Math.PI/8, Math.PI/8); // 45deg arc centered on label
+    ctx.lineWidth = 38; // Make arc thicker for better visibility and overlap
+    ctx.strokeStyle = typeColors[i];
+    ctx.shadowColor = 'rgba(0,0,0,0.13)';
+    ctx.shadowBlur = 2;
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+    // Draw the label horizontally, tangent to the circle
+    ctx.save();
+    ctx.rotate(Math.PI/2); // Make text tangent to the circle
+    ctx.fillStyle = '#fff';
+    ctx.fillText(allTypes[i], 0, -labelRadius);
+    ctx.restore();
+    ctx.restore();
+  }
   // Draw concentric circles for intensity levels
   for (let i = 1; i <= 3; i++) {
     ctx.beginPath()
@@ -303,22 +426,30 @@ const drawInsightsCircle = () => {
   }
   
   // Calculate profile position based on scores
-  const scores = colorScores.value
-  
-  // Convert scores to coordinates
-  // Red = top (negative Y), Yellow = right (positive X), Green = bottom (positive Y), Blue = left (negative X)
-  const redWeight = scores.Red / 100
-  const yellowWeight = scores.Yellow / 100
-  const greenWeight = scores.Green / 100
-  const blueWeight = scores.Blue / 100
-  
-  // Calculate position using weighted average
-  const x = (yellowWeight - blueWeight) * radius * 0.7
-  const y = (greenWeight - redWeight) * radius * 0.7
-  
-  const profileX = centerX + x
-  const profileY = centerY + y
-  
+  const scores = colorScores.value;
+  // Correct quadrant mapping for canvas:
+  // Red: 0° (right), Yellow: 90° (bottom), Green: 180° (left), Blue: 270° (top)
+  const colorAngles = {
+    Red: 0,                  // right
+    Yellow: Math.PI / 2,     // bottom
+    Green: Math.PI,          // left
+    Blue: 3 * Math.PI / 2    // top
+  };
+  // Calculate vector sum for each color
+  let sumX = 0;
+  let sumY = 0;
+  colorOrder.forEach(color => {
+    const percent = scores[color] / 100; // 0..1
+    const angle = colorAngles[color];
+    sumX += Math.cos(angle) * percent;
+    sumY += Math.sin(angle) * percent;
+  });
+  // Normalize vector to max possible length (all in one direction)
+  let norm = Math.sqrt(sumX * sumX + sumY * sumY);
+  // Scale to fit within the circle (max radius * 0.7)
+  let scale = norm > 0 ? (radius * 0.7) / 1 : 0; // max possible norm is 1
+  const profileX = centerX + (sumX * scale);
+  const profileY = centerY + (sumY * scale);
   // Draw profile position
   ctx.beginPath()
   ctx.arc(profileX, profileY, 12, 0, 2 * Math.PI)
@@ -327,7 +458,6 @@ const drawInsightsCircle = () => {
   ctx.strokeStyle = '#1A4731'
   ctx.lineWidth = 3
   ctx.stroke()
-  
   // Add profile indicator ring
   ctx.beginPath()
   ctx.arc(profileX, profileY, 20, 0, 2 * Math.PI)
@@ -336,31 +466,169 @@ const drawInsightsCircle = () => {
   ctx.setLineDash([5, 5])
   ctx.stroke()
   ctx.setLineDash([])
-  
   // Add "YOU" label
   ctx.fillStyle = '#1A4731'
   ctx.font = 'bold 12px Arial'
   ctx.textAlign = 'center'
   ctx.textBaseline = 'middle'
   ctx.fillText('YOU', profileX, profileY - 35)
-  
-  // Draw center circle
-  ctx.beginPath()
-  ctx.arc(centerX, centerY, 40, 0, 2 * Math.PI)
-  ctx.fillStyle = 'white'
-  ctx.fill()
-  ctx.strokeStyle = '#333'
-  ctx.lineWidth = 2
-  ctx.stroke()
-  
-  // Add center text
-  ctx.fillStyle = '#333'
-  ctx.font = 'bold 14px Arial'
-  ctx.textAlign = 'center'
-  ctx.textBaseline = 'middle'
-  ctx.fillText('INSIGHTS', centerX, centerY - 8)
-  ctx.font = '12px Arial'
-  ctx.fillText('DISCOVERY', centerX, centerY + 8)
+}
+
+// --- ENERGY DYNAMICS CALCULATION HELPERS ---
+const colorOrder = ['Red', 'Yellow', 'Blue', 'Green'];
+const colorHex = {
+  Red: '#FF6B6B',
+  Yellow: '#FFD93D',
+  Blue: '#45B7D1',
+  Green: '#96CEB4',
+};
+
+// For energy dynamics, use the same colorScores as the rest of the report
+const energyStats = computed(() => {
+  // colorScores is already { Red, Yellow, Blue, Green } in percent
+  // For mean, use (percent/100)*6
+  const stats: Record<string, { mean: number, percent: number }> = {};
+  colorOrder.forEach(color => {
+    const percent = colorScores.value[color];
+    const mean = (percent / 100) * 6;
+    stats[color] = { mean, percent };
+  });
+  return stats;
+});
+
+// --- NEW: Simulate Less Conscious Persona (for demo, rotate colorScores) ---
+const lessConsciousStats = computed(() => {
+  // For demo, rotate the color scores (Red->Yellow, Yellow->Blue, Blue->Green, Green->Red)
+  const rotated: Record<string, number> = {};
+  colorOrder.forEach((color, i) => {
+    const prevColor = colorOrder[(i + colorOrder.length - 1) % colorOrder.length];
+    rotated[color] = colorScores.value[prevColor];
+  });
+  // Convert to mean/percent
+  const stats: Record<string, { mean: number, percent: number }> = {};
+  colorOrder.forEach(color => {
+    const percent = rotated[color];
+    const mean = (percent / 100) * 6;
+    stats[color] = { mean, percent };
+  });
+  return stats;
+});
+
+// --- Preference Flow Calculation ---
+const preferenceFlow = computed(() => {
+  // Flow = Conscious - LessConscious (as percent)
+  const flow: Record<string, number> = {};
+  colorOrder.forEach(color => {
+    flow[color] = energyStats.value[color].percent - lessConsciousStats.value[color].percent;
+  });
+  return flow;
+});
+
+// --- DRAWING FUNCTIONS ---
+function drawEnergyDynamics() {
+  const canvas = dynamicsCanvas.value;
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const chartWidth = 120;
+  const chartHeight = 220;
+  const chartSpacing = 80;
+  const baseY = 40;
+  const baseX = 60;
+  // Draw three charts: persona, flow, persona (less conscious)
+  drawPersonaBarChart(ctx, baseX, baseY, chartWidth, chartHeight, energyStats.value);
+  drawFlowChart(ctx, baseX + chartWidth + chartSpacing, baseY, chartWidth, chartHeight, preferenceFlow.value);
+  drawPersonaBarChart(ctx, baseX + 2 * (chartWidth + chartSpacing), baseY, chartWidth, chartHeight, lessConsciousStats.value);
+  // Draw overall flow in center below flow chart (mean of abs values)
+  const avgFlow =
+    colorOrder.reduce((sum, color) => sum + Math.abs(preferenceFlow.value[color]), 0) / colorOrder.length;
+  ctx.font = 'bold 16px Arial';
+  ctx.fillStyle = '#333';
+  ctx.textAlign = 'center';
+  ctx.fillText(`${avgFlow.toFixed(1)}%`, baseX + chartWidth + chartSpacing + chartWidth / 2, baseY + chartHeight + 60);
+}
+
+// Persona bar chart: show mean and percent under each bar
+function drawPersonaBarChart(ctx, x, y, w, h, stats) {
+  const max = 6;
+  const barW = w / 4 - 10;
+  colorOrder.forEach((color, i) => {
+    const { mean, percent } = stats[color];
+    const barH = (mean / max) * h;
+    ctx.fillStyle = colorHex[color];
+    ctx.fillRect(x + i * (barW + 10), y + h - barH, barW, barH);
+    ctx.strokeStyle = '#333';
+    ctx.strokeRect(x + i * (barW + 10), y, barW, h);
+    // Mean and percent under bar (two lines)
+    ctx.font = '11px Arial';
+    ctx.fillStyle = '#333';
+    ctx.textAlign = 'center';
+    ctx.fillText(`${mean.toFixed(2)}`, x + i * (barW + 10) + barW / 2, y + h + 34);
+    ctx.fillText(`${Math.round(percent)}%`, x + i * (barW + 10) + barW / 2, y + h + 48);
+  });
+  // Y axis (0-6)
+  ctx.strokeStyle = '#aaa';
+  ctx.beginPath();
+  ctx.moveTo(x - 5, y);
+  ctx.lineTo(x - 5, y + h);
+  ctx.stroke();
+  // X axis
+  ctx.beginPath();
+  ctx.moveTo(x - 5, y + h);
+  ctx.lineTo(x + w + 5, y + h);
+  ctx.stroke();
+  // Draw y-ticks for 0-6
+  ctx.font = '10px Arial';
+  ctx.fillStyle = '#666';
+  for (let i = 0; i <= 6; i++) {
+    const yTick = y + h - (i / max) * h;
+    ctx.fillText(i.toString(), x - 18, yTick + 3);
+  }
+}
+
+// Preference flow: show positive/negative bars and percent
+function drawFlowChart(ctx, x, y, w, h, flow) {
+  ctx.strokeStyle = '#aaa';
+  ctx.beginPath();
+  ctx.moveTo(x - 5, y + h / 2);
+  ctx.lineTo(x + w + 5, y + h / 2);
+  ctx.stroke();
+  const barW = w / 4 - 10;
+  const maxAbs = 100; // percent scale
+  colorOrder.forEach((color, i) => {
+    const percent = flow[color];
+    const barH = (Math.abs(percent) / maxAbs) * (h / 2);
+    ctx.fillStyle = colorHex[color];
+    // Draw bar: up for positive, down for negative
+    if (percent >= 0) {
+      ctx.fillRect(x + i * (barW + 10), y + h / 2 - barH, barW, barH);
+    } else {
+      ctx.fillRect(x + i * (barW + 10), y + h / 2, barW, barH);
+    }
+    ctx.strokeStyle = '#333';
+    ctx.strokeRect(x + i * (barW + 10), y, barW, h);
+    // Show percent below bar
+    ctx.font = '11px Arial';
+    ctx.fillStyle = '#333';
+    ctx.textAlign = 'center';
+    ctx.fillText(`${percent > 0 ? '+' : ''}${Math.round(percent)}%`, x + i * (barW + 10) + barW / 2, y + h + 34);
+  });
+  // Y axis (100-0-100)
+  ctx.strokeStyle = '#aaa';
+  ctx.beginPath();
+  ctx.moveTo(x - 5, y);
+  ctx.lineTo(x - 5, y + h);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(x - 5, y + h);
+  ctx.lineTo(x + w + 5, y + h);
+  ctx.stroke();
+  ctx.font = '10px Arial';
+  ctx.fillStyle = '#666';
+  ctx.fillText('100', x - 22, y + 10);
+  ctx.fillText('0', x - 15, y + h / 2 + 3);
+  ctx.fillText('100', x - 22, y + h - 5);
 }
 </script>
 
@@ -376,6 +644,36 @@ const drawInsightsCircle = () => {
   padding: 20px;
   background: #f8f9fa;
   border-radius: 15px;
+}
+
+.energy-dynamics {
+  margin-bottom: 40px;
+  padding: 25px;
+  background: #fffbe8;
+  border-radius: 15px;
+  border: 2px solid #ffe2a0;
+  text-align: center;
+}
+
+.energy-dynamics h4 {
+  color: #F9A607;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.dynamics-labels {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 60px 0 60px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.dynamics-labels > div {
+  width: 200px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .primary-color {
@@ -525,6 +823,20 @@ const drawInsightsCircle = () => {
   margin-bottom: 10px;
 }
 
+.insights-extras {
+  margin-top: 30px;
+  padding: 25px;
+  background: #f1f3f5;
+  border-radius: 15px;
+  color: #333;
+}
+
+.pitfalls-section,
+.good-day-section,
+.strong-day-section {
+  margin-bottom: 20px;
+}
+
 .pdf-actions {
   margin-top: 30px;
   text-align: center;
@@ -569,6 +881,20 @@ const drawInsightsCircle = () => {
   .primary-color,
   .profile-analysis {
     padding: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .energy-dynamics canvas {
+    width: 100% !important;
+    height: 220px !important;
+  }
+  .dynamics-labels {
+    margin: 10px 10px 0 10px;
+    font-size: 1rem;
+  }
+  .dynamics-labels > div {
+    width: 100px;
   }
 }
 </style>

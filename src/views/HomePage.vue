@@ -3,10 +3,6 @@
     <!-- Hero Section First -->
     <div class="hero-section">
       <div class="hero-container">
-        <div class="hero-badge">
-          <span class="badge-icon">✨</span>
-          {{ t('welcome_badge') || 'Professional Assessment Platform' }}
-        </div>
         <h1 class="hero-title">{{ t('welcome_title') }}</h1>
         <p class="hero-subtitle">{{ t('welcome_subtitle') }}</p>
         <div class="hero-stats">
