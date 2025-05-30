@@ -4,7 +4,7 @@
       "text": "Which word best describes you in a work environment?",
       "options": [
         "Direct and results-focused",
-        "Enthusiastic and people-oriented", 
+        "Enthusiastic and people-oriented",
         "Steady and supportive",
         "Careful and detail-oriented"
       ]
@@ -25,6 +25,429 @@
         "Generate ideas and energize the group",
         "Listen carefully and support others",
         "Ask detailed questions and ensure accuracy"
+      ]
+    },
+    {
+      "text": "When starting a new project, you tend to:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "Under tight deadlines, your typical reaction is to:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "In a brainstorming session, you like to:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When resolving conflict, you prefer to:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "In an unfamiliar situation, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When giving feedback, you usually:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "In a leadership role, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "During group discussions, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When planning your day, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When instructions are unclear, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When meeting new colleagues, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "To stay motivated, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When someone disagrees with you, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When you achieve a goal, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "In stressful situations, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When delegating tasks, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When faced with routine work, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "Before making a decision, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When handling multiple tasks, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When presenting information, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When learning a new skill, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "In customer interactions, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When changes occur suddenly, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When collaborating remotely, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "In competitive situations, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When celebrating successes, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When dealing with details, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When mentoring others, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "During team celebrations, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When measuring success, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When adapting to new technology, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When confronted with risk, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When seeking feedback on your work, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "During performance reviews, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When balancing work and personal life, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When persuading others, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When scheduling meetings, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When confronted with failure, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When working with diverse teams, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When faced with ambiguity, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When multitasking, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When others seek your advice, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When organizing events, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "At the end of the workday, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "In a crisis, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When people speak over each other in a meeting, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
+      ]
+    },
+    {
+      "text": "When a plan doesn't go as expected, you:",
+      "options": [
+        "Direct and results-focused",
+        "Enthusiastic and people-oriented",
+        "Steady and supportive",
+        "Careful and detail-oriented"
       ]
     }
   ],
@@ -55,6 +478,429 @@
         "Escuches atentamente y apoyes a otros",
         "Hagas preguntas detalladas y asegures la precisión"
       ]
+    },
+    {
+      "text": "Al comenzar un nuevo proyecto, sueles:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Bajo plazos ajustados, tu reacción típica es:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "En una sesión de lluvia de ideas, te gusta:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al resolver conflictos, prefieres:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "En una situación desconocida, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al dar retroalimentación, sueles:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "En un rol de liderazgo, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Durante discusiones de grupo, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al planificar tu día, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Cuando las instrucciones no están claras, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al conocer nuevos colegas, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Para mantenerte motivado, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Cuando alguien no está de acuerdo contigo, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Cuando logras un objetivo, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "En situaciones estresantes, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al delegar tareas, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Cuando enfrentas trabajo rutinario, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Antes de tomar una decisión, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al manejar múltiples tareas, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al presentar información, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Cuando aprendes una nueva habilidad, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "En interacciones con clientes, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Cuando ocurren cambios repentinos, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al colaborar a distancia, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "En situaciones competitivas, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al celebrar éxitos, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al tratar con detalles, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al ser mentor de otros, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "En celebraciones de equipo, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al medir el éxito, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al adaptarte a nueva tecnología, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Cuando te enfrentas al riesgo, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al buscar retroalimentación sobre tu trabajo, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Durante evaluaciones de desempeño, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al equilibrar trabajo y vida personal, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al persuadir a otros, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al programar reuniones, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Cuando te enfrentas al fracaso, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al trabajar con equipos diversos, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Cuando te enfrentas a la ambigüedad, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al realizar multitarea, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Cuando otros buscan tu consejo, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al organizar eventos, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Al final de la jornada laboral, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "En una crisis, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Cuando las personas se interrumpen en una reunión, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
+    },
+    {
+      "text": "Cuando un plan no sale como se esperaba, tú:",
+      "options": [
+        "Directo y enfocado en resultados",
+        "Entusiasta y orientado a las personas",
+        "Estable y solidario",
+        "Cuidadoso y orientado a los detalles"
+      ]
     }
   ],
   "fr": [
@@ -83,6 +929,429 @@
         "Générer des idées et dynamiser le groupe",
         "Écouter attentivement et soutenir les autres",
         "Poser des questions détaillées et assurer la précision"
+      ]
+    },
+    {
+      "text": "Lorsque vous commencez un nouveau projet, vous avez tendance à :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Sous des délais serrés, votre réaction typique est de :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Lors d'une séance de remue‑méninges, vous aimez :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Pour résoudre un conflit, vous préférez :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Dans une situation inconnue, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Lorsque vous donnez un feedback, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Dans un rôle de leadership, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Pendant les discussions de groupe, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "En planifiant votre journée, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Lorsque les instructions sont floues, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "En rencontrant de nouveaux collègues, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Pour rester motivé, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Lorsque quelqu'un n'est pas d'accord avec vous, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Lorsque vous atteignez un objectif, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Dans des situations stressantes, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "En déléguant des tâches, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Face à un travail routinier, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Avant de prendre une décision, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "En gérant plusieurs tâches, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "En présentant des informations, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Lors de l'apprentissage d'une nouvelle compétence, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Dans les interactions avec les clients, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Lorsque des changements surviennent soudainement, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "En collaborant à distance, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Dans des situations compétitives, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "En célébrant les succès, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "En traitant des détails, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "En tant que mentor, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Lors des célébrations d'équipe, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "En mesurant le succès, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "En vous adaptant à une nouvelle technologie, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Confronté au risque, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Lorsque vous cherchez un retour sur votre travail, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Lors d'entretiens d'évaluation, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Lors de l'équilibre entre travail et vie privée, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Pour persuader les autres, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "En planifiant des réunions, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Lorsque vous faites face à un échec, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "En travaillant avec des équipes diverses, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Face à l'ambiguïté, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "En multitâche, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Lorsque les autres sollicitent votre conseil, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "En organisant des événements, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "À la fin de la journée de travail, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "En situation de crise, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Lorsque les gens se coupent la parole en réunion, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
+      ]
+    },
+    {
+      "text": "Lorsque qu'un plan ne se déroule pas comme prévu, vous :",
+      "options": [
+        "Direct et axé sur les résultats",
+        "Enthousiaste et orienté vers les gens",
+        "Stable et solidaire",
+        "Prudent et soucieux du détail"
       ]
     }
   ],
@@ -113,6 +1382,429 @@
         "Aufmerksam zuhören und andere unterstützen",
         "Detaillierte Fragen stellen und Genauigkeit sicherstellen"
       ]
+    },
+    {
+      "text": "Wenn Sie ein neues Projekt starten, neigen Sie dazu:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Unter engen Fristen ist Ihre typische Reaktion:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "In einer Brainstorming‑Sitzung mögen Sie:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Lösen von Konflikten bevorzugen Sie:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "In einer unbekannten Situation:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Wenn Sie Feedback geben, tun Sie:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "In einer Führungsrolle:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Während Gruppendiskussionen:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Bei der Tagesplanung:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Wenn Anweisungen unklar sind:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Kennenlernen neuer Kollegen:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Um motiviert zu bleiben:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Wenn jemand Ihnen widerspricht:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Wenn Sie ein Ziel erreichen:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "In stressigen Situationen:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Delegieren von Aufgaben:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Bei Routinearbeit:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Bevor Sie eine Entscheidung treffen:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Umgang mit mehreren Aufgaben:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Präsentieren von Informationen:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Erlernen einer neuen Fähigkeit:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "In Kundeninteraktionen:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Wenn Änderungen plötzlich auftreten:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Bei der Zusammenarbeit aus der Ferne:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "In Wettbewerbssituationen:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Feiern von Erfolgen:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Umgang mit Details:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Mentoring anderer:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Bei Teamfeiern:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Messen von Erfolg:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Anpassen an neue Technologie:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Wenn Sie mit Risiko konfrontiert sind:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Wenn Sie Feedback zu Ihrer Arbeit suchen:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Bei Leistungsbeurteilungen:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Ausbalancieren von Arbeit und Privatleben:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Überzeugen anderer:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Planen von Meetings:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Wenn Sie mit Misserfolg konfrontiert sind:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Arbeiten mit diversen Teams:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Bei Unklarheit:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Multitasking:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Wenn andere Ihren Rat suchen:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Beim Organisieren von Veranstaltungen:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Am Ende des Arbeitstages:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "In einer Krise:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Wenn in einer Besprechung alle durcheinander reden:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
+    },
+    {
+      "text": "Wenn ein Plan nicht wie erwartet läuft:",
+      "options": [
+        "Direkt und ergebnisorientiert",
+        "Enthusiastisch und menschenorientiert",
+        "Beständig und unterstützend",
+        "Vorsichtig und detailorientiert"
+      ]
     }
   ],
   "nl": [
@@ -141,6 +1833,429 @@
         "Ideeën te genereren en de groep te energeren",
         "Aandachtig te luisteren en anderen te ondersteunen",
         "Gedetailleerde vragen te stellen en nauwkeurigheid te waarborgen"
+      ]
+    },
+    {
+      "text": "Wanneer je aan een nieuw project begint, ben je geneigd om:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Onder strakke deadlines is je typische reactie om:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "In een brainstormsessie vind je het prettig om:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het oplossen van conflicten geef je de voorkeur aan:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "In een onbekende situatie:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het geven van feedback:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "In een leidersrol:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Tijdens groepsdiscussies:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het plannen van je dag:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Wanneer instructies onduidelijk zijn:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het ontmoeten van nieuwe collega's:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Om gemotiveerd te blijven:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Wanneer iemand het niet met je eens is:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Wanneer je een doel bereikt:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "In stressvolle situaties:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het delegeren van taken:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij routinematig werk:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Voordat je een beslissing neemt:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het omgaan met meerdere taken:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het presenteren van informatie:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het leren van een nieuwe vaardigheid:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "In klantinteracties:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Wanneer er plotseling veranderingen optreden:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het samenwerken op afstand:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "In competitieve situaties:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het vieren van successen:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het omgaan met details:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het coachen van anderen:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Tijdens teamvieringen:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het meten van succes:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het aanpassen aan nieuwe technologie:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Wanneer je met risico wordt geconfronteerd:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Wanneer je feedback zoekt over je werk:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Tijdens beoordelingsgesprekken:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het balanceren van werk en privé:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het overtuigen van anderen:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het plannen van vergaderingen:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Wanneer je geconfronteerd wordt met falen:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het werken met diverse teams:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Wanneer je geconfronteerd wordt met ambiguïteit:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij multitasking:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Wanneer anderen je advies zoeken:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Bij het organiseren van evenementen:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Aan het einde van de werkdag:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "In een crisis:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Wanneer mensen door elkaar praten in een vergadering:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
+      ]
+    },
+    {
+      "text": "Wanneer een plan niet verloopt zoals verwacht:",
+      "options": [
+        "Direct en resultaatgericht",
+        "Enthousiast en mensgericht",
+        "Stabiel en ondersteunend",
+        "Voorzichtig en detailgericht"
       ]
     }
   ]

@@ -4,7 +4,7 @@
       "text": "I am usually a responsible, reliable person.",
       "options": [
         "Completely disagree",
-        "Mostly disagree", 
+        "Mostly disagree",
         "Somewhat disagree",
         "Neutral",
         "Somewhat agree",
@@ -16,7 +16,7 @@
       "text": "I feel driven to excel and be the best at what I do.",
       "options": [
         "Completely disagree",
-        "Mostly disagree", 
+        "Mostly disagree",
         "Somewhat disagree",
         "Neutral",
         "Somewhat agree",
@@ -25,10 +25,574 @@
       ]
     },
     {
-      "text": "I want to maintain my independence and self-reliance.",
+      "text": "I want to maintain my independence and self‑reliance.",
       "options": [
         "Completely disagree",
-        "Mostly disagree", 
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I often look for ways to help and support others.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I tend to worry about potential problems before they arise.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I enjoy taking charge and leading projects or groups.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I value harmony and try to avoid conflict whenever possible.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I am motivated by new ideas and possibilities.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I frequently question rules and authorities.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I crave recognition for my achievements.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I have a strong sense of justice and fairness.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I sometimes withdraw to protect my privacy.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I feel a deep need to be needed by others.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I enjoy being spontaneous and playful.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I am highly attuned to the feelings of the people around me.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I struggle with indecision when faced with many choices.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I like to prepare detailed plans before acting.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I often push myself to keep improving.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I sometimes feel an inner fear of being controlled.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I seek emotional connections that feel authentic.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I get restless if I feel stuck in routine.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I tend to take criticism very personally.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I see potential in almost every situation.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I prefer clear structures and guidelines.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I sometimes hide my true feelings to protect myself.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I like being part of a close‑knit group or community.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I enjoy challenging myself physically or mentally.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I feel uncomfortable when others depend on me too much.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I often imagine worst‑case scenarios.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I strive to present a confident image to the world.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I can become impatient when things move too slowly.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I find it hard to say \"no\" to people I care about.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I seek intellectual understanding before making decisions.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I try to keep my options open as long as possible.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I desire freedom from obligations that limit me.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I sometimes avoid difficult emotions with distraction.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I enjoy mastering new skills and competencies.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I feel responsible for maintaining order and stability.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I sometimes feel different from the people around me.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I like to celebrate successes with others.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I am sensitive to being ignored or overlooked.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I feel energized by lively discussions and debates.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I have a tendency to procrastinate when uncertain.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I take pride in being self‑disciplined.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I quickly notice inconsistencies or mistakes.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I sometimes overcommit because everything seems interesting.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I prefer honest feedback even if it is hard to hear.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I feel uneasy when plans suddenly change.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I seek experiences that give me a sense of adventure.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
+        "Somewhat disagree",
+        "Neutral",
+        "Somewhat agree",
+        "Mostly agree",
+        "Completely agree"
+      ]
+    },
+    {
+      "text": "I value loyalty and expect it in return.",
+      "options": [
+        "Completely disagree",
+        "Mostly disagree",
         "Somewhat disagree",
         "Neutral",
         "Somewhat agree",
@@ -43,7 +607,7 @@
       "options": [
         "Completamente en desacuerdo",
         "Mayormente en desacuerdo",
-        "Algo en desacuerdo", 
+        "Algo en desacuerdo",
         "Neutral",
         "Algo de acuerdo",
         "Mayormente de acuerdo",
@@ -56,7 +620,7 @@
         "Completamente en desacuerdo",
         "Mayormente en desacuerdo",
         "Algo en desacuerdo",
-        "Neutral", 
+        "Neutral",
         "Algo de acuerdo",
         "Mayormente de acuerdo",
         "Completamente de acuerdo"
@@ -69,7 +633,571 @@
         "Mayormente en desacuerdo",
         "Algo en desacuerdo",
         "Neutral",
-        "Algo de acuerdo", 
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "A menudo busco formas de ayudar y apoyar a los demás.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Tiendo a preocuparme por los posibles problemas antes de que surjan.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Disfruto tomando el mando y liderando proyectos o grupos.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Valoro la armonía y trato de evitar los conflictos siempre que sea posible.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Me motivan las nuevas ideas y posibilidades.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Con frecuencia cuestiono las reglas y las autoridades.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Ansío el reconocimiento por mis logros.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Tengo un fuerte sentido de la justicia y la equidad.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "A veces me retiro para proteger mi privacidad.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Siento una profunda necesidad de ser necesitado por los demás.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Disfruto siendo espontáneo y juguetón.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Estoy muy atento a los sentimientos de las personas que me rodean.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Lucho con la indecisión cuando enfrento muchas opciones.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Me gusta preparar planes detallados antes de actuar.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "A menudo me esfuerzo por seguir mejorando.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "A veces siento un miedo interno a ser controlado.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Busco conexiones emocionales que se sientan auténticas.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Me inquieto si me siento atrapado en la rutina.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Tiendo a tomarme las críticas muy personalmente.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Veo el potencial en casi todas las situaciones.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Prefiero estructuras y pautas claras.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "A veces oculto mis verdaderos sentimientos para protegerme.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Me gusta formar parte de un grupo o comunidad muy unidos.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Disfruto retándome física o mentalmente.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Me siento incómodo cuando otros dependen demasiado de mí.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "A menudo imagino escenarios de peor caso.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Me esfuerzo por presentar una imagen segura de mí mismo al mundo.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Puedo impacientarme cuando las cosas avanzan demasiado despacio.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Me cuesta decir \"no\" a las personas que me importan.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Busco comprensión intelectual antes de tomar decisiones.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Trato de mantener abiertas mis opciones el mayor tiempo posible.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Deseo libertad de las obligaciones que me limitan.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "A veces evito las emociones difíciles con distracciones.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Disfruto dominando nuevas habilidades y competencias.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Me siento responsable de mantener el orden y la estabilidad.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "A veces me siento diferente de las personas que me rodean.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Me gusta celebrar los éxitos con los demás.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Soy sensible a ser ignorado o pasado por alto.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Me siento energizado por discusiones y debates animados.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Tengo tendencia a procrastinar cuando estoy inseguro.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Me enorgullece ser autodisciplinado.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Detecto rápidamente las inconsistencias o errores.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "A veces me comprometo en exceso porque todo parece interesante.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Prefiero comentarios honestos incluso si son difíciles de escuchar.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Me siento incómodo cuando los planes cambian repentinamente.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Busco experiencias que me den un sentido de aventura.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
+        "Mayormente de acuerdo",
+        "Completamente de acuerdo"
+      ]
+    },
+    {
+      "text": "Valoro la lealtad y la espero a cambio.",
+      "options": [
+        "Completamente en desacuerdo",
+        "Mayormente en desacuerdo",
+        "Algo en desacuerdo",
+        "Neutral",
+        "Algo de acuerdo",
         "Mayormente de acuerdo",
         "Completamente de acuerdo"
       ]
@@ -84,7 +1212,7 @@
         "Quelque peu en désaccord",
         "Neutre",
         "Quelque peu d'accord",
-        "Plutôt d'accord", 
+        "Plutôt d'accord",
         "Complètement d'accord"
       ]
     },
@@ -104,7 +1232,571 @@
       "text": "Je veux maintenir mon indépendance et mon autonomie.",
       "options": [
         "Complètement en désaccord",
-        "Plutôt en désaccord", 
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je cherche souvent des moyens d'aider et de soutenir les autres.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'ai tendance à m'inquiéter des problèmes potentiels avant qu'ils n'apparaissent.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'aime prendre les choses en main et diriger des projets ou des groupes.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'accorde de la valeur à l'harmonie et j'essaie d'éviter les conflits autant que possible.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je suis motivé par les nouvelles idées et possibilités.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je remets souvent en question les règles et les autorités.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je désire la reconnaissance pour mes réalisations.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'ai un fort sens de la justice et de l'équité.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Il m'arrive de me retirer pour protéger ma vie privée.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je ressens un profond besoin d'être nécessaire aux autres.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'aime être spontané et joueur.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je suis très attentif aux sentiments des personnes autour de moi.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'ai du mal à prendre une décision quand il y a trop de choix.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'aime préparer des plans détaillés avant d'agir.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je me pousse souvent à m'améliorer sans cesse.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je ressens parfois une peur intérieure d'être contrôlé.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je recherche des relations émotionnelles authentiques.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je deviens agité si je me sens coincé dans la routine.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'ai tendance à prendre les critiques très personnellement.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je vois le potentiel dans presque toutes les situations.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je préfère des structures et des directives claires.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Il m'arrive de cacher mes vrais sentiments pour me protéger.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'aime faire partie d'un groupe ou d'une communauté soudés.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'aime me lancer des défis physiques ou mentaux.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je me sens mal à l'aise quand les autres dépendent trop de moi.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'imagine souvent les pires scénarios.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je m'efforce de présenter une image confiante au monde.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je peux devenir impatient quand les choses avancent trop lentement.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'ai du mal à dire « non » aux personnes qui me tiennent à cœur.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je cherche à comprendre intellectuellement avant de décider.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'essaie de garder mes options ouvertes le plus longtemps possible.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je souhaite être libre des obligations qui me limitent.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'évite parfois les émotions difficiles par la distraction.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'aime maîtriser de nouvelles compétences et aptitudes.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je me sens responsable du maintien de l'ordre et de la stabilité.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je me sens parfois différent des personnes qui m'entourent.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'aime célébrer les succès avec les autres.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je suis sensible au fait d'être ignoré ou négligé.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Les discussions et débats animés me dynamisent.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'ai tendance à procrastiner quand je suis incertain.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je suis fier d'être autodiscipliné.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je remarque rapidement les incohérences ou les erreurs.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je m'engage parfois trop parce que tout me semble intéressant.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je préfère un retour honnête même s'il est difficile à entendre.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je me sens mal à l'aise quand les plans changent soudainement.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "Je recherche des expériences qui me donnent un sentiment d'aventure.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
+        "Quelque peu en désaccord",
+        "Neutre",
+        "Quelque peu d'accord",
+        "Plutôt d'accord",
+        "Complètement d'accord"
+      ]
+    },
+    {
+      "text": "J'accorde de la valeur à la loyauté et je l'attends en retour.",
+      "options": [
+        "Complètement en désaccord",
+        "Plutôt en désaccord",
         "Quelque peu en désaccord",
         "Neutre",
         "Quelque peu d'accord",
@@ -130,7 +1822,7 @@
       "text": "Ich fühle mich gedrängt, zu glänzen und der Beste in dem zu sein, was ich tue.",
       "options": [
         "Völlig uneinig",
-        "Größtenteils uneinig", 
+        "Größtenteils uneinig",
         "Etwas uneinig",
         "Neutral",
         "Etwas einig",
@@ -140,6 +1832,570 @@
     },
     {
       "text": "Ich möchte meine Unabhängigkeit und Selbstständigkeit bewahren.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich suche oft nach Möglichkeiten, anderen zu helfen und sie zu unterstützen.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich neige dazu, mir über mögliche Probleme Sorgen zu machen, bevor sie auftreten.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich übernehme gern die Führung bei Projekten oder Gruppen.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich schätze Harmonie und versuche, Konflikte nach Möglichkeit zu vermeiden.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Neue Ideen und Möglichkeiten motivieren mich.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich stelle Regeln und Autoritäten häufig in Frage.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich sehne mich nach Anerkennung für meine Leistungen.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich habe einen ausgeprägten Sinn für Gerechtigkeit und Fairness.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Manchmal ziehe ich mich zurück, um meine Privatsphäre zu schützen.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich habe ein tiefes Bedürfnis, von anderen gebraucht zu werden.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich bin gern spontan und verspielt.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich nehme die Gefühle der Menschen um mich herum sehr wahr.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich habe Schwierigkeiten, mich zu entscheiden, wenn ich viele Optionen habe.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich erstelle gerne detaillierte Pläne, bevor ich handele.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich treibe mich oft an, mich ständig zu verbessern.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich habe manchmal eine innere Angst, kontrolliert zu werden.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich suche emotionale Beziehungen, die sich echt anfühlen.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich werde unruhig, wenn ich mich in Routine gefangen fühle.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich nehme Kritik oft sehr persönlich.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich sehe in fast jeder Situation Potenzial.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich bevorzuge klare Strukturen und Richtlinien.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Manchmal verberge ich meine wahren Gefühle, um mich zu schützen.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich bin gern Teil einer eng verbundenen Gruppe oder Gemeinschaft.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich fordere mich körperlich oder geistig gern heraus.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich fühle mich unwohl, wenn andere zu sehr von mir abhängen.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich stelle mir oft Worst‑Case‑Szenarien vor.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich bemühe mich, der Welt ein selbstbewusstes Bild von mir zu zeigen.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich werde ungeduldig, wenn Dinge zu langsam vorangehen.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Es fällt mir schwer, Menschen, die mir wichtig sind, „nein“ zu sagen.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich suche intellektuelles Verständnis, bevor ich Entscheidungen treffe.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich versuche, meine Optionen so lange wie möglich offen zu halten.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich wünsche mir Freiheit von Verpflichtungen, die mich einschränken.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Manchmal vermeide ich schwierige Emotionen durch Ablenkung.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich genieße es, neue Fähigkeiten und Kompetenzen zu meistern.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich fühle mich verantwortlich, Ordnung und Stabilität aufrechtzuerhalten.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Manchmal fühle ich mich anders als die Menschen um mich herum.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich feiere gerne Erfolge mit anderen.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich bin empfindlich dafür, ignoriert oder übersehen zu werden.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Lebhafte Diskussionen und Debatten geben mir Energie.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich neige dazu, aufzuschieben, wenn ich unsicher bin.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich bin stolz darauf, selbstdiszipliniert zu sein.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich bemerke Unstimmigkeiten oder Fehler schnell.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich verpflichte mich manchmal zu viel, weil alles interessant erscheint.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich bevorzuge ehrliches Feedback, auch wenn es schwer zu hören ist.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich fühle mich unwohl, wenn Pläne plötzlich geändert werden.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich suche nach Erfahrungen, die mir ein Gefühl von Abenteuer geben.",
+      "options": [
+        "Völlig uneinig",
+        "Größtenteils uneinig",
+        "Etwas uneinig",
+        "Neutral",
+        "Etwas einig",
+        "Größtenteils einig",
+        "Völlig einig"
+      ]
+    },
+    {
+      "text": "Ich schätze Loyalität und erwarte sie im Gegenzug.",
       "options": [
         "Völlig uneinig",
         "Größtenteils uneinig",
@@ -169,7 +2425,7 @@
       "options": [
         "Helemaal oneens",
         "Grotendeels oneens",
-        "Enigszins oneens", 
+        "Enigszins oneens",
         "Neutraal",
         "Enigszins eens",
         "Grotendeels eens",
@@ -178,6 +2434,570 @@
     },
     {
       "text": "Ik wil mijn onafhankelijkheid en zelfstandigheid behouden.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik zoek vaak manieren om anderen te helpen en te ondersteunen.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik maak me vaak zorgen over mogelijke problemen voordat ze zich voordoen.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik neem graag de leiding bij projecten of groepen.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik hecht waarde aan harmonie en probeer conflicten zo veel mogelijk te vermijden.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Nieuwe ideeën en mogelijkheden motiveren mij.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik betwijfel vaak regels en autoriteiten.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik verlang naar erkenning voor mijn prestaties.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik heb een sterk rechtvaardigheidsgevoel en gevoel voor eerlijkheid.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Soms trek ik me terug om mijn privacy te beschermen.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik voel een diepe behoefte om door anderen nodig te worden.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik ben graag spontaan en speels.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik ben sterk afgestemd op de gevoelens van de mensen om me heen.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik worstel met besluiteloosheid wanneer ik voor veel keuzes sta.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik maak graag gedetailleerde plannen voordat ik handel.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik blijf mezelf vaak pushen om te blijven verbeteren.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik voel soms een innerlijke angst om gecontroleerd te worden.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik zoek emotionele connecties die authentiek aanvoelen.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik word rusteloos als ik me vast voel zitten in routine.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik neem kritiek vaak erg persoonlijk.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik zie potentieel in bijna elke situatie.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik geef de voorkeur aan duidelijke structuren en richtlijnen.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik verberg soms mijn ware gevoelens om mezelf te beschermen.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik ben graag onderdeel van een hechte groep of gemeenschap.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik daag mezelf graag fysiek of mentaal uit.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik voel me ongemakkelijk als anderen te veel van mij afhankelijk zijn.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik stel me vaak worst‑casescenario's voor.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik streef ernaar om een zelfverzekerd beeld aan de wereld te tonen.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik kan ongeduldig worden wanneer dingen te langzaam gaan.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik vind het moeilijk om 'nee' te zeggen tegen mensen om wie ik geef.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik zoek intellectueel begrip voordat ik beslissingen neem.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik probeer mijn opties zo lang mogelijk open te houden.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik verlang naar vrijheid van verplichtingen die mij beperken.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik vermijd soms moeilijke emoties door afleiding.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik vind het leuk om nieuwe vaardigheden en competenties te beheersen.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik voel me verantwoordelijk voor het handhaven van orde en stabiliteit.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik voel me soms anders dan de mensen om mij heen.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik vier graag successen met anderen.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik ben gevoelig voor genegeerd of over het hoofd gezien worden.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Levendige discussies en debatten geven mij energie.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik heb de neiging om uit te stellen wanneer ik onzeker ben.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik ben trots op mijn zelfdiscipline.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik merk snel inconsistenties of fouten op.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik neem soms te veel hooi op mijn vork omdat alles interessant lijkt.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik geef de voorkeur aan eerlijke feedback, ook als deze moeilijk te horen is.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik voel me ongemakkelijk wanneer plannen plotseling veranderen.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik zoek ervaringen die me een gevoel van avontuur geven.",
+      "options": [
+        "Helemaal oneens",
+        "Grotendeels oneens",
+        "Enigszins oneens",
+        "Neutraal",
+        "Enigszins eens",
+        "Grotendeels eens",
+        "Helemaal eens"
+      ]
+    },
+    {
+      "text": "Ik hecht waarde aan loyaliteit en verwacht dit ook terug.",
       "options": [
         "Helemaal oneens",
         "Grotendeels oneens",
