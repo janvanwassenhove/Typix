@@ -112,6 +112,11 @@ const styleColors = {
   C: '#4D96FF'
 }
 
+// Add this function so it's available in the template
+function getStyleColor(style: string): string {
+  return styleColors[style as keyof typeof styleColors] || '#000'
+}
+
 const styleData = {
   D: {
     name: "Dominance",
@@ -224,7 +229,7 @@ const styleScores = computed(() => {
   const scores = { D: 0, I: 0, S: 0, C: 0 }
   const styles = ['D', 'I', 'S', 'C']
   
-  Object.values(props.results).forEach((answer, index) => {
+  Object.values(props.results).forEach((answer) => {
     const style = styles[answer] as keyof typeof scores
     if (style) scores[style]++
   })
