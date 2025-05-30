@@ -26,7 +26,7 @@
       </div>
 
       <div class="profile-explanation">
-        <h4>{{ t('disc_profile', { profile: profileCombination }) }}</h4>
+        <h4>{{ t('disc_profile') }}</h4>
         <div class="profile-details">
           <div class="profile-description">
             <p>{{ combinationData.description }}</p>

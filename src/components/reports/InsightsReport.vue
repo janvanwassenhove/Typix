@@ -23,7 +23,7 @@
       </div>
 
       <div class="primary-color">
-        <h3>{{ t('insights_primary_color', { name: userName ? userName + ", " : '', color: dominantColor.name }) }}</h3>
+        <h3>{{ t('insights_primary_color') }}</h3>
         <div class="color-indicator" :style="{ backgroundColor: dominantColor.hex }"></div>
         <p class="color-description">{{ dominantColor.description }}</p>
         <div class="position-info">
