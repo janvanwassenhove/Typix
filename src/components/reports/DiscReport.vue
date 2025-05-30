@@ -312,7 +312,7 @@ const drawDiscCircle = () => {
     const labelX = centerX + Math.cos(labelAngle) * labelRadius
     const labelY = centerY + Math.sin(labelAngle) * labelRadius
     
-    ctx.fillStyle = 'white'
+    ctx.fillStyle = 'black'
     ctx.font = 'bold 14px Arial'
     ctx.textAlign = 'center'
     ctx.textBaseline = 'middle'
