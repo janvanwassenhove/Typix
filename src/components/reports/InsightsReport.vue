@@ -23,28 +23,30 @@
       </div>
 
       <div class="primary-color">
-        <h3>{{ t('insights_primary_color') }}</h3>
+        <h3>Your Primary Color: {{ userName ? userName + ", " : '' }}{{ dominantColor.name }}</h3>
         <div class="color-indicator" :style="{ backgroundColor: dominantColor.hex }"></div>
         <p class="color-description">{{ dominantColor.description }}</p>
         <div class="position-info">
-          <span class="position-label">{{ t('insights_profile_position') }}: {{ profilePosition }}</span>
+          <span class="position-label">Profile Position: {{ profilePosition }}</span>
         </div>
       </div>
 
       <div class="color-breakdown">
-        <h4>{{ t('insights_color_distribution') }}</h4>
+        <h4>Color Energy Distribution</h4>
         <div class="color-bars">
           <div v-for="color in colorData" :key="color.name" class="color-bar">
             <div class="bar-header">
               <span class="color-name">{{ color.name }}</span>
+              <span class="color-percentage">{{ colorScores[color.name] }}%</span>
               <span class="color-percentage">{{ colorScores[color.name as keyof typeof colorScores] }}%</span>
             </div>
             <div class="bar-container">
-              <div 
-                class="bar-fill" 
-                :style="{ 
-                  width: `${colorScores[color.name as keyof typeof colorScores]}%`, 
-                  backgroundColor: color.hex 
+              <div
+                  class="bar-fill"
+                  :style="{
+                  width: `${colorScores[color.name]}%`,
+                  width: `${colorScores[color.name as keyof typeof colorScores]}%`,
+                  backgroundColor: color.hex
                 }"
               ></div>
             </div>
@@ -53,17 +55,17 @@
       </div>
 
       <div class="profile-analysis">
-        <h4>{{ t('insights_profile_analysis') }}</h4>
+        <h4>Your Color Profile Analysis</h4>
         <div class="analysis-content">
           <p>{{ profileAnalysis.description }}</p>
           <div class="balance-indicator">
-            <span class="balance-label">{{ t('insights_energy_balance') }}: {{ profileAnalysis.balance }}</span>
+            <span class="balance-label">Energy Balance: {{ profileAnalysis.balance }}</span>
           </div>
         </div>
       </div>
 
       <div class="strengths-section">
-        <h4>{{ t('insights_strengths') }}</h4>
+        <h4>Your Strengths</h4>
         <div class="strengths-grid">
           <div v-for="strength in dominantColor.strengths" :key="strength" class="strength-item">
             {{ strength }}
@@ -72,7 +74,7 @@
       </div>
 
       <div class="development-areas">
-        <h4>{{ t('insights_development_areas') }}</h4>
+        <h4>Development Areas</h4>
         <ul>
           <li v-for="area in dominantColor.development" :key="area">{{ area }}</li>
         </ul>
@@ -98,13 +100,13 @@
     </div>
 
     <div class="pdf-actions">
-      <button 
-        @click="downloadPDF" 
-        :disabled="isGeneratingPDF"
-        class="btn btn-pdf"
+      <button
+          @click="downloadPDF"
+          :disabled="isGeneratingPDF"
+          class="btn btn-pdf"
       >
-        <span v-if="isGeneratingPDF">{{ t('generating_pdf') }}</span>
-        <span v-else>📄 {{ t('download_pdf_report') }}</span>
+        <span v-if="isGeneratingPDF">Generating PDF...</span>
+        <span v-else>📄 Download PDF Report</span>
       </button>
     </div>
   </div>
@@ -123,6 +125,7 @@ const props = defineProps<{
 const circleCanvas = ref<HTMLCanvasElement>()
 const dynamicsCanvas = ref<HTMLCanvasElement>()
 const { generatePDF, isGeneratingPDF } = usePdfExport()
+const { t, currentLanguage } = useTranslations()
 const { t } = useTranslations()
 
 const downloadPDF = async () => {
@@ -142,7 +145,7 @@ const colorData = [
     strengths: ["Natural leadership", "Quick decision making", "Results-focused", "Competitive drive"],
     development: [
       "Practice patience with others' pace",
-      "Consider others' feelings in decisions", 
+      "Consider others' feelings in decisions",
       "Delegate more effectively",
       "Balance task focus with relationship building"
     ],
@@ -156,14 +159,14 @@ const colorData = [
     strongDay: "You will excel in situations that require strategic thinking and problem-solving. Your natural analytical skills are heightened."
   },
   {
-    name: "Yellow", 
+    name: "Yellow",
     hex: "#FFD93D",
     description: "Sunshine Yellow energy represents enthusiasm, creativity, and people-focused thinking. You're optimistic, persuasive, and energize others.",
     strengths: ["Inspiring others", "Creative problem solving", "Building relationships", "Positive outlook"],
     development: [
       "Follow through on commitments",
       "Focus on details and accuracy",
-      "Listen more, talk less sometimes", 
+      "Listen more, talk less sometimes",
       "Manage time and priorities better"
     ],
     pitfalls: [
@@ -177,7 +180,7 @@ const colorData = [
   },
   {
     name: "Blue",
-    hex: "#45B7D1", 
+    hex: "#45B7D1",
     description: "Cool Blue energy represents analytical thinking, precision, and quality focus. You're logical, systematic, and value accuracy.",
     strengths: ["Analytical thinking", "Attention to detail", "Quality focus", "Systematic approach"],
     development: [
@@ -203,7 +206,7 @@ const colorData = [
     development: [
       "Assert your opinions more",
       "Embrace change and new ideas",
-      "Set personal boundaries", 
+      "Set personal boundaries",
       "Take initiative when needed"
     ],
     pitfalls: [
@@ -238,6 +241,8 @@ const colorScores = computed(() => {
 
   // Fix: Use keyof typeof scores for color keys
   answers.forEach((answer) => {
+    const color = colorMapping[answer]
+    if (color) scores[color]++
     const color = colorMapping[answer] as keyof typeof scores;
     if (color) scores[color]++;
   })
@@ -255,23 +260,31 @@ const colorScores = computed(() => {
 
 const dominantColor = computed(() => {
   const maxColor = Object.entries(colorScores.value).reduce((a, b) =>
-    colorScores.value[a[0] as keyof typeof colorScores.value] > colorScores.value[b[0] as keyof typeof colorScores.value] ? a : b
-  )[0] as keyof typeof colorScores.value;
+  const maxColor = Object.entries(colorScores.value).reduce((a, b) =>
+      colorScores.value[a[0] as keyof typeof colorScores.value] > colorScores.value[b[0] as keyof typeof colorScores.value] ? a : b
+  )[0]
+
+)[0] as keyof typeof colorScores.value;
   return colorData.find(color => color.name === maxColor) || colorData[0]
 })
 
 const profilePosition = computed(() => {
+  const scores = colorScores.value
   const scores = colorScores.value;
   const sortedColors = Object.entries(scores)
-    .sort(([,a], [,b]) => b - a)
-    .slice(0, 2);
+      .sort(([,a], [,b]) => b - a)
+      .slice(0, 2)
+
+  const primary = sortedColors[0][0]
+  const secondary = sortedColors[1][0]
+      .slice(0, 2);
   const primary = sortedColors[0][0] as keyof typeof scores;
   const secondary = sortedColors[1][0] as keyof typeof scores;
-  
+
   // Define position combinations
   const positions = {
     'Red-Yellow': 'Dynamic Leader',
-    'Red-Blue': 'Analytical Driver', 
+    'Red-Blue': 'Analytical Driver',
     'Red-Green': 'Supportive Leader',
     'Yellow-Red': 'Inspiring Motivator',
     'Yellow-Blue': 'Creative Analyst',
@@ -283,17 +296,18 @@ const profilePosition = computed(() => {
     'Green-Yellow': 'Harmonious Facilitator',
     'Green-Blue': 'Reliable Analyst'
   }
-  
+
   return positions[`${primary}-${secondary}` as keyof typeof positions] || 'Balanced Profile'
 })
 
 const profileAnalysis = computed(() => {
   const scores = colorScores.value
+  const total = Object.values(scores).reduce((sum, score) => sum + score, 0)
   const variance = Object.values(scores).reduce((sum, score) => sum + Math.pow(score - 25, 2), 0) / 4
-  
+
   let balance = 'Highly Focused'
   let description = ''
-  
+
   if (variance < 50) {
     balance = 'Well Balanced'
     description = 'You show a balanced approach across all color energies, adapting your style based on the situation. This flexibility is a significant strength in diverse environments.'
@@ -304,7 +318,7 @@ const profileAnalysis = computed(() => {
     balance = 'Highly Focused'
     description = 'You have very strong preferences in specific color energies. This focused approach gives you clear strengths, though developing other areas could enhance your versatility.'
   }
-  
+
   return { balance, description }
 })
 
@@ -328,6 +342,7 @@ const allTypes = [
   'HELPER',      // Yellow-Green (bottom)
   'SUPPORTER',   // Green (bottom-left)
   'COORDINATOR', // Green-Blue (left)
+  'OBSERVER'     // Blue (top-left)
   'OBSERVER'     // Blue (top-left, 225°)
 ];
 const typeColors = [
@@ -422,7 +437,7 @@ const drawInsightsCircle = () => {
     ctx.lineWidth = 1
     ctx.stroke()
   }
-  
+
   // Calculate profile position based on scores
   const scores = colorScores.value;
   // Correct quadrant mapping for canvas:
@@ -437,6 +452,8 @@ const drawInsightsCircle = () => {
   let sumX = 0;
   let sumY = 0;
   colorOrder.forEach(color => {
+    const percent = scores[color] / 100; // 0..1
+    const angle = colorAngles[color];
     const percent = scores[color as keyof typeof scores] / 100; // 0..1
     const angle = colorAngles[color as keyof typeof colorAngles];
     sumX += Math.cos(angle) * percent;
@@ -487,6 +504,7 @@ const energyStats = computed(() => {
   // For mean, use (percent/100)*6
   const stats: Record<string, { mean: number, percent: number }> = {};
   colorOrder.forEach(color => {
+    const percent = colorScores.value[color];
     const percent = colorScores.value[color as keyof typeof colorScores.value];
     const mean = (percent / 100) * 6;
     stats[color] = { mean, percent };
@@ -499,6 +517,7 @@ const lessConsciousStats = computed(() => {
   // For demo, rotate the color scores (Red->Yellow, Yellow->Blue, Blue->Green, Green->Red)
   const rotated: Record<string, number> = {};
   colorOrder.forEach((color, i) => {
+    const prevColor = colorOrder[(i + colorOrder.length - 1) % colorOrder.length];
     const prevColor = colorOrder[(i + colorOrder.length - 1) % colorOrder.length] as keyof typeof colorScores.value;
     rotated[color] = colorScores.value[prevColor];
   });
@@ -517,6 +536,7 @@ const preferenceFlow = computed(() => {
   // Flow = Conscious - LessConscious (as percent)
   const flow: Record<string, number> = {};
   colorOrder.forEach(color => {
+    flow[color] = energyStats.value[color].percent - lessConsciousStats.value[color].percent;
     flow[color] = energyStats.value[color as keyof typeof energyStats.value].percent - lessConsciousStats.value[color as keyof typeof lessConsciousStats.value].percent;
   });
   return flow;
@@ -540,7 +560,7 @@ function drawEnergyDynamics() {
   drawPersonaBarChart(ctx, baseX + 2 * (chartWidth + chartSpacing), baseY, chartWidth, chartHeight, lessConsciousStats.value);
   // Draw overall flow in center below flow chart (mean of abs values)
   const avgFlow =
-    colorOrder.reduce((sum, color) => sum + Math.abs(preferenceFlow.value[color]), 0) / colorOrder.length;
+      colorOrder.reduce((sum, color) => sum + Math.abs(preferenceFlow.value[color]), 0) / colorOrder.length;
   ctx.font = 'bold 16px Arial';
   ctx.fillStyle = '#333';
   ctx.textAlign = 'center';
@@ -548,86 +568,90 @@ function drawEnergyDynamics() {
 }
 
 // Persona bar chart: show mean and percent under each bar
-function drawPersonaBarChart(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, stats: Record<string, { mean: number, percent: number }>) {
-  const max = 6;
-  const barW = w / 4 - 10;
-  colorOrder.forEach((color, i) => {
-    const { mean, percent } = stats[color];
-    const barH = (mean / max) * h;
-    ctx.fillStyle = colorHex[color as keyof typeof colorHex];
-    ctx.fillRect(x + i * (barW + 10), y + h - barH, barW, barH);
-    ctx.strokeStyle = '#333';
-    ctx.strokeRect(x + i * (barW + 10), y, barW, h);
-    // Mean and percent under bar (two lines)
-    ctx.font = '11px Arial';
-    ctx.fillStyle = '#333';
-    ctx.textAlign = 'center';
-    ctx.fillText(`${mean.toFixed(2)}`, x + i * (barW + 10) + barW / 2, y + h + 34);
-    ctx.fillText(`${Math.round(percent)}%`, x + i * (barW + 10) + barW / 2, y + h + 48);
-  });
-  // Y axis (0-6)
-  ctx.strokeStyle = '#aaa';
-  ctx.beginPath();
-  ctx.moveTo(x - 5, y);
-  ctx.lineTo(x - 5, y + h);
-  ctx.stroke();
-  // X axis
-  ctx.beginPath();
-  ctx.moveTo(x - 5, y + h);
-  ctx.lineTo(x + w + 5, y + h);
-  ctx.stroke();
-  // Draw y-ticks for 0-6
-  ctx.font = '10px Arial';
-  ctx.fillStyle = '#666';
-  for (let i = 0; i <= 6; i++) {
-    const yTick = y + h - (i / max) * h;
-    ctx.fillText(i.toString(), x - 18, yTick + 3);
+function drawPersonaBarChart(ctx, x, y, w, h, stats) {
+  function drawPersonaBarChart(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, stats: Record<string, { mean: number, percent: number }>) {
+    const max = 6;
+    const barW = w / 4 - 10;
+    colorOrder.forEach((color, i) => {
+      const { mean, percent } = stats[color];
+      const barH = (mean / max) * h;
+      ctx.fillStyle = colorHex[color];
+      ctx.fillStyle = colorHex[color as keyof typeof colorHex];
+      ctx.fillRect(x + i * (barW + 10), y + h - barH, barW, barH);
+      ctx.strokeStyle = '#333';
+      ctx.strokeRect(x + i * (barW + 10), y, barW, h);
+      // Mean and percent under bar (two lines)
+      ctx.font = '11px Arial';
+      ctx.fillStyle = '#333';
+      ctx.textAlign = 'center';
+      ctx.fillText(`${mean.toFixed(2)}`, x + i * (barW + 10) + barW / 2, y + h + 34);
+      ctx.fillText(`${Math.round(percent)}%`, x + i * (barW + 10) + barW / 2, y + h + 48);
+    });
+    // Y axis (0-6)
+    ctx.strokeStyle = '#aaa';
+    ctx.beginPath();
+    ctx.moveTo(x - 5, y);
+    ctx.lineTo(x - 5, y + h);
+    ctx.stroke();
+    // X axis
+    ctx.beginPath();
+    ctx.moveTo(x - 5, y + h);
+    ctx.lineTo(x + w + 5, y + h);
+    ctx.stroke();
+    // Draw y-ticks for 0-6
+    ctx.font = '10px Arial';
+    ctx.fillStyle = '#666';
+    for (let i = 0; i <= 6; i++) {
+      const yTick = y + h - (i / max) * h;
+      ctx.fillText(i.toString(), x - 18, yTick + 3);
+    }
   }
-}
 
 // Preference flow: show positive/negative bars and percent
-function drawFlowChart(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, flow: Record<string, number>) {
-  ctx.strokeStyle = '#aaa';
-  ctx.beginPath();
-  ctx.moveTo(x - 5, y + h / 2);
-  ctx.lineTo(x + w + 5, y + h / 2);
-  ctx.stroke();
-  const barW = w / 4 - 10;
-  const maxAbs = 100; // percent scale
-  colorOrder.forEach((color, i) => {
-    const percent = flow[color];
-    const barH = (Math.abs(percent) / maxAbs) * (h / 2);
-    ctx.fillStyle = colorHex[color as keyof typeof colorHex];
-    // Draw bar: up for positive, down for negative
-    if (percent >= 0) {
-      ctx.fillRect(x + i * (barW + 10), y + h / 2 - barH, barW, barH);
-    } else {
-      ctx.fillRect(x + i * (barW + 10), y + h / 2, barW, barH);
+  function drawFlowChart(ctx, x, y, w, h, flow) {
+    function drawFlowChart(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, flow: Record<string, number>) {
+      ctx.strokeStyle = '#aaa';
+      ctx.beginPath();
+      ctx.moveTo(x - 5, y + h / 2);
+      ctx.lineTo(x + w + 5, y + h / 2);
+      ctx.stroke();
+      const barW = w / 4 - 10;
+      const maxAbs = 100; // percent scale
+      colorOrder.forEach((color, i) => {
+        const percent = flow[color];
+        const barH = (Math.abs(percent) / maxAbs) * (h / 2);
+        ctx.fillStyle = colorHex[color];
+        ctx.fillStyle = colorHex[color as keyof typeof colorHex];
+        // Draw bar: up for positive, down for negative
+        if (percent >= 0) {
+          ctx.fillRect(x + i * (barW + 10), y + h / 2 - barH, barW, barH);
+        } else {
+          ctx.fillRect(x + i * (barW + 10), y + h / 2, barW, barH);
+        }
+        ctx.strokeStyle = '#333';
+        ctx.strokeRect(x + i * (barW + 10), y, barW, h);
+        // Show percent below bar
+        ctx.font = '11px Arial';
+        ctx.fillStyle = '#333';
+        ctx.textAlign = 'center';
+        ctx.fillText(`${percent > 0 ? '+' : ''}${Math.round(percent)}%`, x + i * (barW + 10) + barW / 2, y + h + 34);
+      });
+      // Y axis (100-0-100)
+      ctx.strokeStyle = '#aaa';
+      ctx.beginPath();
+      ctx.moveTo(x - 5, y);
+      ctx.lineTo(x - 5, y + h);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(x - 5, y + h);
+      ctx.lineTo(x + w + 5, y + h);
+      ctx.stroke();
+      ctx.font = '10px Arial';
+      ctx.fillStyle = '#666';
+      ctx.fillText('100', x - 22, y + 10);
+      ctx.fillText('0', x - 15, y + h / 2 + 3);
+      ctx.fillText('100', x - 22, y + h - 5);
     }
-    ctx.strokeStyle = '#333';
-    ctx.strokeRect(x + i * (barW + 10), y, barW, h);
-    // Show percent below bar
-    ctx.font = '11px Arial';
-    ctx.fillStyle = '#333';
-    ctx.textAlign = 'center';
-    ctx.fillText(`${percent > 0 ? '+' : ''}${Math.round(percent)}%`, x + i * (barW + 10) + barW / 2, y + h + 34);
-  });
-  // Y axis (100-0-100)
-  ctx.strokeStyle = '#aaa';
-  ctx.beginPath();
-  ctx.moveTo(x - 5, y);
-  ctx.lineTo(x - 5, y + h);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.moveTo(x - 5, y + h);
-  ctx.lineTo(x + w + 5, y + h);
-  ctx.stroke();
-  ctx.font = '10px Arial';
-  ctx.fillStyle = '#666';
-  ctx.fillText('100', x - 22, y + 10);
-  ctx.fillText('0', x - 15, y + h / 2 + 3);
-  ctx.fillText('100', x - 22, y + h - 5);
-}
 </script>
 
 <style scoped>
@@ -870,12 +894,12 @@ function drawFlowChart(ctx: CanvasRenderingContext2D, x: number, y: number, w: n
   .strengths-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .insights-circle canvas {
     width: 300px !important;
     height: 300px !important;
   }
-  
+
   .primary-color,
   .profile-analysis {
     padding: 20px;
@@ -896,3 +920,4 @@ function drawFlowChart(ctx: CanvasRenderingContext2D, x: number, y: number, w: n
   }
 }
 </style>
+
