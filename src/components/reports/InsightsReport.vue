@@ -37,15 +37,13 @@
           <div v-for="color in colorData" :key="color.name" class="color-bar">
             <div class="bar-header">
               <span class="color-name">{{ color.name }}</span>
-              <span class="color-percentage">{{ colorScores[color.name] }}%</span>
-              <span class="color-percentage">{{ colorScores[color.name as keyof typeof colorScores] }}%</span>
+              <span class="color-percentage">{{ colorScores[color.name as ColorKey] }}%</span>
             </div>
             <div class="bar-container">
               <div
-                  class="bar-fill"
-                  :style="{
-                  width: `${colorScores[color.name]}%`,
-                  width: `${colorScores[color.name as keyof typeof colorScores]}%`,
+                class="bar-fill"
+                :style="{
+                  width: `${colorScores[color.name as ColorKey]}%`,
                   backgroundColor: color.hex
                 }"
               ></div>
@@ -117,6 +115,8 @@ import { computed, onMounted, ref, watch } from 'vue'
 import { usePdfExport } from '../../composables/usePdfExport'
 import { useTranslations } from '../../composables/useTranslations'
 
+type ColorKey = 'Red' | 'Yellow' | 'Blue' | 'Green'
+
 const props = defineProps<{
   results: Record<number, number>,
   userName?: string
@@ -125,7 +125,7 @@ const props = defineProps<{
 const circleCanvas = ref<HTMLCanvasElement>()
 const dynamicsCanvas = ref<HTMLCanvasElement>()
 const { generatePDF, isGeneratingPDF } = usePdfExport()
-const { t, currentLanguage } = useTranslations()
+const { t } = useTranslations()
 
 const downloadPDF = async () => {
   try {
@@ -219,7 +219,7 @@ const colorData = [
   }
 ]
 
-const colorScores = computed(() => {
+const colorScores = computed<Record<ColorKey, number>>(() => {
   if (!props.results) return { Red: 25, Yellow: 25, Blue: 25, Green: 25 }
 
   let answers: number[] = []
@@ -233,29 +233,29 @@ const colorScores = computed(() => {
     }).filter(v => v !== null) as number[]
   }
 
-  const scores = { Red: 0, Yellow: 0, Blue: 0, Green: 0 }
-  const colorMapping = ['Red', 'Yellow', 'Blue', 'Green']
+  const scores: Record<ColorKey, number> = { Red: 0, Yellow: 0, Blue: 0, Green: 0 }
+  const colorMapping: ColorKey[] = ['Red', 'Yellow', 'Blue', 'Green']
 
   answers.forEach((answer) => {
-    const color = colorMapping[answer] as keyof typeof scores
+    const color = colorMapping[answer]
     if (color) scores[color]++
   })
 
-  const total = answers.length
-  if (total === 0) return { Red: 25, Yellow: 25, Blue: 25, Green: 25 }
+  const totalAnswers = answers.length
+  if (totalAnswers === 0) return { Red: 25, Yellow: 25, Blue: 25, Green: 25 }
 
   return {
-    Red: Math.round((scores.Red / total) * 100),
-    Yellow: Math.round((scores.Yellow / total) * 100),
-    Blue: Math.round((scores.Blue / total) * 100),
-    Green: Math.round((scores.Green / total) * 100)
+    Red: Math.round((scores.Red / totalAnswers) * 100),
+    Yellow: Math.round((scores.Yellow / totalAnswers) * 100),
+    Blue: Math.round((scores.Blue / totalAnswers) * 100),
+    Green: Math.round((scores.Green / totalAnswers) * 100)
   }
 })
 
 const dominantColor = computed(() => {
   const maxColor = Object.entries(colorScores.value).reduce((a, b) =>
     a[1] > b[1] ? a : b
-  )[0] as keyof typeof colorScores.value
+  )[0] as ColorKey
   return colorData.find(color => color.name === maxColor) || colorData[0]
 })
 
@@ -265,8 +265,8 @@ const profilePosition = computed(() => {
     .sort(([,a], [,b]) => b - a)
     .slice(0, 2)
 
-  const primary = sortedColors[0][0] as keyof typeof scores
-  const secondary = sortedColors[1][0] as keyof typeof scores
+  const primary = sortedColors[0][0] as ColorKey
+  const secondary = sortedColors[1][0] as ColorKey
 
   const positions = {
     'Red-Yellow': 'Dynamic Leader',
@@ -288,7 +288,6 @@ const profilePosition = computed(() => {
 
 const profileAnalysis = computed(() => {
   const scores = colorScores.value
-  const total = Object.values(scores).reduce((sum, score) => sum + score, 0)
   const variance = Object.values(scores).reduce((sum, score) => sum + Math.pow(score - 25, 2), 0) / 4
 
   let balance = 'Highly Focused'
@@ -437,8 +436,8 @@ const drawInsightsCircle = () => {
   let sumX = 0;
   let sumY = 0;
   colorOrder.forEach(color => {
-    const percent = scores[color] / 100; // 0..1
-    const angle = colorAngles[color];
+    const percent = scores[color as ColorKey] / 100; // 0..1
+    const angle = colorAngles[color as ColorKey];
     sumX += Math.cos(angle) * percent;
     sumY += Math.sin(angle) * percent;
   });
@@ -473,37 +472,31 @@ const drawInsightsCircle = () => {
 }
 
 // --- ENERGY DYNAMICS CALCULATION HELPERS ---
-const colorOrder = ['Red', 'Yellow', 'Blue', 'Green'];
-const colorHex = {
+const colorOrder: ColorKey[] = ['Red', 'Yellow', 'Blue', 'Green'];
+const colorHex: Record<ColorKey, string> = {
   Red: '#FF6B6B',
   Yellow: '#FFD93D',
   Blue: '#45B7D1',
   Green: '#96CEB4',
 };
 
-// For energy dynamics, use the same colorScores as the rest of the report
 const energyStats = computed(() => {
-  // colorScores is already { Red, Yellow, Blue, Green } in percent
-  // For mean, use (percent/100)*6
-  const stats: Record<string, { mean: number, percent: number }> = {};
+  const stats: Record<ColorKey, { mean: number, percent: number }> = {} as any;
   colorOrder.forEach(color => {
-    const percent = colorScores.value[color];
+    const percent = colorScores.value[color]
     const mean = (percent / 100) * 6;
     stats[color] = { mean, percent };
   });
   return stats;
 });
 
-// --- NEW: Simulate Less Conscious Persona (for demo, rotate colorScores) ---
 const lessConsciousStats = computed(() => {
-  // For demo, rotate the color scores (Red->Yellow, Yellow->Blue, Blue->Green, Green->Red)
-  const rotated: Record<string, number> = {};
+  const rotated: Record<ColorKey, number> = {} as any;
   colorOrder.forEach((color, i) => {
     const prevColor = colorOrder[(i + colorOrder.length - 1) % colorOrder.length];
     rotated[color] = colorScores.value[prevColor];
   });
-  // Convert to mean/percent
-  const stats: Record<string, { mean: number, percent: number }> = {};
+  const stats: Record<ColorKey, { mean: number, percent: number }> = {} as any;
   colorOrder.forEach(color => {
     const percent = rotated[color];
     const mean = (percent / 100) * 6;
@@ -512,10 +505,8 @@ const lessConsciousStats = computed(() => {
   return stats;
 });
 
-// --- Preference Flow Calculation ---
 const preferenceFlow = computed(() => {
-  // Flow = Conscious - LessConscious (as percent)
-  const flow: Record<string, number> = {};
+  const flow: Record<ColorKey, number> = {} as any;
   colorOrder.forEach(color => {
     flow[color] = energyStats.value[color].percent - lessConsciousStats.value[color].percent;
   });
@@ -548,13 +539,20 @@ function drawEnergyDynamics() {
 }
 
 // Persona bar chart: show mean and percent under each bar
-function drawPersonaBarChart(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, stats: Record<string, { mean: number, percent: number }>) {
+function drawPersonaBarChart(
+  ctx: CanvasRenderingContext2D,
+  x: number,
+  y: number,
+  w: number,
+  h: number,
+  stats: Record<ColorKey, { mean: number, percent: number }>
+) {
   const max = 6;
   const barW = w / 4 - 10;
   colorOrder.forEach((color, i) => {
     const { mean, percent } = stats[color];
     const barH = (mean / max) * h;
-    ctx.fillStyle = colorHex[color as keyof typeof colorHex];
+    ctx.fillStyle = colorHex[color];
     ctx.fillRect(x + i * (barW + 10), y + h - barH, barW, barH);
     ctx.strokeStyle = '#333';
     ctx.strokeRect(x + i * (barW + 10), y, barW, h);
@@ -581,7 +579,14 @@ function drawPersonaBarChart(ctx: CanvasRenderingContext2D, x: number, y: number
   }
 }
 
-function drawFlowChart(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, flow: Record<string, number>) {
+function drawFlowChart(
+  ctx: CanvasRenderingContext2D,
+  x: number,
+  y: number,
+  w: number,
+  h: number,
+  flow: Record<ColorKey, number>
+) {
   ctx.strokeStyle = '#aaa';
   ctx.beginPath();
   ctx.moveTo(x - 5, y + h / 2);
@@ -592,7 +597,7 @@ function drawFlowChart(ctx: CanvasRenderingContext2D, x: number, y: number, w: n
   colorOrder.forEach((color, i) => {
     const percent = flow[color];
     const barH = (Math.abs(percent) / maxAbs) * (h / 2);
-    ctx.fillStyle = colorHex[color as keyof typeof colorHex];
+    ctx.fillStyle = colorHex[color];
     if (percent >= 0) {
       ctx.fillRect(x + i * (barW + 10), y + h / 2 - barH, barW, barH);
     } else {
