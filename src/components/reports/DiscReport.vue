@@ -18,7 +18,7 @@
           <div v-for="(score, style) in styleScores" :key="style" class="score-item">
             <div class="score-label">{{ style }}</div>
             <div class="score-bar">
-              <div class="score-fill" :style="{ width: `${score}%`, backgroundColor: styleColors[style] }"></div>
+              <div class="score-fill" :style="{ width: `${score}%`, backgroundColor: getStyleColor(style) }"></div>
             </div>
             <div class="score-value">{{ score }}%</div>
           </div>
@@ -109,11 +109,21 @@ const downloadPDF = async () => {
   }
 }
 
-const styleColors = {
+// Add type definitions
+type StyleKey = 'D' | 'I' | 'S' | 'C'
+type StyleColors = Record<StyleKey, string>
+type CombinationKey = 'D/I' | 'D/C' | 'S/I' | 'S/C' | 'I/D' | 'I/C' | 'C/D' | 'C/I'
+
+const styleColors: StyleColors = {
   D: '#FF6B6B',
   I: '#FFD93D', 
   S: '#6BCF7F',
   C: '#4D96FF'
+}
+
+// Fix the template style access
+const getStyleColor = (style: string): string => {
+  return styleColors[style as StyleKey] || '#000000'
 }
 
 const styleData = computed(() => ({
@@ -326,10 +336,10 @@ const styleScores = computed(() => {
   if (!props.results) return { D: 25, I: 25, S: 25, C: 25 }
   
   const scores = { D: 0, I: 0, S: 0, C: 0 }
-  const styles = ['D', 'I', 'S', 'C']
+  const styles: StyleKey[] = ['D', 'I', 'S', 'C']
   
   Object.values(props.results).forEach((answer) => {
-    const style = styles[answer] as keyof typeof scores
+    const style = styles[answer] as StyleKey
     if (style) {
       scores[style] = (scores[style] || 0) + 1
     }
@@ -339,24 +349,31 @@ const styleScores = computed(() => {
   
   return Object.fromEntries(
     Object.entries(scores).map(([style, score]) => [style, Math.round((score / total) * 100)])
-  )
+  ) as Record<StyleKey, number>
 })
 
 const dominantStyle = computed(() => {
   const maxScore = Math.max(...Object.values(styleScores.value))
-  const dominantStyles = Object.keys(styleScores.value).filter(style => styleScores.value[style] === maxScore)
+  const dominantStyles = Object.keys(styleScores.value).filter(
+    style => styleScores.value[style as StyleKey] === maxScore
+  )
   
   return dominantStyles.length === 1
-    ? styleData.value[dominantStyles[0]]
+    ? styleData.value[dominantStyles[0] as StyleKey]
     : { name: t('disc_style_balanced'), description: t('disc_style_balanced_desc'), traits: [], tips: [] }
 })
 
-const profileCombination = computed(() => {
-  const sortedStyles = Object.keys(styleScores.value).sort((a, b) => styleScores.value[b] - styleScores.value[a])
-  return `${sortedStyles[0]}/${sortedStyles[1]}`
+const profileCombination = computed((): CombinationKey => {
+  const sortedStyles = Object.keys(styleScores.value).sort(
+    (a, b) => styleScores.value[b as StyleKey] - styleScores.value[a as StyleKey]
+  )
+  return `${sortedStyles[0]}/${sortedStyles[1]}` as CombinationKey
 })
 
-const combinationData = computed(() => combinationProfiles.value[profileCombination.value] || { description: '', traits: [], teamRole: '', complements: [] })
+const combinationData = computed(() => 
+  combinationProfiles.value[profileCombination.value as CombinationKey] || 
+  { description: '', traits: [], teamRole: '', complements: [] }
+)
 
 let chartInstance: Chart | undefined
 
