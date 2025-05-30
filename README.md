@@ -8,13 +8,19 @@ Typix is a web application for taking and generating reports for three popular p
 - **Purpose:** Measures four personality traits: Dominance, Influence, Steadiness, and Conscientiousness.
 - **How it works:** Users answer a series of questions. Their responses are scored to determine their DISC profile, which is then presented in a detailed report.
 
+![Sample Typix Discovery DISC Profile](docs/assets/disc-profile-sample.png)
+
 ### 2. Enneagram Assessment
 - **Purpose:** Identifies which of the nine Enneagram types best describes the user.
 - **How it works:** Users complete a questionnaire. The system analyzes the answers to assign an Enneagram type and provides a personalized report.
 
-### 3. Insights Assessment
-- **Purpose:** Based on the Insights Discovery model, this assessment helps users understand their communication and working styles.
+![Sample Typix Enneageram DISC Profile](docs/assets/enneagram.png)
+
+### 3. Typix Discovery Assessment
+- **Purpose:** Typix Discovery model, this assessment helps users understand their communication and working styles.
 - **How it works:** Users respond to prompts, and the app generates an Insights profile and report.
+
+![Sample Typix Discovery DISC Profile](docs/assets/discovery.png)
 
 ## Project Structure
 - `src/components/surveys/`: Survey components for each assessment.
