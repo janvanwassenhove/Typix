@@ -12,29 +12,36 @@
       <!-- Enneagram Visualization -->
       <div class="enneagram-visualization">
         <h4>{{ t('enneagram_position') }}</h4>
+        <!-- Explanation about the lines and connections -->
+        <div class="enneagram-explanation">
+          <p>
+            The lines inside the Enneagram symbol represent the dynamic connections between types. 
+            The triangle (3-6-9) and hexagon (1-4-2-8-5-7) show how each type is linked to others in patterns of growth, stress, and integration.
+          </p>
+        </div>
         <div class="enneagram-circle">
           <svg viewBox="0 0 400 400" class="enneagram-svg">
             <!-- Outer circle -->
             <circle cx="200" cy="200" r="180" fill="none" stroke="#e9ecef" stroke-width="2"/>
             
-            <!-- Inner connecting lines -->
-            <g stroke="#dee2e6" stroke-width="1" opacity="0.5">
-              <!-- Triangle: 3-6-9 -->
-              <line x1="200" y1="40" x2="331" y2="275" />
-              <line x1="331" y1="275" x2="69" y2="275" />
-              <line x1="69" y1="275" x2="200" y2="40" />
-              
-              <!-- Hexagon: 1-4-2-8-5-7 -->
-              <line x1="285" y1="65" x2="115" y2="125" />
-              <line x1="115" y1="125" x2="69" y2="275" />
-              <line x1="69" y1="275" x2="200" y2="360" />
-              <line x1="200" y1="360" x2="331" y2="275" />
-              <line x1="331" y1="275" x2="285" y2="65" />
-              <line x1="285" y1="65" x2="115" y2="125" />
+            <!-- Rotated lines and positions, but NOT rotating the text/numbers -->
+            <g :transform="`rotate(${rotationAngle} 200 200)`">
+              <g stroke="#dee2e6" stroke-width="1" opacity="0.5">
+                <!-- Triangle: 3-6-9 -->
+                <line :x1="positions[2].x" :y1="positions[2].y" :x2="positions[5].x" :y2="positions[5].y" />
+                <line :x1="positions[5].x" :y1="positions[5].y" :x2="positions[8].x" :y2="positions[8].y" />
+                <line :x1="positions[8].x" :y1="positions[8].y" :x2="positions[2].x" :y2="positions[2].y" />
+                <!-- Hexagon: 1-4-2-8-5-7 -->
+                <line :x1="positions[0].x" :y1="positions[0].y" :x2="positions[3].x" :y2="positions[3].y" />
+                <line :x1="positions[3].x" :y1="positions[3].y" :x2="positions[1].x" :y2="positions[1].y" />
+                <line :x1="positions[1].x" :y1="positions[1].y" :x2="positions[7].x" :y2="positions[7].y" />
+                <line :x1="positions[7].x" :y1="positions[7].y" :x2="positions[4].x" :y2="positions[4].y" />
+                <line :x1="positions[4].x" :y1="positions[4].y" :x2="positions[6].x" :y2="positions[6].y" />
+                <line :x1="positions[6].x" :y1="positions[6].y" :x2="positions[0].x" :y2="positions[0].y" />
+              </g>
             </g>
-            
-            <!-- Type positions -->
-            <g v-for="type in enneagramPositions" :key="type.number">
+            <!-- Draw circles and text OUTSIDE the rotation group so they are always upright -->
+            <g v-for="(type, idx) in positions" :key="type.number">
               <circle 
                 :cx="type.x" 
                 :cy="type.y" 
@@ -66,6 +73,14 @@
               </text>
             </g>
           </svg>
+        </div>
+        <!-- Add interpretation explanation below the visual -->
+        <div class="enneagram-interpretation">
+          <p>
+            <b>How to interpret:</b> Your main type is highlighted. The connecting lines show which types you may move toward in times of growth or stress. 
+            For example, when healthy, you may take on the positive traits of the type your line points to (growth), and under stress, you may display behaviors of the other connected type. 
+            Use these connections to better understand your patterns and potential paths for personal development.
+          </p>
         </div>
       </div>
 
@@ -320,46 +335,63 @@ const enneagramPositions = [
 
 const typeScores = computed(() => {
   if (!props.results) return { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 }
-  
+
   const scores = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 }
-  
-  // Enhanced scoring algorithm
-  Object.entries(props.results).forEach(([questionIndex, score]) => {
-    const qIndex = parseInt(questionIndex)
-    // Map questions to types with more sophisticated logic
-    const typeMapping = [
-      [1, 6, 8], // Question 0: responsibility -> Type 1, 6, 8
-      [3, 7, 8], // Question 1: excellence -> Type 3, 7, 8  
-      [5, 8, 9], // Question 2: independence -> Type 5, 8, 9
-    ]
-    
-    if (typeMapping[qIndex % 3]) {
-      typeMapping[qIndex % 3].forEach(type => {
-        scores[type as keyof typeof scores] += score
-      })
-    }
+
+  // Assume each answer index maps to a type: 0->1, 1->2, ..., 8->9
+  Object.entries(props.results).forEach(([questionIndex, answerIndex]) => {
+    const type = (Number(answerIndex) % 9) + 1
+    scores[type as keyof typeof scores] += 1
   })
-  
+
   // Normalize to percentages
-  const maxScore = Math.max(...Object.values(scores))
-  if (maxScore > 0) {
+  const total = Object.values(scores).reduce((sum, v) => sum + v, 0)
+  if (total > 0) {
     Object.keys(scores).forEach(type => {
-      const typeNum = Number(type) as keyof typeof scores;
-      scores[typeNum] = Math.round((scores[typeNum] / maxScore) * 100);
+      const typeNum = Number(type) as keyof typeof scores
+      scores[typeNum] = Math.round((scores[typeNum] / total) * 100)
     })
   }
-  
+
   return scores
 })
 
 const dominantType = computed(() => {
-  const scores = typeScores.value;
-  return Number(Object.entries(scores).reduce((a, b) =>
-    scores[Number(a[0]) as keyof typeof scores] > scores[Number(b[0]) as keyof typeof scores] ? a : b
-  )[0]);
-});
+  const scores = typeScores.value
+  return Number(
+    Object.entries(scores).reduce((a, b) =>
+      scores[Number(a[0]) as keyof typeof scores] > scores[Number(b[0]) as keyof typeof scores] ? a : b
+    )[0]
+  )
+})
 
 const typeData = computed(() => enneagramTypes[dominantType.value as keyof typeof enneagramTypes] || enneagramTypes[1])
+
+// Helper: get angle for each type (0 is top, clockwise)
+function getTypeAngles() {
+  const centerX = 200, centerY = 200, radius = 160
+  // Type 9 is at the top, then 1-8 clockwise
+  return Array.from({ length: 9 }, (_, i) => {
+    const angle = ((i - 2) * 40) * Math.PI / 180 // -2 so type 9 is at top
+    return {
+      number: ((i + 8) % 9) + 1, // 9,1,2,3,4,5,6,7,8
+      x: centerX + Math.sin(angle) * radius,
+      y: centerY - Math.cos(angle) * radius,
+      name: enneagramPositions[((i + 8) % 9)].name
+    }
+  })
+}
+
+// Compute rotation so dominantType is at the top (position 9)
+const rotationAngle = computed(() => {
+  // Find index of dominantType in enneagramPositions
+  const idx = enneagramPositions.findIndex(t => t.number === dominantType.value)
+  // Type 9 is at index 0 (top), so rotate by -idx*40 deg
+  return -idx * 40
+})
+
+// Rotated positions for SVG
+const positions = computed(() => getTypeAngles())
 </script>
 
 <style scoped>
@@ -414,6 +446,16 @@ const typeData = computed(() => enneagramTypes[dominantType.value as keyof typeo
   border-left: 4px solid #667eea;
   padding-left: 15px;
   text-align: left;
+}
+
+.enneagram-explanation {
+  margin-bottom: 18px;
+  color: #555;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .enneagram-circle {
@@ -575,6 +617,20 @@ const typeData = computed(() => enneagramTypes[dominantType.value as keyof typeo
   opacity: 0.6;
   cursor: not-allowed;
   transform: none;
+}
+
+.enneagram-interpretation {
+  margin-top: 18px;
+  color: #444;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 16px 20px;
+  border: 1px solid #e9ecef;
 }
 
 @media (max-width: 768px) {
