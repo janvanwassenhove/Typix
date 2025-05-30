@@ -126,7 +126,6 @@ const circleCanvas = ref<HTMLCanvasElement>()
 const dynamicsCanvas = ref<HTMLCanvasElement>()
 const { generatePDF, isGeneratingPDF } = usePdfExport()
 const { t, currentLanguage } = useTranslations()
-const { t } = useTranslations()
 
 const downloadPDF = async () => {
   try {
@@ -223,7 +222,6 @@ const colorData = [
 const colorScores = computed(() => {
   if (!props.results) return { Red: 25, Yellow: 25, Blue: 25, Green: 25 }
 
-  // Extract answerIndex from each answer object or use the number directly
   let answers: number[] = []
   if (Array.isArray(props.results)) {
     answers = props.results.map(v => typeof v === 'number' ? v : (v && typeof v.answerIndex === 'number' ? v.answerIndex : null)).filter(v => v !== null) as number[]
@@ -235,16 +233,12 @@ const colorScores = computed(() => {
     }).filter(v => v !== null) as number[]
   }
 
-  // Map answer indices to color names: 0=Red, 1=Yellow, 2=Blue, 3=Green
   const scores = { Red: 0, Yellow: 0, Blue: 0, Green: 0 }
   const colorMapping = ['Red', 'Yellow', 'Blue', 'Green']
 
-  // Fix: Use keyof typeof scores for color keys
   answers.forEach((answer) => {
-    const color = colorMapping[answer]
+    const color = colorMapping[answer] as keyof typeof scores
     if (color) scores[color]++
-    const color = colorMapping[answer] as keyof typeof scores;
-    if (color) scores[color]++;
   })
 
   const total = answers.length
@@ -260,28 +254,20 @@ const colorScores = computed(() => {
 
 const dominantColor = computed(() => {
   const maxColor = Object.entries(colorScores.value).reduce((a, b) =>
-  const maxColor = Object.entries(colorScores.value).reduce((a, b) =>
-      colorScores.value[a[0] as keyof typeof colorScores.value] > colorScores.value[b[0] as keyof typeof colorScores.value] ? a : b
-  )[0]
-
-)[0] as keyof typeof colorScores.value;
+    a[1] > b[1] ? a : b
+  )[0] as keyof typeof colorScores.value
   return colorData.find(color => color.name === maxColor) || colorData[0]
 })
 
 const profilePosition = computed(() => {
   const scores = colorScores.value
-  const scores = colorScores.value;
   const sortedColors = Object.entries(scores)
-      .sort(([,a], [,b]) => b - a)
-      .slice(0, 2)
+    .sort(([,a], [,b]) => b - a)
+    .slice(0, 2)
 
-  const primary = sortedColors[0][0]
-  const secondary = sortedColors[1][0]
-      .slice(0, 2);
-  const primary = sortedColors[0][0] as keyof typeof scores;
-  const secondary = sortedColors[1][0] as keyof typeof scores;
+  const primary = sortedColors[0][0] as keyof typeof scores
+  const secondary = sortedColors[1][0] as keyof typeof scores
 
-  // Define position combinations
   const positions = {
     'Red-Yellow': 'Dynamic Leader',
     'Red-Blue': 'Analytical Driver',
@@ -342,7 +328,6 @@ const allTypes = [
   'HELPER',      // Yellow-Green (bottom)
   'SUPPORTER',   // Green (bottom-left)
   'COORDINATOR', // Green-Blue (left)
-  'OBSERVER'     // Blue (top-left)
   'OBSERVER'     // Blue (top-left, 225°)
 ];
 const typeColors = [
@@ -454,8 +439,6 @@ const drawInsightsCircle = () => {
   colorOrder.forEach(color => {
     const percent = scores[color] / 100; // 0..1
     const angle = colorAngles[color];
-    const percent = scores[color as keyof typeof scores] / 100; // 0..1
-    const angle = colorAngles[color as keyof typeof colorAngles];
     sumX += Math.cos(angle) * percent;
     sumY += Math.sin(angle) * percent;
   });
@@ -505,7 +488,6 @@ const energyStats = computed(() => {
   const stats: Record<string, { mean: number, percent: number }> = {};
   colorOrder.forEach(color => {
     const percent = colorScores.value[color];
-    const percent = colorScores.value[color as keyof typeof colorScores.value];
     const mean = (percent / 100) * 6;
     stats[color] = { mean, percent };
   });
@@ -518,7 +500,6 @@ const lessConsciousStats = computed(() => {
   const rotated: Record<string, number> = {};
   colorOrder.forEach((color, i) => {
     const prevColor = colorOrder[(i + colorOrder.length - 1) % colorOrder.length];
-    const prevColor = colorOrder[(i + colorOrder.length - 1) % colorOrder.length] as keyof typeof colorScores.value;
     rotated[color] = colorScores.value[prevColor];
   });
   // Convert to mean/percent
@@ -537,7 +518,6 @@ const preferenceFlow = computed(() => {
   const flow: Record<string, number> = {};
   colorOrder.forEach(color => {
     flow[color] = energyStats.value[color].percent - lessConsciousStats.value[color].percent;
-    flow[color] = energyStats.value[color as keyof typeof energyStats.value].percent - lessConsciousStats.value[color as keyof typeof lessConsciousStats.value].percent;
   });
   return flow;
 });
@@ -568,90 +548,78 @@ function drawEnergyDynamics() {
 }
 
 // Persona bar chart: show mean and percent under each bar
-function drawPersonaBarChart(ctx, x, y, w, h, stats) {
-  function drawPersonaBarChart(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, stats: Record<string, { mean: number, percent: number }>) {
-    const max = 6;
-    const barW = w / 4 - 10;
-    colorOrder.forEach((color, i) => {
-      const { mean, percent } = stats[color];
-      const barH = (mean / max) * h;
-      ctx.fillStyle = colorHex[color];
-      ctx.fillStyle = colorHex[color as keyof typeof colorHex];
-      ctx.fillRect(x + i * (barW + 10), y + h - barH, barW, barH);
-      ctx.strokeStyle = '#333';
-      ctx.strokeRect(x + i * (barW + 10), y, barW, h);
-      // Mean and percent under bar (two lines)
-      ctx.font = '11px Arial';
-      ctx.fillStyle = '#333';
-      ctx.textAlign = 'center';
-      ctx.fillText(`${mean.toFixed(2)}`, x + i * (barW + 10) + barW / 2, y + h + 34);
-      ctx.fillText(`${Math.round(percent)}%`, x + i * (barW + 10) + barW / 2, y + h + 48);
-    });
-    // Y axis (0-6)
-    ctx.strokeStyle = '#aaa';
-    ctx.beginPath();
-    ctx.moveTo(x - 5, y);
-    ctx.lineTo(x - 5, y + h);
-    ctx.stroke();
-    // X axis
-    ctx.beginPath();
-    ctx.moveTo(x - 5, y + h);
-    ctx.lineTo(x + w + 5, y + h);
-    ctx.stroke();
-    // Draw y-ticks for 0-6
-    ctx.font = '10px Arial';
-    ctx.fillStyle = '#666';
-    for (let i = 0; i <= 6; i++) {
-      const yTick = y + h - (i / max) * h;
-      ctx.fillText(i.toString(), x - 18, yTick + 3);
-    }
+function drawPersonaBarChart(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, stats: Record<string, { mean: number, percent: number }>) {
+  const max = 6;
+  const barW = w / 4 - 10;
+  colorOrder.forEach((color, i) => {
+    const { mean, percent } = stats[color];
+    const barH = (mean / max) * h;
+    ctx.fillStyle = colorHex[color as keyof typeof colorHex];
+    ctx.fillRect(x + i * (barW + 10), y + h - barH, barW, barH);
+    ctx.strokeStyle = '#333';
+    ctx.strokeRect(x + i * (barW + 10), y, barW, h);
+    ctx.font = '11px Arial';
+    ctx.fillStyle = '#333';
+    ctx.textAlign = 'center';
+    ctx.fillText(`${mean.toFixed(2)}`, x + i * (barW + 10) + barW / 2, y + h + 34);
+    ctx.fillText(`${Math.round(percent)}%`, x + i * (barW + 10) + barW / 2, y + h + 48);
+  });
+  ctx.strokeStyle = '#aaa';
+  ctx.beginPath();
+  ctx.moveTo(x - 5, y);
+  ctx.lineTo(x - 5, y + h);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(x - 5, y + h);
+  ctx.lineTo(x + w + 5, y + h);
+  ctx.stroke();
+  ctx.font = '10px Arial';
+  ctx.fillStyle = '#666';
+  for (let i = 0; i <= 6; i++) {
+    const yTick = y + h - (i / max) * h;
+    ctx.fillText(i.toString(), x - 18, yTick + 3);
   }
+}
 
-// Preference flow: show positive/negative bars and percent
-  function drawFlowChart(ctx, x, y, w, h, flow) {
-    function drawFlowChart(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, flow: Record<string, number>) {
-      ctx.strokeStyle = '#aaa';
-      ctx.beginPath();
-      ctx.moveTo(x - 5, y + h / 2);
-      ctx.lineTo(x + w + 5, y + h / 2);
-      ctx.stroke();
-      const barW = w / 4 - 10;
-      const maxAbs = 100; // percent scale
-      colorOrder.forEach((color, i) => {
-        const percent = flow[color];
-        const barH = (Math.abs(percent) / maxAbs) * (h / 2);
-        ctx.fillStyle = colorHex[color];
-        ctx.fillStyle = colorHex[color as keyof typeof colorHex];
-        // Draw bar: up for positive, down for negative
-        if (percent >= 0) {
-          ctx.fillRect(x + i * (barW + 10), y + h / 2 - barH, barW, barH);
-        } else {
-          ctx.fillRect(x + i * (barW + 10), y + h / 2, barW, barH);
-        }
-        ctx.strokeStyle = '#333';
-        ctx.strokeRect(x + i * (barW + 10), y, barW, h);
-        // Show percent below bar
-        ctx.font = '11px Arial';
-        ctx.fillStyle = '#333';
-        ctx.textAlign = 'center';
-        ctx.fillText(`${percent > 0 ? '+' : ''}${Math.round(percent)}%`, x + i * (barW + 10) + barW / 2, y + h + 34);
-      });
-      // Y axis (100-0-100)
-      ctx.strokeStyle = '#aaa';
-      ctx.beginPath();
-      ctx.moveTo(x - 5, y);
-      ctx.lineTo(x - 5, y + h);
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.moveTo(x - 5, y + h);
-      ctx.lineTo(x + w + 5, y + h);
-      ctx.stroke();
-      ctx.font = '10px Arial';
-      ctx.fillStyle = '#666';
-      ctx.fillText('100', x - 22, y + 10);
-      ctx.fillText('0', x - 15, y + h / 2 + 3);
-      ctx.fillText('100', x - 22, y + h - 5);
+function drawFlowChart(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, flow: Record<string, number>) {
+  ctx.strokeStyle = '#aaa';
+  ctx.beginPath();
+  ctx.moveTo(x - 5, y + h / 2);
+  ctx.lineTo(x + w + 5, y + h / 2);
+  ctx.stroke();
+  const barW = w / 4 - 10;
+  const maxAbs = 100;
+  colorOrder.forEach((color, i) => {
+    const percent = flow[color];
+    const barH = (Math.abs(percent) / maxAbs) * (h / 2);
+    ctx.fillStyle = colorHex[color as keyof typeof colorHex];
+    if (percent >= 0) {
+      ctx.fillRect(x + i * (barW + 10), y + h / 2 - barH, barW, barH);
+    } else {
+      ctx.fillRect(x + i * (barW + 10), y + h / 2, barW, barH);
     }
+    ctx.strokeStyle = '#333';
+    ctx.strokeRect(x + i * (barW + 10), y, barW, h);
+    ctx.font = '11px Arial';
+    ctx.fillStyle = '#333';
+    ctx.textAlign = 'center';
+    ctx.fillText(`${percent > 0 ? '+' : ''}${Math.round(percent)}%`, x + i * (barW + 10) + barW / 2, y + h + 34);
+  });
+  ctx.strokeStyle = '#aaa';
+  ctx.beginPath();
+  ctx.moveTo(x - 5, y);
+  ctx.lineTo(x - 5, y + h);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(x - 5, y + h);
+  ctx.lineTo(x + w + 5, y + h);
+  ctx.stroke();
+  ctx.font = '10px Arial';
+  ctx.fillStyle = '#666';
+  ctx.fillText('100', x - 22, y + 10);
+  ctx.fillText('0', x - 15, y + h / 2 + 3);
+  ctx.fillText('100', x - 22, y + h - 5);
+}
 </script>
 
 <style scoped>
