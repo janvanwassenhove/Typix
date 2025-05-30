@@ -47,7 +47,7 @@ Typix is a web application for taking and generating reports for three popular p
    # or
    yarn dev
    ```
-4. Open your browser and navigate to `http://localhost:5173` (or the port shown in your terminal).
+4. Open your browser and navigate to `http://localhost:5174` (or the port shown in your terminal).
 
 ## Accessing on GitHub
 
