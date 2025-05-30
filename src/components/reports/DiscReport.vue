@@ -1,6 +1,17 @@
 <template>
   <div class="card">
     <div id="disc-report-content" class="report-content">
+      <!-- Tooltip for DISC abbreviations -->
+      <div class="disc-tooltip">
+        <span class="tooltip-label">What does <b>DISC</b> mean?</span>
+        <span class="tooltip-content">
+          <b>D</b>: Dominance &nbsp;|&nbsp;
+          <b>I</b>: Influence &nbsp;|&nbsp;
+          <b>S</b>: Steadiness &nbsp;|&nbsp;
+          <b>C</b>: Conscientiousness
+        </span>
+      </div>
+      
       <div class="disc-chart">
         <canvas ref="chartCanvas" width="400" height="400"></canvas>
       </div>
@@ -616,6 +627,30 @@ const drawDiscCircle = () => {
   opacity: 0.6;
   cursor: not-allowed;
   transform: none;
+}
+
+.disc-tooltip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.tooltip-label {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.tooltip-content {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-size: 0.98rem;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  letter-spacing: 0.01em;
 }
 
 @media (max-width: 768px) {
