@@ -18,7 +18,7 @@
           <div v-for="(score, style) in styleScores" :key="style" class="score-item">
             <div class="score-label">{{ style }}</div>
             <div class="score-bar">
-              <div class="score-fill" :style="{ width: `${score}%`, backgroundColor: styleColors[style] }"></div>
+              <div class="score-fill" :style="{ width: `${score}%`, backgroundColor: getStyleColor(style) }"></div>
             </div>
             <div class="score-value">{{ score }}%</div>
           </div>
