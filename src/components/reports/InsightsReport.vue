@@ -23,16 +23,16 @@
       </div>
 
       <div class="primary-color">
-        <h3>Your Primary Color: {{ userName ? userName + ", " : '' }}{{ dominantColor.name }}</h3>
+        <h3>{{ t('insights_primary_color', { name: userName ? userName + ", " : '', color: dominantColor.name }) }}</h3>
         <div class="color-indicator" :style="{ backgroundColor: dominantColor.hex }"></div>
         <p class="color-description">{{ dominantColor.description }}</p>
         <div class="position-info">
-          <span class="position-label">Profile Position: {{ profilePosition }}</span>
+          <span class="position-label">{{ t('insights_profile_position') }}: {{ profilePosition }}</span>
         </div>
       </div>
 
       <div class="color-breakdown">
-        <h4>Color Energy Distribution</h4>
+        <h4>{{ t('insights_color_distribution') }}</h4>
         <div class="color-bars">
           <div v-for="color in colorData" :key="color.name" class="color-bar">
             <div class="bar-header">
@@ -53,17 +53,17 @@
       </div>
 
       <div class="profile-analysis">
-        <h4>Your Color Profile Analysis</h4>
+        <h4>{{ t('insights_profile_analysis') }}</h4>
         <div class="analysis-content">
           <p>{{ profileAnalysis.description }}</p>
           <div class="balance-indicator">
-            <span class="balance-label">Energy Balance: {{ profileAnalysis.balance }}</span>
+            <span class="balance-label">{{ t('insights_energy_balance') }}: {{ profileAnalysis.balance }}</span>
           </div>
         </div>
       </div>
 
       <div class="strengths-section">
-        <h4>Your Strengths</h4>
+        <h4>{{ t('insights_strengths') }}</h4>
         <div class="strengths-grid">
           <div v-for="strength in dominantColor.strengths" :key="strength" class="strength-item">
             {{ strength }}
@@ -72,7 +72,7 @@
       </div>
 
       <div class="development-areas">
-        <h4>Development Areas</h4>
+        <h4>{{ t('insights_development_areas') }}</h4>
         <ul>
           <li v-for="area in dominantColor.development" :key="area">{{ area }}</li>
         </ul>
@@ -103,8 +103,8 @@
         :disabled="isGeneratingPDF"
         class="btn btn-pdf"
       >
-        <span v-if="isGeneratingPDF">Generating PDF...</span>
-        <span v-else>📄 Download PDF Report</span>
+        <span v-if="isGeneratingPDF">{{ t('generating_pdf') }}</span>
+        <span v-else>📄 {{ t('download_pdf_report') }}</span>
       </button>
     </div>
   </div>

@@ -42,8 +42,62 @@ export const translations = {
 
     // Name Input Step
     your_name: 'Your Name',
-    enter_name: 'Enter your name'
+    enter_name: 'Enter your name',
+
+    // General
+    generating_pdf: 'Generating PDF...',
+    download_pdf_report: 'Download PDF Report',
+
+    // DISC Report Labels
+    disc_primary_style: 'Your Primary Style',
+    disc_profile_combination: 'Profile Combination',
+    disc_profile: '{profile} Profile',
+    disc_key_characteristics: 'Key Characteristics',
+    disc_behavioral_strengths: 'Behavioral Strengths',
+    disc_communication_style: 'Communication & Work Style',
+    disc_team_collaboration: 'Team Collaboration',
+    disc_works_best_with: 'Works Best With',
+    disc_leader: 'LEADER',
+    disc_motivator: 'MOTIVATOR',
+    disc_supporter: 'SUPPORTER',
+    disc_analyst: 'ANALYST',
+
+    // DISC Styles
+    disc_style_d_name: 'Dominance',
+    disc_style_d_desc: 'Direct, results-oriented, firm, strong-willed, and forceful',
+    disc_style_d_trait_1: 'Decisive',
+    disc_style_d_trait_2: 'Competitive',
+    disc_style_d_trait_3: 'Results-focused',
+    disc_style_d_trait_4: 'Direct communication',
+    disc_style_d_tip_1: 'Be direct and to the point',
+    disc_style_d_tip_2: 'Focus on results and outcomes',
+    disc_style_d_tip_3: 'Provide options and let them choose',
+    disc_style_d_tip_4: 'Avoid too much detail or small talk',
+
+    // DISC Combinations
+    disc_combo_di_name: 'INITIATOR',
+    disc_combo_di_desc: 'Results-oriented and people-focused. You drive initiatives while inspiring others to follow.',
+    disc_combo_di_trait_1: 'Charismatic leader',
+    disc_combo_di_trait_2: 'Goal-oriented',
+    disc_combo_di_trait_3: 'Persuasive',
+    disc_combo_di_trait_4: 'Energetic',
+    disc_combo_di_trait_5: 'Risk-taker',
+    disc_combo_di_role: 'You excel at launching new projects and rallying team support.',
+    disc_combo_di_complement_1: 'S/C profiles for detailed execution',
+    disc_combo_di_complement_2: 'C profiles for analytical support',
+    disc_combo_di_complement_3: 'S profiles for steady implementation',
+
+    // Enneagram Report Labels
+    enneagram_position: 'Your Position on the Enneagram',
+    enneagram_type_scores: 'Type Scores',
+    enneagram_core_motivation: 'Core Motivation',
+    enneagram_basic_fear: 'Basic Fear',
+    enneagram_key_characteristics: 'Key Characteristics',
+    enneagram_growth_recommendations: 'Growth Recommendations',
+
+    // ...remaining keys...
   },
+
   es: {
     // App & Navigation
     app_title: 'Typix',
@@ -87,8 +141,62 @@ export const translations = {
 
     // Name Input Step
     your_name: 'Tu Nombre',
-    enter_name: 'Introduce tu nombre'
+    enter_name: 'Introduce tu nombre',
+
+    // General
+    generating_pdf: 'Generando PDF...',
+    download_pdf_report: 'Descargar Reporte PDF',
+
+    // DISC Report Labels
+    disc_primary_style: 'Tu Estilo Primario',
+    disc_profile_combination: 'Combinación de Perfil',
+    disc_profile: 'Perfil {profile}',
+    disc_key_characteristics: 'Características Clave',
+    disc_behavioral_strengths: 'Fortalezas Comportamentales',
+    disc_communication_style: 'Estilo de Comunicación y Trabajo',
+    disc_team_collaboration: 'Colaboración en Equipo',
+    disc_works_best_with: 'Mejor Con',
+    disc_leader: 'LÍDER',
+    disc_motivator: 'MOTIVADOR',
+    disc_supporter: 'SOPORTE',
+    disc_analyst: 'ANALISTA',
+
+    // DISC Styles
+    disc_style_d_name: 'Dominio',
+    disc_style_d_desc: 'Directo, orientado a resultados, firme, de voluntad fuerte y enérgico',
+    disc_style_d_trait_1: 'Decisivo',
+    disc_style_d_trait_2: 'Competitivo',
+    disc_style_d_trait_3: 'Enfocado en resultados',
+    disc_style_d_trait_4: 'Comunicación directa',
+    disc_style_d_tip_1: 'Sé directo y ve al grano',
+    disc_style_d_tip_2: 'Enfócate en los resultados y desenlaces',
+    disc_style_d_tip_3: 'Proporciona opciones y deja que elijan',
+    disc_style_d_tip_4: 'Evita demasiados detalles o charlas triviales',
+
+    // DISC Combinations
+    disc_combo_di_name: 'INICIADOR',
+    disc_combo_di_desc: 'Orientado a resultados y enfocado en las personas. Impulsas iniciativas mientras inspiras a otros a seguir.',
+    disc_combo_di_trait_1: 'Líder carismático',
+    disc_combo_di_trait_2: 'Orientado a objetivos',
+    disc_combo_di_trait_3: 'Persuasivo',
+    disc_combo_di_trait_4: 'Enérgico',
+    disc_combo_di_trait_5: 'Tomador de riesgos',
+    disc_combo_di_role: 'Destacas en el lanzamiento de nuevos proyectos y en reunir el apoyo del equipo.',
+    disc_combo_di_complement_1: 'Perfiles S/C para ejecución detallada',
+    disc_combo_di_complement_2: 'Perfiles C para apoyo analítico',
+    disc_combo_di_complement_3: 'Perfiles S para implementación constante',
+
+    // Enneagram Report Labels
+    enneagram_position: 'Tu Posición en el Eneagrama',
+    enneagram_type_scores: 'Puntuaciones por Tipo',
+    enneagram_core_motivation: 'Motivación Central',
+    enneagram_basic_fear: 'Miedo Básico',
+    enneagram_key_characteristics: 'Características Clave',
+    enneagram_growth_recommendations: 'Recomendaciones de Crecimiento',
+
+    // ...remaining keys...
   },
+
   fr: {
     // App & Navigation
     app_title: 'Typix',
@@ -132,8 +240,62 @@ export const translations = {
 
     // Name Input Step
     your_name: 'Votre Nom',
-    enter_name: 'Entrez votre nom'
+    enter_name: 'Entrez votre nom',
+
+    // General
+    generating_pdf: 'Génération du PDF...',
+    download_pdf_report: 'Télécharger le Rapport PDF',
+
+    // DISC Report Labels
+    disc_primary_style: 'Votre Style Principal',
+    disc_profile_combination: 'Combinaison de Profil',
+    disc_profile: 'Profil {profile}',
+    disc_key_characteristics: 'Caractéristiques Clés',
+    disc_behavioral_strengths: 'Forces Comportementales',
+    disc_communication_style: 'Style de Communication & de Travail',
+    disc_team_collaboration: 'Collaboration en Équipe',
+    disc_works_best_with: 'Fonctionne Mieux Avec',
+    disc_leader: 'LEADER',
+    disc_motivator: 'MOTIVATEUR',
+    disc_supporter: 'SUPPORTER',
+    disc_analyst: 'ANALYSTE',
+
+    // DISC Styles
+    disc_style_d_name: 'Dominance',
+    disc_style_d_desc: 'Direct, orienté résultats, ferme, volontaire et énergique',
+    disc_style_d_trait_1: 'Décisif',
+    disc_style_d_trait_2: 'Compétitif',
+    disc_style_d_trait_3: 'Axé sur les résultats',
+    disc_style_d_trait_4: 'Communication directe',
+    disc_style_d_tip_1: 'Soyez direct et allez droit au but',
+    disc_style_d_tip_2: 'Concentrez-vous sur les résultats et les conséquences',
+    disc_style_d_tip_3: 'Fournissez des options et laissez-les choisir',
+    disc_style_d_tip_4: 'Évitez trop de détails ou de bavardages',
+
+    // DISC Combinations
+    disc_combo_di_name: 'INITIATEUR',
+    disc_combo_di_desc: 'Orienté résultats et axé sur les personnes. Vous pilotez des initiatives tout en inspirant les autres à suivre.',
+    disc_combo_di_trait_1: 'Leader charismatique',
+    disc_combo_di_trait_2: 'Orienté vers les objectifs',
+    disc_combo_di_trait_3: 'Persuasif',
+    disc_combo_di_trait_4: 'Énergique',
+    disc_combo_di_trait_5: 'Prise de risque',
+    disc_combo_di_role: 'Vous excellez dans le lancement de nouveaux projets et le rassemblement du soutien de l’équipe.',
+    disc_combo_di_complement_1: 'Profils S/C pour une exécution détaillée',
+    disc_combo_di_complement_2: 'Profils C pour un soutien analytique',
+    disc_combo_di_complement_3: 'Profils S pour une mise en œuvre stable',
+
+    // Enneagram Report Labels
+    enneagram_position: 'Votre Position sur l\'Ennéagramme',
+    enneagram_type_scores: 'Scores par Type',
+    enneagram_core_motivation: 'Motivation Principale',
+    enneagram_basic_fear: 'Peur de Base',
+    enneagram_key_characteristics: 'Caractéristiques Clés',
+    enneagram_growth_recommendations: 'Recommandations de Croissance',
+
+    // ...remaining keys...
   },
+
   de: {
     // App & Navigation
     app_title: 'Typix',
@@ -177,8 +339,62 @@ export const translations = {
 
     // Name Input Step
     your_name: 'Ihr Name',
-    enter_name: 'Geben Sie Ihren Namen ein'
+    enter_name: 'Geben Sie Ihren Namen ein',
+
+    // General
+    generating_pdf: 'PDF wird erstellt...',
+    download_pdf_report: 'PDF-Bericht herunterladen',
+
+    // DISC Report Labels
+    disc_primary_style: 'Ihr Primärer Stil',
+    disc_profile_combination: 'Profilkombination',
+    disc_profile: '{profile} Profil',
+    disc_key_characteristics: 'Schlüsselmerkmale',
+    disc_behavioral_strengths: 'Verhaltensstärken',
+    disc_communication_style: 'Kommunikations- & Arbeitsstil',
+    disc_team_collaboration: 'Teamzusammenarbeit',
+    disc_works_best_with: 'Am besten mit',
+    disc_leader: 'FÜHRER',
+    disc_motivator: 'MOTIVATOR',
+    disc_supporter: 'UNTERSTÜTZER',
+    disc_analyst: 'ANALYST',
+
+    // DISC Styles
+    disc_style_d_name: 'Dominanz',
+    disc_style_d_desc: 'Direkt, ergebnisorientiert, fest, willensstark und durchsetzungsfähig',
+    disc_style_d_trait_1: 'Entscheidungsfreudig',
+    disc_style_d_trait_2: 'Wettbewerbsfähig',
+    disc_style_d_trait_3: 'Ergebnisorientiert',
+    disc_style_d_trait_4: 'Direkte Kommunikation',
+    disc_style_d_tip_1: 'Seien Sie direkt und kommen Sie zur Sache',
+    disc_style_d_tip_2: 'Konzentrieren Sie sich auf Ergebnisse und Auswirkungen',
+    disc_style_d_tip_3: 'Bieten Sie Optionen an und lassen Sie sie wählen',
+    disc_style_d_tip_4: 'Vermeiden Sie zu viele Details oder Small Talk',
+
+    // DISC Combinations
+    disc_combo_di_name: 'INITIATOR',
+    disc_combo_di_desc: 'Ergebnisorientiert und menschenorientiert. Sie treiben Initiativen voran, während Sie andere inspirieren, Ihnen zu folgen.',
+    disc_combo_di_trait_1: 'Charismatischer Führer',
+    disc_combo_di_trait_2: 'Zielorientiert',
+    disc_combo_di_trait_3: 'Überzeugend',
+    disc_combo_di_trait_4: 'Energiegeladen',
+    disc_combo_di_trait_5: 'Risikoaffin',
+    disc_combo_di_role: 'Sie excel in der Einleitung neuer Projekte und der Mobilisierung der Unterstützung des Teams.',
+    disc_combo_di_complement_1: 'S/C-Profile für detaillierte Ausführung',
+    disc_combo_di_complement_2: 'C-Profile für analytische Unterstützung',
+    disc_combo_di_complement_3: 'S-Profile für stetige Umsetzung',
+
+    // Enneagram Report Labels
+    enneagram_position: 'Ihre Position im Enneagramm',
+    enneagram_type_scores: 'Typwerte',
+    enneagram_core_motivation: 'Kernmotivation',
+    enneagram_basic_fear: 'Grundangst',
+    enneagram_key_characteristics: 'Schlüsselmerkmale',
+    enneagram_growth_recommendations: 'Wachstums Empfehlungen',
+
+    // ...remaining keys...
   },
+
   nl: {
     // App & Navigation
     app_title: 'Typix',
@@ -222,6 +438,59 @@ export const translations = {
 
     // Name Input Step
     your_name: 'Jouw Naam',
-    enter_name: 'Vul je naam in'
+    enter_name: 'Vul je naam in',
+
+    // General
+    generating_pdf: 'PDF aan het genereren...',
+    download_pdf_report: 'Download PDF Rapport',
+
+    // DISC Report Labels
+    disc_primary_style: 'Jouw Primaire Stijl',
+    disc_profile_combination: 'Profielcombinatie',
+    disc_profile: '{profile} Profiel',
+    disc_key_characteristics: 'Sleutelkenmerken',
+    disc_behavioral_strengths: 'Gedragssterkten',
+    disc_communication_style: 'Communicatie- & Werkstijl',
+    disc_team_collaboration: 'Team Samenwerking',
+    disc_works_best_with: 'Werkt Het Beste Met',
+    disc_leader: 'LEIDER',
+    disc_motivator: 'MOTIVATOR',
+    disc_supporter: 'ONDERSTEUNER',
+    disc_analyst: 'ANALIST',
+
+    // DISC Styles
+    disc_style_d_name: 'Dominantie',
+    disc_style_d_desc: 'Direct, resultaatgericht, stevig, vastberaden en doortastend',
+    disc_style_d_trait_1: 'Besluitvaardig',
+    disc_style_d_trait_2: 'Competitief',
+    disc_style_d_trait_3: 'Resultaatgericht',
+    disc_style_d_trait_4: 'Directe communicatie',
+    disc_style_d_tip_1: 'Wees direct en kom ter zake',
+    disc_style_d_tip_2: 'Focus op resultaten en uitkomsten',
+    disc_style_d_tip_3: 'Bied opties aan en laat ze kiezen',
+    disc_style_d_tip_4: 'Vermijd te veel details of small talk',
+
+    // DISC Combinations
+    disc_combo_di_name: 'INITIATOR',
+    disc_combo_di_desc: 'Resultaatgericht en mensengericht. Je drijft initiatieven terwijl je anderen inspireert om te volgen.',
+    disc_combo_di_trait_1: 'Charismatische leider',
+    disc_combo_di_trait_2: 'Doelgericht',
+    disc_combo_di_trait_3: 'Overtuigend',
+    disc_combo_di_trait_4: 'Energiek',
+    disc_combo_di_trait_5: 'Risicozoekend',
+    disc_combo_di_role: 'Je blinkt uit in het lanceren van nieuwe projecten en het verzamelen van teamondersteuning.',
+    disc_combo_di_complement_1: 'S/C-profielen voor gedetailleerde uitvoering',
+    disc_combo_di_complement_2: 'C-profielen voor analytische ondersteuning',
+    disc_combo_di_complement_3: 'S-profielen voor stabiele implementatie',
+
+    // Enneagram Report Labels
+    enneagram_position: 'Jouw Positie op het Enneagram',
+    enneagram_type_scores: 'Type Scores',
+    enneagram_core_motivation: 'Kernmotivatie',
+    enneagram_basic_fear: 'Basisangst',
+    enneagram_key_characteristics: 'Sleutelkenmerken',
+    enneagram_growth_recommendations: 'Groei Aanbevelingen',
+
+    // ...remaining keys...
   }
 }

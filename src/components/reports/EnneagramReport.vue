@@ -11,7 +11,7 @@
 
       <!-- Enneagram Visualization -->
       <div class="enneagram-visualization">
-        <h4>Your Position on the Enneagram</h4>
+        <h4>{{ t('enneagram_position') }}</h4>
         <div class="enneagram-circle">
           <svg viewBox="0 0 400 400" class="enneagram-svg">
             <!-- Outer circle -->
@@ -71,7 +71,7 @@
 
       <!-- Score Breakdown -->
       <div class="score-breakdown">
-        <h4>Type Scores</h4>
+        <h4>{{ t('enneagram_type_scores') }}</h4>
         <div class="scores-grid">
           <div 
             v-for="(score, type) in typeScores" 
@@ -94,37 +94,37 @@
       </div>
 
       <div class="description-section">
-        <h4>Core Motivation</h4>
+        <h4>{{ t('enneagram_core_motivation') }}</h4>
         <p>{{ typeData.motivation }}</p>
         
-        <h4>Basic Fear</h4>
+        <h4>{{ t('enneagram_basic_fear') }}</h4>
         <p>{{ typeData.fear }}</p>
         
-        <h4>Key Characteristics</h4>
+        <h4>{{ t('enneagram_key_characteristics') }}</h4>
         <ul>
           <li v-for="trait in typeData.traits" :key="trait">{{ trait }}</li>
         </ul>
       </div>
 
       <div class="growth-section">
-        <h4>Growth Recommendations</h4>
+        <h4>{{ t('enneagram_growth_recommendations') }}</h4>
         <div class="growth-tips">
           <div v-for="tip in typeData.growth" :key="tip" class="growth-tip">
             {{ tip }}
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="pdf-actions">
-      <button 
-        @click="downloadPDF" 
-        :disabled="isGeneratingPDF"
-        class="btn btn-pdf"
-      >
-        <span v-if="isGeneratingPDF">Generating PDF...</span>
-        <span v-else>📄 Download PDF Report</span>
-      </button>
+      <div class="pdf-actions">
+        <button 
+          @click="downloadPDF" 
+          :disabled="isGeneratingPDF"
+          class="btn btn-pdf"
+        >
+          <span v-if="isGeneratingPDF">{{ t('generating_pdf') }}</span>
+          <span v-else>📄 {{ t('download_pdf_report') }}</span>
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -132,12 +132,14 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { usePdfExport } from '../../composables/usePdfExport'
+import { useTranslations } from '../../composables/useTranslations'
 
 const props = defineProps<{
   results: Record<number, number>
 }>()
 
 const { generatePDF, isGeneratingPDF } = usePdfExport()
+const { t } = useTranslations()
 
 const downloadPDF = async () => {
   try {
