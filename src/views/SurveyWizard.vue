@@ -45,10 +45,10 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
+import { useTranslations } from '../composables/useTranslations'
 import enneagramQuestions from '../data/enneagram-questions.json'
 import discQuestions from '../data/disc-questions.json'
 import insightsQuestions from '../data/insights-questions.json'
-import { useTranslations } from '../composables/useTranslations'
 import EnneagramSurvey from '../components/surveys/EnneagramSurvey.vue'
 import DiscSurvey from '../components/surveys/DiscSurvey.vue'
 import InsightsSurvey from '../components/surveys/InsightsSurvey.vue'
@@ -65,19 +65,21 @@ const answers = ref<Record<number, any>>({})
 const userName = ref('')
 const nameStep = ref(true)
 
+const currentLang = computed(() => currentLanguage || 'en')
+
 // Update totalSteps based on survey type
 const totalSteps = computed(() => {
-  const lang = currentLanguage.value || 'en'
+  const lang = currentLang.value
   if (surveyType.value === 'insights') {
-    const questions = insightsQuestions[lang] || insightsQuestions.en
+    const questions = insightsQuestions[lang as keyof typeof insightsQuestions] || insightsQuestions.en
     return questions.length
   }
   if (surveyType.value === 'disc') {
-    const questions = discQuestions[lang] || discQuestions.en
+    const questions = discQuestions[lang as keyof typeof discQuestions] || discQuestions.en
     return questions.length
   }
   // Default to enneagram
-  const questions = enneagramQuestions[lang] || enneagramQuestions.en
+  const questions = enneagramQuestions[lang as keyof typeof enneagramQuestions] || enneagramQuestions.en
   return questions.length
 })
 
