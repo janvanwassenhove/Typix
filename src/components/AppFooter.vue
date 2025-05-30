@@ -28,7 +28,7 @@
       <div class="footer-bottom">
         <div class="footer-divider"></div>
         <div class="footer-meta">
-          <span class="footer-copyright">© 2024 {{ t('app_title') }}. All rights reserved.</span>
+          <span class="footer-copyright">© 2025 {{ t('app_title') }}. All rights reserved.</span>
           <p class="mb-0">Follow mITy.John on
           <a href="https://www.instagram.com/mity.john/" class="text-white"><i class="fab fa-instagram"></i></a>&nbsp;
           <a href="https://www.linkedin.com/in/jan-van-wassenhove-9b49893/" class="text-white"><i class="fab fa-linkedin"></i></a>&nbsp;
