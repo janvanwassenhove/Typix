@@ -41,7 +41,7 @@
               </g>
             </g>
             <!-- Draw circles and text OUTSIDE the rotation group so they are always upright -->
-            <g v-for="(type, idx) in positions" :key="type.number">
+            <g v-for="type in positions" :key="type.number">
               <circle 
                 :cx="type.x" 
                 :cy="type.y" 
@@ -339,7 +339,7 @@ const typeScores = computed(() => {
   const scores = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 }
 
   // Assume each answer index maps to a type: 0->1, 1->2, ..., 8->9
-  Object.entries(props.results).forEach(([questionIndex, answerIndex]) => {
+  Object.values(props.results).forEach((answerIndex) => {
     const type = (Number(answerIndex) % 9) + 1
     scores[type as keyof typeof scores] += 1
   })
