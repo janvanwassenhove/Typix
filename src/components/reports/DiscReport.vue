@@ -329,31 +329,39 @@ const drawDiscCircle = () => {
   })
   
   // Draw combination segments
+  // Order must match visual positions (starting at top, clockwise)
   const combinations = [
-    'D/I', 'I/D', 'I/S', 'S/I', 'S/C', 'C/S', 'C/D', 'D/C'
+    'D/I', // top
+    'I/D', // top-right
+    'I/S', // right
+    'S/I', // bottom-right
+    'S/C', // bottom
+    'C/S', // bottom-left
+    'C/D', // left
+    'D/C'  // top-left
   ]
-  
+
   combinations.forEach((combo, index) => {
     const angle = (index * Math.PI / 4) - Math.PI/2 + Math.PI/8
     const radius = (outerRadius + innerRadius) / 2
-    
+
     ctx.fillStyle = '#333'
     ctx.font = 'bold 11px Arial'
     ctx.textAlign = 'center'
     ctx.textBaseline = 'middle'
-    
+
     const x = centerX + Math.cos(angle) * radius
     const y = centerY + Math.sin(angle) * radius
     ctx.fillText(combo, x, y)
   })
-  
-  // Highlight user's combination
+
+  // Highlight user's combination (use exact match, not normalized)
   const userCombo = profileCombination.value
   const comboIndex = combinations.indexOf(userCombo)
   if (comboIndex !== -1) {
     const angle = (comboIndex * Math.PI / 4) - Math.PI/2 + Math.PI/8
     const radius = (outerRadius + innerRadius) / 2
-    
+
     ctx.beginPath()
     ctx.arc(
       centerX + Math.cos(angle) * radius,
