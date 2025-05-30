@@ -1,0 +1,5262 @@
+{
+  "nl": [
+    {
+      "text": "Hoe reageer je op strakke deadlines?",
+      "options": [
+        {
+          "text": "Ik neem de leiding en handel snel",
+          "value": "red"
+        },
+        {
+          "text": "Ik blijf kalm en werk samen",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik maak een plan en analyseer",
+          "value": "blue"
+        },
+        {
+          "text": "Ik ondersteun anderen bij stress",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat doe je als je team vastloopt?",
+      "options": [
+        {
+          "text": "Ik geef duidelijke richting",
+          "value": "red"
+        },
+        {
+          "text": "Ik stel voor om samen even pauze te nemen",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik onderzoek eerst wat er precies misloopt",
+          "value": "blue"
+        },
+        {
+          "text": "Ik luister naar iedereen om rust te brengen",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe start je het liefst een nieuwe werkdag?",
+      "options": [
+        {
+          "text": "Door meteen in actie te schieten",
+          "value": "red"
+        },
+        {
+          "text": "Met een koffietje en babbel met collega’s",
+          "value": "yellow"
+        },
+        {
+          "text": "Met een duidelijke lijst van prioriteiten",
+          "value": "blue"
+        },
+        {
+          "text": "Door rustig te checken hoe iedereen zich voelt",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat motiveert je het meest op het werk?",
+      "options": [
+        {
+          "text": "Resultaten behalen",
+          "value": "red"
+        },
+        {
+          "text": "Innovatie en vrijheid",
+          "value": "yellow"
+        },
+        {
+          "text": "Nauwkeurigheid en orde",
+          "value": "blue"
+        },
+        {
+          "text": "Harmonie en teamgevoel",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe neem je beslissingen?",
+      "options": [
+        {
+          "text": "Snel, op basis van ervaring",
+          "value": "red"
+        },
+        {
+          "text": "Door creatieve ideeën te verkennen",
+          "value": "yellow"
+        },
+        {
+          "text": "Pas na een grondige analyse",
+          "value": "blue"
+        },
+        {
+          "text": "Na overleg met anderen",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat stoort je het meest in een team?",
+      "options": [
+        {
+          "text": "Traagheid en besluiteloosheid",
+          "value": "red"
+        },
+        {
+          "text": "Gebrek aan sfeer en spontaniteit",
+          "value": "yellow"
+        },
+        {
+          "text": "Slordigheid of onnauwkeurigheid",
+          "value": "blue"
+        },
+        {
+          "text": "Onrespectvolle communicatie",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe geef je het liefst feedback?",
+      "options": [
+        {
+          "text": "Kort en duidelijk",
+          "value": "red"
+        },
+        {
+          "text": "Positief en met een glimlach",
+          "value": "yellow"
+        },
+        {
+          "text": "Feiten en observaties delen",
+          "value": "blue"
+        },
+        {
+          "text": "Empathisch en respectvol",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe werk je aan een nieuw project?",
+      "options": [
+        {
+          "text": "Door snel richting en structuur te geven",
+          "value": "red"
+        },
+        {
+          "text": "Door meteen het team te motiveren",
+          "value": "yellow"
+        },
+        {
+          "text": "Met een gedetailleerd stappenplan",
+          "value": "blue"
+        },
+        {
+          "text": "Door te overleggen over ieders noden",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat doe je als je iets nieuws moet leren?",
+      "options": [
+        {
+          "text": "Ik leer door te doen",
+          "value": "red"
+        },
+        {
+          "text": "Ik ga op zoek naar inspirerende voorbeelden",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik lees erover en test methodisch",
+          "value": "blue"
+        },
+        {
+          "text": "Ik vraag tips aan collega’s",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe reageer je op veranderingen?",
+      "options": [
+        {
+          "text": "Ik neem snel actie om richting te houden",
+          "value": "red"
+        },
+        {
+          "text": "Ik zie het als een kans om te vernieuwen",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik analyseer eerst de impact",
+          "value": "blue"
+        },
+        {
+          "text": "Ik pas me aan zolang het team mee is",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat is jouw aanpak bij conflicten?",
+      "options": [
+        {
+          "text": "Ik grijp in en probeer het meteen op te lossen",
+          "value": "red"
+        },
+        {
+          "text": "Ik zoek naar creatieve oplossingen voor beide partijen",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik bekijk de feiten en probeer objectief te blijven",
+          "value": "blue"
+        },
+        {
+          "text": "Ik probeer de rust te bewaren en te bemiddelen",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe werk je samen met anderen?",
+      "options": [
+        {
+          "text": "Ik neem initiatief en hou het team op tempo",
+          "value": "red"
+        },
+        {
+          "text": "Ik breng energie en enthousiasme in het team",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik focus op structuur en duidelijke afspraken",
+          "value": "blue"
+        },
+        {
+          "text": "Ik bied een luisterend oor en help waar nodig",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe bereid je een presentatie voor?",
+      "options": [
+        {
+          "text": "Ik focus op de kern en maak een strakke boodschap",
+          "value": "red"
+        },
+        {
+          "text": "Ik denk na over hoe ik het boeiend kan brengen",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik verzamel feiten en zorg voor een logische opbouw",
+          "value": "blue"
+        },
+        {
+          "text": "Ik check of het aansluit bij de noden van het publiek",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe ga je om met fouten?",
+      "options": [
+        {
+          "text": "Ik herstel snel en leer ervan",
+          "value": "red"
+        },
+        {
+          "text": "Ik lach ermee en kijk vooruit",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik analyseer de oorzaak grondig",
+          "value": "blue"
+        },
+        {
+          "text": "Ik reflecteer en praat erover met anderen",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat is jouw rol in teamvergaderingen?",
+      "options": [
+        {
+          "text": "Ik hou het doel voor ogen en stuur bij",
+          "value": "red"
+        },
+        {
+          "text": "Ik breng leven in de discussie",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik let op de inhoud en maak notities",
+          "value": "blue"
+        },
+        {
+          "text": "Ik zorg dat iedereen aan bod komt",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat is jouw eerste reactie bij kritiek?",
+      "options": [
+        {
+          "text": "Ik luister en ga meteen naar actie",
+          "value": "red"
+        },
+        {
+          "text": "Ik blijf positief en neem het niet persoonlijk",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik evalueer of het onderbouwd is",
+          "value": "blue"
+        },
+        {
+          "text": "Ik laat het even bezinken en zoek dialoog",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe reageer je op onverwachte opdrachten?",
+      "options": [
+        {
+          "text": "Ik neem het voortouw en begin er direct aan",
+          "value": "red"
+        },
+        {
+          "text": "Ik bekijk het als een nieuwe kans",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik structureer het en bepaal eerst een plan",
+          "value": "blue"
+        },
+        {
+          "text": "Ik overleg met anderen om het te coördineren",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe omschrijf je jouw communicatie?",
+      "options": [
+        {
+          "text": "To the point en direct",
+          "value": "red"
+        },
+        {
+          "text": "Spontaan en enthousiast",
+          "value": "yellow"
+        },
+        {
+          "text": "Duidelijk en feitelijk",
+          "value": "blue"
+        },
+        {
+          "text": "Warm en ondersteunend",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat waardeer je het meest in collega’s?",
+      "options": [
+        {
+          "text": "Besluitvaardigheid",
+          "value": "red"
+        },
+        {
+          "text": "Creativiteit",
+          "value": "yellow"
+        },
+        {
+          "text": "Grondigheid",
+          "value": "blue"
+        },
+        {
+          "text": "Betrokkenheid",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe stel je doelen?",
+      "options": [
+        {
+          "text": "Ambitieus en actiegericht",
+          "value": "red"
+        },
+        {
+          "text": "Visiegedreven en inspirerend",
+          "value": "yellow"
+        },
+        {
+          "text": "SMART en meetbaar",
+          "value": "blue"
+        },
+        {
+          "text": "Realistisch en in overleg",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe reageer je als iemand je plan in vraag stelt?",
+      "options": [
+        {
+          "text": "Ik blijf erbij en verdedig mijn aanpak",
+          "value": "red"
+        },
+        {
+          "text": "Ik luister maar blijf wel enthousiast",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik bekijk of hun feedback inhoudelijk klopt",
+          "value": "blue"
+        },
+        {
+          "text": "Ik probeer hun zorgen te begrijpen",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat typeert jouw manier van werken?",
+      "options": [
+        {
+          "text": "Doelgericht en efficiënt",
+          "value": "red"
+        },
+        {
+          "text": "Flexibel en inspirerend",
+          "value": "yellow"
+        },
+        {
+          "text": "Nauwkeurig en gestructureerd",
+          "value": "blue"
+        },
+        {
+          "text": "Samenwerkend en geduldig",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe ga je om met routinewerk?",
+      "options": [
+        {
+          "text": "Ik probeer het sneller en efficiënter te doen",
+          "value": "red"
+        },
+        {
+          "text": "Ik zoek manieren om het leuker te maken",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik voer het nauwgezet en zorgvuldig uit",
+          "value": "blue"
+        },
+        {
+          "text": "Ik doe het omdat het belangrijk is voor het team",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat doe je bij onduidelijke verwachtingen?",
+      "options": [
+        {
+          "text": "Ik bepaal zelf de richting",
+          "value": "red"
+        },
+        {
+          "text": "Ik stel vragen en probeer het luchtig te houden",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik vraag verduidelijking tot alles helder is",
+          "value": "blue"
+        },
+        {
+          "text": "Ik zoek afstemming met collega's",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe reageer je op feedback die je niet had verwacht?",
+      "options": [
+        {
+          "text": "Ik handel snel om het recht te zetten",
+          "value": "red"
+        },
+        {
+          "text": "Ik relativeer en blijf positief",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik analyseer het en trek conclusies",
+          "value": "blue"
+        },
+        {
+          "text": "Ik voel me geraakt, maar probeer te begrijpen",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat is je aanpak bij groepsbeslissingen?",
+      "options": [
+        {
+          "text": "Ik neem de leiding als het te lang duurt",
+          "value": "red"
+        },
+        {
+          "text": "Ik stimuleer iedereen om mee te denken",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik probeer structuur aan te brengen in de discussie",
+          "value": "blue"
+        },
+        {
+          "text": "Ik let op dat iedereen zich gehoord voelt",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe ziet een ideale werkdag eruit?",
+      "options": [
+        {
+          "text": "Ik werk taken snel af en bereik mijn doelen",
+          "value": "red"
+        },
+        {
+          "text": "Ik krijg energie van brainstorms en gesprekken",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik heb de tijd om iets grondig af te werken",
+          "value": "blue"
+        },
+        {
+          "text": "Ik voel me verbonden met collega’s",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe reageer je op overvolle agenda’s?",
+      "options": [
+        {
+          "text": "Ik schrap wat niet dringend is en ga door",
+          "value": "red"
+        },
+        {
+          "text": "Ik improviseer en blijf flexibel",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik herstructureer mijn planning grondig",
+          "value": "blue"
+        },
+        {
+          "text": "Ik overleg wie eventueel kan helpen",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe benader je een moeilijke klant?",
+      "options": [
+        {
+          "text": "Met assertiviteit en duidelijkheid",
+          "value": "red"
+        },
+        {
+          "text": "Met charme en humor",
+          "value": "yellow"
+        },
+        {
+          "text": "Met feiten en goed voorbereide argumenten",
+          "value": "blue"
+        },
+        {
+          "text": "Met empathie en luisterbereidheid",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat doe je als een collega hulp nodig heeft?",
+      "options": [
+        {
+          "text": "Ik geef snel tips om door te gaan",
+          "value": "red"
+        },
+        {
+          "text": "Ik probeer hen te motiveren",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik analyseer eerst het probleem",
+          "value": "blue"
+        },
+        {
+          "text": "Ik maak tijd om samen te zoeken naar een oplossing",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe werk je een strategie uit?",
+      "options": [
+        {
+          "text": "Ik kies een richting en definieer de stappen",
+          "value": "red"
+        },
+        {
+          "text": "Ik verken ideeën en betrek anderen",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik onderzoek eerst de context en cijfers",
+          "value": "blue"
+        },
+        {
+          "text": "Ik zoek consensus en input van het team",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe ga je om met een meningsverschil?",
+      "options": [
+        {
+          "text": "Ik blijf bij mijn standpunt en voer debat",
+          "value": "red"
+        },
+        {
+          "text": "Ik probeer het luchtig te houden",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik baseer me op feiten en argumenten",
+          "value": "blue"
+        },
+        {
+          "text": "Ik zoek verbinding en begrip",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat is jouw sterkte als collega?",
+      "options": [
+        {
+          "text": "Ik zorg dat dingen vooruitgaan",
+          "value": "red"
+        },
+        {
+          "text": "Ik breng energie en fun",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik breng precisie en overzicht",
+          "value": "blue"
+        },
+        {
+          "text": "Ik ben betrouwbaar en behulpzaam",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat motiveert je in teamwerk?",
+      "options": [
+        {
+          "text": "Duidelijke doelen en snelheid",
+          "value": "red"
+        },
+        {
+          "text": "Leuke dynamiek en creativiteit",
+          "value": "yellow"
+        },
+        {
+          "text": "Een duidelijke structuur",
+          "value": "blue"
+        },
+        {
+          "text": "Vertrouwen en samenwerking",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe reageer je als iemand je werk bekritiseert?",
+      "options": [
+        {
+          "text": "Ik vraag wat beter kan en stuur bij",
+          "value": "red"
+        },
+        {
+          "text": "Ik blijf positief en kijk vooruit",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik analyseer of het terecht is",
+          "value": "blue"
+        },
+        {
+          "text": "Ik neem het serieus en overleg",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe reageer je als een deadline wordt vervroegd?",
+      "options": [
+        {
+          "text": "Ik herorganiseer en versneld werk ik verder",
+          "value": "red"
+        },
+        {
+          "text": "Ik blijf optimistisch en los het onderweg op",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik maak een nieuwe planning",
+          "value": "blue"
+        },
+        {
+          "text": "Ik overleg met betrokkenen over de impact",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat doe je bij een onverwachte wending in een project?",
+      "options": [
+        {
+          "text": "Ik neem beslissingen om het bij te sturen",
+          "value": "red"
+        },
+        {
+          "text": "Ik zoek nieuwe kansen in de situatie",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik herbekijk de doelen en risico's",
+          "value": "blue"
+        },
+        {
+          "text": "Ik zorg dat iedereen mee is in de verandering",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe werk je het liefst samen met een leidinggevende?",
+      "options": [
+        {
+          "text": "Met veel autonomie",
+          "value": "red"
+        },
+        {
+          "text": "In een open en creatieve sfeer",
+          "value": "yellow"
+        },
+        {
+          "text": "Met duidelijke afspraken",
+          "value": "blue"
+        },
+        {
+          "text": "Met regelmatige check-ins",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat is je aanpak bij een nieuwe uitdaging?",
+      "options": [
+        {
+          "text": "Vol erin en zien waar we uitkomen",
+          "value": "red"
+        },
+        {
+          "text": "Ik zie het als kans om te groeien",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik verzamel info en maak een plan",
+          "value": "blue"
+        },
+        {
+          "text": "Ik praat met collega's over hun aanpak",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe zorg je voor balans in drukke tijden?",
+      "options": [
+        {
+          "text": "Ik focus op prioriteiten",
+          "value": "red"
+        },
+        {
+          "text": "Ik zoek afleiding en energie",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik plan mijn werk nog strikter",
+          "value": "blue"
+        },
+        {
+          "text": "Ik praat erover met het team",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe help je iemand die onzeker is?",
+      "options": [
+        {
+          "text": "Ik geef hen richting",
+          "value": "red"
+        },
+        {
+          "text": "Ik probeer hen op te vrolijken",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik geef feiten en geruststelling",
+          "value": "blue"
+        },
+        {
+          "text": "Ik luister en moedig hen aan",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe ga je om met onvoorziene obstakels?",
+      "options": [
+        {
+          "text": "Ik reageer snel en pas mijn plan aan",
+          "value": "red"
+        },
+        {
+          "text": "Ik blijf positief en creatief",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik herbekijk het geheel en pas aan",
+          "value": "blue"
+        },
+        {
+          "text": "Ik overleg met het team voor steun",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat maakt een team sterk volgens jou?",
+      "options": [
+        {
+          "text": "Besluitvaardigheid",
+          "value": "red"
+        },
+        {
+          "text": "Inspiratie en enthousiasme",
+          "value": "yellow"
+        },
+        {
+          "text": "Duidelijkheid en regels",
+          "value": "blue"
+        },
+        {
+          "text": "Vertrouwen en empathie",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe begin je aan een groot project?",
+      "options": [
+        {
+          "text": "Met een kickoff en directe actie",
+          "value": "red"
+        },
+        {
+          "text": "Met een creatieve brainstorm",
+          "value": "yellow"
+        },
+        {
+          "text": "Met analyse en planning",
+          "value": "blue"
+        },
+        {
+          "text": "Met overleg en afstemming",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat typeert jouw leiderschapsstijl?",
+      "options": [
+        {
+          "text": "Resultaatgericht",
+          "value": "red"
+        },
+        {
+          "text": "Motiverend",
+          "value": "yellow"
+        },
+        {
+          "text": "Beleidsmatig",
+          "value": "blue"
+        },
+        {
+          "text": "Coachend",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat doe je als je veel tegelijk moet doen?",
+      "options": [
+        {
+          "text": "Ik ga voluit aan de slag",
+          "value": "red"
+        },
+        {
+          "text": "Ik vertrouw op improvisatie",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik maak een overzicht en plan",
+          "value": "blue"
+        },
+        {
+          "text": "Ik vraag hulp waar nodig",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat doe je bij een meningsverschil in het team?",
+      "options": [
+        {
+          "text": "Ik hak de knoop door",
+          "value": "red"
+        },
+        {
+          "text": "Ik probeer de sfeer goed te houden",
+          "value": "yellow"
+        },
+        {
+          "text": "Ik zoek een oplossing op basis van feiten",
+          "value": "blue"
+        },
+        {
+          "text": "Ik luister naar alle standpunten",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe sluit je een werkdag het liefst af?",
+      "options": [
+        {
+          "text": "Met het gevoel veel bereikt te hebben",
+          "value": "red"
+        },
+        {
+          "text": "Met een leuke babbel of grap",
+          "value": "yellow"
+        },
+        {
+          "text": "Met een duidelijke to-dolijst voor morgen",
+          "value": "blue"
+        },
+        {
+          "text": "In rust, met alles afgerond",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wat waardeer je in je werk?",
+      "options": [
+        {
+          "text": "Efficiëntie en resultaat",
+          "value": "red"
+        },
+        {
+          "text": "Vrijheid en creativiteit",
+          "value": "yellow"
+        },
+        {
+          "text": "Structuur en duidelijkheid",
+          "value": "blue"
+        },
+        {
+          "text": "Betrokkenheid en harmonie",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Hoe zorg je voor kwaliteit?",
+      "options": [
+        {
+          "text": "Door snel en correct te werken",
+          "value": "red"
+        },
+        {
+          "text": "Door vernieuwing en inspiratie",
+          "value": "yellow"
+        },
+        {
+          "text": "Door controle en standaarden",
+          "value": "blue"
+        },
+        {
+          "text": "Door zorg en aandacht",
+          "value": "green"
+        }
+      ]
+    }
+  ],
+    "en": [
+    {
+      "text": "How do you respond to tight deadlines?",
+      "options": [
+        {
+          "text": "I take the lead and act quickly",
+          "value": "red"
+        },
+        {
+          "text": "I stay calm and collaborate",
+          "value": "yellow"
+        },
+        {
+          "text": "I make a plan and analyze",
+          "value": "blue"
+        },
+        {
+          "text": "I support others under stress",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What do you do when your team gets stuck?",
+      "options": [
+        {
+          "text": "I provide clear direction",
+          "value": "red"
+        },
+        {
+          "text": "I suggest taking a short break together",
+          "value": "yellow"
+        },
+        {
+          "text": "I first investigate exactly what is going wrong",
+          "value": "blue"
+        },
+        {
+          "text": "I listen to everyone to bring calm",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you prefer to start a new workday?",
+      "options": [
+        {
+          "text": "By jumping straight into action",
+          "value": "red"
+        },
+        {
+          "text": "With a coffee and a chat with colleagues",
+          "value": "yellow"
+        },
+        {
+          "text": "With a clear list of priorities",
+          "value": "blue"
+        },
+        {
+          "text": "By calmly checking how everyone feels",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What motivates you most at work?",
+      "options": [
+        {
+          "text": "Achieving results",
+          "value": "red"
+        },
+        {
+          "text": "Innovation and freedom",
+          "value": "yellow"
+        },
+        {
+          "text": "Accuracy and order",
+          "value": "blue"
+        },
+        {
+          "text": "Harmony and team spirit",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you make decisions?",
+      "options": [
+        {
+          "text": "Quickly, based on experience",
+          "value": "red"
+        },
+        {
+          "text": "By exploring creative ideas",
+          "value": "yellow"
+        },
+        {
+          "text": "Only after thorough analysis",
+          "value": "blue"
+        },
+        {
+          "text": "After consulting with others",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What annoys you the most in a team?",
+      "options": [
+        {
+          "text": "Slowness and indecision",
+          "value": "red"
+        },
+        {
+          "text": "Lack of atmosphere and spontaneity",
+          "value": "yellow"
+        },
+        {
+          "text": "Sloppiness or inaccuracy",
+          "value": "blue"
+        },
+        {
+          "text": "Disrespectful communication",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you prefer to give feedback?",
+      "options": [
+        {
+          "text": "Brief and direct",
+          "value": "red"
+        },
+        {
+          "text": "Positive and with a smile",
+          "value": "yellow"
+        },
+        {
+          "text": "Sharing facts and observations",
+          "value": "blue"
+        },
+        {
+          "text": "Empathic and respectful",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you tackle a new project?",
+      "options": [
+        {
+          "text": "By quickly providing direction and structure",
+          "value": "red"
+        },
+        {
+          "text": "By immediately motivating the team",
+          "value": "yellow"
+        },
+        {
+          "text": "With a detailed step‑by‑step plan",
+          "value": "blue"
+        },
+        {
+          "text": "By discussing everyone's needs",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What do you do when you need to learn something new?",
+      "options": [
+        {
+          "text": "I learn by doing",
+          "value": "red"
+        },
+        {
+          "text": "I look for inspiring examples",
+          "value": "yellow"
+        },
+        {
+          "text": "I read about it and test methodically",
+          "value": "blue"
+        },
+        {
+          "text": "I ask colleagues for tips",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you respond to changes?",
+      "options": [
+        {
+          "text": "I take rapid action to keep direction",
+          "value": "red"
+        },
+        {
+          "text": "I see it as an opportunity to innovate",
+          "value": "yellow"
+        },
+        {
+          "text": "I first analyze the impact",
+          "value": "blue"
+        },
+        {
+          "text": "I adapt as long as the team is on board",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What is your approach to conflicts?",
+      "options": [
+        {
+          "text": "I intervene and try to solve it immediately",
+          "value": "red"
+        },
+        {
+          "text": "I look for creative solutions for both parties",
+          "value": "yellow"
+        },
+        {
+          "text": "I look at the facts and try to remain objective",
+          "value": "blue"
+        },
+        {
+          "text": "I try to keep calm and mediate",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you work with others?",
+      "options": [
+        {
+          "text": "I take initiative and keep the team up to speed",
+          "value": "red"
+        },
+        {
+          "text": "I bring energy and enthusiasm to the team",
+          "value": "yellow"
+        },
+        {
+          "text": "I focus on structure and clear agreements",
+          "value": "blue"
+        },
+        {
+          "text": "I offer a listening ear and help when needed",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you prepare a presentation?",
+      "options": [
+        {
+          "text": "I focus on the core and craft a concise message",
+          "value": "red"
+        },
+        {
+          "text": "I think about how to make it engaging",
+          "value": "yellow"
+        },
+        {
+          "text": "I gather facts and ensure logical structure",
+          "value": "blue"
+        },
+        {
+          "text": "I check that it meets the audience's needs",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you deal with mistakes?",
+      "options": [
+        {
+          "text": "I fix them quickly and learn from them",
+          "value": "red"
+        },
+        {
+          "text": "I laugh about it and move on",
+          "value": "yellow"
+        },
+        {
+          "text": "I thoroughly analyze the cause",
+          "value": "blue"
+        },
+        {
+          "text": "I reflect and talk about it with others",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What is your role in team meetings?",
+      "options": [
+        {
+          "text": "I keep the goal in mind and steer",
+          "value": "red"
+        },
+        {
+          "text": "I bring life to the discussion",
+          "value": "yellow"
+        },
+        {
+          "text": "I watch the content and take notes",
+          "value": "blue"
+        },
+        {
+          "text": "I ensure everyone has a voice",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What is your first reaction to criticism?",
+      "options": [
+        {
+          "text": "I listen and move straight to action",
+          "value": "red"
+        },
+        {
+          "text": "I stay positive and don't take it personally",
+          "value": "yellow"
+        },
+        {
+          "text": "I evaluate whether it's substantiated",
+          "value": "blue"
+        },
+        {
+          "text": "I let it sink in and seek dialogue",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you respond to unexpected assignments?",
+      "options": [
+        {
+          "text": "I take the lead and start right away",
+          "value": "red"
+        },
+        {
+          "text": "I see it as a new opportunity",
+          "value": "yellow"
+        },
+        {
+          "text": "I structure it and first set a plan",
+          "value": "blue"
+        },
+        {
+          "text": "I consult with others to coordinate",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How would you describe your communication?",
+      "options": [
+        {
+          "text": "To the point and direct",
+          "value": "red"
+        },
+        {
+          "text": "Spontaneous and enthusiastic",
+          "value": "yellow"
+        },
+        {
+          "text": "Clear and factual",
+          "value": "blue"
+        },
+        {
+          "text": "Warm and supportive",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What do you value most in colleagues?",
+      "options": [
+        {
+          "text": "Decisiveness",
+          "value": "red"
+        },
+        {
+          "text": "Creativity",
+          "value": "yellow"
+        },
+        {
+          "text": "Thoroughness",
+          "value": "blue"
+        },
+        {
+          "text": "Commitment",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you set goals?",
+      "options": [
+        {
+          "text": "Ambitious and action‑oriented",
+          "value": "red"
+        },
+        {
+          "text": "Vision‑driven and inspiring",
+          "value": "yellow"
+        },
+        {
+          "text": "SMART and measurable",
+          "value": "blue"
+        },
+        {
+          "text": "Realistic and in consultation",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you react when someone questions your plan?",
+      "options": [
+        {
+          "text": "I stick to it and defend my approach",
+          "value": "red"
+        },
+        {
+          "text": "I listen but remain enthusiastic",
+          "value": "yellow"
+        },
+        {
+          "text": "I check whether their feedback is valid",
+          "value": "blue"
+        },
+        {
+          "text": "I try to understand their concerns",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What characterizes your way of working?",
+      "options": [
+        {
+          "text": "Goal‑oriented and efficient",
+          "value": "red"
+        },
+        {
+          "text": "Flexible and inspiring",
+          "value": "yellow"
+        },
+        {
+          "text": "Accurate and structured",
+          "value": "blue"
+        },
+        {
+          "text": "Collaborative and patient",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you deal with routine work?",
+      "options": [
+        {
+          "text": "I try to do it faster and more efficiently",
+          "value": "red"
+        },
+        {
+          "text": "I look for ways to make it more fun",
+          "value": "yellow"
+        },
+        {
+          "text": "I execute it diligently and carefully",
+          "value": "blue"
+        },
+        {
+          "text": "I do it because it's important for the team",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What do you do when expectations are unclear?",
+      "options": [
+        {
+          "text": "I determine the direction myself",
+          "value": "red"
+        },
+        {
+          "text": "I ask questions and try to keep it light",
+          "value": "yellow"
+        },
+        {
+          "text": "I ask for clarification until everything is clear",
+          "value": "blue"
+        },
+        {
+          "text": "I seek alignment with colleagues",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you react to feedback you didn't expect?",
+      "options": [
+        {
+          "text": "I act quickly to put it right",
+          "value": "red"
+        },
+        {
+          "text": "I put it in perspective and stay positive",
+          "value": "yellow"
+        },
+        {
+          "text": "I analyze it and draw conclusions",
+          "value": "blue"
+        },
+        {
+          "text": "I feel touched but try to understand",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What is your approach to group decisions?",
+      "options": [
+        {
+          "text": "I take the lead if it takes too long",
+          "value": "red"
+        },
+        {
+          "text": "I encourage everyone to contribute ideas",
+          "value": "yellow"
+        },
+        {
+          "text": "I try to bring structure to the discussion",
+          "value": "blue"
+        },
+        {
+          "text": "I ensure everyone feels heard",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What does an ideal workday look like for you?",
+      "options": [
+        {
+          "text": "I quickly finish tasks and reach my goals",
+          "value": "red"
+        },
+        {
+          "text": "I get energy from brainstorms and conversations",
+          "value": "yellow"
+        },
+        {
+          "text": "I have time to complete something thoroughly",
+          "value": "blue"
+        },
+        {
+          "text": "I feel connected with colleagues",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you react to packed schedules?",
+      "options": [
+        {
+          "text": "I cut what isn't urgent and move on",
+          "value": "red"
+        },
+        {
+          "text": "I improvise and stay flexible",
+          "value": "yellow"
+        },
+        {
+          "text": "I thoroughly restructure my planning",
+          "value": "blue"
+        },
+        {
+          "text": "I discuss who might help",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you approach a difficult client?",
+      "options": [
+        {
+          "text": "With assertiveness and clarity",
+          "value": "red"
+        },
+        {
+          "text": "With charm and humour",
+          "value": "yellow"
+        },
+        {
+          "text": "With facts and well‑prepared arguments",
+          "value": "blue"
+        },
+        {
+          "text": "With empathy and willingness to listen",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What do you do when a colleague needs help?",
+      "options": [
+        {
+          "text": "I quickly give tips to move on",
+          "value": "red"
+        },
+        {
+          "text": "I try to motivate them",
+          "value": "yellow"
+        },
+        {
+          "text": "I first analyze the problem",
+          "value": "blue"
+        },
+        {
+          "text": "I make time to look for a solution together",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you develop a strategy?",
+      "options": [
+        {
+          "text": "I choose a direction and define the steps",
+          "value": "red"
+        },
+        {
+          "text": "I explore ideas and involve others",
+          "value": "yellow"
+        },
+        {
+          "text": "I first research the context and figures",
+          "value": "blue"
+        },
+        {
+          "text": "I seek consensus and input from the team",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you handle a disagreement?",
+      "options": [
+        {
+          "text": "I stick to my viewpoint and debate",
+          "value": "red"
+        },
+        {
+          "text": "I try to keep it light",
+          "value": "yellow"
+        },
+        {
+          "text": "I base myself on facts and arguments",
+          "value": "blue"
+        },
+        {
+          "text": "I seek connection and understanding",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What is your strength as a colleague?",
+      "options": [
+        {
+          "text": "I ensure things move forward",
+          "value": "red"
+        },
+        {
+          "text": "I bring energy and fun",
+          "value": "yellow"
+        },
+        {
+          "text": "I provide precision and overview",
+          "value": "blue"
+        },
+        {
+          "text": "I am reliable and helpful",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What motivates you in teamwork?",
+      "options": [
+        {
+          "text": "Clear goals and speed",
+          "value": "red"
+        },
+        {
+          "text": "Fun dynamics and creativity",
+          "value": "yellow"
+        },
+        {
+          "text": "A clear structure",
+          "value": "blue"
+        },
+        {
+          "text": "Trust and collaboration",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you react when someone criticizes your work?",
+      "options": [
+        {
+          "text": "I ask what can be improved and adjust",
+          "value": "red"
+        },
+        {
+          "text": "I stay positive and look ahead",
+          "value": "yellow"
+        },
+        {
+          "text": "I analyze whether it is justified",
+          "value": "blue"
+        },
+        {
+          "text": "I take it seriously and discuss it",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you react when a deadline is moved forward?",
+      "options": [
+        {
+          "text": "I reorganize and work faster",
+          "value": "red"
+        },
+        {
+          "text": "I stay optimistic and solve it on the fly",
+          "value": "yellow"
+        },
+        {
+          "text": "I create a new schedule",
+          "value": "blue"
+        },
+        {
+          "text": "I discuss the impact with stakeholders",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What do you do when a project takes an unexpected turn?",
+      "options": [
+        {
+          "text": "I make decisions to steer it",
+          "value": "red"
+        },
+        {
+          "text": "I look for new opportunities in the situation",
+          "value": "yellow"
+        },
+        {
+          "text": "I review the goals and risks",
+          "value": "blue"
+        },
+        {
+          "text": "I ensure everyone is on board with the change",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you prefer to work with a manager?",
+      "options": [
+        {
+          "text": "With a lot of autonomy",
+          "value": "red"
+        },
+        {
+          "text": "In an open and creative atmosphere",
+          "value": "yellow"
+        },
+        {
+          "text": "With clear agreements",
+          "value": "blue"
+        },
+        {
+          "text": "With regular check‑ins",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What is your approach to a new challenge?",
+      "options": [
+        {
+          "text": "Dive in headfirst and see where we end up",
+          "value": "red"
+        },
+        {
+          "text": "I see it as a chance to grow",
+          "value": "yellow"
+        },
+        {
+          "text": "I gather information and make a plan",
+          "value": "blue"
+        },
+        {
+          "text": "I talk to colleagues about their approach",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you maintain balance in busy times?",
+      "options": [
+        {
+          "text": "I focus on priorities",
+          "value": "red"
+        },
+        {
+          "text": "I look for diversion and energy",
+          "value": "yellow"
+        },
+        {
+          "text": "I plan my work even more strictly",
+          "value": "blue"
+        },
+        {
+          "text": "I talk about it with the team",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you help someone who is insecure?",
+      "options": [
+        {
+          "text": "I give them direction",
+          "value": "red"
+        },
+        {
+          "text": "I try to cheer them up",
+          "value": "yellow"
+        },
+        {
+          "text": "I give facts and reassurance",
+          "value": "blue"
+        },
+        {
+          "text": "I listen and encourage them",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you deal with unforeseen obstacles?",
+      "options": [
+        {
+          "text": "I react quickly and adjust my plan",
+          "value": "red"
+        },
+        {
+          "text": "I stay positive and creative",
+          "value": "yellow"
+        },
+        {
+          "text": "I review the whole and adapt",
+          "value": "blue"
+        },
+        {
+          "text": "I consult the team for support",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What makes a team strong in your view?",
+      "options": [
+        {
+          "text": "Decisiveness",
+          "value": "red"
+        },
+        {
+          "text": "Inspiration and enthusiasm",
+          "value": "yellow"
+        },
+        {
+          "text": "Clarity and rules",
+          "value": "blue"
+        },
+        {
+          "text": "Trust and empathy",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you start a large project?",
+      "options": [
+        {
+          "text": "With a kickoff and immediate action",
+          "value": "red"
+        },
+        {
+          "text": "With a creative brainstorm",
+          "value": "yellow"
+        },
+        {
+          "text": "With analysis and planning",
+          "value": "blue"
+        },
+        {
+          "text": "With consultation and alignment",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What characterizes your leadership style?",
+      "options": [
+        {
+          "text": "Result‑oriented",
+          "value": "red"
+        },
+        {
+          "text": "Motivating",
+          "value": "yellow"
+        },
+        {
+          "text": "Policy‑driven",
+          "value": "blue"
+        },
+        {
+          "text": "Coaching",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What do you do when you have to do a lot at once?",
+      "options": [
+        {
+          "text": "I dive right in",
+          "value": "red"
+        },
+        {
+          "text": "I rely on improvisation",
+          "value": "yellow"
+        },
+        {
+          "text": "I make an overview and plan",
+          "value": "blue"
+        },
+        {
+          "text": "I ask for help when needed",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What do you do when there's a disagreement in the team?",
+      "options": [
+        {
+          "text": "I cut the knot and decide",
+          "value": "red"
+        },
+        {
+          "text": "I try to keep the atmosphere good",
+          "value": "yellow"
+        },
+        {
+          "text": "I look for a solution based on facts",
+          "value": "blue"
+        },
+        {
+          "text": "I listen to all points of view",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you prefer to end a workday?",
+      "options": [
+        {
+          "text": "With the feeling of having achieved a lot",
+          "value": "red"
+        },
+        {
+          "text": "With a nice chat or joke",
+          "value": "yellow"
+        },
+        {
+          "text": "With a clear to‑do list for tomorrow",
+          "value": "blue"
+        },
+        {
+          "text": "In peace, with everything finished",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "What do you value in your work?",
+      "options": [
+        {
+          "text": "Efficiency and result",
+          "value": "red"
+        },
+        {
+          "text": "Freedom and creativity",
+          "value": "yellow"
+        },
+        {
+          "text": "Structure and clarity",
+          "value": "blue"
+        },
+        {
+          "text": "Engagement and harmony",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "How do you ensure quality?",
+      "options": [
+        {
+          "text": "By working quickly and correctly",
+          "value": "red"
+        },
+        {
+          "text": "By renewal and inspiration",
+          "value": "yellow"
+        },
+        {
+          "text": "By control and standards",
+          "value": "blue"
+        },
+        {
+          "text": "By care and attention",
+          "value": "green"
+        }
+      ]
+    }
+  ],
+  "de": [
+    {
+      "text": "Wie reagierst du auf enge Fristen?",
+      "options": [
+        {
+          "text": "Ich übernehme die Führung und handle schnell",
+          "value": "red"
+        },
+        {
+          "text": "Ich bleibe ruhig und arbeite zusammen",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich erstelle einen Plan und analysiere",
+          "value": "blue"
+        },
+        {
+          "text": "Ich unterstütze andere bei Stress",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was tust du, wenn dein Team feststeckt?",
+      "options": [
+        {
+          "text": "Ich gebe klare Richtung vor",
+          "value": "red"
+        },
+        {
+          "text": "Ich schlage vor, gemeinsam kurz Pause zu machen",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich untersuche zuerst, was genau schief läuft",
+          "value": "blue"
+        },
+        {
+          "text": "Ich höre allen zu, um Ruhe zu schaffen",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie beginnst du am liebsten einen neuen Arbeitstag?",
+      "options": [
+        {
+          "text": "Indem ich sofort loslege",
+          "value": "red"
+        },
+        {
+          "text": "Mit einem Kaffee und einem Plausch mit Kollegen",
+          "value": "yellow"
+        },
+        {
+          "text": "Mit einer klaren Prioritätenliste",
+          "value": "blue"
+        },
+        {
+          "text": "Indem ich in Ruhe nachfrage, wie es allen geht",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was motiviert dich bei der Arbeit am meisten?",
+      "options": [
+        {
+          "text": "Ergebnisse erzielen",
+          "value": "red"
+        },
+        {
+          "text": "Innovation und Freiheit",
+          "value": "yellow"
+        },
+        {
+          "text": "Genauigkeit und Ordnung",
+          "value": "blue"
+        },
+        {
+          "text": "Harmonie und Teamgeist",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie triffst du Entscheidungen?",
+      "options": [
+        {
+          "text": "Schnell, basierend auf Erfahrung",
+          "value": "red"
+        },
+        {
+          "text": "Indem ich kreative Ideen erkunde",
+          "value": "yellow"
+        },
+        {
+          "text": "Erst nach einer gründlichen Analyse",
+          "value": "blue"
+        },
+        {
+          "text": "Nach Rücksprache mit anderen",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was stört dich in einem Team am meisten?",
+      "options": [
+        {
+          "text": "Langsamkeit und Unentschlossenheit",
+          "value": "red"
+        },
+        {
+          "text": "Mangel an Stimmung und Spontanität",
+          "value": "yellow"
+        },
+        {
+          "text": "Schlampigkeit oder Ungenauigkeit",
+          "value": "blue"
+        },
+        {
+          "text": "Respektlose Kommunikation",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie gibst du am liebsten Feedback?",
+      "options": [
+        {
+          "text": "Kurz und klar",
+          "value": "red"
+        },
+        {
+          "text": "Positiv und mit einem Lächeln",
+          "value": "yellow"
+        },
+        {
+          "text": "Fakten und Beobachtungen teilen",
+          "value": "blue"
+        },
+        {
+          "text": "Einfühlsam und respektvoll",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie gehst du ein neues Projekt an?",
+      "options": [
+        {
+          "text": "Indem ich schnell Richtung und Struktur gebe",
+          "value": "red"
+        },
+        {
+          "text": "Indem ich das Team sofort motiviere",
+          "value": "yellow"
+        },
+        {
+          "text": "Mit einem detaillierten Schritt‑für‑Schritt‑Plan",
+          "value": "blue"
+        },
+        {
+          "text": "Indem ich die Bedürfnisse aller bespreche",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was tust du, wenn du etwas Neues lernen musst?",
+      "options": [
+        {
+          "text": "Ich lerne durch Tun",
+          "value": "red"
+        },
+        {
+          "text": "Ich suche inspirierende Beispiele",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich lese darüber und teste methodisch",
+          "value": "blue"
+        },
+        {
+          "text": "Ich frage Kollegen nach Tipps",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie reagierst du auf Veränderungen?",
+      "options": [
+        {
+          "text": "Ich handle schnell, um die Richtung zu halten",
+          "value": "red"
+        },
+        {
+          "text": "Ich sehe es als Chance zur Erneuerung",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich analysiere zuerst die Auswirkungen",
+          "value": "blue"
+        },
+        {
+          "text": "Ich passe mich an, solange das Team dabei ist",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was ist dein Vorgehen bei Konflikten?",
+      "options": [
+        {
+          "text": "Ich greife ein und versuche es sofort zu lösen",
+          "value": "red"
+        },
+        {
+          "text": "Ich suche kreative Lösungen für beide Parteien",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich betrachte die Fakten und bleibe objektiv",
+          "value": "blue"
+        },
+        {
+          "text": "Ich versuche, Ruhe zu bewahren und zu vermitteln",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie arbeitest du mit anderen zusammen?",
+      "options": [
+        {
+          "text": "Ich ergreife Initiative und halte das Team auf Kurs",
+          "value": "red"
+        },
+        {
+          "text": "Ich bringe Energie und Begeisterung ins Team",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich fokussiere auf Struktur und klare Absprachen",
+          "value": "blue"
+        },
+        {
+          "text": "Ich höre zu und helfe bei Bedarf",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie bereitest du eine Präsentation vor?",
+      "options": [
+        {
+          "text": "Ich fokussiere auf das Wesentliche und formuliere eine klare Botschaft",
+          "value": "red"
+        },
+        {
+          "text": "Ich überlege, wie ich sie spannend gestalten kann",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich sammle Fakten und sorge für einen logischen Aufbau",
+          "value": "blue"
+        },
+        {
+          "text": "Ich prüfe, ob sie den Bedürfnissen des Publikums entspricht",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie gehst du mit Fehlern um?",
+      "options": [
+        {
+          "text": "Ich behebe sie schnell und lerne daraus",
+          "value": "red"
+        },
+        {
+          "text": "Ich lache darüber und schaue nach vorn",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich analysiere gründlich die Ursache",
+          "value": "blue"
+        },
+        {
+          "text": "Ich reflektiere und spreche mit anderen darüber",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Welche Rolle hast du in Teammeetings?",
+      "options": [
+        {
+          "text": "Ich behalte das Ziel im Auge und steuere",
+          "value": "red"
+        },
+        {
+          "text": "Ich bringe Schwung in die Diskussion",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich achte auf den Inhalt und mache Notizen",
+          "value": "blue"
+        },
+        {
+          "text": "Ich achte darauf, dass jeder zu Wort kommt",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was ist deine erste Reaktion auf Kritik?",
+      "options": [
+        {
+          "text": "Ich höre zu und setze sofort um",
+          "value": "red"
+        },
+        {
+          "text": "Ich bleibe positiv und nehme es nicht persönlich",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich bewerte, ob sie begründet ist",
+          "value": "blue"
+        },
+        {
+          "text": "Ich lasse es sacken und suche das Gespräch",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie reagierst du auf unerwartete Aufgaben?",
+      "options": [
+        {
+          "text": "Ich übernehme die Führung und lege sofort los",
+          "value": "red"
+        },
+        {
+          "text": "Ich sehe es als neue Chance",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich strukturiere sie und erstelle zuerst einen Plan",
+          "value": "blue"
+        },
+        {
+          "text": "Ich stimme mich mit anderen ab, um zu koordinieren",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie würdest du deine Kommunikation beschreiben?",
+      "options": [
+        {
+          "text": "Auf den Punkt und direkt",
+          "value": "red"
+        },
+        {
+          "text": "Spontan und enthusiastisch",
+          "value": "yellow"
+        },
+        {
+          "text": "Klar und sachlich",
+          "value": "blue"
+        },
+        {
+          "text": "Warm und unterstützend",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was schätzt du an Kollegen am meisten?",
+      "options": [
+        {
+          "text": "Entscheidungsfreude",
+          "value": "red"
+        },
+        {
+          "text": "Kreativität",
+          "value": "yellow"
+        },
+        {
+          "text": "Gründlichkeit",
+          "value": "blue"
+        },
+        {
+          "text": "Engagement",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie setzt du Ziele?",
+      "options": [
+        {
+          "text": "Ambitioniert und handlungsorientiert",
+          "value": "red"
+        },
+        {
+          "text": "Visionsgetrieben und inspirierend",
+          "value": "yellow"
+        },
+        {
+          "text": "SMART und messbar",
+          "value": "blue"
+        },
+        {
+          "text": "Realistisch und in Abstimmung",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie reagierst du, wenn jemand deinen Plan in Frage stellt?",
+      "options": [
+        {
+          "text": "Ich bleibe dabei und verteidige meinen Ansatz",
+          "value": "red"
+        },
+        {
+          "text": "Ich höre zu, bleibe aber begeistert",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich prüfe, ob ihr Feedback inhaltlich stimmt",
+          "value": "blue"
+        },
+        {
+          "text": "Ich versuche, ihre Bedenken zu verstehen",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was zeichnet deine Arbeitsweise aus?",
+      "options": [
+        {
+          "text": "Zielorientiert und effizient",
+          "value": "red"
+        },
+        {
+          "text": "Flexibel und inspirierend",
+          "value": "yellow"
+        },
+        {
+          "text": "Genau und strukturiert",
+          "value": "blue"
+        },
+        {
+          "text": "Kooperativ und geduldig",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie gehst du mit Routinearbeit um?",
+      "options": [
+        {
+          "text": "Ich versuche, sie schneller und effizienter zu erledigen",
+          "value": "red"
+        },
+        {
+          "text": "Ich suche nach Wegen, sie unterhaltsamer zu gestalten",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich führe sie gewissenhaft und sorgfältig aus",
+          "value": "blue"
+        },
+        {
+          "text": "Ich mache es, weil es fürs Team wichtig ist",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was tust du bei unklaren Erwartungen?",
+      "options": [
+        {
+          "text": "Ich bestimme selbst die Richtung",
+          "value": "red"
+        },
+        {
+          "text": "Ich stelle Fragen und versuche, es locker zu halten",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich bitte um Klarstellung, bis alles klar ist",
+          "value": "blue"
+        },
+        {
+          "text": "Ich suche Abstimmung mit Kollegen",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie reagierst du auf unerwartetes Feedback?",
+      "options": [
+        {
+          "text": "Ich handle schnell, um es richtigzustellen",
+          "value": "red"
+        },
+        {
+          "text": "Ich relativiere und bleibe positiv",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich analysiere es und ziehe Schlüsse",
+          "value": "blue"
+        },
+        {
+          "text": "Ich fühle mich betroffen, versuche aber zu verstehen",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie gehst du bei Gruppenentscheidungen vor?",
+      "options": [
+        {
+          "text": "Ich übernehme die Führung, wenn es zu lange dauert",
+          "value": "red"
+        },
+        {
+          "text": "Ich ermutige alle, mitzudenken",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich versuche, Struktur in die Diskussion zu bringen",
+          "value": "blue"
+        },
+        {
+          "text": "Ich achte darauf, dass sich jeder gehört fühlt",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie sieht ein idealer Arbeitstag für dich aus?",
+      "options": [
+        {
+          "text": "Ich erledige Aufgaben schnell und erreiche meine Ziele",
+          "value": "red"
+        },
+        {
+          "text": "Ich bekomme Energie von Brainstormings und Gesprächen",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich habe Zeit, etwas gründlich fertigzustellen",
+          "value": "blue"
+        },
+        {
+          "text": "Ich fühle mich mit Kollegen verbunden",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie reagierst du auf überfüllte Kalender?",
+      "options": [
+        {
+          "text": "Ich streiche, was nicht dringend ist, und mache weiter",
+          "value": "red"
+        },
+        {
+          "text": "Ich improvisiere und bleibe flexibel",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich strukturiere meine Planung gründlich um",
+          "value": "blue"
+        },
+        {
+          "text": "Ich spreche darüber, wer eventuell helfen kann",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie gehst du mit einem schwierigen Kunden um?",
+      "options": [
+        {
+          "text": "Mit Durchsetzungsvermögen und Klarheit",
+          "value": "red"
+        },
+        {
+          "text": "Mit Charme und Humor",
+          "value": "yellow"
+        },
+        {
+          "text": "Mit Fakten und gut vorbereiteten Argumenten",
+          "value": "blue"
+        },
+        {
+          "text": "Mit Empathie und Bereitschaft zuzuhören",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was tust du, wenn ein Kollege Hilfe braucht?",
+      "options": [
+        {
+          "text": "Ich gebe schnell Tipps, um weiterzukommen",
+          "value": "red"
+        },
+        {
+          "text": "Ich versuche, ihn zu motivieren",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich analysiere zuerst das Problem",
+          "value": "blue"
+        },
+        {
+          "text": "Ich nehme mir Zeit, gemeinsam eine Lösung zu suchen",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie arbeitest du eine Strategie aus?",
+      "options": [
+        {
+          "text": "Ich wähle eine Richtung und definiere die Schritte",
+          "value": "red"
+        },
+        {
+          "text": "Ich erkunde Ideen und beziehe andere ein",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich untersuche zuerst Kontext und Zahlen",
+          "value": "blue"
+        },
+        {
+          "text": "Ich suche Konsens und Input vom Team",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie gehst du mit einer Meinungsverschiedenheit um?",
+      "options": [
+        {
+          "text": "Ich bleibe bei meinem Standpunkt und diskutiere",
+          "value": "red"
+        },
+        {
+          "text": "Ich versuche, es locker zu halten",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich stütze mich auf Fakten und Argumente",
+          "value": "blue"
+        },
+        {
+          "text": "Ich suche Verbindung und Verständnis",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was ist deine Stärke als Kollege?",
+      "options": [
+        {
+          "text": "Ich sorge dafür, dass Dinge vorangehen",
+          "value": "red"
+        },
+        {
+          "text": "Ich bringe Energie und Spaß",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich liefere Präzision und Überblick",
+          "value": "blue"
+        },
+        {
+          "text": "Ich bin zuverlässig und hilfsbereit",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was motiviert dich an Teamarbeit?",
+      "options": [
+        {
+          "text": "Klare Ziele und Tempo",
+          "value": "red"
+        },
+        {
+          "text": "Gute Stimmung und Kreativität",
+          "value": "yellow"
+        },
+        {
+          "text": "Eine klare Struktur",
+          "value": "blue"
+        },
+        {
+          "text": "Vertrauen und Zusammenarbeit",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie reagierst du, wenn jemand deine Arbeit kritisiert?",
+      "options": [
+        {
+          "text": "Ich frage, was verbessert werden kann, und passe an",
+          "value": "red"
+        },
+        {
+          "text": "Ich bleibe positiv und schaue nach vorne",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich analysiere, ob die Kritik berechtigt ist",
+          "value": "blue"
+        },
+        {
+          "text": "Ich nehme es ernst und bespreche es",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie reagierst du, wenn eine Deadline vorgezogen wird?",
+      "options": [
+        {
+          "text": "Ich organisiere um und arbeite schneller",
+          "value": "red"
+        },
+        {
+          "text": "Ich bleibe optimistisch und löse es unterwegs",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich erstelle einen neuen Zeitplan",
+          "value": "blue"
+        },
+        {
+          "text": "Ich bespreche die Auswirkungen mit den Beteiligten",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was tust du bei einer unerwarteten Wendung in einem Projekt?",
+      "options": [
+        {
+          "text": "Ich treffe Entscheidungen, um es zu steuern",
+          "value": "red"
+        },
+        {
+          "text": "Ich suche neue Chancen in der Situation",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich überprüfe Ziele und Risiken",
+          "value": "blue"
+        },
+        {
+          "text": "Ich stelle sicher, dass alle die Veränderung mittragen",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie arbeitest du am liebsten mit einer Führungskraft zusammen?",
+      "options": [
+        {
+          "text": "Mit viel Autonomie",
+          "value": "red"
+        },
+        {
+          "text": "In einer offenen und kreativen Atmosphäre",
+          "value": "yellow"
+        },
+        {
+          "text": "Mit klaren Absprachen",
+          "value": "blue"
+        },
+        {
+          "text": "Mit regelmäßigen Check‑ins",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie gehst du eine neue Herausforderung an?",
+      "options": [
+        {
+          "text": "Ich stürze mich voll hinein und schaue, wohin es führt",
+          "value": "red"
+        },
+        {
+          "text": "Ich sehe es als Chance zu wachsen",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich sammle Informationen und mache einen Plan",
+          "value": "blue"
+        },
+        {
+          "text": "Ich spreche mit Kollegen über ihre Vorgehensweise",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie sorgst du für Balance in hektischen Zeiten?",
+      "options": [
+        {
+          "text": "Ich fokussiere auf Prioritäten",
+          "value": "red"
+        },
+        {
+          "text": "Ich suche Ablenkung und Energie",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich plane meine Arbeit noch strikter",
+          "value": "blue"
+        },
+        {
+          "text": "Ich spreche mit dem Team darüber",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie hilfst du jemandem, der unsicher ist?",
+      "options": [
+        {
+          "text": "Ich gebe ihm Richtung",
+          "value": "red"
+        },
+        {
+          "text": "Ich versuche, ihn aufzumuntern",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich gebe Fakten und Beruhigung",
+          "value": "blue"
+        },
+        {
+          "text": "Ich höre zu und ermutige ihn",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie gehst du mit unvorhergesehenen Hindernissen um?",
+      "options": [
+        {
+          "text": "Ich reagiere schnell und passe meinen Plan an",
+          "value": "red"
+        },
+        {
+          "text": "Ich bleibe positiv und kreativ",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich betrachte das Ganze neu und passe an",
+          "value": "blue"
+        },
+        {
+          "text": "Ich berate mich mit dem Team für Unterstützung",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was macht ein Team deiner Meinung nach stark?",
+      "options": [
+        {
+          "text": "Entscheidungsstärke",
+          "value": "red"
+        },
+        {
+          "text": "Inspiration und Begeisterung",
+          "value": "yellow"
+        },
+        {
+          "text": "Klarheit und Regeln",
+          "value": "blue"
+        },
+        {
+          "text": "Vertrauen und Empathie",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie startest du ein großes Projekt?",
+      "options": [
+        {
+          "text": "Mit einem Kickoff und sofortiger Aktion",
+          "value": "red"
+        },
+        {
+          "text": "Mit einem kreativen Brainstorming",
+          "value": "yellow"
+        },
+        {
+          "text": "Mit Analyse und Planung",
+          "value": "blue"
+        },
+        {
+          "text": "Mit Abstimmung und Alignment",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was kennzeichnet deinen Führungsstil?",
+      "options": [
+        {
+          "text": "Ergebnisorientiert",
+          "value": "red"
+        },
+        {
+          "text": "Motivierend",
+          "value": "yellow"
+        },
+        {
+          "text": "Richtlinienorientiert",
+          "value": "blue"
+        },
+        {
+          "text": "Coachend",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was tust du, wenn du viel gleichzeitig tun musst?",
+      "options": [
+        {
+          "text": "Ich lege sofort los",
+          "value": "red"
+        },
+        {
+          "text": "Ich vertraue auf Improvisation",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich verschaffe mir einen Überblick und plane",
+          "value": "blue"
+        },
+        {
+          "text": "Ich bitte um Hilfe, wenn nötig",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was tust du bei einer Meinungsverschiedenheit im Team?",
+      "options": [
+        {
+          "text": "Ich treffe die Entscheidung",
+          "value": "red"
+        },
+        {
+          "text": "Ich versuche, die Stimmung gut zu halten",
+          "value": "yellow"
+        },
+        {
+          "text": "Ich suche eine Lösung auf Faktenbasis",
+          "value": "blue"
+        },
+        {
+          "text": "Ich höre mir alle Standpunkte an",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie beendest du einen Arbeitstag am liebsten?",
+      "options": [
+        {
+          "text": "Mit dem Gefühl, viel erreicht zu haben",
+          "value": "red"
+        },
+        {
+          "text": "Mit einem netten Gespräch oder Witz",
+          "value": "yellow"
+        },
+        {
+          "text": "Mit einer klaren To‑do‑Liste für morgen",
+          "value": "blue"
+        },
+        {
+          "text": "In Ruhe, mit allem erledigt",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Was schätzt du an deiner Arbeit?",
+      "options": [
+        {
+          "text": "Effizienz und Ergebnis",
+          "value": "red"
+        },
+        {
+          "text": "Freiheit und Kreativität",
+          "value": "yellow"
+        },
+        {
+          "text": "Struktur und Klarheit",
+          "value": "blue"
+        },
+        {
+          "text": "Engagement und Harmonie",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Wie sorgst du für Qualität?",
+      "options": [
+        {
+          "text": "Durch schnelles und korrektes Arbeiten",
+          "value": "red"
+        },
+        {
+          "text": "Durch Erneuerung und Inspiration",
+          "value": "yellow"
+        },
+        {
+          "text": "Durch Kontrolle und Standards",
+          "value": "blue"
+        },
+        {
+          "text": "Durch Sorgfalt und Aufmerksamkeit",
+          "value": "green"
+        }
+      ]
+    }
+  ],
+  "fr": [
+    {
+      "text": "Comment réagis‑tu aux délais serrés ?",
+      "options": [
+        {
+          "text": "Je prends les commandes et j’agis rapidement",
+          "value": "red"
+        },
+        {
+          "text": "Je reste calme et je collabore",
+          "value": "yellow"
+        },
+        {
+          "text": "J’élabore un plan et j’analyse",
+          "value": "blue"
+        },
+        {
+          "text": "Je soutiens les autres en période de stress",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Que fais‑tu lorsque ton équipe se retrouve bloquée ?",
+      "options": [
+        {
+          "text": "Je donne une direction claire",
+          "value": "red"
+        },
+        {
+          "text": "Je propose de faire une courte pause ensemble",
+          "value": "yellow"
+        },
+        {
+          "text": "J’examine d’abord ce qui ne va pas exactement",
+          "value": "blue"
+        },
+        {
+          "text": "J’écoute tout le monde pour ramener le calme",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment préfères‑tu commencer une nouvelle journée de travail ?",
+      "options": [
+        {
+          "text": "En passant immédiatement à l’action",
+          "value": "red"
+        },
+        {
+          "text": "Avec un café et une discussion avec les collègues",
+          "value": "yellow"
+        },
+        {
+          "text": "Avec une liste claire de priorités",
+          "value": "blue"
+        },
+        {
+          "text": "En vérifiant calmement comment chacun se sent",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Qu’est‑ce qui te motive le plus au travail ?",
+      "options": [
+        {
+          "text": "Atteindre des résultats",
+          "value": "red"
+        },
+        {
+          "text": "Innovation et liberté",
+          "value": "yellow"
+        },
+        {
+          "text": "Précision et ordre",
+          "value": "blue"
+        },
+        {
+          "text": "Harmonie et esprit d’équipe",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment prends‑tu des décisions ?",
+      "options": [
+        {
+          "text": "Rapidement, basé sur l’expérience",
+          "value": "red"
+        },
+        {
+          "text": "En explorant des idées créatives",
+          "value": "yellow"
+        },
+        {
+          "text": "Seulement après une analyse approfondie",
+          "value": "blue"
+        },
+        {
+          "text": "Après consultation des autres",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Qu’est‑ce qui t’ennuie le plus dans une équipe ?",
+      "options": [
+        {
+          "text": "Lenteur et indécision",
+          "value": "red"
+        },
+        {
+          "text": "Manque d’ambiance et de spontanéité",
+          "value": "yellow"
+        },
+        {
+          "text": "Négligence ou imprécision",
+          "value": "blue"
+        },
+        {
+          "text": "Communication irrespectueuse",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment préfères‑tu donner du feedback ?",
+      "options": [
+        {
+          "text": "Court et direct",
+          "value": "red"
+        },
+        {
+          "text": "Positif et avec le sourire",
+          "value": "yellow"
+        },
+        {
+          "text": "Partage de faits et d’observations",
+          "value": "blue"
+        },
+        {
+          "text": "Empathique et respectueux",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment abordes‑tu un nouveau projet ?",
+      "options": [
+        {
+          "text": "En donnant rapidement direction et structure",
+          "value": "red"
+        },
+        {
+          "text": "En motivant immédiatement l’équipe",
+          "value": "yellow"
+        },
+        {
+          "text": "Avec un plan détaillé étape par étape",
+          "value": "blue"
+        },
+        {
+          "text": "En discutant des besoins de chacun",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Que fais‑tu quand tu dois apprendre quelque chose de nouveau ?",
+      "options": [
+        {
+          "text": "J’apprends en faisant",
+          "value": "red"
+        },
+        {
+          "text": "Je cherche des exemples inspirants",
+          "value": "yellow"
+        },
+        {
+          "text": "Je lis à ce sujet et teste de façon méthodique",
+          "value": "blue"
+        },
+        {
+          "text": "Je demande des conseils aux collègues",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment réagis‑tu aux changements ?",
+      "options": [
+        {
+          "text": "J’agis rapidement pour garder le cap",
+          "value": "red"
+        },
+        {
+          "text": "Je vois cela comme une occasion d’innover",
+          "value": "yellow"
+        },
+        {
+          "text": "J’analyse d’abord l’impact",
+          "value": "blue"
+        },
+        {
+          "text": "Je m’adapte tant que l’équipe suit",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Quelle est ton approche des conflits ?",
+      "options": [
+        {
+          "text": "J’interviens et j’essaie de résoudre immédiatement",
+          "value": "red"
+        },
+        {
+          "text": "Je cherche des solutions créatives pour les deux parties",
+          "value": "yellow"
+        },
+        {
+          "text": "J’examine les faits et tente de rester objectif",
+          "value": "blue"
+        },
+        {
+          "text": "J’essaie de maintenir le calme et de faire la médiation",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment travailles‑tu avec les autres ?",
+      "options": [
+        {
+          "text": "Je prends l’initiative et je maintiens le rythme de l’équipe",
+          "value": "red"
+        },
+        {
+          "text": "J’apporte de l’énergie et de l’enthousiasme",
+          "value": "yellow"
+        },
+        {
+          "text": "Je me concentre sur la structure et des accords clairs",
+          "value": "blue"
+        },
+        {
+          "text": "J’offre une oreille attentive et j’aide si nécessaire",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment prépares‑tu une présentation ?",
+      "options": [
+        {
+          "text": "Je me concentre sur l’essentiel et crée un message percutant",
+          "value": "red"
+        },
+        {
+          "text": "Je réfléchis à la façon de la rendre captivante",
+          "value": "yellow"
+        },
+        {
+          "text": "Je recueille des faits et veille à une structure logique",
+          "value": "blue"
+        },
+        {
+          "text": "Je vérifie qu’elle répond aux besoins du public",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment gères‑tu les erreurs ?",
+      "options": [
+        {
+          "text": "Je les corrige rapidement et j’en tire des leçons",
+          "value": "red"
+        },
+        {
+          "text": "J’en ris et je vais de l’avant",
+          "value": "yellow"
+        },
+        {
+          "text": "J’analyse en profondeur la cause",
+          "value": "blue"
+        },
+        {
+          "text": "Je réfléchis et en parle avec les autres",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Quel est ton rôle lors des réunions d’équipe ?",
+      "options": [
+        {
+          "text": "Je garde l’objectif en vue et oriente",
+          "value": "red"
+        },
+        {
+          "text": "J’anime la discussion",
+          "value": "yellow"
+        },
+        {
+          "text": "Je veille au contenu et prends des notes",
+          "value": "blue"
+        },
+        {
+          "text": "Je m’assure que tout le monde s’exprime",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Quelle est ta première réaction face à une critique ?",
+      "options": [
+        {
+          "text": "J’écoute et passe aussitôt à l’action",
+          "value": "red"
+        },
+        {
+          "text": "Je reste positif et ne le prends pas personnellement",
+          "value": "yellow"
+        },
+        {
+          "text": "J’évalue si elle est fondée",
+          "value": "blue"
+        },
+        {
+          "text": "Je la laisse décanter et cherche le dialogue",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment réagis‑tu aux tâches imprévues ?",
+      "options": [
+        {
+          "text": "Je prends les devants et m’y mets aussitôt",
+          "value": "red"
+        },
+        {
+          "text": "Je le vois comme une nouvelle opportunité",
+          "value": "yellow"
+        },
+        {
+          "text": "Je structure la tâche et définis d’abord un plan",
+          "value": "blue"
+        },
+        {
+          "text": "Je consulte les autres pour coordonner",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment décrirais‑tu ta communication ?",
+      "options": [
+        {
+          "text": "Directe et concise",
+          "value": "red"
+        },
+        {
+          "text": "Spontanée et enthousiaste",
+          "value": "yellow"
+        },
+        {
+          "text": "Claire et factuelle",
+          "value": "blue"
+        },
+        {
+          "text": "Chaleureuse et soutenante",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Que valorises‑tu le plus chez tes collègues ?",
+      "options": [
+        {
+          "text": "Esprit de décision",
+          "value": "red"
+        },
+        {
+          "text": "Créativité",
+          "value": "yellow"
+        },
+        {
+          "text": "Rigueur",
+          "value": "blue"
+        },
+        {
+          "text": "Engagement",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment fixes‑tu des objectifs ?",
+      "options": [
+        {
+          "text": "Ambitieux et orientés vers l’action",
+          "value": "red"
+        },
+        {
+          "text": "Guidés par la vision et inspirants",
+          "value": "yellow"
+        },
+        {
+          "text": "SMART et mesurables",
+          "value": "blue"
+        },
+        {
+          "text": "Réalistes et concertés",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment réagis‑tu lorsqu’on remet ton plan en question ?",
+      "options": [
+        {
+          "text": "Je m’y tiens et défends mon approche",
+          "value": "red"
+        },
+        {
+          "text": "J’écoute mais reste enthousiaste",
+          "value": "yellow"
+        },
+        {
+          "text": "Je vérifie si leurs commentaires sont fondés",
+          "value": "blue"
+        },
+        {
+          "text": "J’essaie de comprendre leurs préoccupations",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Qu’est‑ce qui caractérise ta façon de travailler ?",
+      "options": [
+        {
+          "text": "Orientée vers l’objectif et efficace",
+          "value": "red"
+        },
+        {
+          "text": "Flexible et inspirante",
+          "value": "yellow"
+        },
+        {
+          "text": "Précise et structurée",
+          "value": "blue"
+        },
+        {
+          "text": "Collaborative et patiente",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment gères‑tu les tâches routinières ?",
+      "options": [
+        {
+          "text": "J’essaie de les faire plus vite et plus efficacement",
+          "value": "red"
+        },
+        {
+          "text": "Je cherche à les rendre plus ludiques",
+          "value": "yellow"
+        },
+        {
+          "text": "Je les exécute de manière minutieuse",
+          "value": "blue"
+        },
+        {
+          "text": "Je les fais parce qu’elles sont importantes pour l’équipe",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Que fais‑tu en cas d’attentes floues ?",
+      "options": [
+        {
+          "text": "Je fixe moi‑même la direction",
+          "value": "red"
+        },
+        {
+          "text": "Je pose des questions et garde la situation légère",
+          "value": "yellow"
+        },
+        {
+          "text": "Je demande des clarifications jusqu’à ce que tout soit clair",
+          "value": "blue"
+        },
+        {
+          "text": "Je cherche l’alignement avec les collègues",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment réagis‑tu à un feedback inattendu ?",
+      "options": [
+        {
+          "text": "J’agis rapidement pour corriger",
+          "value": "red"
+        },
+        {
+          "text": "Je relativise et reste positif",
+          "value": "yellow"
+        },
+        {
+          "text": "Je l’analyse et en tire des conclusions",
+          "value": "blue"
+        },
+        {
+          "text": "Je me sens touché mais tente de comprendre",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Quelle est ton approche pour les décisions de groupe ?",
+      "options": [
+        {
+          "text": "Je prends la tête si cela traîne",
+          "value": "red"
+        },
+        {
+          "text": "J’encourage tout le monde à participer",
+          "value": "yellow"
+        },
+        {
+          "text": "J’essaie d’apporter de la structure à la discussion",
+          "value": "blue"
+        },
+        {
+          "text": "Je veille à ce que chacun se sente entendu",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "À quoi ressemble pour toi une journée de travail idéale ?",
+      "options": [
+        {
+          "text": "Je termine rapidement mes tâches et atteins mes objectifs",
+          "value": "red"
+        },
+        {
+          "text": "Je tire de l’énergie des brainstormings et des échanges",
+          "value": "yellow"
+        },
+        {
+          "text": "J’ai le temps de finir quelque chose en profondeur",
+          "value": "blue"
+        },
+        {
+          "text": "Je me sens connecté à mes collègues",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment réagis‑tu aux agendas surchargés ?",
+      "options": [
+        {
+          "text": "Je supprime ce qui n’est pas urgent et je continue",
+          "value": "red"
+        },
+        {
+          "text": "J’improvise et reste flexible",
+          "value": "yellow"
+        },
+        {
+          "text": "Je réorganise complètement ma planification",
+          "value": "blue"
+        },
+        {
+          "text": "Je discute de qui pourrait aider",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment abordes‑tu un client difficile ?",
+      "options": [
+        {
+          "text": "Avec assertivité et clarté",
+          "value": "red"
+        },
+        {
+          "text": "Avec charme et humour",
+          "value": "yellow"
+        },
+        {
+          "text": "Avec des faits et des arguments bien préparés",
+          "value": "blue"
+        },
+        {
+          "text": "Avec empathie et écoute",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Que fais‑tu lorsqu’un collègue a besoin d’aide ?",
+      "options": [
+        {
+          "text": "Je donne rapidement des conseils pour avancer",
+          "value": "red"
+        },
+        {
+          "text": "J’essaie de le motiver",
+          "value": "yellow"
+        },
+        {
+          "text": "J’analyse d’abord le problème",
+          "value": "blue"
+        },
+        {
+          "text": "Je prends le temps de chercher une solution ensemble",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment élabores‑tu une stratégie ?",
+      "options": [
+        {
+          "text": "Je choisis une direction et définis les étapes",
+          "value": "red"
+        },
+        {
+          "text": "J’explore des idées et implique les autres",
+          "value": "yellow"
+        },
+        {
+          "text": "J’étudie d’abord le contexte et les chiffres",
+          "value": "blue"
+        },
+        {
+          "text": "Je recherche le consensus et les contributions de l’équipe",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment gères‑tu un désaccord ?",
+      "options": [
+        {
+          "text": "Je reste sur mon point de vue et débat",
+          "value": "red"
+        },
+        {
+          "text": "J’essaie de garder la légèreté",
+          "value": "yellow"
+        },
+        {
+          "text": "Je m’appuie sur des faits et des arguments",
+          "value": "blue"
+        },
+        {
+          "text": "Je cherche la connexion et la compréhension",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Quelle est ta force comme collègue ?",
+      "options": [
+        {
+          "text": "Je fais avancer les choses",
+          "value": "red"
+        },
+        {
+          "text": "J’apporte énergie et bonne humeur",
+          "value": "yellow"
+        },
+        {
+          "text": "J’apporte précision et vue d’ensemble",
+          "value": "blue"
+        },
+        {
+          "text": "Je suis fiable et serviable",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Qu’est‑ce qui te motive dans le travail d’équipe ?",
+      "options": [
+        {
+          "text": "Objectifs clairs et rapidité",
+          "value": "red"
+        },
+        {
+          "text": "Dynamique agréable et créativité",
+          "value": "yellow"
+        },
+        {
+          "text": "Une structure claire",
+          "value": "blue"
+        },
+        {
+          "text": "Confiance et collaboration",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment réagis‑tu quand quelqu’un critique ton travail ?",
+      "options": [
+        {
+          "text": "Je demande ce qui peut être amélioré et j’ajuste",
+          "value": "red"
+        },
+        {
+          "text": "Je reste positif et me projette",
+          "value": "yellow"
+        },
+        {
+          "text": "J’analyse si c’est fondé",
+          "value": "blue"
+        },
+        {
+          "text": "Je le prends au sérieux et en discute",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment réagis‑tu quand une échéance est avancée ?",
+      "options": [
+        {
+          "text": "Je réorganise et travaille plus vite",
+          "value": "red"
+        },
+        {
+          "text": "Je reste optimiste et gère au fil du chemin",
+          "value": "yellow"
+        },
+        {
+          "text": "Je fais un nouveau planning",
+          "value": "blue"
+        },
+        {
+          "text": "Je discute de l’impact avec les parties prenantes",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Que fais‑tu lorsqu’un projet prend une tournure inattendue ?",
+      "options": [
+        {
+          "text": "Je prends des décisions pour le réorienter",
+          "value": "red"
+        },
+        {
+          "text": "Je cherche de nouvelles opportunités dans la situation",
+          "value": "yellow"
+        },
+        {
+          "text": "Je revois les objectifs et les risques",
+          "value": "blue"
+        },
+        {
+          "text": "Je m’assure que tout le monde suit le changement",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment préfères‑tu collaborer avec un responsable ?",
+      "options": [
+        {
+          "text": "Avec beaucoup d’autonomie",
+          "value": "red"
+        },
+        {
+          "text": "Dans une ambiance ouverte et créative",
+          "value": "yellow"
+        },
+        {
+          "text": "Avec des accords clairs",
+          "value": "blue"
+        },
+        {
+          "text": "Avec des points de suivi réguliers",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Quelle est ton approche face à un nouveau défi ?",
+      "options": [
+        {
+          "text": "Je fonce et on verra bien",
+          "value": "red"
+        },
+        {
+          "text": "Je le vois comme une occasion de grandir",
+          "value": "yellow"
+        },
+        {
+          "text": "Je collecte des informations et établis un plan",
+          "value": "blue"
+        },
+        {
+          "text": "Je discute avec des collègues de leur méthode",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment maintiens‑tu l’équilibre en période de forte activité ?",
+      "options": [
+        {
+          "text": "Je me concentre sur les priorités",
+          "value": "red"
+        },
+        {
+          "text": "Je cherche de la distraction et de l’énergie",
+          "value": "yellow"
+        },
+        {
+          "text": "Je planifie mon travail encore plus strictement",
+          "value": "blue"
+        },
+        {
+          "text": "J’en parle avec l’équipe",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment aides‑tu quelqu’un qui manque de confiance ?",
+      "options": [
+        {
+          "text": "Je lui donne une direction",
+          "value": "red"
+        },
+        {
+          "text": "J’essaie de le remonter le moral",
+          "value": "yellow"
+        },
+        {
+          "text": "Je donne des faits et le rassure",
+          "value": "blue"
+        },
+        {
+          "text": "J’écoute et l’encourage",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment gères‑tu les obstacles imprévus ?",
+      "options": [
+        {
+          "text": "Je réagis vite et ajuste mon plan",
+          "value": "red"
+        },
+        {
+          "text": "Je reste positif et créatif",
+          "value": "yellow"
+        },
+        {
+          "text": "Je revois l’ensemble et j’adapte",
+          "value": "blue"
+        },
+        {
+          "text": "Je consulte l’équipe pour du soutien",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Qu’est‑ce qui rend une équipe forte selon toi ?",
+      "options": [
+        {
+          "text": "Capacité de décision",
+          "value": "red"
+        },
+        {
+          "text": "Inspiration et enthousiasme",
+          "value": "yellow"
+        },
+        {
+          "text": "Clarté et règles",
+          "value": "blue"
+        },
+        {
+          "text": "Confiance et empathie",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment démarres‑tu un grand projet ?",
+      "options": [
+        {
+          "text": "Par un lancement et une action immédiate",
+          "value": "red"
+        },
+        {
+          "text": "Par un brainstorming créatif",
+          "value": "yellow"
+        },
+        {
+          "text": "Par l’analyse et la planification",
+          "value": "blue"
+        },
+        {
+          "text": "Par la concertation et l’alignement",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Qu’est‑ce qui caractérise ton style de leadership ?",
+      "options": [
+        {
+          "text": "Orienté résultats",
+          "value": "red"
+        },
+        {
+          "text": "Motivant",
+          "value": "yellow"
+        },
+        {
+          "text": "Axé sur les politiques",
+          "value": "blue"
+        },
+        {
+          "text": "Coaching",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Que fais‑tu quand tu dois faire beaucoup de choses en même temps ?",
+      "options": [
+        {
+          "text": "Je me lance à fond",
+          "value": "red"
+        },
+        {
+          "text": "Je compte sur l’improvisation",
+          "value": "yellow"
+        },
+        {
+          "text": "J’établis une vue d’ensemble et un plan",
+          "value": "blue"
+        },
+        {
+          "text": "Je demande de l’aide si nécessaire",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Que fais‑tu en cas de désaccord dans l’équipe ?",
+      "options": [
+        {
+          "text": "Je tranche",
+          "value": "red"
+        },
+        {
+          "text": "J’essaie de garder une bonne ambiance",
+          "value": "yellow"
+        },
+        {
+          "text": "Je cherche une solution basée sur les faits",
+          "value": "blue"
+        },
+        {
+          "text": "J’écoute tous les points de vue",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment préfères‑tu terminer une journée de travail ?",
+      "options": [
+        {
+          "text": "Avec le sentiment d’avoir accompli beaucoup",
+          "value": "red"
+        },
+        {
+          "text": "Avec une bonne discussion ou plaisanterie",
+          "value": "yellow"
+        },
+        {
+          "text": "Avec une liste claire pour demain",
+          "value": "blue"
+        },
+        {
+          "text": "Dans le calme, tout bouclé",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Qu’apprécies‑tu dans ton travail ?",
+      "options": [
+        {
+          "text": "Efficacité et résultat",
+          "value": "red"
+        },
+        {
+          "text": "Liberté et créativité",
+          "value": "yellow"
+        },
+        {
+          "text": "Structure et clarté",
+          "value": "blue"
+        },
+        {
+          "text": "Engagement et harmonie",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "Comment assures‑tu la qualité ?",
+      "options": [
+        {
+          "text": "En travaillant vite et correctement",
+          "value": "red"
+        },
+        {
+          "text": "Par l’innovation et l’inspiration",
+          "value": "yellow"
+        },
+        {
+          "text": "Par le contrôle et les normes",
+          "value": "blue"
+        },
+        {
+          "text": "Par le soin et l’attention",
+          "value": "green"
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "text": "¿Cómo respondes a plazos ajustados?",
+      "options": [
+        {
+          "text": "Tomo el mando y actúo rápido",
+          "value": "red"
+        },
+        {
+          "text": "Me mantengo tranquilo y colaboro",
+          "value": "yellow"
+        },
+        {
+          "text": "Hago un plan y analizo",
+          "value": "blue"
+        },
+        {
+          "text": "Apoyo a los demás cuando hay estrés",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Qué haces cuando tu equipo se atasca?",
+      "options": [
+        {
+          "text": "Proporciono una dirección clara",
+          "value": "red"
+        },
+        {
+          "text": "Propongo tomar un breve descanso juntos",
+          "value": "yellow"
+        },
+        {
+          "text": "Primero investigo qué está fallando exactamente",
+          "value": "blue"
+        },
+        {
+          "text": "Escucho a todos para traer calma",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo prefieres empezar un nuevo día de trabajo?",
+      "options": [
+        {
+          "text": "Saltando directamente a la acción",
+          "value": "red"
+        },
+        {
+          "text": "Con un café y charla con los compañeros",
+          "value": "yellow"
+        },
+        {
+          "text": "Con una lista clara de prioridades",
+          "value": "blue"
+        },
+        {
+          "text": "Comprobando tranquilamente cómo se siente todo el mundo",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Qué te motiva más en el trabajo?",
+      "options": [
+        {
+          "text": "Lograr resultados",
+          "value": "red"
+        },
+        {
+          "text": "Innovación y libertad",
+          "value": "yellow"
+        },
+        {
+          "text": "Precisión y orden",
+          "value": "blue"
+        },
+        {
+          "text": "Armonía y espíritu de equipo",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo tomas decisiones?",
+      "options": [
+        {
+          "text": "Rápido, basado en la experiencia",
+          "value": "red"
+        },
+        {
+          "text": "Explorando ideas creativas",
+          "value": "yellow"
+        },
+        {
+          "text": "Solo después de un análisis exhaustivo",
+          "value": "blue"
+        },
+        {
+          "text": "Tras consultarlo con otros",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Qué te molesta más en un equipo?",
+      "options": [
+        {
+          "text": "Lentitud e indecisión",
+          "value": "red"
+        },
+        {
+          "text": "Falta de ambiente y espontaneidad",
+          "value": "yellow"
+        },
+        {
+          "text": "Descuido o imprecisión",
+          "value": "blue"
+        },
+        {
+          "text": "Comunicación irrespetuosa",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo prefieres dar retroalimentación?",
+      "options": [
+        {
+          "text": "Breve y directa",
+          "value": "red"
+        },
+        {
+          "text": "Positiva y con una sonrisa",
+          "value": "yellow"
+        },
+        {
+          "text": "Compartiendo hechos y observaciones",
+          "value": "blue"
+        },
+        {
+          "text": "Empática y respetuosa",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo abordas un nuevo proyecto?",
+      "options": [
+        {
+          "text": "Dando dirección y estructura rápidamente",
+          "value": "red"
+        },
+        {
+          "text": "Motivando al equipo de inmediato",
+          "value": "yellow"
+        },
+        {
+          "text": "Con un plan detallado paso a paso",
+          "value": "blue"
+        },
+        {
+          "text": "Hablando de las necesidades de todos",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Qué haces cuando tienes que aprender algo nuevo?",
+      "options": [
+        {
+          "text": "Aprendo haciendo",
+          "value": "red"
+        },
+        {
+          "text": "Busco ejemplos inspiradores",
+          "value": "yellow"
+        },
+        {
+          "text": "Leo sobre ello y pruebo metódicamente",
+          "value": "blue"
+        },
+        {
+          "text": "Pido consejos a mis compañeros",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo respondes a los cambios?",
+      "options": [
+        {
+          "text": "Actúo rápidamente para mantener el rumbo",
+          "value": "red"
+        },
+        {
+          "text": "Lo veo como una oportunidad de innovar",
+          "value": "yellow"
+        },
+        {
+          "text": "Primero analizo el impacto",
+          "value": "blue"
+        },
+        {
+          "text": "Me adapto mientras el equipo esté de acuerdo",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cuál es tu enfoque ante los conflictos?",
+      "options": [
+        {
+          "text": "Intervengo y trato de solucionarlo de inmediato",
+          "value": "red"
+        },
+        {
+          "text": "Busco soluciones creativas para ambas partes",
+          "value": "yellow"
+        },
+        {
+          "text": "Miro los hechos y trato de mantenerme objetivo",
+          "value": "blue"
+        },
+        {
+          "text": "Intento mantener la calma y mediar",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo trabajas con los demás?",
+      "options": [
+        {
+          "text": "Tomo la iniciativa y mantengo el ritmo del equipo",
+          "value": "red"
+        },
+        {
+          "text": "Aporto energía y entusiasmo al equipo",
+          "value": "yellow"
+        },
+        {
+          "text": "Me centro en la estructura y acuerdos claros",
+          "value": "blue"
+        },
+        {
+          "text": "Ofrezco un oído atento y ayudo cuando sea necesario",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo preparas una presentación?",
+      "options": [
+        {
+          "text": "Me concentro en lo esencial y creo un mensaje claro",
+          "value": "red"
+        },
+        {
+          "text": "Pienso en cómo hacerla atractiva",
+          "value": "yellow"
+        },
+        {
+          "text": "Reúno hechos y aseguro una estructura lógica",
+          "value": "blue"
+        },
+        {
+          "text": "Compruebo que se ajuste a las necesidades de la audiencia",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo afrontas los errores?",
+      "options": [
+        {
+          "text": "Los corrijo rápidamente y aprendo de ellos",
+          "value": "red"
+        },
+        {
+          "text": "Me río y sigo adelante",
+          "value": "yellow"
+        },
+        {
+          "text": "Analizo a fondo la causa",
+          "value": "blue"
+        },
+        {
+          "text": "Reflexiono y lo comento con otros",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cuál es tu papel en las reuniones de equipo?",
+      "options": [
+        {
+          "text": "Mantengo el objetivo presente y dirijo",
+          "value": "red"
+        },
+        {
+          "text": "Aporto dinamismo a la discusión",
+          "value": "yellow"
+        },
+        {
+          "text": "Me ocupo del contenido y tomo notas",
+          "value": "blue"
+        },
+        {
+          "text": "Me aseguro de que todos participen",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cuál es tu primera reacción ante una crítica?",
+      "options": [
+        {
+          "text": "Escucho y paso directamente a la acción",
+          "value": "red"
+        },
+        {
+          "text": "Me mantengo positivo y no lo tomo como algo personal",
+          "value": "yellow"
+        },
+        {
+          "text": "Evalúo si está fundamentada",
+          "value": "blue"
+        },
+        {
+          "text": "Lo dejo reposar y busco diálogo",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo respondes a encargos inesperados?",
+      "options": [
+        {
+          "text": "Asumo el liderazgo y me pongo manos a la obra de inmediato",
+          "value": "red"
+        },
+        {
+          "text": "Lo veo como una nueva oportunidad",
+          "value": "yellow"
+        },
+        {
+          "text": "Lo estructuro y primero establezco un plan",
+          "value": "blue"
+        },
+        {
+          "text": "Lo consulto con otros para coordinar",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo describirías tu comunicación?",
+      "options": [
+        {
+          "text": "Directa y al grano",
+          "value": "red"
+        },
+        {
+          "text": "Espontánea y entusiasta",
+          "value": "yellow"
+        },
+        {
+          "text": "Clara y basada en hechos",
+          "value": "blue"
+        },
+        {
+          "text": "Cálida y de apoyo",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Qué valoras más en tus compañeros?",
+      "options": [
+        {
+          "text": "Capacidad de decisión",
+          "value": "red"
+        },
+        {
+          "text": "Creatividad",
+          "value": "yellow"
+        },
+        {
+          "text": "Minuciosidad",
+          "value": "blue"
+        },
+        {
+          "text": "Compromiso",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo estableces objetivos?",
+      "options": [
+        {
+          "text": "Ambiciosos y orientados a la acción",
+          "value": "red"
+        },
+        {
+          "text": "Impulsados por la visión e inspiradores",
+          "value": "yellow"
+        },
+        {
+          "text": "SMART y medibles",
+          "value": "blue"
+        },
+        {
+          "text": "Realistas y en consulta",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo reaccionas cuando alguien cuestiona tu plan?",
+      "options": [
+        {
+          "text": "Me mantengo firme y defiendo mi enfoque",
+          "value": "red"
+        },
+        {
+          "text": "Escucho pero sigo entusiasmado",
+          "value": "yellow"
+        },
+        {
+          "text": "Compruebo si sus comentarios tienen fundamento",
+          "value": "blue"
+        },
+        {
+          "text": "Intento comprender sus inquietudes",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Qué caracteriza tu forma de trabajar?",
+      "options": [
+        {
+          "text": "Orientada a objetivos y eficiente",
+          "value": "red"
+        },
+        {
+          "text": "Flexible e inspiradora",
+          "value": "yellow"
+        },
+        {
+          "text": "Precisa y estructurada",
+          "value": "blue"
+        },
+        {
+          "text": "Colaborativa y paciente",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo manejas el trabajo rutinario?",
+      "options": [
+        {
+          "text": "Intento hacerlo más rápido y eficiente",
+          "value": "red"
+        },
+        {
+          "text": "Busco formas de hacerlo más divertido",
+          "value": "yellow"
+        },
+        {
+          "text": "Lo realizo meticulosamente y con cuidado",
+          "value": "blue"
+        },
+        {
+          "text": "Lo hago porque es importante para el equipo",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Qué haces cuando las expectativas no están claras?",
+      "options": [
+        {
+          "text": "Marco yo mismo la dirección",
+          "value": "red"
+        },
+        {
+          "text": "Hago preguntas y trato de mantenerlo ligero",
+          "value": "yellow"
+        },
+        {
+          "text": "Pido aclaraciones hasta que todo quede claro",
+          "value": "blue"
+        },
+        {
+          "text": "Busco alinearme con los compañeros",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo reaccionas a una retroalimentación inesperada?",
+      "options": [
+        {
+          "text": "Actúo rápido para corregirlo",
+          "value": "red"
+        },
+        {
+          "text": "Lo relativizo y me mantengo positivo",
+          "value": "yellow"
+        },
+        {
+          "text": "Lo analizo y saco conclusiones",
+          "value": "blue"
+        },
+        {
+          "text": "Me siento afectado, pero intento comprender",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cuál es tu enfoque para las decisiones en grupo?",
+      "options": [
+        {
+          "text": "Asumo el liderazgo si se alarga demasiado",
+          "value": "red"
+        },
+        {
+          "text": "Animo a todos a aportar ideas",
+          "value": "yellow"
+        },
+        {
+          "text": "Intento aportar estructura a la discusión",
+          "value": "blue"
+        },
+        {
+          "text": "Me aseguro de que todos se sientan escuchados",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo es un día de trabajo ideal para ti?",
+      "options": [
+        {
+          "text": "Termino las tareas rápidamente y alcanzo mis objetivos",
+          "value": "red"
+        },
+        {
+          "text": "Obtengo energía de lluvias de ideas y conversaciones",
+          "value": "yellow"
+        },
+        {
+          "text": "Tengo tiempo para terminar algo a fondo",
+          "value": "blue"
+        },
+        {
+          "text": "Me siento conectado con mis compañeros",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo reaccionas ante agendas saturadas?",
+      "options": [
+        {
+          "text": "Elimino lo que no es urgente y sigo",
+          "value": "red"
+        },
+        {
+          "text": "Improviso y me mantengo flexible",
+          "value": "yellow"
+        },
+        {
+          "text": "Reestructuro a fondo mi planificación",
+          "value": "blue"
+        },
+        {
+          "text": "Hablo con quién podría ayudar",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo abordas a un cliente difícil?",
+      "options": [
+        {
+          "text": "Con asertividad y claridad",
+          "value": "red"
+        },
+        {
+          "text": "Con encanto y humor",
+          "value": "yellow"
+        },
+        {
+          "text": "Con hechos y argumentos bien preparados",
+          "value": "blue"
+        },
+        {
+          "text": "Con empatía y disposición a escuchar",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Qué haces cuando un compañero necesita ayuda?",
+      "options": [
+        {
+          "text": "Le doy consejos rápidos para avanzar",
+          "value": "red"
+        },
+        {
+          "text": "Trato de motivarle",
+          "value": "yellow"
+        },
+        {
+          "text": "Primero analizo el problema",
+          "value": "blue"
+        },
+        {
+          "text": "Dedico tiempo a buscar juntos una solución",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo elaboras una estrategia?",
+      "options": [
+        {
+          "text": "Elijo una dirección y defino los pasos",
+          "value": "red"
+        },
+        {
+          "text": "Exploro ideas e involucro a otros",
+          "value": "yellow"
+        },
+        {
+          "text": "Primero investigo el contexto y las cifras",
+          "value": "blue"
+        },
+        {
+          "text": "Busco consenso y la aportación del equipo",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo manejas un desacuerdo?",
+      "options": [
+        {
+          "text": "Mantengo mi postura y debato",
+          "value": "red"
+        },
+        {
+          "text": "Intento mantenerlo ligero",
+          "value": "yellow"
+        },
+        {
+          "text": "Me baso en hechos y argumentos",
+          "value": "blue"
+        },
+        {
+          "text": "Busco conexión y comprensión",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cuál es tu fortaleza como compañero?",
+      "options": [
+        {
+          "text": "Aseguro que las cosas avancen",
+          "value": "red"
+        },
+        {
+          "text": "Aporto energía y diversión",
+          "value": "yellow"
+        },
+        {
+          "text": "Aporto precisión y visión global",
+          "value": "blue"
+        },
+        {
+          "text": "Soy fiable y servicial",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Qué te motiva del trabajo en equipo?",
+      "options": [
+        {
+          "text": "Objetivos claros y rapidez",
+          "value": "red"
+        },
+        {
+          "text": "Dinámica divertida y creatividad",
+          "value": "yellow"
+        },
+        {
+          "text": "Una estructura clara",
+          "value": "blue"
+        },
+        {
+          "text": "Confianza y colaboración",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo reaccionas cuando alguien critica tu trabajo?",
+      "options": [
+        {
+          "text": "Pregunto qué se puede mejorar y lo ajusto",
+          "value": "red"
+        },
+        {
+          "text": "Me mantengo positivo y miro hacia adelante",
+          "value": "yellow"
+        },
+        {
+          "text": "Analizo si es justificado",
+          "value": "blue"
+        },
+        {
+          "text": "Lo tomo en serio y lo discuto",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo reaccionas cuando se adelanta un plazo?",
+      "options": [
+        {
+          "text": "Reorganizo y trabajo más rápido",
+          "value": "red"
+        },
+        {
+          "text": "Me mantengo optimista y lo resuelvo sobre la marcha",
+          "value": "yellow"
+        },
+        {
+          "text": "Hago un nuevo plan",
+          "value": "blue"
+        },
+        {
+          "text": "Hablo con los implicados sobre el impacto",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Qué haces cuando un proyecto da un giro inesperado?",
+      "options": [
+        {
+          "text": "Tomo decisiones para redirigirlo",
+          "value": "red"
+        },
+        {
+          "text": "Busco nuevas oportunidades en la situación",
+          "value": "yellow"
+        },
+        {
+          "text": "Reviso los objetivos y riesgos",
+          "value": "blue"
+        },
+        {
+          "text": "Me aseguro de que todos estén de acuerdo con el cambio",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo prefieres colaborar con un superior?",
+      "options": [
+        {
+          "text": "Con mucha autonomía",
+          "value": "red"
+        },
+        {
+          "text": "En un ambiente abierto y creativo",
+          "value": "yellow"
+        },
+        {
+          "text": "Con acuerdos claros",
+          "value": "blue"
+        },
+        {
+          "text": "Con revisiones periódicas",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cuál es tu enfoque ante un nuevo desafío?",
+      "options": [
+        {
+          "text": "Me lanzo de lleno y veo adónde llegamos",
+          "value": "red"
+        },
+        {
+          "text": "Lo veo como una oportunidad de crecer",
+          "value": "yellow"
+        },
+        {
+          "text": "Reúno información y elaboro un plan",
+          "value": "blue"
+        },
+        {
+          "text": "Hablo con compañeros sobre su enfoque",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo mantienes el equilibrio en épocas de mucho trabajo?",
+      "options": [
+        {
+          "text": "Me centro en las prioridades",
+          "value": "red"
+        },
+        {
+          "text": "Busco distracción y energía",
+          "value": "yellow"
+        },
+        {
+          "text": "Planifico mi trabajo aún más estrictamente",
+          "value": "blue"
+        },
+        {
+          "text": "Lo comento con el equipo",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo ayudas a alguien que se siente inseguro?",
+      "options": [
+        {
+          "text": "Le doy dirección",
+          "value": "red"
+        },
+        {
+          "text": "Trato de animarle",
+          "value": "yellow"
+        },
+        {
+          "text": "Le doy datos y tranquilidad",
+          "value": "blue"
+        },
+        {
+          "text": "Escucho y le animo",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo manejas los obstáculos imprevistos?",
+      "options": [
+        {
+          "text": "Reacciono rápido y ajusto mi plan",
+          "value": "red"
+        },
+        {
+          "text": "Me mantengo positivo y creativo",
+          "value": "yellow"
+        },
+        {
+          "text": "Reviso el conjunto y ajusto",
+          "value": "blue"
+        },
+        {
+          "text": "Consulto con el equipo para apoyo",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Qué hace fuerte a un equipo según tu opinión?",
+      "options": [
+        {
+          "text": "Determinación",
+          "value": "red"
+        },
+        {
+          "text": "Inspiración y entusiasmo",
+          "value": "yellow"
+        },
+        {
+          "text": "Claridad y normas",
+          "value": "blue"
+        },
+        {
+          "text": "Confianza y empatía",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo comienzas un proyecto grande?",
+      "options": [
+        {
+          "text": "Con un kickoff y acción inmediata",
+          "value": "red"
+        },
+        {
+          "text": "Con una lluvia de ideas creativa",
+          "value": "yellow"
+        },
+        {
+          "text": "Con análisis y planificación",
+          "value": "blue"
+        },
+        {
+          "text": "Con consulta y alineación",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Qué caracteriza tu estilo de liderazgo?",
+      "options": [
+        {
+          "text": "Orientado a resultados",
+          "value": "red"
+        },
+        {
+          "text": "Motivador",
+          "value": "yellow"
+        },
+        {
+          "text": "Basado en políticas",
+          "value": "blue"
+        },
+        {
+          "text": "De coaching",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Qué haces cuando tienes que hacer muchas cosas a la vez?",
+      "options": [
+        {
+          "text": "Me pongo manos a la obra de inmediato",
+          "value": "red"
+        },
+        {
+          "text": "Confío en la improvisación",
+          "value": "yellow"
+        },
+        {
+          "text": "Hago un resumen y planifico",
+          "value": "blue"
+        },
+        {
+          "text": "Pido ayuda cuando es necesario",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Qué haces cuando hay un desacuerdo en el equipo?",
+      "options": [
+        {
+          "text": "Tomo la decisión",
+          "value": "red"
+        },
+        {
+          "text": "Intento mantener buen ambiente",
+          "value": "yellow"
+        },
+        {
+          "text": "Busco una solución basada en hechos",
+          "value": "blue"
+        },
+        {
+          "text": "Escucho todos los puntos de vista",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo prefieres acabar un día de trabajo?",
+      "options": [
+        {
+          "text": "Con la sensación de haber logrado mucho",
+          "value": "red"
+        },
+        {
+          "text": "Con una charla agradable o broma",
+          "value": "yellow"
+        },
+        {
+          "text": "Con una lista clara para mañana",
+          "value": "blue"
+        },
+        {
+          "text": "En calma, con todo terminado",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Qué valoras en tu trabajo?",
+      "options": [
+        {
+          "text": "Eficiencia y resultado",
+          "value": "red"
+        },
+        {
+          "text": "Libertad y creatividad",
+          "value": "yellow"
+        },
+        {
+          "text": "Estructura y claridad",
+          "value": "blue"
+        },
+        {
+          "text": "Compromiso y armonía",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "text": "¿Cómo garantizas la calidad?",
+      "options": [
+        {
+          "text": "Trabajando rápido y correctamente",
+          "value": "red"
+        },
+        {
+          "text": "Mediante renovación e inspiración",
+          "value": "yellow"
+        },
+        {
+          "text": "Con control y estándares",
+          "value": "blue"
+        },
+        {
+          "text": "Con cuidado y atención",
+          "value": "green"
+        }
+      ]
+    }
+  ]
+}

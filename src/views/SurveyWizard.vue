@@ -45,6 +45,9 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
+import enneagramQuestions from '../data/enneagram-questions.json'
+import discQuestions from '../data/disc-questions.json'
+import insightsQuestions from '../data/insights-questions.json'
 import { useTranslations } from '../composables/useTranslations'
 import EnneagramSurvey from '../components/surveys/EnneagramSurvey.vue'
 import DiscSurvey from '../components/surveys/DiscSurvey.vue'
@@ -54,7 +57,7 @@ const props = defineProps<{
   type: string
 }>()
 
-const { t } = useTranslations()
+const { t, currentLanguage } = useTranslations()
 
 const surveyType = computed(() => props.type)
 const currentStep = ref(0)
@@ -64,8 +67,18 @@ const nameStep = ref(true)
 
 // Update totalSteps based on survey type
 const totalSteps = computed(() => {
-  if (surveyType.value === 'insights') return 5
-  return 3
+  const lang = currentLanguage.value || 'en'
+  if (surveyType.value === 'insights') {
+    const questions = insightsQuestions[lang] || insightsQuestions.en
+    return questions.length
+  }
+  if (surveyType.value === 'disc') {
+    const questions = discQuestions[lang] || discQuestions.en
+    return questions.length
+  }
+  // Default to enneagram
+  const questions = enneagramQuestions[lang] || enneagramQuestions.en
+  return questions.length
 })
 
 const surveyComponents = {
