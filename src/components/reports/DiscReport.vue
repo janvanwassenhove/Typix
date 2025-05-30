@@ -86,7 +86,8 @@
 </template>
 
 <script setup lang="ts">
-import { Chart } from 'chart.js/auto'
+import { Chart, registerables } from 'chart.js'
+import type { ChartConfiguration } from 'chart.js'
 import { computed, onMounted, ref } from 'vue'
 import { usePdfExport } from '../../composables/usePdfExport'
 import { useTranslations } from '../../composables/useTranslations'
@@ -359,26 +360,22 @@ const combinationData = computed(() => combinationProfiles.value[profileCombinat
 
 let chartInstance: Chart | undefined
 
-onMounted(() => {
-  const ctx = chartCanvas.value?.getContext('2d')
-  if (!ctx) return
+// Register Chart.js components
+Chart.register(...registerables)
 
-  // Destroy previous chart instance if it exists
-  if (chartInstance) {
-    chartInstance.destroy()
-  }
-
-  const data = {
+// Add type for chart configuration
+const chartConfig: ChartConfiguration = {
+  type: 'bar',
+  data: {
     labels: ['D', 'I', 'S', 'C'],
     datasets: [{
       label: 'Style Scores',
-      data: Object.values(styleScores.value),
-      backgroundColor: Object.keys(styleScores.value).map(style => styleColors[style]),
+      data: [],
+      backgroundColor: [],
       borderWidth: 1
     }]
-  }
-
-  const options = {
+  },
+  options: {
     responsive: true,
     plugins: {
       legend: {
@@ -390,12 +387,22 @@ onMounted(() => {
       }
     }
   }
+}
 
-  chartInstance = new Chart(ctx, {
-    type: 'bar',
-    data,
-    options
-  })
+onMounted(() => {
+  const ctx = chartCanvas.value?.getContext('2d')
+  if (!ctx) return
+
+  if (chartInstance) {
+    chartInstance.destroy()
+  }
+
+  // Update chart data
+  chartConfig.data.datasets[0].data = Object.values(styleScores.value)
+  chartConfig.data.datasets[0].backgroundColor = Object.keys(styleScores.value)
+    .map(style => styleColors[style as keyof typeof styleColors])
+
+  chartInstance = new Chart(ctx, chartConfig)
 })
 </script>
 
