@@ -86,6 +86,7 @@
 </template>
 
 <script setup lang="ts">
+import { Chart } from 'chart.js/auto'
 import { computed, onMounted, ref } from 'vue'
 import { usePdfExport } from '../../composables/usePdfExport'
 import { useTranslations } from '../../composables/useTranslations'
@@ -328,4 +329,135 @@ const styleScores = computed(() => {
   
   Object.values(props.results).forEach((answer) => {
     const style = styles[answer] as keyof typeof scores
-    if
+    if (style) {
+      scores[style] = (scores[style] || 0) + 1
+    }
+  })
+  
+  const total = Object.values(scores).reduce((a, b) => a + b, 0)
+  
+  return Object.fromEntries(
+    Object.entries(scores).map(([style, score]) => [style, Math.round((score / total) * 100)])
+  )
+})
+
+const dominantStyle = computed(() => {
+  const maxScore = Math.max(...Object.values(styleScores.value))
+  const dominantStyles = Object.keys(styleScores.value).filter(style => styleScores.value[style] === maxScore)
+  
+  return dominantStyles.length === 1
+    ? styleData.value[dominantStyles[0]]
+    : { name: t('disc_style_balanced'), description: t('disc_style_balanced_desc'), traits: [], tips: [] }
+})
+
+const profileCombination = computed(() => {
+  const sortedStyles = Object.keys(styleScores.value).sort((a, b) => styleScores.value[b] - styleScores.value[a])
+  return `${sortedStyles[0]}/${sortedStyles[1]}`
+})
+
+const combinationData = computed(() => combinationProfiles.value[profileCombination.value] || { description: '', traits: [], teamRole: '', complements: [] })
+
+let chartInstance: Chart | undefined
+
+onMounted(() => {
+  const ctx = chartCanvas.value?.getContext('2d')
+  if (!ctx) return
+
+  // Destroy previous chart instance if it exists
+  if (chartInstance) {
+    chartInstance.destroy()
+  }
+
+  const data = {
+    labels: ['D', 'I', 'S', 'C'],
+    datasets: [{
+      label: 'Style Scores',
+      data: Object.values(styleScores.value),
+      backgroundColor: Object.keys(styleScores.value).map(style => styleColors[style]),
+      borderWidth: 1
+    }]
+  }
+
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top' as const,
+      },
+      title: {
+        display: true,
+        text: 'DISC Style Scores'
+      }
+    }
+  }
+
+  chartInstance = new Chart(ctx, {
+    type: 'bar',
+    data,
+    options
+  })
+})
+</script>
+
+<style scoped>
+.card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.report-content {
+  margin-bottom: 20px;
+}
+
+.disc-chart {
+  margin-bottom: 20px;
+}
+
+.primary-style {
+  margin-bottom: 20px;
+}
+
+.style-breakdown {
+  margin-bottom: 20px;
+}
+
+.profile-explanation {
+  margin-bottom: 20px;
+}
+
+.characteristics {
+  margin-bottom: 20px;
+}
+
+.communication-tips {
+  margin-bottom: 20px;
+}
+
+.team-dynamics {
+  margin-bottom: 20px;
+}
+
+.pdf-actions {
+  text-align: center;
+}
+
+.btn-pdf {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-pdf:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+</style>
