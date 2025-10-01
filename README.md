@@ -29,6 +29,29 @@ Typix is a web application for taking and generating reports for three popular p
 - `src/composables/`: Reusable logic, such as PDF export and translations.
 - `src/i18n/`: Internationalization support.
 
+## 📚 Documentation
+
+Comprehensive documentation is available in the `/docs` folder:
+
+- **[Complete Documentation Index](docs/README.md)** - Start here for all documentation
+- **[Use Case Diagrams](docs/diagrams/use-cases.md)** - Detailed use cases for all assessments
+- **[4+1 Architectural Model](docs/architecture/4+1-model.md)** - Complete system architecture
+- **[Business Design](docs/business/business-design.md)** - Business strategy and model
+- **[Functional Design](docs/functional/functional-design.md)** - Detailed functional specifications
+
+### Documentation Highlights
+
+The documentation includes:
+- ✅ **Use Case Diagrams**: Complete user flows for all three assessment types
+- ✅ **4+1 Architectural Model**: 
+  - Logical View (component structure)
+  - Process View (runtime behavior)
+  - Development View (code organization)
+  - Physical View (deployment)
+  - Scenarios (use cases)
+- ✅ **Business Design**: Market analysis, value proposition, business model, roadmap
+- ✅ **Functional Design**: System requirements, UI specs, performance, security, i18n
+
 ## Getting Started Locally
 
 ### Prerequisites
