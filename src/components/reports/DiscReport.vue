@@ -9,21 +9,18 @@
     <div v-else id="disc-report-content" class="report-content">
       <!-- Tooltip for DISC abbreviations -->
       <div class="disc-tooltip">
-        <span class="tooltip-label">What does <b>DISC</b> mean?</span>
+        <span class="tooltip-label">{{ t('disc_what_is') }}</span>
         <span class="tooltip-content">
-          <b>D</b>: Dominance &nbsp;|&nbsp;
-          <b>I</b>: Influence &nbsp;|&nbsp;
-          <b>S</b>: Steadiness &nbsp;|&nbsp;
-          <b>C</b>: Conscientiousness
+          <template v-for="(style, i) in DISC_STYLES" :key="style">
+            <span v-if="i > 0" class="tooltip-separator">|</span>
+            <b>{{ style }}</b>: {{ content.styles[style].name }}
+          </template>
         </span>
       </div>
 
       <div class="disc-chart">
         <canvas ref="chartCanvas" width="440" height="440"></canvas>
-        <p class="chart-caption">
-          The marker shows where your answers place you on the wheel: each style pulls
-          towards its own quadrant, weighted by how often you chose it.
-        </p>
+        <p class="chart-caption">{{ t('disc_wheel_caption') }}</p>
       </div>
 
       <div class="primary-style">
@@ -44,9 +41,7 @@
             <div class="score-value">{{ scores.percentages[style] }}%</div>
           </div>
         </div>
-        <p class="score-footnote">
-          Based on {{ scores.answered }} answered {{ scores.answered === 1 ? 'question' : 'questions' }}.
-        </p>
+        <p class="score-footnote">{{ answeredLabel }}</p>
       </div>
 
       <div class="profile-explanation">
@@ -118,9 +113,10 @@ import {
   DISC_WHEEL_SEGMENTS,
   discWheelPosition,
   scoreDisc,
-  type DiscCombination,
   type DiscStyle
 } from '../../scoring/disc'
+import { discContent } from '../../i18n/content/disc'
+import { pickLocale } from '../../i18n/content/locale'
 
 const props = defineProps<{
   results: unknown
@@ -128,9 +124,15 @@ const props = defineProps<{
 
 const chartCanvas = ref<HTMLCanvasElement>()
 const { generatePDF, isGeneratingPDF } = usePdfExport()
-const { t } = useTranslations()
+const { t, currentLanguage } = useTranslations()
 
 const scores = computed(() => scoreDisc(props.results))
+const content = computed(() => pickLocale(discContent, currentLanguage.value))
+
+const answeredLabel = computed(() => t(
+  scores.value.answered === 1 ? 'based_on_answers_one' : 'based_on_answers_other',
+  { count: scores.value.answered }
+))
 
 const downloadPDF = async () => {
   try {
@@ -152,155 +154,8 @@ function getStyleColor(style: string): string {
   return styleColors[style as DiscStyle] || '#000'
 }
 
-const styleData: Record<DiscStyle, { name: string; description: string; traits: string[]; tips: string[] }> = {
-  D: {
-    name: "Dominance",
-    description: "Direct, results-oriented, firm, strong-willed, and forceful",
-    traits: ["Decisive", "Competitive", "Results-focused", "Direct communication"],
-    tips: [
-      "Be direct and to the point",
-      "Focus on results and outcomes",
-      "Provide options and let them choose",
-      "Avoid too much detail or small talk"
-    ]
-  },
-  I: {
-    name: "Influence",
-    description: "Outgoing, enthusiastic, optimistic, high-spirited, and lively",
-    traits: ["Enthusiastic", "Persuasive", "People-oriented", "Optimistic"],
-    tips: [
-      "Be enthusiastic and energetic",
-      "Allow time for socializing",
-      "Use stories and examples",
-      "Provide recognition and praise"
-    ]
-  },
-  S: {
-    name: "Steadiness",
-    description: "Even-tempered, accommodating, patient, humble, and tactful",
-    traits: ["Reliable", "Patient", "Team-oriented", "Good listener"],
-    tips: [
-      "Be patient and supportive",
-      "Provide security and stability",
-      "Allow time for decision making",
-      "Show appreciation for their loyalty"
-    ]
-  },
-  C: {
-    name: "Conscientiousness",
-    description: "Private, analytical, logical, critical thinker, and reserved",
-    traits: ["Analytical", "Precise", "Quality-focused", "Systematic"],
-    tips: [
-      "Provide detailed information",
-      "Be prepared with facts and data",
-      "Allow time for analysis",
-      "Focus on quality and accuracy"
-    ]
-  }
-}
-
-interface CombinationProfile {
-  name: string
-  description: string
-  traits: string[]
-  teamRole: string
-  complements: string[]
-}
-
-/**
- * All twelve ordered style pairs are covered. Four of them (the "opposite"
- * pairs D/S, S/D, I/C and C/I) used to fall through to the D/I profile, so a
- * steady, detail-driven respondent could be handed a risk-taker's write-up.
- */
-const combinationProfiles: Record<DiscCombination, CombinationProfile> = {
-  'D/I': {
-    name: 'INITIATOR',
-    description: 'Results-oriented and people-focused. You drive initiatives while inspiring others to follow. Natural leaders who can motivate teams toward ambitious goals.',
-    traits: ['Charismatic leader', 'Goal-oriented', 'Persuasive', 'Energetic', 'Risk-taker'],
-    teamRole: 'You excel at launching new projects and rallying team support. Your combination of drive and enthusiasm makes you effective at both setting direction and getting buy-in.',
-    complements: ['S/C profiles for detailed execution', 'C profiles for analytical support', 'S profiles for steady implementation']
-  },
-  'D/S': {
-    name: 'DRIVER',
-    description: 'Results-driven with a steady hand. You push for outcomes without churning the team around you, and you follow through on what you start.',
-    traits: ['Determined', 'Persistent', 'Calm under pressure', 'Dependable', 'Outcome-focused'],
-    teamRole: 'You keep momentum going long after the initial enthusiasm fades. Your mix of drive and patience makes you effective on work that needs both a push and a long attention span.',
-    complements: ['I profiles for energy and visibility', 'C profiles for rigorous analysis', 'I/C profiles for polished communication']
-  },
-  'D/C': {
-    name: 'LEADER',
-    description: 'Results-driven with analytical precision. You make decisions based on data and drive for efficient, high-quality outcomes.',
-    traits: ['Strategic thinker', 'Quality-focused', 'Efficient', 'Systematic leader', 'Performance-driven'],
-    teamRole: 'You provide strong leadership with attention to detail. Your ability to combine vision with precision makes you effective at complex problem-solving.',
-    complements: ['I profiles for team motivation', 'S profiles for relationship building', 'I/S profiles for team harmony']
-  },
-  'I/D': {
-    name: 'MOTIVATOR',
-    description: 'Enthusiastic and action-oriented. You inspire others while driving for results, combining social energy with goal achievement.',
-    traits: ['Inspiring', 'Action-oriented', 'Socially confident', 'Goal-focused', 'Optimistic'],
-    teamRole: 'You energize teams while maintaining focus on results. Your ability to motivate others while driving performance makes you effective in dynamic environments.',
-    complements: ['S profiles for stability', 'C profiles for detailed analysis', 'S/C profiles for steady execution']
-  },
-  'I/S': {
-    name: 'ENCOURAGER',
-    description: 'Warm and people-first. You bring energy to a group without pushing it, and you notice when someone needs support before they ask.',
-    traits: ['Approachable', 'Encouraging', 'Patient listener', 'Enthusiastic', 'Loyal'],
-    teamRole: 'You make teams feel safe enough to speak up. Your blend of optimism and steadiness is valuable during change, when people need both reassurance and momentum.',
-    complements: ['D profiles for decisive direction', 'C profiles for structure and rigour', 'D/C profiles for strategic leadership']
-  },
-  'I/C': {
-    name: 'PROMOTER',
-    description: 'People-oriented with attention to quality. You promote ideas and solutions while ensuring they meet high standards.',
-    traits: ['Persuasive', 'Quality-minded', 'Creative', 'Thorough communicator', 'Relationship-focused'],
-    teamRole: 'You excel at presenting ideas and building consensus around quality solutions. Your combination of social skills and attention to detail helps in complex negotiations.',
-    complements: ['D profiles for decision-making', 'S profiles for implementation', 'D/S profiles for leadership and stability']
-  },
-  'S/D': {
-    name: 'ANCHOR',
-    description: 'Steady first, but willing to take the lead. You hold things together day to day and step forward decisively when the situation calls for it.',
-    traits: ['Grounded', 'Reliable', 'Quietly assertive', 'Practical', 'Protective of the team'],
-    teamRole: 'You are the person a team leans on when things get turbulent. You absorb pressure rather than pass it on, and you will make the call when nobody else will.',
-    complements: ['I profiles for visibility and energy', 'C profiles for detailed analysis', 'I/C profiles for persuasive communication']
-  },
-  'S/I': {
-    name: 'CONNECTOR',
-    description: 'Relationship-focused and supportive. You build strong team connections while maintaining harmony and encouraging collaboration.',
-    traits: ['Team builder', 'Supportive', 'Collaborative', 'Encouraging', 'Diplomatic'],
-    teamRole: 'You excel at bringing people together and maintaining positive team dynamics. Your warmth and stability create an environment where others thrive.',
-    complements: ['D profiles for direction setting', 'C profiles for analytical tasks', 'D/C profiles for strategic leadership']
-  },
-  'S/C': {
-    name: 'SUPPORTER',
-    description: 'Steady and detail-oriented. You provide reliable, high-quality work while maintaining team stability and following established processes.',
-    traits: ['Dependable', 'Detail-oriented', 'Loyal', 'Process-focused', 'Quality-conscious'],
-    teamRole: 'You are the backbone of team operations, ensuring consistent quality and reliable execution. Your thoroughness and loyalty make you invaluable for long-term success.',
-    complements: ['D profiles for leadership', 'I profiles for innovation', 'D/I profiles for dynamic leadership']
-  },
-  'C/D': {
-    name: 'ANALYST',
-    description: 'Analytical and results-focused. You solve complex problems with systematic approaches while driving for efficient outcomes.',
-    traits: ['Problem solver', 'Systematic', 'Results-oriented', 'Logical', 'Efficient'],
-    teamRole: 'You provide analytical leadership, solving complex challenges with data-driven approaches. Your combination of analysis and action orientation drives optimal solutions.',
-    complements: ['I profiles for team engagement', 'S profiles for relationship management', 'I/S profiles for team harmony']
-  },
-  'C/I': {
-    name: 'COORDINATOR',
-    description: 'Detail-oriented and people-focused. You coordinate complex projects while maintaining positive relationships and ensuring quality outcomes.',
-    traits: ['Organized', 'Collaborative', 'Detail-focused', 'Communicative', 'Quality-driven'],
-    teamRole: 'You excel at managing complex projects that require both attention to detail and team coordination. Your ability to organize while maintaining relationships is valuable in matrix environments.',
-    complements: ['D profiles for strategic direction', 'S profiles for steady support', 'D/S profiles for leadership and stability']
-  },
-  'C/S': {
-    name: 'EVALUATOR',
-    description: 'Precise and unhurried. You want the work to be right rather than fast, and you build the checks that stop small errors becoming expensive ones.',
-    traits: ['Methodical', 'Accurate', 'Patient', 'Risk-aware', 'Consistent'],
-    teamRole: 'You are the quality conscience of a team. You spot the flaw in a plan before it ships, and you keep standards steady when everyone else is in a hurry.',
-    complements: ['D profiles for decisive direction', 'I profiles for momentum and buy-in', 'D/I profiles for dynamic leadership']
-  }
-}
-
-const dominantStyle = computed(() => styleData[scores.value.primary])
-const combinationData = computed(() => combinationProfiles[scores.value.combination])
+const dominantStyle = computed(() => content.value.styles[scores.value.primary])
+const combinationData = computed(() => content.value.combinations[scores.value.combination])
 
 const redraw = () => nextTick(drawDiscCircle)
 
@@ -698,6 +553,11 @@ const drawDiscCircle = () => {
 .tooltip-label {
   font-weight: 600;
   margin-bottom: 2px;
+}
+
+.tooltip-separator {
+  margin: 0 6px;
+  color: #999;
 }
 
 .tooltip-content {

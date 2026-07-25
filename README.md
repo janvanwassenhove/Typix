@@ -6,13 +6,19 @@ Typix is a web application for taking and generating reports for three popular p
 
 ### 1. DISC Assessment
 - **Purpose:** Measures four personality traits: Dominance, Influence, Steadiness, and Conscientiousness.
-- **How it works:** Each question offers one option per style. Your picks are counted, converted to percentages that sum to 100, and the two strongest styles form your profile combination — one of twelve, such as `D/I` or `S/C`.
+- **How it works:** Each of the 50 questions describes a real situation and offers one response per style, written for that situation. Your picks are counted, converted to percentages that sum to 100, and the two strongest styles form your profile combination — one of twelve, such as `D/I` or `S/C`.
+
+![DISC question](docs/assets/reports/disc-question.png)
 
 ![Sample Typix DISC report](docs/assets/disc-profile-sample.png)
 
 The wheel splits each style's quadrant between its two neighbours. The highlighted segment is your combination; the marker is placed from your actual score distribution, so a balanced profile sits near the centre and a concentrated one sits near the rim.
 
 ![DISC wheel](docs/assets/reports/disc-wheel.png)
+
+Reports are written in all five supported languages, not just their headings — the same report in Dutch:
+
+![DISC report in Dutch](docs/assets/reports/disc-report-nl.png)
 
 ### 2. Enneagram Assessment
 - **Purpose:** Identifies which of the nine Enneagram types best describes the user.
@@ -41,9 +47,9 @@ The colour energy profile restates your percentages on the 0–6 preference scal
 - `src/components/reports/`: Report components for each assessment.
 - `src/scoring/`: Pure scoring logic for each assessment, plus its unit tests.
 - `src/data/`: Question sets in five languages. Every option carries the dimension it scores.
+- `src/i18n/`: UI strings, plus the report body copy under `src/i18n/content/`.
 - `src/views/`: Main views, including the homepage, survey wizard, and report page.
 - `src/composables/`: Reusable logic, such as PDF export and translations.
-- `src/i18n/`: Internationalization support.
 
 Scoring lives in `src/scoring/` rather than in the report components, so it can be tested
 without a browser and so every part of a report reads the same numbers.
@@ -80,9 +86,12 @@ without a browser and so every part of a report reads the same numbers.
 npm test
 ```
 
-The suite covers the scoring modules: percentages summing to 100, every Enneagram type and
+The suite covers the scoring modules — percentages summing to 100, every Enneagram type and
 every DISC combination being reachable, consistent tie-breaking, wheel geometry, and no `NaN`
-for an unanswered assessment.
+for an unanswered assessment — and the content: every language defines the same keys, every
+profile is written in every language, and no two questions share the same answer options.
+
+CI runs the same tests and a production build on every pull request.
 
 ## Release notes
 

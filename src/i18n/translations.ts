@@ -57,35 +57,10 @@ export const translations = {
     disc_communication_style: 'Communication & Work Style',
     disc_team_collaboration: 'Team Collaboration',
     disc_works_best_with: 'Works Best With',
-    disc_leader: 'LEADER',
-    disc_motivator: 'MOTIVATOR',
-    disc_supporter: 'SUPPORTER',
-    disc_analyst: 'ANALYST',
 
     // DISC Styles
-    disc_style_d_name: 'Dominance',
-    disc_style_d_desc: 'Direct, results-oriented, firm, strong-willed, and forceful',
-    disc_style_d_trait_1: 'Decisive',
-    disc_style_d_trait_2: 'Competitive',
-    disc_style_d_trait_3: 'Results-focused',
-    disc_style_d_trait_4: 'Direct communication',
-    disc_style_d_tip_1: 'Be direct and to the point',
-    disc_style_d_tip_2: 'Focus on results and outcomes',
-    disc_style_d_tip_3: 'Provide options and let them choose',
-    disc_style_d_tip_4: 'Avoid too much detail or small talk',
 
     // DISC Combinations
-    disc_combo_di_name: 'INITIATOR',
-    disc_combo_di_desc: 'Results-oriented and people-focused. You drive initiatives while inspiring others to follow.',
-    disc_combo_di_trait_1: 'Charismatic leader',
-    disc_combo_di_trait_2: 'Goal-oriented',
-    disc_combo_di_trait_3: 'Persuasive',
-    disc_combo_di_trait_4: 'Energetic',
-    disc_combo_di_trait_5: 'Risk-taker',
-    disc_combo_di_role: 'You excel at launching new projects and rallying team support.',
-    disc_combo_di_complement_1: 'S/C profiles for detailed execution',
-    disc_combo_di_complement_2: 'C profiles for analytical support',
-    disc_combo_di_complement_3: 'S profiles for steady implementation',
 
     // Enneagram Report Labels
     enneagram_position: 'Your Position on the Enneagram',
@@ -95,7 +70,6 @@ export const translations = {
     enneagram_key_characteristics: 'Key Characteristics',
     enneagram_growth_recommendations: 'Growth Recommendations',
 
-    // ...remaining keys...,
     no_results_title: 'No answers yet',
     no_results_body: 'Complete the assessment first and your report will appear here.',
     enneagram_type: 'Type',
@@ -111,7 +85,19 @@ export const translations = {
     insights_energy_balance: 'Energy Balance',
     insights_strengths: 'Your Strengths',
     insights_development_areas: 'Development Areas',
-    },
+    disc_what_is: 'What does DISC mean?',
+    disc_wheel_caption: 'The marker shows where your answers place you on the wheel: each style pulls towards its own quadrant, weighted by how often you chose it.',
+    based_on_answers_one: 'Based on {count} answered question.',
+    based_on_answers_other: 'Based on {count} answered questions.',
+    enneagram_lines_intro: 'The lines inside the symbol are fixed: the triangle joins 3-6-9 and the hexad follows 1-4-2-8-5-7. Highlighted on top of them are the two lines that belong to your own type.',
+    enneagram_interpret_label: 'How to interpret:',
+    enneagram_interpret_body: 'your main type is highlighted, with its wing shaded next to it. The solid green line points to the type whose healthy qualities you tend to pick up when you are doing well; the dashed red line points to the type whose behaviour tends to surface under sustained stress.',
+    enneagram_scores_footnote: 'Each type is scored on the agreement it collected as a share of the agreement it could have collected, then expressed as a percentage of the whole.',
+    insights_wheel_caption: 'Each colour pulls the marker towards its own quadrant, weighted by how often you chose it. Opposing energies cancel out, so a marker near the centre means a balanced profile.',
+    insights_chart_conscious: 'Colour energy (0-6 scale)',
+    insights_chart_deviation: 'Distance from a balanced profile',
+    insights_energy_caption: 'The left chart restates your percentages on the 0-6 preference scale. The right chart shows how far each colour sits from an even 25% split. Your overall spread is {spread} points, which reads as {balance}.',
+  },
 
   es: {
     // App & Navigation
@@ -171,35 +157,10 @@ export const translations = {
     disc_communication_style: 'Estilo de Comunicación y Trabajo',
     disc_team_collaboration: 'Colaboración en Equipo',
     disc_works_best_with: 'Mejor Con',
-    disc_leader: 'LÍDER',
-    disc_motivator: 'MOTIVADOR',
-    disc_supporter: 'SOPORTE',
-    disc_analyst: 'ANALISTA',
 
     // DISC Styles
-    disc_style_d_name: 'Dominio',
-    disc_style_d_desc: 'Directo, orientado a resultados, firme, de voluntad fuerte y enérgico',
-    disc_style_d_trait_1: 'Decisivo',
-    disc_style_d_trait_2: 'Competitivo',
-    disc_style_d_trait_3: 'Enfocado en resultados',
-    disc_style_d_trait_4: 'Comunicación directa',
-    disc_style_d_tip_1: 'Sé directo y ve al grano',
-    disc_style_d_tip_2: 'Enfócate en los resultados y desenlaces',
-    disc_style_d_tip_3: 'Proporciona opciones y deja que elijan',
-    disc_style_d_tip_4: 'Evita demasiados detalles o charlas triviales',
 
     // DISC Combinations
-    disc_combo_di_name: 'INICIADOR',
-    disc_combo_di_desc: 'Orientado a resultados y enfocado en las personas. Impulsas iniciativas mientras inspiras a otros a seguir.',
-    disc_combo_di_trait_1: 'Líder carismático',
-    disc_combo_di_trait_2: 'Orientado a objetivos',
-    disc_combo_di_trait_3: 'Persuasivo',
-    disc_combo_di_trait_4: 'Enérgico',
-    disc_combo_di_trait_5: 'Tomador de riesgos',
-    disc_combo_di_role: 'Destacas en el lanzamiento de nuevos proyectos y en reunir el apoyo del equipo.',
-    disc_combo_di_complement_1: 'Perfiles S/C para ejecución detallada',
-    disc_combo_di_complement_2: 'Perfiles C para apoyo analítico',
-    disc_combo_di_complement_3: 'Perfiles S para implementación constante',
 
     // Enneagram Report Labels
     enneagram_position: 'Tu Posición en el Eneagrama',
@@ -209,7 +170,6 @@ export const translations = {
     enneagram_key_characteristics: 'Características Clave',
     enneagram_growth_recommendations: 'Recomendaciones de Crecimiento',
 
-    // ...remaining keys...,
     no_results_title: 'Aún no hay respuestas',
     no_results_body: 'Completa primero la evaluación y tu informe aparecerá aquí.',
     enneagram_type: 'Tipo',
@@ -225,7 +185,19 @@ export const translations = {
     insights_energy_balance: 'Equilibrio Energético',
     insights_strengths: 'Tus Fortalezas',
     insights_development_areas: 'Áreas de Desarrollo',
-    },
+    disc_what_is: '¿Qué significa DISC?',
+    disc_wheel_caption: 'El marcador muestra dónde te sitúan tus respuestas en la rueda: cada estilo tira hacia su propio cuadrante, ponderado por la frecuencia con que lo elegiste.',
+    based_on_answers_one: 'Basado en {count} pregunta respondida.',
+    based_on_answers_other: 'Basado en {count} preguntas respondidas.',
+    enneagram_lines_intro: 'Las líneas del símbolo son fijas: el triángulo une 3-6-9 y la hexada sigue 1-4-2-8-5-7. Sobre ellas se destacan las dos líneas propias de tu tipo.',
+    enneagram_interpret_label: 'Cómo leerlo:',
+    enneagram_interpret_body: 'tu tipo principal está destacado, con su ala en un tono más claro al lado. La línea verde continua apunta al tipo cuyas cualidades sanas adoptas cuando estás bien; la linea roja discontinua apunta al tipo cuyo comportamiento aflora bajo estrés sostenido.',
+    enneagram_scores_footnote: 'Cada tipo se puntúa por el acuerdo que recogio como proporción del acuerdo que podría haber recogido, y luego se expresa como porcentaje del total.',
+    insights_wheel_caption: 'Cada color tira del marcador hacia su propio cuadrante, ponderado por la frecuencia con que lo elegiste. Las energías opuestas se cancelan, así que un marcador cerca del centro indica un perfil equilibrado.',
+    insights_chart_conscious: 'Energía de color (escala 0-6)',
+    insights_chart_deviation: 'Distancia a un perfil equilibrado',
+    insights_energy_caption: 'El gráfico de la izquierda traslada tus porcentajes a la escala de preferencia 0-6. El de la derecha muestra cuánto se aleja cada color de un reparto igual del 25%. Tu dispersión global es de {spread} puntos, lo que se lee como {balance}.',
+  },
 
   fr: {
     // App & Navigation
@@ -285,35 +257,10 @@ export const translations = {
     disc_communication_style: 'Style de Communication & de Travail',
     disc_team_collaboration: 'Collaboration en Équipe',
     disc_works_best_with: 'Fonctionne Mieux Avec',
-    disc_leader: 'LEADER',
-    disc_motivator: 'MOTIVATEUR',
-    disc_supporter: 'SUPPORTER',
-    disc_analyst: 'ANALYSTE',
 
     // DISC Styles
-    disc_style_d_name: 'Dominance',
-    disc_style_d_desc: 'Direct, orienté résultats, ferme, volontaire et énergique',
-    disc_style_d_trait_1: 'Décisif',
-    disc_style_d_trait_2: 'Compétitif',
-    disc_style_d_trait_3: 'Axé sur les résultats',
-    disc_style_d_trait_4: 'Communication directe',
-    disc_style_d_tip_1: 'Soyez direct et allez droit au but',
-    disc_style_d_tip_2: 'Concentrez-vous sur les résultats et les conséquences',
-    disc_style_d_tip_3: 'Fournissez des options et laissez-les choisir',
-    disc_style_d_tip_4: 'Évitez trop de détails ou de bavardages',
 
     // DISC Combinations
-    disc_combo_di_name: 'INITIATEUR',
-    disc_combo_di_desc: 'Orienté résultats et axé sur les personnes. Vous pilotez des initiatives tout en inspirant les autres à suivre.',
-    disc_combo_di_trait_1: 'Leader charismatique',
-    disc_combo_di_trait_2: 'Orienté vers les objectifs',
-    disc_combo_di_trait_3: 'Persuasif',
-    disc_combo_di_trait_4: 'Énergique',
-    disc_combo_di_trait_5: 'Prise de risque',
-    disc_combo_di_role: 'Vous excellez dans le lancement de nouveaux projets et le rassemblement du soutien de l’équipe.',
-    disc_combo_di_complement_1: 'Profils S/C pour une exécution détaillée',
-    disc_combo_di_complement_2: 'Profils C pour un soutien analytique',
-    disc_combo_di_complement_3: 'Profils S pour une mise en œuvre stable',
 
     // Enneagram Report Labels
     enneagram_position: 'Votre Position sur l\'Ennéagramme',
@@ -323,7 +270,6 @@ export const translations = {
     enneagram_key_characteristics: 'Caractéristiques Clés',
     enneagram_growth_recommendations: 'Recommandations de Croissance',
 
-    // ...remaining keys...,
     no_results_title: 'Pas encore de réponses',
     no_results_body: 'Complétez d\'abord le questionnaire et votre rapport s\'affichera ici.',
     enneagram_type: 'Type',
@@ -339,7 +285,19 @@ export const translations = {
     insights_energy_balance: 'Équilibre Énergétique',
     insights_strengths: 'Vos Forces',
     insights_development_areas: 'Axes de Développement',
-    },
+    disc_what_is: 'Que signifie DISC ?',
+    disc_wheel_caption: 'Le repère montre où vos réponses vous placent sur la roue : chaque style attire vers son propre quadrant, pondéré par la fréquence de vos choix.',
+    based_on_answers_one: 'Basé sur {count} question répondue.',
+    based_on_answers_other: 'Basé sur {count} questions répondues.',
+    enneagram_lines_intro: 'Les lignes du symbole sont fixes : le triangle relie 3-6-9 et l\'hexade suit 1-4-2-8-5-7. Par-dessus sont mises en évidence les deux lignes propres à votre type.',
+    enneagram_interpret_label: 'Comment lire ceci :',
+    enneagram_interpret_body: 'votre type principal est mis en évidence, avec son aile en teinte plus claire à côté. La ligne verte continue pointe vers le type dont vous reprenez les qualités saines quand tout va bien ; la ligne rouge pointillée pointe vers le type dont le comportement ressort sous un stress prolongé.',
+    enneagram_scores_footnote: 'Chaque type est noté sur l\'adhésion recueillie rapportée à l\'adhésion qu\'il aurait pu recueillir, puis exprimée en pourcentage de l\'ensemble.',
+    insights_wheel_caption: 'Chaque couleur attire le repère vers son propre quadrant, pondérée par la fréquence de vos choix. Les énergies opposées s\'annulent : un repère proche du centre indique un profil équilibré.',
+    insights_chart_conscious: 'Énergie des couleurs (échelle 0-6)',
+    insights_chart_deviation: 'Ecart par rapport a un profil équilibré',
+    insights_energy_caption: 'Le graphique de gauche traduit vos pourcentages sur l\'échelle de préférence 0-6. Celui de droite montre l\'écart de chaque couleur par rapport a une répartition égale de 25%. Votre dispersion globale est de {spread} points, ce qui se lit comme {balance}.',
+  },
 
   de: {
     // App & Navigation
@@ -399,35 +357,10 @@ export const translations = {
     disc_communication_style: 'Kommunikations- & Arbeitsstil',
     disc_team_collaboration: 'Teamzusammenarbeit',
     disc_works_best_with: 'Am besten mit',
-    disc_leader: 'FÜHRER',
-    disc_motivator: 'MOTIVATOR',
-    disc_supporter: 'UNTERSTÜTZER',
-    disc_analyst: 'ANALYST',
 
     // DISC Styles
-    disc_style_d_name: 'Dominanz',
-    disc_style_d_desc: 'Direkt, ergebnisorientiert, fest, willensstark und durchsetzungsfähig',
-    disc_style_d_trait_1: 'Entscheidungsfreudig',
-    disc_style_d_trait_2: 'Wettbewerbsfähig',
-    disc_style_d_trait_3: 'Ergebnisorientiert',
-    disc_style_d_trait_4: 'Direkte Kommunikation',
-    disc_style_d_tip_1: 'Seien Sie direkt und kommen Sie zur Sache',
-    disc_style_d_tip_2: 'Konzentrieren Sie sich auf Ergebnisse und Auswirkungen',
-    disc_style_d_tip_3: 'Bieten Sie Optionen an und lassen Sie sie wählen',
-    disc_style_d_tip_4: 'Vermeiden Sie zu viele Details oder Small Talk',
 
     // DISC Combinations
-    disc_combo_di_name: 'INITIATOR',
-    disc_combo_di_desc: 'Ergebnisorientiert und menschenorientiert. Sie treiben Initiativen voran, während Sie andere inspirieren, Ihnen zu folgen.',
-    disc_combo_di_trait_1: 'Charismatischer Führer',
-    disc_combo_di_trait_2: 'Zielorientiert',
-    disc_combo_di_trait_3: 'Überzeugend',
-    disc_combo_di_trait_4: 'Energiegeladen',
-    disc_combo_di_trait_5: 'Risikoaffin',
-    disc_combo_di_role: 'Sie excel in der Einleitung neuer Projekte und der Mobilisierung der Unterstützung des Teams.',
-    disc_combo_di_complement_1: 'S/C-Profile für detaillierte Ausführung',
-    disc_combo_di_complement_2: 'C-Profile für analytische Unterstützung',
-    disc_combo_di_complement_3: 'S-Profile für stetige Umsetzung',
 
     // Enneagram Report Labels
     enneagram_position: 'Ihre Position im Enneagramm',
@@ -437,7 +370,6 @@ export const translations = {
     enneagram_key_characteristics: 'Schlüsselmerkmale',
     enneagram_growth_recommendations: 'Wachstums Empfehlungen',
 
-    // ...remaining keys...,
     no_results_title: 'Noch keine Antworten',
     no_results_body: 'Füllen Sie zuerst den Test aus, dann erscheint Ihr Bericht hier.',
     enneagram_type: 'Typ',
@@ -453,7 +385,19 @@ export const translations = {
     insights_energy_balance: 'Energiebalance',
     insights_strengths: 'Ihre Stärken',
     insights_development_areas: 'Entwicklungsfelder',
-    },
+    disc_what_is: 'Wofür steht DISC?',
+    disc_wheel_caption: 'Die Markierung zeigt, wo Ihre Antworten Sie auf dem Rad verorten: Jeder Stil zieht zum eigenen Quadranten, gewichtet danach, wie oft Sie ihn gewählt haben.',
+    based_on_answers_one: 'Basierend auf {count} beantworteten Frage.',
+    based_on_answers_other: 'Basierend auf {count} beantworteten Fragen.',
+    enneagram_lines_intro: 'Die Linien im Symbol liegen fest: Das Dreieck verbindet 3-6-9, das Sechseck folgt 1-4-2-8-5-7. Darüber sind die beiden Linien Ihres eigenen Typs hervorgehoben.',
+    enneagram_interpret_label: 'So lesen Sie das:',
+    enneagram_interpret_body: 'Ihr Haupttyp ist hervorgehoben, daneben heller sein Flügel. Die durchgezogene grüne Linie zeigt auf den Typ, dessen gesunde Qualitäten Sie übernehmen, wenn es Ihnen gut geht; die rot gestrichelte Linie zeigt auf den Typ, dessen Verhalten bei anhaltendem Stress hervortritt.',
+    enneagram_scores_footnote: 'Jeder Typ wird an der gesammelten Zustimmung im Verhältnis zur maximal möglichen Zustimmung gemessen und danach als Anteil am Ganzen ausgedrückt.',
+    insights_wheel_caption: 'Jede Farbe zieht die Markierung zum eigenen Quadranten, gewichtet danach, wie oft Sie sie gewählt haben. Gegenüberliegende Energien heben sich auf: Eine Markierung nahe der Mitte bedeutet ein ausgewogenes Profil.',
+    insights_chart_conscious: 'Farbenergie (Skala 0-6)',
+    insights_chart_deviation: 'Abstand zu einem ausgewogenen Profil',
+    insights_energy_caption: 'Das linke Diagramm überträgt Ihre Prozentwerte auf die Präferenzskala 0-6. Das rechte zeigt, wie weit jede Farbe von einer gleichmäßigen Verteilung von 25% entfernt liegt. Ihre Gesamtstreuung beträgt {spread} Punkte, was als {balance} zu lesen ist.',
+  },
 
   nl: {
     // App & Navigation
@@ -513,35 +457,10 @@ export const translations = {
     disc_communication_style: 'Communicatie- & Werkstijl',
     disc_team_collaboration: 'Team Samenwerking',
     disc_works_best_with: 'Werkt Het Beste Met',
-    disc_leader: 'LEIDER',
-    disc_motivator: 'MOTIVATOR',
-    disc_supporter: 'ONDERSTEUNER',
-    disc_analyst: 'ANALIST',
 
     // DISC Styles
-    disc_style_d_name: 'Dominantie',
-    disc_style_d_desc: 'Direct, resultaatgericht, stevig, vastberaden en doortastend',
-    disc_style_d_trait_1: 'Besluitvaardig',
-    disc_style_d_trait_2: 'Competitief',
-    disc_style_d_trait_3: 'Resultaatgericht',
-    disc_style_d_trait_4: 'Directe communicatie',
-    disc_style_d_tip_1: 'Wees direct en kom ter zake',
-    disc_style_d_tip_2: 'Focus op resultaten en uitkomsten',
-    disc_style_d_tip_3: 'Bied opties aan en laat ze kiezen',
-    disc_style_d_tip_4: 'Vermijd te veel details of small talk',
 
     // DISC Combinations
-    disc_combo_di_name: 'INITIATOR',
-    disc_combo_di_desc: 'Resultaatgericht en mensengericht. Je drijft initiatieven terwijl je anderen inspireert om te volgen.',
-    disc_combo_di_trait_1: 'Charismatische leider',
-    disc_combo_di_trait_2: 'Doelgericht',
-    disc_combo_di_trait_3: 'Overtuigend',
-    disc_combo_di_trait_4: 'Energiek',
-    disc_combo_di_trait_5: 'Risicozoekend',
-    disc_combo_di_role: 'Je blinkt uit in het lanceren van nieuwe projecten en het verzamelen van teamondersteuning.',
-    disc_combo_di_complement_1: 'S/C-profielen voor gedetailleerde uitvoering',
-    disc_combo_di_complement_2: 'C-profielen voor analytische ondersteuning',
-    disc_combo_di_complement_3: 'S-profielen voor stabiele implementatie',
 
     // Enneagram Report Labels
     enneagram_position: 'Jouw Positie op het Enneagram',
@@ -551,7 +470,6 @@ export const translations = {
     enneagram_key_characteristics: 'Sleutelkenmerken',
     enneagram_growth_recommendations: 'Groei Aanbevelingen',
 
-    // ...remaining keys...,
     no_results_title: 'Nog geen antwoorden',
     no_results_body: 'Vul eerst de vragenlijst in, dan verschijnt je rapport hier.',
     enneagram_type: 'Type',
@@ -567,5 +485,17 @@ export const translations = {
     insights_energy_balance: 'Energiebalans',
     insights_strengths: 'Jouw Sterktes',
     insights_development_areas: 'Ontwikkelpunten',
-    }
+    disc_what_is: 'Wat betekent DISC?',
+    disc_wheel_caption: 'De markering toont waar je antwoorden je op het wiel plaatsen: elke stijl trekt naar het eigen kwadrant, gewogen naar hoe vaak je die koos.',
+    based_on_answers_one: 'Gebaseerd op {count} beantwoorde vraag.',
+    based_on_answers_other: 'Gebaseerd op {count} beantwoorde vragen.',
+    enneagram_lines_intro: 'De lijnen in het symbool liggen vast: de driehoek verbindt 3-6-9 en het zeshoekige patroon volgt 1-4-2-8-5-7. Daarbovenop zijn de twee lijnen van jouw eigen type gemarkeerd.',
+    enneagram_interpret_label: 'Hoe lees je dit:',
+    enneagram_interpret_body: 'je hoofdtype is gemarkeerd, met de vleugel er lichter naast. De doorlopende groene lijn wijst naar het type waarvan je de gezonde kwaliteiten oppikt als het goed met je gaat; de rode stippellijn wijst naar het type waarvan het gedrag opduikt bij aanhoudende stress.',
+    enneagram_scores_footnote: 'Elk type scoort de instemming die het verzamelde als aandeel van de instemming die het had kunnen verzamelen, en dat wordt daarna uitgedrukt als percentage van het geheel.',
+    insights_wheel_caption: 'Elke kleur trekt de markering naar het eigen kwadrant, gewogen naar hoe vaak je die koos. Tegenoverliggende energieën heffen elkaar op, dus een markering dicht bij het midden betekent een uitgebalanceerd profiel.',
+    insights_chart_conscious: 'Kleurenergie (schaal 0-6)',
+    insights_chart_deviation: 'Afstand tot een uitgebalanceerd profiel',
+    insights_energy_caption: 'De linkergrafiek zet je percentages om naar de voorkeursschaal 0-6. De rechtergrafiek toont hoe ver elke kleur van een gelijke verdeling van 25% ligt. Je totale spreiding is {spread} punten, wat leest als {balance}.',
+  }
 }

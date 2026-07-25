@@ -94,10 +94,10 @@ answers land in, and draws a marker derived from the actual score distribution.
 
 ### Across all three reports
 
-- Scoring moved out of the components into `src/scoring/`, covered by 45 unit tests
-  (`npm test`). The tests assert the properties that were broken: percentages summing to 100,
-  every type and every combination being reachable, ties resolving consistently, and no `NaN`
-  for an unanswered assessment.
+- Scoring moved out of the components into `src/scoring/`, covered by unit tests (`npm test`).
+  The tests assert the properties that were broken: percentages summing to 100, every type and
+  every combination being reachable, ties resolving consistently, and no `NaN` for an
+  unanswered assessment.
 - Report views reload their answers when the route changes. Previously, navigating from
   `/report/disc` to `/report/enneagram` reused the DISC answers under the Enneagram heading.
 - Language switching now updates question text. `useTranslations` returned a plain string
@@ -106,12 +106,37 @@ answers land in, and draws a marker derived from the actual score distribution.
 - Answers are stored as `{ questionIndex, answerIndex, value }` for all three assessments.
   Answers written by earlier versions are still read correctly.
 
-### Known limitations
+### The DISC questionnaire
 
-- **DISC question wording.** 48 of the 50 DISC questions share the same four generic answer
-  options ("Direct and results-focused", "Enthusiastic and people-oriented", …). The scoring is
-  now correct, but the instrument itself is weak — the questions vary while the answers do not.
-  Rewriting them is a separate content task.
-- **Report body copy is English only.** Section headings follow the selected language; the
-  profile descriptions, traits and tips do not. The translation file has keys for the D style
-  and the D/I combination only.
+![DISC question](assets/reports/disc-question.png)
+
+48 of the 50 DISC questions used to offer the same four generic options — "Direct and
+results-focused", "Enthusiastic and people-oriented", "Steady and supportive", "Careful and
+detail-oriented" — so only the question text changed while the answers stayed the same. A
+respondent could read fifty different situations and pick from one unchanging list, which tells
+them nothing about what they are choosing.
+
+All 50 questions are rewritten with responses written for that specific situation, in all five
+languages. A test asserts that no two questions in a language share an answer option.
+
+### Report copy is now translated
+
+Section headings already followed the selected language, but the profile descriptions, traits,
+tips, motivations and fears did not — the report switched to Dutch and then explained your
+profile in English. All of it now lives in `src/i18n/content/` and is written in all five
+languages: 4 DISC styles and 12 combinations, 9 Enneagram types, 4 colour energies with their
+12 profile positions, plus the chart captions and footnotes.
+
+![DISC report in Dutch](assets/reports/disc-report-nl.png)
+
+A test compares the shape of every locale against English, so a missing or empty string fails
+the build rather than falling back silently.
+
+The half-finished `disc_style_d_*` and `disc_combo_di_*` keys — which covered only the D style
+and the D/I combination and were never read — are removed.
+
+### Continuous integration
+
+The repository had no CI: the only workflow deployed to GitHub Pages on a push to `main`, so
+nothing ran on a pull request. `.github/workflows/ci.yml` now runs `npm test` and a production
+build (which includes `vue-tsc`) on every pull request and every push to `main`.
