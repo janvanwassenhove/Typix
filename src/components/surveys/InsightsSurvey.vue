@@ -34,7 +34,7 @@ const { currentLanguage } = useTranslations()
 const selectedAnswer = ref<number | null>(null)
 
 const currentQuestion = computed(() => {
-  const langQuestions = questions[currentLanguage as keyof typeof questions] || questions.en
+  const langQuestions = questions[currentLanguage.value as keyof typeof questions] || questions.en
   return langQuestions[props.currentStep] || langQuestions[0]
 })
 

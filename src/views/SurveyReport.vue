@@ -6,10 +6,10 @@
         <p class="report-subtitle">{{ getSurveyTitle() }}</p>
       </div>
 
-      <component 
-        :is="currentReportComponent" 
-        :results="results" 
-        :userName="userName" 
+      <component
+        :is="currentReportComponent"
+        :results="results"
+        :userName="userName"
       />
 
       <div class="report-actions">
@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useTranslations } from '../composables/useTranslations'
 import EnneagramReport from '../components/reports/EnneagramReport.vue'
 import DiscReport from '../components/reports/DiscReport.vue'
@@ -34,37 +34,31 @@ const { t } = useTranslations()
 
 const surveyType = computed(() => props.type)
 
-// Load real results from localStorage based on survey type
-const results = ref<Record<number, any>>({})
+const results = ref<unknown>({})
 const userName = ref('')
 
-onMounted(() => {
+/**
+ * Reloaded whenever the route type changes, not just on mount: vue-router
+ * reuses this view when navigating between `/report/disc` and
+ * `/report/enneagram`, so a mount-only load left the previous assessment's
+ * answers on screen under the new assessment's heading.
+ *
+ * The stored shape is handed to the report components untouched; normalising
+ * it is the scoring layer's job.
+ */
+watch(surveyType, (type) => {
   userName.value = localStorage.getItem('user_name') || ''
-  const key = `${surveyType.value}_answers`
-  const stored = localStorage.getItem(key)
-  // Insights expects results as an array of answer indices
-  if (surveyType.value === 'insights' && stored) {
-    try {
-      const parsed = JSON.parse(stored)
-      // Extract answerIndex from each answer object
-      if (typeof parsed === 'object' && !Array.isArray(parsed)) {
-        results.value = Object.values(parsed).map((v: any) =>
-          typeof v === 'object' && v !== null && typeof v.answerIndex === 'number' ? v.answerIndex : (typeof v === 'number' ? v : null)
-        ).filter(v => v !== null)
-      } else if (Array.isArray(parsed)) {
-        results.value = parsed.map((v: any) =>
-          typeof v === 'object' && v !== null && typeof v.answerIndex === 'number' ? v.answerIndex : (typeof v === 'number' ? v : null)
-        ).filter(v => v !== null)
-      } else {
-        results.value = []
-      }
-    } catch {
-      results.value = []
-    }
-  } else {
-    results.value = stored ? JSON.parse(stored) : {}
+  const stored = localStorage.getItem(`${type}_answers`)
+  if (!stored) {
+    results.value = {}
+    return
   }
-})
+  try {
+    results.value = JSON.parse(stored)
+  } catch {
+    results.value = {}
+  }
+}, { immediate: true })
 
 const reportComponents = {
   enneagram: EnneagramReport,
@@ -114,12 +108,12 @@ const getSurveyTitle = () => {
   .report-title {
     font-size: 2rem;
   }
-  
+
   .report-actions {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .report-actions .btn {
     width: 100%;
     max-width: 300px;

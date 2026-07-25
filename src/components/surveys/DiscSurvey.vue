@@ -9,7 +9,7 @@
         :class="{ active: selectedAnswer === index }"
         @click="selectAnswer(index)"
       >
-        <div class="option-text">{{ option }}</div>
+        <div class="option-text">{{ option.text }}</div>
       </div>
     </div>
   </div>
@@ -35,18 +35,24 @@ const selectedAnswer = ref<number | null>(null)
 import questions from '../../data/disc-questions.json'
 
 const currentQuestion = computed(() => {
-  const langQuestions = questions[currentLanguage as keyof typeof questions] || questions.en
+  const langQuestions = questions[currentLanguage.value as keyof typeof questions] || questions.en
   return langQuestions[props.currentStep] || langQuestions[0]
 })
 
+// The chosen dimension travels with the answer, so scoring never has to assume
+// that every question lists its options in the same order.
 const selectAnswer = (index: number) => {
   selectedAnswer.value = index
-  emit('answer', index)
+  emit('answer', {
+    questionIndex: props.currentStep,
+    answerIndex: index,
+    value: currentQuestion.value.options[index].value
+  })
 }
 
 // Reset selection when step changes or answers are cleared
 watch(() => props.currentStep, () => {
-  selectedAnswer.value = props.answers[props.currentStep] ?? null
+  selectedAnswer.value = props.answers[props.currentStep]?.answerIndex ?? null
 }, { immediate: true })
 
 // Watch for answers being cleared (reset)

@@ -1,6 +1,12 @@
 <template>
   <div class="card">
-    <div id="disc-report-content" class="report-content">
+    <div v-if="!scores.hasAnswers" class="empty-state">
+      <h3>{{ t('no_results_title') }}</h3>
+      <p>{{ t('no_results_body') }}</p>
+      <router-link to="/survey/disc" class="btn btn-primary">{{ t('start_survey') }}</router-link>
+    </div>
+
+    <div v-else id="disc-report-content" class="report-content">
       <!-- Tooltip for DISC abbreviations -->
       <div class="disc-tooltip">
         <span class="tooltip-label">What does <b>DISC</b> mean?</span>
@@ -11,39 +17,46 @@
           <b>C</b>: Conscientiousness
         </span>
       </div>
-      
+
       <div class="disc-chart">
-        <canvas ref="chartCanvas" width="400" height="400"></canvas>
+        <canvas ref="chartCanvas" width="440" height="440"></canvas>
+        <p class="chart-caption">
+          The marker shows where your answers place you on the wheel: each style pulls
+          towards its own quadrant, weighted by how often you chose it.
+        </p>
       </div>
-      
+
       <div class="primary-style">
-        <h3>Your Primary Style: {{ dominantStyle.name }}</h3>
+        <h3>{{ t('disc_primary_style') }}: {{ dominantStyle.name }}</h3>
         <p class="style-description">{{ dominantStyle.description }}</p>
         <div class="combination-badge">
-          <span class="combination-text">Profile Combination: {{ profileCombination }}</span>
+          <span class="combination-text">{{ t('disc_profile_combination') }}: {{ scores.combination }}</span>
         </div>
       </div>
 
       <div class="style-breakdown">
         <div class="style-scores">
-          <div v-for="(score, style) in styleScores" :key="style" class="score-item">
+          <div v-for="style in DISC_STYLES" :key="style" class="score-item">
             <div class="score-label">{{ style }}</div>
             <div class="score-bar">
-              <div class="score-fill" :style="{ width: `${score}%`, backgroundColor: getStyleColor(style) }"></div>
+              <div class="score-fill" :style="{ width: `${scores.percentages[style]}%`, backgroundColor: getStyleColor(style) }"></div>
             </div>
-            <div class="score-value">{{ score }}%</div>
+            <div class="score-value">{{ scores.percentages[style] }}%</div>
           </div>
         </div>
+        <p class="score-footnote">
+          Based on {{ scores.answered }} answered {{ scores.answered === 1 ? 'question' : 'questions' }}.
+        </p>
       </div>
 
       <div class="profile-explanation">
-        <h4>{{ profileCombination }} Profile</h4>
+        <h4>{{ scores.combination }} &mdash; {{ combinationData.name }}</h4>
         <div class="profile-details">
           <div class="profile-description">
             <p>{{ combinationData.description }}</p>
           </div>
           <div class="profile-traits">
-            <h5>Key Characteristics:</h5>
+            <h5>{{ t('disc_key_characteristics') }}:</h5>
             <div class="traits-grid">
               <div v-for="trait in combinationData.traits" :key="trait" class="trait-item">
                 {{ trait }}
@@ -54,7 +67,7 @@
       </div>
 
       <div class="characteristics">
-        <h4>Behavioral Strengths</h4>
+        <h4>{{ t('disc_behavioral_strengths') }}</h4>
         <div class="traits-grid">
           <div v-for="trait in dominantStyle.traits" :key="trait" class="trait-item">
             {{ trait }}
@@ -63,18 +76,18 @@
       </div>
 
       <div class="communication-tips">
-        <h4>Communication & Work Style</h4>
+        <h4>{{ t('disc_communication_style') }}</h4>
         <ul>
           <li v-for="tip in dominantStyle.tips" :key="tip">{{ tip }}</li>
         </ul>
       </div>
 
       <div class="team-dynamics">
-        <h4>Team Collaboration</h4>
+        <h4>{{ t('disc_team_collaboration') }}</h4>
         <div class="dynamics-content">
           <p>{{ combinationData.teamRole }}</p>
           <div class="collaboration-tips">
-            <h5>Works Best With:</h5>
+            <h5>{{ t('disc_works_best_with') }}:</h5>
             <ul>
               <li v-for="complement in combinationData.complements" :key="complement">{{ complement }}</li>
             </ul>
@@ -83,65 +96,76 @@
       </div>
     </div>
 
-    <div class="pdf-actions">
-      <button 
-        @click="downloadPDF" 
+    <div v-if="scores.hasAnswers" class="pdf-actions">
+      <button
+        @click="downloadPDF"
         :disabled="isGeneratingPDF"
         class="btn btn-pdf"
       >
-        <span v-if="isGeneratingPDF">Generating PDF...</span>
-        <span v-else>📄 Download PDF Report</span>
+        <span v-if="isGeneratingPDF">{{ t('generating_pdf') }}</span>
+        <span v-else>📄 {{ t('download_pdf_report') }}</span>
       </button>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { usePdfExport } from '../../composables/usePdfExport'
+import { useTranslations } from '../../composables/useTranslations'
+import {
+  DISC_STYLES,
+  DISC_WHEEL_SEGMENTS,
+  discWheelPosition,
+  scoreDisc,
+  type DiscCombination,
+  type DiscStyle
+} from '../../scoring/disc'
 
 const props = defineProps<{
-  results: Record<number, number>
+  results: unknown
 }>()
 
 const chartCanvas = ref<HTMLCanvasElement>()
 const { generatePDF, isGeneratingPDF } = usePdfExport()
+const { t } = useTranslations()
+
+const scores = computed(() => scoreDisc(props.results))
 
 const downloadPDF = async () => {
   try {
-    await generatePDF('disc-report-content', `DISC-Report-${profileCombination.value}`)
+    await generatePDF('disc-report-content', `DISC-Report-${scores.value.combination.replace('/', '-')}`)
   } catch (error) {
     console.error('Failed to generate PDF:', error)
     alert('Failed to generate PDF. Please try again.')
   }
 }
 
-const styleColors = {
+const styleColors: Record<DiscStyle, string> = {
   D: '#FF6B6B',
-  I: '#FFD93D', 
+  I: '#FFD93D',
   S: '#6BCF7F',
   C: '#4D96FF'
 }
 
-// Add this function so it's available in the template
 function getStyleColor(style: string): string {
-  return styleColors[style as keyof typeof styleColors] || '#000'
+  return styleColors[style as DiscStyle] || '#000'
 }
 
-const styleData = {
+const styleData: Record<DiscStyle, { name: string; description: string; traits: string[]; tips: string[] }> = {
   D: {
     name: "Dominance",
     description: "Direct, results-oriented, firm, strong-willed, and forceful",
     traits: ["Decisive", "Competitive", "Results-focused", "Direct communication"],
     tips: [
       "Be direct and to the point",
-      "Focus on results and outcomes", 
+      "Focus on results and outcomes",
       "Provide options and let them choose",
       "Avoid too much detail or small talk"
     ]
   },
   I: {
-    name: "Influence", 
+    name: "Influence",
     description: "Outgoing, enthusiastic, optimistic, high-spirited, and lively",
     traits: ["Enthusiastic", "Persuasive", "People-oriented", "Optimistic"],
     tips: [
@@ -153,7 +177,7 @@ const styleData = {
   },
   S: {
     name: "Steadiness",
-    description: "Even-tempered, accommodating, patient, humble, and tactful", 
+    description: "Even-tempered, accommodating, patient, humble, and tactful",
     traits: ["Reliable", "Patient", "Team-oriented", "Good listener"],
     tips: [
       "Be patient and supportive",
@@ -175,7 +199,20 @@ const styleData = {
   }
 }
 
-const combinationProfiles = {
+interface CombinationProfile {
+  name: string
+  description: string
+  traits: string[]
+  teamRole: string
+  complements: string[]
+}
+
+/**
+ * All twelve ordered style pairs are covered. Four of them (the "opposite"
+ * pairs D/S, S/D, I/C and C/I) used to fall through to the D/I profile, so a
+ * steady, detail-driven respondent could be handed a risk-taker's write-up.
+ */
+const combinationProfiles: Record<DiscCombination, CombinationProfile> = {
   'D/I': {
     name: 'INITIATOR',
     description: 'Results-oriented and people-focused. You drive initiatives while inspiring others to follow. Natural leaders who can motivate teams toward ambitious goals.',
@@ -183,12 +220,47 @@ const combinationProfiles = {
     teamRole: 'You excel at launching new projects and rallying team support. Your combination of drive and enthusiasm makes you effective at both setting direction and getting buy-in.',
     complements: ['S/C profiles for detailed execution', 'C profiles for analytical support', 'S profiles for steady implementation']
   },
+  'D/S': {
+    name: 'DRIVER',
+    description: 'Results-driven with a steady hand. You push for outcomes without churning the team around you, and you follow through on what you start.',
+    traits: ['Determined', 'Persistent', 'Calm under pressure', 'Dependable', 'Outcome-focused'],
+    teamRole: 'You keep momentum going long after the initial enthusiasm fades. Your mix of drive and patience makes you effective on work that needs both a push and a long attention span.',
+    complements: ['I profiles for energy and visibility', 'C profiles for rigorous analysis', 'I/C profiles for polished communication']
+  },
   'D/C': {
     name: 'LEADER',
     description: 'Results-driven with analytical precision. You make decisions based on data and drive for efficient, high-quality outcomes.',
     traits: ['Strategic thinker', 'Quality-focused', 'Efficient', 'Systematic leader', 'Performance-driven'],
     teamRole: 'You provide strong leadership with attention to detail. Your ability to combine vision with precision makes you effective at complex problem-solving.',
     complements: ['I profiles for team motivation', 'S profiles for relationship building', 'I/S profiles for team harmony']
+  },
+  'I/D': {
+    name: 'MOTIVATOR',
+    description: 'Enthusiastic and action-oriented. You inspire others while driving for results, combining social energy with goal achievement.',
+    traits: ['Inspiring', 'Action-oriented', 'Socially confident', 'Goal-focused', 'Optimistic'],
+    teamRole: 'You energize teams while maintaining focus on results. Your ability to motivate others while driving performance makes you effective in dynamic environments.',
+    complements: ['S profiles for stability', 'C profiles for detailed analysis', 'S/C profiles for steady execution']
+  },
+  'I/S': {
+    name: 'ENCOURAGER',
+    description: 'Warm and people-first. You bring energy to a group without pushing it, and you notice when someone needs support before they ask.',
+    traits: ['Approachable', 'Encouraging', 'Patient listener', 'Enthusiastic', 'Loyal'],
+    teamRole: 'You make teams feel safe enough to speak up. Your blend of optimism and steadiness is valuable during change, when people need both reassurance and momentum.',
+    complements: ['D profiles for decisive direction', 'C profiles for structure and rigour', 'D/C profiles for strategic leadership']
+  },
+  'I/C': {
+    name: 'PROMOTER',
+    description: 'People-oriented with attention to quality. You promote ideas and solutions while ensuring they meet high standards.',
+    traits: ['Persuasive', 'Quality-minded', 'Creative', 'Thorough communicator', 'Relationship-focused'],
+    teamRole: 'You excel at presenting ideas and building consensus around quality solutions. Your combination of social skills and attention to detail helps in complex negotiations.',
+    complements: ['D profiles for decision-making', 'S profiles for implementation', 'D/S profiles for leadership and stability']
+  },
+  'S/D': {
+    name: 'ANCHOR',
+    description: 'Steady first, but willing to take the lead. You hold things together day to day and step forward decisively when the situation calls for it.',
+    traits: ['Grounded', 'Reliable', 'Quietly assertive', 'Practical', 'Protective of the team'],
+    teamRole: 'You are the person a team leans on when things get turbulent. You absorb pressure rather than pass it on, and you will make the call when nobody else will.',
+    complements: ['I profiles for visibility and energy', 'C profiles for detailed analysis', 'I/C profiles for persuasive communication']
   },
   'S/I': {
     name: 'CONNECTOR',
@@ -204,20 +276,6 @@ const combinationProfiles = {
     teamRole: 'You are the backbone of team operations, ensuring consistent quality and reliable execution. Your thoroughness and loyalty make you invaluable for long-term success.',
     complements: ['D profiles for leadership', 'I profiles for innovation', 'D/I profiles for dynamic leadership']
   },
-  'I/D': {
-    name: 'MOTIVATOR',
-    description: 'Enthusiastic and action-oriented. You inspire others while driving for results, combining social energy with goal achievement.',
-    traits: ['Inspiring', 'Action-oriented', 'Socially confident', 'Goal-focused', 'Optimistic'],
-    teamRole: 'You energize teams while maintaining focus on results. Your ability to motivate others while driving performance makes you effective in dynamic environments.',
-    complements: ['S profiles for stability', 'C profiles for detailed analysis', 'S/C profiles for steady execution']
-  },
-  'I/C': {
-    name: 'PROMOTER',
-    description: 'People-oriented with attention to quality. You promote ideas and solutions while ensuring they meet high standards.',
-    traits: ['Persuasive', 'Quality-minded', 'Creative', 'Thorough communicator', 'Relationship-focused'],
-    teamRole: 'You excel at presenting ideas and building consensus around quality solutions. Your combination of social skills and attention to detail helps in complex negotiations.',
-    complements: ['D profiles for decision-making', 'S profiles for implementation', 'D/S profiles for leadership and stability']
-  },
   'C/D': {
     name: 'ANALYST',
     description: 'Analytical and results-focused. You solve complex problems with systematic approaches while driving for efficient outcomes.',
@@ -231,162 +289,107 @@ const combinationProfiles = {
     traits: ['Organized', 'Collaborative', 'Detail-focused', 'Communicative', 'Quality-driven'],
     teamRole: 'You excel at managing complex projects that require both attention to detail and team coordination. Your ability to organize while maintaining relationships is valuable in matrix environments.',
     complements: ['D profiles for strategic direction', 'S profiles for steady support', 'D/S profiles for leadership and stability']
+  },
+  'C/S': {
+    name: 'EVALUATOR',
+    description: 'Precise and unhurried. You want the work to be right rather than fast, and you build the checks that stop small errors becoming expensive ones.',
+    traits: ['Methodical', 'Accurate', 'Patient', 'Risk-aware', 'Consistent'],
+    teamRole: 'You are the quality conscience of a team. You spot the flaw in a plan before it ships, and you keep standards steady when everyone else is in a hurry.',
+    complements: ['D profiles for decisive direction', 'I profiles for momentum and buy-in', 'D/I profiles for dynamic leadership']
   }
 }
 
-const styleScores = computed(() => {
-  if (!props.results) return { D: 25, I: 25, S: 25, C: 25 }
-  
-  const scores = { D: 0, I: 0, S: 0, C: 0 }
-  const styles = ['D', 'I', 'S', 'C']
-  
-  Object.values(props.results).forEach((answer) => {
-    const style = styles[answer] as keyof typeof scores
-    if (style) scores[style]++
-  })
-  
-  const total = Object.values(scores).reduce((sum, score) => sum + score, 0)
-  
-  return {
-    D: Math.round((scores.D / total) * 100),
-    I: Math.round((scores.I / total) * 100), 
-    S: Math.round((scores.S / total) * 100),
-    C: Math.round((scores.C / total) * 100)
-  }
-})
+const dominantStyle = computed(() => styleData[scores.value.primary])
+const combinationData = computed(() => combinationProfiles[scores.value.combination])
 
-const dominantStyle = computed(() => {
-  const maxStyle = Object.entries(styleScores.value).reduce((a, b) => 
-    styleScores.value[a[0] as keyof typeof styleScores.value] > styleScores.value[b[0] as keyof typeof styleScores.value] ? a : b
-  )[0] as keyof typeof styleData
-  
-  return styleData[maxStyle]
-})
+const redraw = () => nextTick(drawDiscCircle)
 
-const profileCombination = computed(() => {
-  const scores = styleScores.value
-  const sortedStyles = Object.entries(scores)
-    .sort(([,a], [,b]) => b - a)
-    .slice(0, 2)
-  
-  const primary = sortedStyles[0][0]
-  const secondary = sortedStyles[1][0]
-  
-  return `${primary}/${secondary}`
-})
-
-const combinationData = computed(() => {
-  return combinationProfiles[profileCombination.value as keyof typeof combinationProfiles] || combinationProfiles['D/I']
-})
-
-onMounted(() => {
-  if (chartCanvas.value) {
-    drawDiscCircle()
-  }
-})
+onMounted(redraw)
+// The parent loads answers from localStorage after this component mounts, so
+// the wheel must follow the scores rather than being painted once on mount.
+watch(() => props.results, redraw, { deep: true })
 
 const drawDiscCircle = () => {
   const canvas = chartCanvas.value
   if (!canvas) return
-  
+
   const ctx = canvas.getContext('2d')
   if (!ctx) return
-  
+
   const centerX = canvas.width / 2
   const centerY = canvas.height / 2
-  const outerRadius = 180
-  const innerRadius = 60
-  
-  // Clear canvas
+  const outerRadius = 175
+  const ringWidth = 40
+  const innerRadius = 62
+
   ctx.clearRect(0, 0, canvas.width, canvas.height)
-  
-  // Draw outer ring with DISC sections
-  const sections = [
-    { style: 'D', startAngle: -Math.PI/2, endAngle: 0, color: styleColors.D, label: 'LEADER' },
-    { style: 'I', startAngle: 0, endAngle: Math.PI/2, color: styleColors.I, label: 'MOTIVATOR' },
-    { style: 'S', startAngle: Math.PI/2, endAngle: Math.PI, color: styleColors.S, label: 'SUPPORTER' },
-    { style: 'C', startAngle: Math.PI, endAngle: 3*Math.PI/2, color: styleColors.C, label: 'ANALYST' }
+
+  // Outer ring: one coloured band per style, in wheel order C | D / S | I.
+  const quadrants: Array<{ style: DiscStyle; startAngle: number }> = [
+    { style: 'D', startAngle: -Math.PI / 2 },
+    { style: 'I', startAngle: 0 },
+    { style: 'S', startAngle: Math.PI / 2 },
+    { style: 'C', startAngle: Math.PI }
   ]
-  
-  // Draw outer sections
-  sections.forEach(section => {
+
+  quadrants.forEach(({ style, startAngle }) => {
+    const endAngle = startAngle + Math.PI / 2
     ctx.beginPath()
-    ctx.arc(centerX, centerY, outerRadius, section.startAngle, section.endAngle)
-    ctx.arc(centerX, centerY, outerRadius - 40, section.endAngle, section.startAngle, true)
+    ctx.arc(centerX, centerY, outerRadius, startAngle, endAngle)
+    ctx.arc(centerX, centerY, outerRadius - ringWidth, endAngle, startAngle, true)
     ctx.closePath()
-    ctx.fillStyle = section.color
+    ctx.fillStyle = styleColors[style]
     ctx.fill()
-    
-    // Add section labels
-    const labelAngle = (section.startAngle + section.endAngle) / 2
-    const labelRadius = outerRadius - 20
-    const labelX = centerX + Math.cos(labelAngle) * labelRadius
-    const labelY = centerY + Math.sin(labelAngle) * labelRadius
-    
-    ctx.fillStyle = 'black'
-    ctx.font = 'bold 14px Arial'
+
+    // Only the letter goes in the band — the legend above the chart already
+    // spells out what each letter stands for, and the full words do not fit
+    // around the rim without colliding with it.
+    const labelAngle = startAngle + Math.PI / 4
     ctx.textAlign = 'center'
     ctx.textBaseline = 'middle'
-    ctx.fillText(section.label, labelX, labelY)
-    
-    // Add style letter
-    const letterRadius = outerRadius + 25
-    const letterX = centerX + Math.cos(labelAngle) * letterRadius
-    const letterY = centerY + Math.sin(labelAngle) * letterRadius
-    
-    ctx.fillStyle = section.color
-    ctx.font = 'bold 32px Arial'
-    ctx.fillText(section.style, letterX, letterY)
-  })
-  
-  // Draw combination segments
-  // Order must match visual positions (starting at top, clockwise)
-  const combinations = [
-    'D/I', // top
-    'I/D', // top-right
-    'I/S', // right
-    'S/I', // bottom-right
-    'S/C', // bottom
-    'C/S', // bottom-left
-    'C/D', // left
-    'D/C'  // top-left
-  ]
-
-  combinations.forEach((combo, index) => {
-    const angle = (index * Math.PI / 4) - Math.PI/2 + Math.PI/8
-    const radius = (outerRadius + innerRadius) / 2
-
-    ctx.fillStyle = '#333'
-    ctx.font = 'bold 11px Arial'
-    ctx.textAlign = 'center'
-    ctx.textBaseline = 'middle'
-
-    const x = centerX + Math.cos(angle) * radius
-    const y = centerY + Math.sin(angle) * radius
-    ctx.fillText(combo, x, y)
-  })
-
-  // Highlight user's combination (use exact match, not normalized)
-  const userCombo = profileCombination.value
-  const comboIndex = combinations.indexOf(userCombo)
-  if (comboIndex !== -1) {
-    const angle = (comboIndex * Math.PI / 4) - Math.PI/2 + Math.PI/8
-    const radius = (outerRadius + innerRadius) / 2
-
-    ctx.beginPath()
-    ctx.arc(
-      centerX + Math.cos(angle) * radius,
-      centerY + Math.sin(angle) * radius,
-      25, 0, 2 * Math.PI
+    ctx.fillStyle = '#1A1A1A'
+    ctx.font = 'bold 26px Arial'
+    ctx.fillText(
+      style,
+      centerX + Math.cos(labelAngle) * (outerRadius - ringWidth / 2),
+      centerY + Math.sin(labelAngle) * (outerRadius - ringWidth / 2)
     )
-    ctx.fillStyle = 'rgba(249, 166, 7, 0.3)'
+  })
+
+  // Eight combination segments: each quadrant splits into the half nearest each
+  // neighbour, so D/I sits against I/D and C/D sits against D/C.
+  const ringInner = outerRadius - ringWidth
+  const segmentRadius = (ringInner + innerRadius) / 2
+  const segmentAngle = (index: number) => (index * Math.PI) / 4 - Math.PI / 2 + Math.PI / 8
+
+  const highlightIndex = DISC_WHEEL_SEGMENTS.indexOf(scores.value.combination)
+  if (highlightIndex !== -1) {
+    const centre = segmentAngle(highlightIndex)
+    ctx.beginPath()
+    ctx.arc(centerX, centerY, ringInner - 2, centre - Math.PI / 8, centre + Math.PI / 8)
+    ctx.arc(centerX, centerY, innerRadius + 2, centre + Math.PI / 8, centre - Math.PI / 8, true)
+    ctx.closePath()
+    ctx.fillStyle = 'rgba(249, 166, 7, 0.22)'
     ctx.fill()
     ctx.strokeStyle = '#F9A607'
-    ctx.lineWidth = 3
+    ctx.lineWidth = 2
     ctx.stroke()
   }
-  
-  // Draw center circle
+
+  DISC_WHEEL_SEGMENTS.forEach((combo, index) => {
+    const angle = segmentAngle(index)
+    ctx.fillStyle = combo === scores.value.combination ? '#1A4731' : '#666'
+    ctx.font = combo === scores.value.combination ? 'bold 13px Arial' : '11px Arial'
+    ctx.textAlign = 'center'
+    ctx.textBaseline = 'middle'
+    ctx.fillText(
+      combo,
+      centerX + Math.cos(angle) * segmentRadius,
+      centerY + Math.sin(angle) * segmentRadius
+    )
+  })
+
+  // Centre disc.
   ctx.beginPath()
   ctx.arc(centerX, centerY, innerRadius, 0, 2 * Math.PI)
   ctx.fillStyle = 'white'
@@ -394,15 +397,38 @@ const drawDiscCircle = () => {
   ctx.strokeStyle = '#ddd'
   ctx.lineWidth = 2
   ctx.stroke()
-  
-  // Add center text
-  ctx.fillStyle = '#333'
-  ctx.font = 'bold 16px Arial'
+
+  ctx.fillStyle = '#1A4731'
+  ctx.font = 'bold 20px Arial'
   ctx.textAlign = 'center'
   ctx.textBaseline = 'middle'
-  ctx.fillText('DISC', centerX, centerY - 10)
-  ctx.font = '12px Arial'
-  ctx.fillText('Profile', centerX, centerY + 10)
+  ctx.fillText(scores.value.combination, centerX, centerY - 9)
+  ctx.fillStyle = '#666'
+  ctx.font = '11px Arial'
+  ctx.fillText(combinationData.value.name, centerX, centerY + 11)
+
+  // Marker last, so it is never painted over. Positioned from the actual score
+  // distribution, which also covers the four profiles that do not map onto one
+  // of the eight segments (D/S, S/D, I/C, C/I).
+  if (scores.value.hasAnswers) {
+    const { angle, radius } = discWheelPosition(scores.value.percentages)
+    const markerRadius = innerRadius + 8 + radius * (ringInner - innerRadius - 16)
+    const markerX = centerX + Math.cos(angle) * markerRadius
+    const markerY = centerY + Math.sin(angle) * markerRadius
+
+    ctx.beginPath()
+    ctx.arc(markerX, markerY, 9, 0, 2 * Math.PI)
+    ctx.fillStyle = '#F9A607'
+    ctx.fill()
+    ctx.strokeStyle = '#fff'
+    ctx.lineWidth = 3
+    ctx.stroke()
+    ctx.beginPath()
+    ctx.arc(markerX, markerY, 10.5, 0, 2 * Math.PI)
+    ctx.strokeStyle = '#1A4731'
+    ctx.lineWidth = 1.5
+    ctx.stroke()
+  }
 }
 </script>
 
@@ -412,12 +438,36 @@ const drawDiscCircle = () => {
   margin: 0 auto;
 }
 
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.empty-state h3 {
+  font-size: 1.6rem;
+  color: #1A4731;
+  margin-bottom: 12px;
+}
+
+.empty-state p {
+  color: #666;
+  margin-bottom: 24px;
+}
+
 .disc-chart {
   text-align: center;
   margin-bottom: 40px;
   padding: 20px;
   background: #f8f9fa;
   border-radius: 15px;
+}
+
+.chart-caption {
+  max-width: 480px;
+  margin: 10px auto 0;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .primary-style {
@@ -498,6 +548,13 @@ const drawDiscCircle = () => {
   width: 50px;
   text-align: right;
   font-size: 1.1rem;
+}
+
+.score-footnote {
+  margin-top: 18px;
+  color: #888;
+  font-size: 0.85rem;
+  text-align: right;
 }
 
 .profile-explanation {
@@ -655,24 +712,24 @@ const drawDiscCircle = () => {
 
 @media (max-width: 768px) {
   .disc-chart canvas {
-    width: 300px !important;
-    height: 300px !important;
+    width: 320px !important;
+    height: 320px !important;
   }
-  
+
   .primary-style,
   .profile-explanation,
   .team-dynamics {
     padding: 20px;
   }
-  
+
   .traits-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .score-item {
     gap: 15px;
   }
-  
+
   .score-label {
     width: 25px;
   }

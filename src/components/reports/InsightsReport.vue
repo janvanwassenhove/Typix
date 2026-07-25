@@ -1,69 +1,80 @@
 <template>
   <div class="card">
-    <div id="insights-report-content" class="report-content">
+    <div v-if="!scores.hasAnswers" class="empty-state">
+      <h3>{{ t('no_results_title') }}</h3>
+      <p>{{ t('no_results_body') }}</p>
+      <router-link to="/survey/insights" class="btn btn-primary">{{ t('start_survey') }}</router-link>
+    </div>
+
+    <div v-else id="insights-report-content" class="report-content">
       <div class="insights-circle">
         <canvas ref="circleCanvas" width="500" height="500"></canvas>
+        <p class="chart-caption">
+          Each colour pulls the marker towards its own quadrant, weighted by how often you chose it.
+          Opposing energies cancel out, so a marker near the centre means a balanced profile.
+        </p>
       </div>
 
-      <!-- Energy Dynamics Visualization -->
+      <!-- Colour energy charts -->
       <div class="energy-dynamics">
-        <h4>Energy Dynamics</h4>
-        <canvas ref="dynamicsCanvas" width="700" height="350"></canvas>
+        <h4>{{ t('insights_energy_profile') }}</h4>
+        <canvas ref="dynamicsCanvas" width="700" height="330"></canvas>
         <div class="dynamics-labels">
-          <div>
-            <strong>Persona<br>(Conscious)</strong>
-          </div>
-          <div>
-            <strong>Preference<br>Flow</strong>
-          </div>
-          <div>
-            <strong>Persona<br>(Less Conscious)</strong>
-          </div>
+          <div><strong>Colour energy<br>(0&ndash;6 scale)</strong></div>
+          <div><strong>Distance from a<br>balanced profile</strong></div>
         </div>
+        <p class="chart-caption">
+          The left chart restates your percentages on the 0&ndash;6 preference scale. The right chart
+          shows how far each colour sits from an even 25% split &mdash; your overall spread is
+          {{ spread.toFixed(1) }} points, which reads as <strong>{{ balance }}</strong>.
+        </p>
       </div>
 
       <div class="primary-color">
-        <h3>Your Primary Color: {{ userName ? userName + ", " : '' }}{{ dominantColor.name }}</h3>
+        <h3>{{ t('insights_primary_color') }}: {{ userName ? userName + ", " : '' }}{{ dominantColor.name }}</h3>
         <div class="color-indicator" :style="{ backgroundColor: dominantColor.hex }"></div>
         <p class="color-description">{{ dominantColor.description }}</p>
         <div class="position-info">
-          <span class="position-label">Profile Position: {{ profilePosition }}</span>
+          <span class="position-label">{{ t('insights_profile_position') }}: {{ profilePosition }}</span>
         </div>
       </div>
 
       <div class="color-breakdown">
-        <h4>Color Energy Distribution</h4>
+        <h4>{{ t('insights_color_distribution') }}</h4>
         <div class="color-bars">
-          <div v-for="color in colorData" :key="color.name" class="color-bar">
+          <div v-for="color in COLOR_KEYS" :key="color" class="color-bar">
             <div class="bar-header">
-              <span class="color-name">{{ color.name }}</span>
-              <span class="color-percentage">{{ colorScores[color.name as ColorKey] }}%</span>
+              <span class="color-name">{{ color }}</span>
+              <span class="color-percentage">{{ scores.percentages[color] }}%</span>
             </div>
             <div class="bar-container">
               <div
                 class="bar-fill"
                 :style="{
-                  width: `${colorScores[color.name as ColorKey]}%`,
-                  backgroundColor: color.hex
+                  width: `${scores.percentages[color]}%`,
+                  backgroundColor: colorHex[color]
                 }"
               ></div>
             </div>
           </div>
         </div>
+        <p class="score-footnote">
+          Based on {{ scores.answered }} answered {{ scores.answered === 1 ? 'question' : 'questions' }}.
+        </p>
       </div>
 
       <div class="profile-analysis">
-        <h4>Your Color Profile Analysis</h4>
+        <h4>{{ t('insights_profile_analysis') }}</h4>
         <div class="analysis-content">
           <p>{{ profileAnalysis.description }}</p>
           <div class="balance-indicator">
-            <span class="balance-label">Energy Balance: {{ profileAnalysis.balance }}</span>
+            <span class="balance-label">{{ t('insights_energy_balance') }}: {{ balance }}</span>
           </div>
         </div>
       </div>
 
       <div class="strengths-section">
-        <h4>Your Strengths</h4>
+        <h4>{{ t('insights_strengths') }}</h4>
         <div class="strengths-grid">
           <div v-for="strength in dominantColor.strengths" :key="strength" class="strength-item">
             {{ strength }}
@@ -72,13 +83,12 @@
       </div>
 
       <div class="development-areas">
-        <h4>Development Areas</h4>
+        <h4>{{ t('insights_development_areas') }}</h4>
         <ul>
           <li v-for="area in dominantColor.development" :key="area">{{ area }}</li>
         </ul>
       </div>
 
-      <!-- Nieuwe secties: Pitfalls, Goede Dag, en Sterke Dag -->
       <div class="insights-extras">
         <div class="pitfalls-section">
           <h4>{{ t('insights_pitfalls') }}</h4>
@@ -97,28 +107,35 @@
       </div>
     </div>
 
-    <div class="pdf-actions">
+    <div v-if="scores.hasAnswers" class="pdf-actions">
       <button
           @click="downloadPDF"
           :disabled="isGeneratingPDF"
           class="btn btn-pdf"
       >
-        <span v-if="isGeneratingPDF">Generating PDF...</span>
-        <span v-else>📄 Download PDF Report</span>
+        <span v-if="isGeneratingPDF">{{ t('generating_pdf') }}</span>
+        <span v-else>📄 {{ t('download_pdf_report') }}</span>
       </button>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { usePdfExport } from '../../composables/usePdfExport'
 import { useTranslations } from '../../composables/useTranslations'
-
-type ColorKey = 'Red' | 'Yellow' | 'Blue' | 'Green'
+import {
+  COLOR_KEYS,
+  PREFERENCE_MAX,
+  energyBalance,
+  energySpread,
+  insightsWheelPosition,
+  scoreInsights,
+  type ColorKey
+} from '../../scoring/insights'
 
 const props = defineProps<{
-  results: Record<number, number>,
+  results: unknown,
   userName?: string
 }>()
 
@@ -127,19 +144,41 @@ const dynamicsCanvas = ref<HTMLCanvasElement>()
 const { generatePDF, isGeneratingPDF } = usePdfExport()
 const { t } = useTranslations()
 
+const scores = computed(() => scoreInsights(props.results))
+const spread = computed(() => energySpread(scores.value.percentages))
+const balance = computed(() => energyBalance(scores.value.percentages))
+
 const downloadPDF = async () => {
   try {
-    await generatePDF('insights-report-content', `Insights-Report-${dominantColor.value.name}`)
+    await generatePDF('insights-report-content', `Insights-Report-${scores.value.dominant}`)
   } catch (error) {
     console.error('Failed to generate PDF:', error)
     alert('Failed to generate PDF. Please try again.')
   }
 }
 
-const colorData = [
-  {
+const colorHex: Record<ColorKey, string> = {
+  Red: '#FF6B6B',
+  Yellow: '#FFD93D',
+  Blue: '#45B7D1',
+  Green: '#96CEB4'
+}
+
+interface ColorProfile {
+  name: ColorKey
+  hex: string
+  description: string
+  strengths: string[]
+  development: string[]
+  pitfalls: string[]
+  goodDay: string
+  strongDay: string
+}
+
+const colorData: Record<ColorKey, ColorProfile> = {
+  Red: {
     name: "Red",
-    hex: "#FF6B6B",
+    hex: colorHex.Red,
     description: "Fiery Red energy represents determination, leadership, and results-oriented thinking. You're direct, competitive, and thrive on challenges.",
     strengths: ["Natural leadership", "Quick decision making", "Results-focused", "Competitive drive"],
     development: [
@@ -154,12 +193,12 @@ const colorData = [
       "Struggle to relax and go with the flow",
       "Tendency to overlook details"
     ],
-    goodDay: "Today is a great day to take charge and lead initiatives. Your energy is high, and your ability to inspire others is enhanced.",
-    strongDay: "You will excel in situations that require strategic thinking and problem-solving. Your natural analytical skills are heightened."
+    goodDay: "A good day for you is one where you can take charge, cut through the noise and close things out. Momentum is your fuel.",
+    strongDay: "At your strongest you turn a stalled situation around: you make the call others are avoiding and give the team a direction to move in."
   },
-  {
+  Yellow: {
     name: "Yellow",
-    hex: "#FFD93D",
+    hex: colorHex.Yellow,
     description: "Sunshine Yellow energy represents enthusiasm, creativity, and people-focused thinking. You're optimistic, persuasive, and energize others.",
     strengths: ["Inspiring others", "Creative problem solving", "Building relationships", "Positive outlook"],
     development: [
@@ -174,12 +213,12 @@ const colorData = [
       "Difficulty in saying no",
       "May overlook practical details"
     ],
-    goodDay: "Embrace your creativity and share your ideas with the world. It's a perfect day for collaboration and socializing.",
-    strongDay: "Your ability to connect with others and inspire them is at its peak. Use this energy to motivate your team or community."
+    goodDay: "A good day for you involves people, ideas and room to improvise. Collaboration leaves you with more energy than you started with.",
+    strongDay: "At your strongest you get a room engaged: you connect people to an idea and make them want to be part of it."
   },
-  {
+  Blue: {
     name: "Blue",
-    hex: "#45B7D1",
+    hex: colorHex.Blue,
     description: "Cool Blue energy represents analytical thinking, precision, and quality focus. You're logical, systematic, and value accuracy.",
     strengths: ["Analytical thinking", "Attention to detail", "Quality focus", "Systematic approach"],
     development: [
@@ -194,12 +233,12 @@ const colorData = [
       "May come across as aloof or detached",
       "Struggle to adapt to sudden changes"
     ],
-    goodDay: "Today is ideal for tackling complex problems and focusing on details. Your analytical skills will lead to significant insights.",
-    strongDay: "You will perform exceptionally well in tasks that require precision and careful planning. Trust your systematic approach."
+    goodDay: "A good day for you gives you uninterrupted time with a hard problem and the information you need to do it properly.",
+    strongDay: "At your strongest you find the flaw nobody else saw and produce work that holds up to scrutiny long after it ships."
   },
-  {
+  Green: {
     name: "Green",
-    hex: "#96CEB4",
+    hex: colorHex.Green,
     description: "Earth Green energy represents harmony, support, and steady progress. You're reliable, patient, and create stable environments.",
     strengths: ["Team collaboration", "Reliable support", "Patient approach", "Creating harmony"],
     development: [
@@ -214,206 +253,134 @@ const colorData = [
       "Difficulty in making quick decisions",
       "May resist necessary change or innovation"
     ],
-    goodDay: "Focus on nurturing your relationships and creating a positive atmosphere. Your supportive nature will shine through.",
-    strongDay: "You will excel in roles that require patience and a steady hand. Your ability to maintain harmony will be a key asset."
+    goodDay: "A good day for you is calm and predictable, with time to support the people around you and finish what you started.",
+    strongDay: "At your strongest you are the steady point in a turbulent situation: people trust you, and that trust holds the team together."
   }
-]
+}
 
-const colorScores = computed<Record<ColorKey, number>>(() => {
-  if (!props.results) return { Red: 25, Yellow: 25, Blue: 25, Green: 25 }
+const dominantColor = computed(() => colorData[scores.value.dominant])
 
-  let answers: number[] = []
-  if (Array.isArray(props.results)) {
-    answers = props.results.map(v => typeof v === 'number' ? v : (v && typeof v.answerIndex === 'number' ? v.answerIndex : null)).filter(v => v !== null) as number[]
-  } else if (typeof props.results === 'object') {
-    answers = Object.values(props.results).map((ans: any) => {
-      if (typeof ans === 'number') return ans
-      if (ans && typeof ans === 'object' && typeof ans.answerIndex === 'number') return ans.answerIndex
-      return null
-    }).filter(v => v !== null) as number[]
-  }
+const POSITION_NAMES: Record<string, string> = {
+  'Red-Yellow': 'Dynamic Leader',
+  'Red-Blue': 'Analytical Driver',
+  'Red-Green': 'Supportive Leader',
+  'Yellow-Red': 'Inspiring Motivator',
+  'Yellow-Blue': 'Creative Analyst',
+  'Yellow-Green': 'Collaborative Enthusiast',
+  'Blue-Red': 'Strategic Executor',
+  'Blue-Yellow': 'Methodical Communicator',
+  'Blue-Green': 'Systematic Supporter',
+  'Green-Red': 'Steady Achiever',
+  'Green-Yellow': 'Harmonious Facilitator',
+  'Green-Blue': 'Reliable Analyst'
+}
 
-  const scores: Record<ColorKey, number> = { Red: 0, Yellow: 0, Blue: 0, Green: 0 }
-  const colorMapping: ColorKey[] = ['Red', 'Yellow', 'Blue', 'Green']
-
-  answers.forEach((answer) => {
-    const color = colorMapping[answer]
-    if (color) scores[color]++
-  })
-
-  const totalAnswers = answers.length
-  if (totalAnswers === 0) return { Red: 25, Yellow: 25, Blue: 25, Green: 25 }
-
-  return {
-    Red: Math.round((scores.Red / totalAnswers) * 100),
-    Yellow: Math.round((scores.Yellow / totalAnswers) * 100),
-    Blue: Math.round((scores.Blue / totalAnswers) * 100),
-    Green: Math.round((scores.Green / totalAnswers) * 100)
-  }
-})
-
-const dominantColor = computed(() => {
-  const maxColor = Object.entries(colorScores.value).reduce((a, b) =>
-    a[1] > b[1] ? a : b
-  )[0] as ColorKey
-  return colorData.find(color => color.name === maxColor) || colorData[0]
-})
-
-const profilePosition = computed(() => {
-  const scores = colorScores.value
-  const sortedColors = Object.entries(scores)
-    .sort(([,a], [,b]) => b - a)
-    .slice(0, 2)
-
-  const primary = sortedColors[0][0] as ColorKey
-  const secondary = sortedColors[1][0] as ColorKey
-
-  const positions = {
-    'Red-Yellow': 'Dynamic Leader',
-    'Red-Blue': 'Analytical Driver',
-    'Red-Green': 'Supportive Leader',
-    'Yellow-Red': 'Inspiring Motivator',
-    'Yellow-Blue': 'Creative Analyst',
-    'Yellow-Green': 'Collaborative Enthusiast',
-    'Blue-Red': 'Strategic Executor',
-    'Blue-Yellow': 'Methodical Communicator',
-    'Blue-Green': 'Systematic Supporter',
-    'Green-Red': 'Steady Achiever',
-    'Green-Yellow': 'Harmonious Facilitator',
-    'Green-Blue': 'Reliable Analyst'
-  }
-
-  return positions[`${primary}-${secondary}` as keyof typeof positions] || 'Balanced Profile'
-})
+// Derived from the same ranking as the headline colour, so the position label
+// can no longer disagree with "Your Primary Colour".
+const profilePosition = computed(
+  () => POSITION_NAMES[`${scores.value.dominant}-${scores.value.secondary}`] || 'Balanced Profile'
+)
 
 const profileAnalysis = computed(() => {
-  const scores = colorScores.value
-  const variance = Object.values(scores).reduce((sum, score) => sum + Math.pow(score - 25, 2), 0) / 4
-
-  let balance = 'Highly Focused'
-  let description = ''
-
-  if (variance < 50) {
-    balance = 'Well Balanced'
-    description = 'You show a balanced approach across all color energies, adapting your style based on the situation. This flexibility is a significant strength in diverse environments.'
-  } else if (variance < 150) {
-    balance = 'Moderately Focused'
-    description = 'You have clear preferences while maintaining some flexibility. Your primary colors guide your approach, but you can draw on other energies when needed.'
-  } else {
-    balance = 'Highly Focused'
-    description = 'You have very strong preferences in specific color energies. This focused approach gives you clear strengths, though developing other areas could enhance your versatility.'
+  switch (balance.value) {
+    case 'Well Balanced':
+      return { description: 'You show a balanced approach across all colour energies, adapting your style based on the situation. This flexibility is a significant strength in diverse environments.' }
+    case 'Moderately Focused':
+      return { description: 'You have clear preferences while maintaining some flexibility. Your primary colours guide your approach, but you can draw on other energies when needed.' }
+    default:
+      return { description: 'You have very strong preferences in specific colour energies. This focused approach gives you clear strengths, though developing other areas could enhance your versatility.' }
   }
-
-  return { balance, description }
 })
 
-onMounted(() => {
-  if (circleCanvas.value) {
-    drawInsightsCircle()
-  }
-  drawEnergyDynamics()
-})
-
-watch(() => props.results, () => {
+const redraw = () => nextTick(() => {
   drawInsightsCircle()
-  drawEnergyDynamics()
+  drawEnergyCharts()
 })
+
+onMounted(redraw)
+watch(() => props.results, redraw, { deep: true })
 
 const allTypes = [
-  'REFORMER',    // Blue-Red (top, purple)
+  'REFORMER',    // Blue-Red (top)
   'DIRECTOR',    // Red (top-right)
   'MOTIVATOR',   // Red-Yellow (right)
   'INSPIRER',    // Yellow (bottom-right)
   'HELPER',      // Yellow-Green (bottom)
   'SUPPORTER',   // Green (bottom-left)
   'COORDINATOR', // Green-Blue (left)
-  'OBSERVER'     // Blue (top-left, 225°)
-];
+  'OBSERVER'     // Blue (top-left)
+]
 const typeColors = [
-  '#9B59B6', // REFORMER (Blue-Red, Purple)
-  '#E74C3C', // DIRECTOR (Red)
-  '#E67E22', // MOTIVATOR (Red-Yellow, Orange)
-  '#F7CA18', // INSPIRER (Yellow)
-  '#B6D957', // HELPER (Yellow-Green)
-  '#27AE60', // SUPPORTER (Green)
-  '#00B5B5', // COORDINATOR (Green-Blue, Teal)
-  '#3498DB'  // OBSERVER (Blue)
-];
-// Angles for each type (radians, starting from top, going clockwise)
+  '#9B59B6', '#E74C3C', '#E67E22', '#F7CA18',
+  '#B6D957', '#27AE60', '#00B5B5', '#3498DB'
+]
 const typeAngles = [
-  -Math.PI/2,           // REFORMER (top, 270°)
-  -Math.PI/4,           // DIRECTOR (top-right, 315°)
-  0,                    // MOTIVATOR (right, 0°)
-  Math.PI/4,            // INSPIRER (bottom-right, 45°)
-  Math.PI/2,            // HELPER (bottom, 90°)
-  3*Math.PI/4,          // SUPPORTER (bottom-left, 135°)
-  Math.PI,              // COORDINATOR (left, 180°)
-  -3*Math.PI/4          // OBSERVER (top-left, 225°)
-];
+  -Math.PI / 2, -Math.PI / 4, 0, Math.PI / 4,
+  Math.PI / 2, 3 * Math.PI / 4, Math.PI, -3 * Math.PI / 4
+]
 
 const drawInsightsCircle = () => {
   const canvas = circleCanvas.value
   if (!canvas) return
   const ctx = canvas.getContext('2d')
   if (!ctx) return
+
   const centerX = canvas.width / 2
   const centerY = canvas.height / 2
-  // Fit everything inside the .insights-circle div, so shrink radius if needed
-  const maxRadius = Math.min(canvas.width, canvas.height) / 2 - 60; // 60px margin for labels
-  const radius = Math.min(180, maxRadius);
+  const radius = Math.min(180, Math.min(canvas.width, canvas.height) / 2 - 60)
   ctx.clearRect(0, 0, canvas.width, canvas.height)
-  // Draw quadrants (colors only)
-  const quadrants = [
-    { color: '#FF6B6B', startAngle: -Math.PI/2, endAngle: 0 },
-    { color: '#FFD93D', startAngle: 0, endAngle: Math.PI/2 },
-    { color: '#96CEB4', startAngle: Math.PI/2, endAngle: Math.PI },
-    { color: '#45B7D1', startAngle: Math.PI, endAngle: 3*Math.PI/2 }
+
+  // Quadrants: Blue top-left, Red top-right, Green bottom-left, Yellow bottom-right.
+  const quadrants: Array<{ color: ColorKey; startAngle: number }> = [
+    { color: 'Red', startAngle: -Math.PI / 2 },
+    { color: 'Yellow', startAngle: 0 },
+    { color: 'Green', startAngle: Math.PI / 2 },
+    { color: 'Blue', startAngle: Math.PI }
   ]
-  quadrants.forEach(quadrant => {
+  quadrants.forEach(({ color, startAngle }) => {
+    const endAngle = startAngle + Math.PI / 2
     ctx.beginPath()
-    ctx.arc(centerX, centerY, radius, quadrant.startAngle, quadrant.endAngle)
+    ctx.arc(centerX, centerY, radius, startAngle, endAngle)
     ctx.lineTo(centerX, centerY)
     ctx.closePath()
-    ctx.fillStyle = quadrant.color
+    ctx.fillStyle = colorHex[color]
     ctx.globalAlpha = 0.3
     ctx.fill()
     ctx.globalAlpha = 1
     ctx.beginPath()
-    ctx.arc(centerX, centerY, radius, quadrant.startAngle, quadrant.endAngle)
+    ctx.arc(centerX, centerY, radius, startAngle, endAngle)
     ctx.lineTo(centerX, centerY)
-    ctx.strokeStyle = quadrant.color
+    ctx.strokeStyle = colorHex[color]
     ctx.lineWidth = 3
     ctx.stroke()
   })
-  // Draw 8 types evenly spaced (octants), starting with REFORMER at top
+
+  // Eight named positions around the rim.
   for (let i = 0; i < 8; i++) {
-    const angle = typeAngles[i];
-    const labelRadius = radius + 38; // closer to circle, fits in div
-    ctx.save();
-    ctx.translate(centerX, centerY);
-    ctx.rotate(angle);
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.font = 'bold 18px Arial';
-    // Draw colored background arc behind the text
-    ctx.beginPath();
-    // Make each arc 1/8th of the circle (45deg = Math.PI/4), so they touch and are equal
-    ctx.arc(0, 0, labelRadius, -Math.PI/8, Math.PI/8); // 45deg arc centered on label
-    ctx.lineWidth = 38; // Make arc thicker for better visibility and overlap
-    ctx.strokeStyle = typeColors[i];
-    ctx.shadowColor = 'rgba(0,0,0,0.13)';
-    ctx.shadowBlur = 2;
-    ctx.stroke();
-    ctx.shadowBlur = 0;
-    // Draw the label horizontally, tangent to the circle
-    ctx.save();
-    ctx.rotate(Math.PI/2); // Make text tangent to the circle
-    ctx.fillStyle = '#fff';
-    ctx.fillText(allTypes[i], 0, -labelRadius);
-    ctx.restore();
-    ctx.restore();
+    const labelRadius = radius + 38
+    ctx.save()
+    ctx.translate(centerX, centerY)
+    ctx.rotate(typeAngles[i])
+    ctx.textAlign = 'center'
+    ctx.textBaseline = 'middle'
+    ctx.font = 'bold 18px Arial'
+    ctx.beginPath()
+    ctx.arc(0, 0, labelRadius, -Math.PI / 8, Math.PI / 8)
+    ctx.lineWidth = 38
+    ctx.strokeStyle = typeColors[i]
+    ctx.shadowColor = 'rgba(0,0,0,0.13)'
+    ctx.shadowBlur = 2
+    ctx.stroke()
+    ctx.shadowBlur = 0
+    ctx.save()
+    ctx.rotate(Math.PI / 2)
+    ctx.fillStyle = '#fff'
+    ctx.fillText(allTypes[i], 0, -labelRadius)
+    ctx.restore()
+    ctx.restore()
   }
-  // Draw concentric circles for intensity levels
+
+  // Intensity rings.
   for (let i = 1; i <= 3; i++) {
     ctx.beginPath()
     ctx.arc(centerX, centerY, (radius * i) / 3, 0, 2 * Math.PI)
@@ -422,32 +389,13 @@ const drawInsightsCircle = () => {
     ctx.stroke()
   }
 
-  // Calculate profile position based on scores
-  const scores = colorScores.value;
-  // Correct quadrant mapping for canvas:
-  // Red: 0° (right), Yellow: 90° (bottom), Green: 180° (left), Blue: 270° (top)
-  const colorAngles = {
-    Red: 0,                  // right
-    Yellow: Math.PI / 2,     // bottom
-    Green: Math.PI,          // left
-    Blue: 3 * Math.PI / 2    // top
-  };
-  // Calculate vector sum for each color
-  let sumX = 0;
-  let sumY = 0;
-  colorOrder.forEach(color => {
-    const percent = scores[color as ColorKey] / 100; // 0..1
-    const angle = colorAngles[color as ColorKey];
-    sumX += Math.cos(angle) * percent;
-    sumY += Math.sin(angle) * percent;
-  });
-  // Normalize vector to max possible length (all in one direction)
-  let norm = Math.sqrt(sumX * sumX + sumY * sumY);
-  // Scale to fit within the circle (max radius * 0.7)
-  let scale = norm > 0 ? (radius * 0.7) / 1 : 0; // max possible norm is 1
-  const profileX = centerX + (sumX * scale);
-  const profileY = centerY + (sumY * scale);
-  // Draw profile position
+  // Marker. Each colour pulls towards the centre of its own quadrant, and the
+  // radius is normalised so a single-colour profile reaches the rim.
+  const { angle, radius: pull } = insightsWheelPosition(scores.value.percentages)
+  const markerRadius = pull * radius * 0.86
+  const profileX = centerX + Math.cos(angle) * markerRadius
+  const profileY = centerY + Math.sin(angle) * markerRadius
+
   ctx.beginPath()
   ctx.arc(profileX, profileY, 12, 0, 2 * Math.PI)
   ctx.fillStyle = '#F9A607'
@@ -455,7 +403,6 @@ const drawInsightsCircle = () => {
   ctx.strokeStyle = '#1A4731'
   ctx.lineWidth = 3
   ctx.stroke()
-  // Add profile indicator ring
   ctx.beginPath()
   ctx.arc(profileX, profileY, 20, 0, 2 * Math.PI)
   ctx.strokeStyle = '#F9A607'
@@ -463,167 +410,131 @@ const drawInsightsCircle = () => {
   ctx.setLineDash([5, 5])
   ctx.stroke()
   ctx.setLineDash([])
-  // Add "YOU" label
   ctx.fillStyle = '#1A4731'
   ctx.font = 'bold 12px Arial'
   ctx.textAlign = 'center'
   ctx.textBaseline = 'middle'
-  ctx.fillText('YOU', profileX, profileY - 35)
+  ctx.fillText('YOU', profileX, profileY - 32)
 }
 
-// --- ENERGY DYNAMICS CALCULATION HELPERS ---
-const colorOrder: ColorKey[] = ['Red', 'Yellow', 'Blue', 'Green'];
-const colorHex: Record<ColorKey, string> = {
-  Red: '#FF6B6B',
-  Yellow: '#FFD93D',
-  Blue: '#45B7D1',
-  Green: '#96CEB4',
-};
+/**
+ * Two panels drawn from the same scores: the preference means on the 0..6
+ * scale, and each colour's distance from an even 25% split.
+ *
+ * The previous version added a third "less conscious persona" panel produced by
+ * rotating the colour list by one position. The questionnaire only captures a
+ * single conscious preference per question, so that panel restated the same
+ * four numbers under different labels and is no longer drawn.
+ */
+function drawEnergyCharts() {
+  const canvas = dynamicsCanvas.value
+  if (!canvas) return
+  const ctx = canvas.getContext('2d')
+  if (!ctx) return
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-const energyStats = computed(() => {
-  const stats: Record<ColorKey, { mean: number, percent: number }> = {} as any;
-  colorOrder.forEach(color => {
-    const percent = colorScores.value[color]
-    const mean = (percent / 100) * 6;
-    stats[color] = { mean, percent };
-  });
-  return stats;
-});
+  const chartWidth = 200
+  const chartHeight = 210
+  const baseY = 30
+  const leftX = 80
+  const rightX = 410
 
-const lessConsciousStats = computed(() => {
-  const rotated: Record<ColorKey, number> = {} as any;
-  colorOrder.forEach((color, i) => {
-    const prevColor = colorOrder[(i + colorOrder.length - 1) % colorOrder.length];
-    rotated[color] = colorScores.value[prevColor];
-  });
-  const stats: Record<ColorKey, { mean: number, percent: number }> = {} as any;
-  colorOrder.forEach(color => {
-    const percent = rotated[color];
-    const mean = (percent / 100) * 6;
-    stats[color] = { mean, percent };
-  });
-  return stats;
-});
-
-const preferenceFlow = computed(() => {
-  const flow: Record<ColorKey, number> = {} as any;
-  colorOrder.forEach(color => {
-    flow[color] = energyStats.value[color].percent - lessConsciousStats.value[color].percent;
-  });
-  return flow;
-});
-
-// --- DRAWING FUNCTIONS ---
-function drawEnergyDynamics() {
-  const canvas = dynamicsCanvas.value;
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  if (!ctx) return;
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  const chartWidth = 120;
-  const chartHeight = 220;
-  const chartSpacing = 80;
-  const baseY = 40;
-  const baseX = 60;
-  // Draw three charts: persona, flow, persona (less conscious)
-  drawPersonaBarChart(ctx, baseX, baseY, chartWidth, chartHeight, energyStats.value);
-  drawFlowChart(ctx, baseX + chartWidth + chartSpacing, baseY, chartWidth, chartHeight, preferenceFlow.value);
-  drawPersonaBarChart(ctx, baseX + 2 * (chartWidth + chartSpacing), baseY, chartWidth, chartHeight, lessConsciousStats.value);
-  // Draw overall flow in center below flow chart (mean of abs values)
-  const avgFlow =
-      colorOrder.reduce((sum, color) => sum + Math.abs(preferenceFlow.value[color]), 0) / colorOrder.length;
-  ctx.font = 'bold 16px Arial';
-  ctx.fillStyle = '#333';
-  ctx.textAlign = 'center';
-  ctx.fillText(`${avgFlow.toFixed(1)}%`, baseX + chartWidth + chartSpacing + chartWidth / 2, baseY + chartHeight + 60);
+  drawMeansChart(ctx, leftX, baseY, chartWidth, chartHeight)
+  drawDeviationChart(ctx, rightX, baseY, chartWidth, chartHeight)
 }
 
-// Persona bar chart: show mean and percent under each bar
-function drawPersonaBarChart(
-  ctx: CanvasRenderingContext2D,
-  x: number,
-  y: number,
-  w: number,
-  h: number,
-  stats: Record<ColorKey, { mean: number, percent: number }>
-) {
-  const max = 6;
-  const barW = w / 4 - 10;
-  colorOrder.forEach((color, i) => {
-    const { mean, percent } = stats[color];
-    const barH = (mean / max) * h;
-    ctx.fillStyle = colorHex[color];
-    ctx.fillRect(x + i * (barW + 10), y + h - barH, barW, barH);
-    ctx.strokeStyle = '#333';
-    ctx.strokeRect(x + i * (barW + 10), y, barW, h);
-    ctx.font = '11px Arial';
-    ctx.fillStyle = '#333';
-    ctx.textAlign = 'center';
-    ctx.fillText(`${mean.toFixed(2)}`, x + i * (barW + 10) + barW / 2, y + h + 34);
-    ctx.fillText(`${Math.round(percent)}%`, x + i * (barW + 10) + barW / 2, y + h + 48);
-  });
-  ctx.strokeStyle = '#aaa';
-  ctx.beginPath();
-  ctx.moveTo(x - 5, y);
-  ctx.lineTo(x - 5, y + h);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.moveTo(x - 5, y + h);
-  ctx.lineTo(x + w + 5, y + h);
-  ctx.stroke();
-  ctx.font = '10px Arial';
-  ctx.fillStyle = '#666';
-  for (let i = 0; i <= 6; i++) {
-    const yTick = y + h - (i / max) * h;
-    ctx.fillText(i.toString(), x - 18, yTick + 3);
-  }
+function barLayout(x: number, width: number, index: number) {
+  const slot = width / COLOR_KEYS.length
+  const barWidth = slot - 14
+  return { left: x + index * slot + 7, width: barWidth, centre: x + index * slot + slot / 2 }
 }
 
-function drawFlowChart(
-  ctx: CanvasRenderingContext2D,
-  x: number,
-  y: number,
-  w: number,
-  h: number,
-  flow: Record<ColorKey, number>
-) {
-  ctx.strokeStyle = '#aaa';
-  ctx.beginPath();
-  ctx.moveTo(x - 5, y + h / 2);
-  ctx.lineTo(x + w + 5, y + h / 2);
-  ctx.stroke();
-  const barW = w / 4 - 10;
-  const maxAbs = 100;
-  colorOrder.forEach((color, i) => {
-    const percent = flow[color];
-    const barH = (Math.abs(percent) / maxAbs) * (h / 2);
-    ctx.fillStyle = colorHex[color];
-    if (percent >= 0) {
-      ctx.fillRect(x + i * (barW + 10), y + h / 2 - barH, barW, barH);
-    } else {
-      ctx.fillRect(x + i * (barW + 10), y + h / 2, barW, barH);
+function drawAxes(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number) {
+  ctx.strokeStyle = '#aaa'
+  ctx.lineWidth = 1
+  ctx.beginPath()
+  ctx.moveTo(x - 6, y)
+  ctx.lineTo(x - 6, y + h)
+  ctx.lineTo(x + w + 6, y + h)
+  ctx.stroke()
+}
+
+function drawColorLabels(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, value: (c: ColorKey) => string) {
+  ctx.font = '11px Arial'
+  ctx.textAlign = 'center'
+  COLOR_KEYS.forEach((color, i) => {
+    const { centre } = barLayout(x, w, i)
+    ctx.fillStyle = '#333'
+    ctx.fillText(color, centre, y + h + 20)
+    ctx.fillStyle = '#666'
+    ctx.fillText(value(color), centre, y + h + 36)
+  })
+}
+
+function drawMeansChart(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number) {
+  drawAxes(ctx, x, y, w, h)
+
+  ctx.font = '10px Arial'
+  ctx.textAlign = 'right'
+  ctx.textBaseline = 'middle'
+  for (let i = 0; i <= PREFERENCE_MAX; i++) {
+    const tickY = y + h - (i / PREFERENCE_MAX) * h
+    ctx.fillStyle = '#666'
+    ctx.fillText(String(i), x - 12, tickY)
+    if (i > 0) {
+      ctx.strokeStyle = '#eee'
+      ctx.beginPath()
+      ctx.moveTo(x - 6, tickY)
+      ctx.lineTo(x + w + 6, tickY)
+      ctx.stroke()
     }
-    ctx.strokeStyle = '#333';
-    ctx.strokeRect(x + i * (barW + 10), y, barW, h);
-    ctx.font = '11px Arial';
-    ctx.fillStyle = '#333';
-    ctx.textAlign = 'center';
-    ctx.fillText(`${percent > 0 ? '+' : ''}${Math.round(percent)}%`, x + i * (barW + 10) + barW / 2, y + h + 34);
-  });
-  ctx.strokeStyle = '#aaa';
-  ctx.beginPath();
-  ctx.moveTo(x - 5, y);
-  ctx.lineTo(x - 5, y + h);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.moveTo(x - 5, y + h);
-  ctx.lineTo(x + w + 5, y + h);
-  ctx.stroke();
-  ctx.font = '10px Arial';
-  ctx.fillStyle = '#666';
-  ctx.fillText('100', x - 22, y + 10);
-  ctx.fillText('0', x - 15, y + h / 2 + 3);
-  ctx.fillText('100', x - 22, y + h - 5);
+  }
+
+  COLOR_KEYS.forEach((color, i) => {
+    const { left, width } = barLayout(x, w, i)
+    const barHeight = (scores.value.means[color] / PREFERENCE_MAX) * h
+    ctx.fillStyle = colorHex[color]
+    ctx.fillRect(left, y + h - barHeight, width, barHeight)
+  })
+
+  ctx.textBaseline = 'alphabetic'
+  drawColorLabels(ctx, x, y, w, h, c => scores.value.means[c].toFixed(2))
+}
+
+function drawDeviationChart(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number) {
+  const maxAbs = 40
+  const zeroY = y + h / 2
+
+  drawAxes(ctx, x, y, w, h)
+
+  ctx.strokeStyle = '#bbb'
+  ctx.beginPath()
+  ctx.moveTo(x - 6, zeroY)
+  ctx.lineTo(x + w + 6, zeroY)
+  ctx.stroke()
+
+  ctx.font = '10px Arial'
+  ctx.textAlign = 'right'
+  ctx.textBaseline = 'middle'
+  ctx.fillStyle = '#666'
+  ctx.fillText(`+${maxAbs}`, x - 12, y)
+  ctx.fillText('0', x - 12, zeroY)
+  ctx.fillText(`-${maxAbs}`, x - 12, y + h)
+
+  COLOR_KEYS.forEach((color, i) => {
+    const { left, width } = barLayout(x, w, i)
+    const deviation = scores.value.percentages[color] - 25
+    const clamped = Math.max(-maxAbs, Math.min(maxAbs, deviation))
+    const barHeight = (Math.abs(clamped) / maxAbs) * (h / 2)
+    ctx.fillStyle = colorHex[color]
+    ctx.fillRect(left, clamped >= 0 ? zeroY - barHeight : zeroY, width, barHeight)
+  })
+
+  ctx.textBaseline = 'alphabetic'
+  drawColorLabels(ctx, x, y, w, h, c => {
+    const deviation = scores.value.percentages[c] - 25
+    return `${deviation > 0 ? '+' : ''}${deviation}pp`
+  })
 }
 </script>
 
@@ -633,12 +544,36 @@ function drawFlowChart(
   margin: 0 auto;
 }
 
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.empty-state h3 {
+  font-size: 1.6rem;
+  color: #1A4731;
+  margin-bottom: 12px;
+}
+
+.empty-state p {
+  color: #666;
+  margin-bottom: 24px;
+}
+
 .insights-circle {
   text-align: center;
   margin-bottom: 30px;
   padding: 20px;
   background: #f8f9fa;
   border-radius: 15px;
+}
+
+.chart-caption {
+  max-width: 540px;
+  margin: 12px auto 0;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .energy-dynamics {
@@ -656,16 +591,20 @@ function drawFlowChart(
   margin-bottom: 15px;
 }
 
+.energy-dynamics canvas {
+  max-width: 100%;
+}
+
 .dynamics-labels {
   display: flex;
-  justify-content: space-between;
-  margin: 10px 60px 0 60px;
-  font-size: 1.1rem;
+  justify-content: space-around;
+  margin: 6px 40px 0 40px;
+  font-size: 1rem;
   color: #333;
 }
 
 .dynamics-labels > div {
-  width: 200px;
+  width: 220px;
   text-align: center;
   font-weight: 600;
   line-height: 1.2;
@@ -792,6 +731,13 @@ function drawFlowChart(
   border-radius: 6px;
 }
 
+.score-footnote {
+  margin-top: 12px;
+  color: #888;
+  font-size: 0.85rem;
+  text-align: right;
+}
+
 .strengths-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -869,8 +815,8 @@ function drawFlowChart(
   }
 
   .insights-circle canvas {
-    width: 300px !important;
-    height: 300px !important;
+    width: 320px !important;
+    height: 320px !important;
   }
 
   .primary-color,
@@ -880,17 +826,12 @@ function drawFlowChart(
 }
 
 @media (max-width: 500px) {
-  .energy-dynamics canvas {
-    width: 100% !important;
-    height: 220px !important;
-  }
   .dynamics-labels {
-    margin: 10px 10px 0 10px;
-    font-size: 1rem;
+    margin: 6px 10px 0 10px;
+    font-size: 0.9rem;
   }
   .dynamics-labels > div {
-    width: 100px;
+    width: 120px;
   }
 }
 </style>
-

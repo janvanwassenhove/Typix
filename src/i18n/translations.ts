@@ -95,8 +95,23 @@ export const translations = {
     enneagram_key_characteristics: 'Key Characteristics',
     enneagram_growth_recommendations: 'Growth Recommendations',
 
-    // ...remaining keys...
-  },
+    // ...remaining keys...,
+    no_results_title: 'No answers yet',
+    no_results_body: 'Complete the assessment first and your report will appear here.',
+    enneagram_type: 'Type',
+    enneagram_wing: 'Wing',
+    enneagram_your_type: 'Your type',
+    enneagram_growth_line: 'Growth line',
+    enneagram_stress_line: 'Stress line',
+    insights_energy_profile: 'Colour Energy Profile',
+    insights_primary_color: 'Your Primary Colour',
+    insights_profile_position: 'Profile Position',
+    insights_color_distribution: 'Colour Energy Distribution',
+    insights_profile_analysis: 'Your Colour Profile Analysis',
+    insights_energy_balance: 'Energy Balance',
+    insights_strengths: 'Your Strengths',
+    insights_development_areas: 'Development Areas',
+    },
 
   es: {
     // App & Navigation
@@ -194,8 +209,23 @@ export const translations = {
     enneagram_key_characteristics: 'Características Clave',
     enneagram_growth_recommendations: 'Recomendaciones de Crecimiento',
 
-    // ...remaining keys...
-  },
+    // ...remaining keys...,
+    no_results_title: 'Aún no hay respuestas',
+    no_results_body: 'Completa primero la evaluación y tu informe aparecerá aquí.',
+    enneagram_type: 'Tipo',
+    enneagram_wing: 'Ala',
+    enneagram_your_type: 'Tu tipo',
+    enneagram_growth_line: 'Línea de crecimiento',
+    enneagram_stress_line: 'Línea de estrés',
+    insights_energy_profile: 'Perfil de Energía de Colores',
+    insights_primary_color: 'Tu Color Principal',
+    insights_profile_position: 'Posición del Perfil',
+    insights_color_distribution: 'Distribución de Energía de Colores',
+    insights_profile_analysis: 'Análisis de Tu Perfil de Colores',
+    insights_energy_balance: 'Equilibrio Energético',
+    insights_strengths: 'Tus Fortalezas',
+    insights_development_areas: 'Áreas de Desarrollo',
+    },
 
   fr: {
     // App & Navigation
@@ -293,8 +323,23 @@ export const translations = {
     enneagram_key_characteristics: 'Caractéristiques Clés',
     enneagram_growth_recommendations: 'Recommandations de Croissance',
 
-    // ...remaining keys...
-  },
+    // ...remaining keys...,
+    no_results_title: 'Pas encore de réponses',
+    no_results_body: 'Complétez d\'abord le questionnaire et votre rapport s\'affichera ici.',
+    enneagram_type: 'Type',
+    enneagram_wing: 'Aile',
+    enneagram_your_type: 'Votre type',
+    enneagram_growth_line: 'Ligne de croissance',
+    enneagram_stress_line: 'Ligne de stress',
+    insights_energy_profile: 'Profil d\'Énergie des Couleurs',
+    insights_primary_color: 'Votre Couleur Principale',
+    insights_profile_position: 'Position du Profil',
+    insights_color_distribution: 'Répartition de l\'Énergie des Couleurs',
+    insights_profile_analysis: 'Analyse de Votre Profil de Couleurs',
+    insights_energy_balance: 'Équilibre Énergétique',
+    insights_strengths: 'Vos Forces',
+    insights_development_areas: 'Axes de Développement',
+    },
 
   de: {
     // App & Navigation
@@ -392,8 +437,23 @@ export const translations = {
     enneagram_key_characteristics: 'Schlüsselmerkmale',
     enneagram_growth_recommendations: 'Wachstums Empfehlungen',
 
-    // ...remaining keys...
-  },
+    // ...remaining keys...,
+    no_results_title: 'Noch keine Antworten',
+    no_results_body: 'Füllen Sie zuerst den Test aus, dann erscheint Ihr Bericht hier.',
+    enneagram_type: 'Typ',
+    enneagram_wing: 'Flügel',
+    enneagram_your_type: 'Ihr Typ',
+    enneagram_growth_line: 'Wachstumslinie',
+    enneagram_stress_line: 'Stresslinie',
+    insights_energy_profile: 'Farbenergie-Profil',
+    insights_primary_color: 'Ihre Primärfarbe',
+    insights_profile_position: 'Profilposition',
+    insights_color_distribution: 'Verteilung der Farbenergie',
+    insights_profile_analysis: 'Analyse Ihres Farbprofils',
+    insights_energy_balance: 'Energiebalance',
+    insights_strengths: 'Ihre Stärken',
+    insights_development_areas: 'Entwicklungsfelder',
+    },
 
   nl: {
     // App & Navigation
@@ -491,6 +551,21 @@ export const translations = {
     enneagram_key_characteristics: 'Sleutelkenmerken',
     enneagram_growth_recommendations: 'Groei Aanbevelingen',
 
-    // ...remaining keys...
-  }
+    // ...remaining keys...,
+    no_results_title: 'Nog geen antwoorden',
+    no_results_body: 'Vul eerst de vragenlijst in, dan verschijnt je rapport hier.',
+    enneagram_type: 'Type',
+    enneagram_wing: 'Vleugel',
+    enneagram_your_type: 'Jouw type',
+    enneagram_growth_line: 'Groeilijn',
+    enneagram_stress_line: 'Stresslijn',
+    insights_energy_profile: 'Kleurenergieprofiel',
+    insights_primary_color: 'Jouw Primaire Kleur',
+    insights_profile_position: 'Profielpositie',
+    insights_color_distribution: 'Verdeling Kleurenergie',
+    insights_profile_analysis: 'Analyse van Jouw Kleurprofiel',
+    insights_energy_balance: 'Energiebalans',
+    insights_strengths: 'Jouw Sterktes',
+    insights_development_areas: 'Ontwikkelpunten',
+    }
 }
