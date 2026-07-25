@@ -4,19 +4,19 @@
       "text": "Which word best describes you in a work environment?",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Driven — I push for the result",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Outgoing — I lift the people around me",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Steady — I keep things running calmly",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Precise — I make sure it is right",
           "value": "C"
         }
       ]
@@ -25,19 +25,19 @@
       "text": "When facing a challenge, you tend to:",
       "options": [
         {
-          "text": "Take charge and push forward",
+          "text": "Take charge and push straight through it",
           "value": "D"
         },
         {
-          "text": "Rally others and find creative solutions",
+          "text": "Rally people and look for a creative angle",
           "value": "I"
         },
         {
-          "text": "Seek consensus and maintain harmony",
+          "text": "Work at it patiently until it gives way",
           "value": "S"
         },
         {
-          "text": "Analyze thoroughly before acting",
+          "text": "Break it down and analyse it first",
           "value": "C"
         }
       ]
@@ -46,19 +46,19 @@
       "text": "In meetings, you are most likely to:",
       "options": [
         {
-          "text": "Drive the agenda and make decisions",
+          "text": "Drive the agenda and get to a decision",
           "value": "D"
         },
         {
-          "text": "Generate ideas and energize the group",
+          "text": "Offer ideas and keep the energy up",
           "value": "I"
         },
         {
-          "text": "Listen carefully and support others",
+          "text": "Listen carefully and support the others",
           "value": "S"
         },
         {
-          "text": "Ask detailed questions and ensure accuracy",
+          "text": "Ask precise questions and check the facts",
           "value": "C"
         }
       ]
@@ -67,19 +67,19 @@
       "text": "When starting a new project, you tend to:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Set the goal and get moving immediately",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Get people excited about the possibilities",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Check who needs what before you begin",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Map out the plan and the risks first",
           "value": "C"
         }
       ]
@@ -88,19 +88,19 @@
       "text": "Under tight deadlines, your typical reaction is to:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Cut the scope and push hard for the finish",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Get everyone talking so nothing stalls",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Keep a steady pace and absorb the pressure",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Reprioritise carefully so the quality holds",
           "value": "C"
         }
       ]
@@ -109,19 +109,19 @@
       "text": "In a brainstorming session, you like to:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Steer towards the option that will actually work",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Fire out ideas and build on other people's",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Give the quieter people room to contribute",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Test each idea against what we already know",
           "value": "C"
         }
       ]
@@ -130,19 +130,19 @@
       "text": "When resolving conflict, you prefer to:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Name the issue and settle it now",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Lighten the mood and talk it through",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Find common ground everyone can live with",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Lay out the facts and remove the guesswork",
           "value": "C"
         }
       ]
@@ -151,19 +151,19 @@
       "text": "In an unfamiliar situation, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Act first and adjust as you learn",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Introduce yourself and ask around",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Watch and wait until you feel settled",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Gather information before committing",
           "value": "C"
         }
       ]
@@ -172,19 +172,19 @@
       "text": "When giving feedback, you usually:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Say it plainly and move on",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Wrap it in encouragement",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Choose the moment so it lands gently",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Point to specific examples and evidence",
           "value": "C"
         }
       ]
@@ -193,19 +193,19 @@
       "text": "In a leadership role, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Set the direction and hold people to it",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Inspire the team and keep morale high",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Support each person and keep the team steady",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Set clear standards and track them",
           "value": "C"
         }
       ]
@@ -214,19 +214,19 @@
       "text": "During group discussions, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Push the group towards a conclusion",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Talk freely and draw others in",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Make sure everyone gets heard",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Keep the discussion accurate and on point",
           "value": "C"
         }
       ]
@@ -235,19 +235,19 @@
       "text": "When planning your day, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Attack the biggest thing first",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Keep it loose and follow the energy",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Follow a steady routine that works",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Work through a detailed, ordered list",
           "value": "C"
         }
       ]
@@ -256,19 +256,19 @@
       "text": "When instructions are unclear, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Decide yourself and get on with it",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Ask around until it makes sense",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Wait for clarification rather than guess",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Write down the questions and get them answered",
           "value": "C"
         }
       ]
@@ -277,19 +277,19 @@
       "text": "When meeting new colleagues, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Get straight to what you are working on",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Chat easily and find common ground",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Take your time and let it develop",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Stay reserved until you know them",
           "value": "C"
         }
       ]
@@ -298,19 +298,19 @@
       "text": "To stay motivated, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Chase a target worth winning",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Feed off the people around you",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Rely on routine and steady progress",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Take satisfaction in work done properly",
           "value": "C"
         }
       ]
@@ -319,19 +319,19 @@
       "text": "When someone disagrees with you, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Argue your case directly",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Try to win them round",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Look for a compromise",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Ask what their reasoning is",
           "value": "C"
         }
       ]
@@ -340,19 +340,19 @@
       "text": "When you achieve a goal, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Set the next, bigger one",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Share it with everyone",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Quietly enjoy it and carry on",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Review what worked and what did not",
           "value": "C"
         }
       ]
@@ -361,19 +361,19 @@
       "text": "In stressful situations, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Become more decisive and blunt",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Talk it out with someone",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Stay calm and keep things stable",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Withdraw and think it through",
           "value": "C"
         }
       ]
@@ -382,19 +382,19 @@
       "text": "When delegating tasks, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Say what you want and expect it done",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Sell the task so people want it",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Check the person has what they need",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Explain the standard and the steps",
           "value": "C"
         }
       ]
@@ -403,19 +403,19 @@
       "text": "When faced with routine work, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Get it done fast and move on",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Find a way to make it more interesting",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Work through it steadily without fuss",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Look for a way to do it better",
           "value": "C"
         }
       ]
@@ -424,19 +424,19 @@
       "text": "Before making a decision, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Trust your judgement and commit",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Talk it over with people you trust",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Consider how it affects everyone",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Gather the data and weigh it up",
           "value": "C"
         }
       ]
@@ -445,19 +445,19 @@
       "text": "When handling multiple tasks, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Rank them by impact and drive through",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Move between them as the mood takes you",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Finish one properly before the next",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Plan the sequence before starting",
           "value": "C"
         }
       ]
@@ -466,19 +466,19 @@
       "text": "When presenting information, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Lead with the conclusion",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Tell a story people will remember",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Keep it clear and unhurried",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Give the full picture with the evidence",
           "value": "C"
         }
       ]
@@ -487,19 +487,19 @@
       "text": "When learning a new skill, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Jump in and learn by doing",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Learn it alongside other people",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Build it up slowly and thoroughly",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Read up on it before you start",
           "value": "C"
         }
       ]
@@ -508,19 +508,19 @@
       "text": "In customer interactions, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Solve the problem quickly",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Build rapport and keep it warm",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Listen patiently and reassure",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Give accurate, complete answers",
           "value": "C"
         }
       ]
@@ -529,19 +529,19 @@
       "text": "When changes occur suddenly, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Take control of the new situation",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Look for the opportunity in it",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Steady yourself and the people around you",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Work out what it means before reacting",
           "value": "C"
         }
       ]
@@ -550,19 +550,19 @@
       "text": "When collaborating remotely, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Keep it short and outcome-focused",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Turn the camera on and keep it social",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Check in regularly on how people are",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Write things down so nothing is lost",
           "value": "C"
         }
       ]
@@ -571,19 +571,19 @@
       "text": "In competitive situations, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Play to win",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Enjoy the atmosphere as much as the result",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Compete without making it personal",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Prepare more thoroughly than anyone else",
           "value": "C"
         }
       ]
@@ -592,19 +592,19 @@
       "text": "When celebrating successes, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Acknowledge it briefly and look ahead",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Make an occasion of it",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Make sure everyone who helped is thanked",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Note precisely what produced the result",
           "value": "C"
         }
       ]
@@ -613,19 +613,19 @@
       "text": "When dealing with details, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Delegate them wherever you can",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Cover the ones that matter and move on",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Work through them patiently",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Check every one of them yourself",
           "value": "C"
         }
       ]
@@ -634,19 +634,19 @@
       "text": "When mentoring others, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Set them a stretching challenge",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Encourage them and build their confidence",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Stay available and patient while they learn",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Show them how to do it properly",
           "value": "C"
         }
       ]
@@ -655,40 +655,40 @@
       "text": "During team celebrations, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Keep it short before getting back to work",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Get everybody involved",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Enjoy the time together with the team",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Prefer a smaller, quieter gathering",
           "value": "C"
         }
       ]
     },
     {
-      "text": "When measuring success, you:",
+      "text": "When measuring success, you ask:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Did we hit the target?",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Did people enjoy the work?",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Is the team in good shape?",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Does the work stand up to scrutiny?",
           "value": "C"
         }
       ]
@@ -697,19 +697,19 @@
       "text": "When adapting to new technology, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Use what you need and skip the rest",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Explore it with others and share what you find",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Take it up once it has proved itself",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Learn it properly before relying on it",
           "value": "C"
         }
       ]
@@ -718,19 +718,19 @@
       "text": "When confronted with risk, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Accept it if the prize is worth it",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Stay optimistic that it will work out",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Prefer the safer, more predictable route",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Quantify it before deciding",
           "value": "C"
         }
       ]
@@ -739,19 +739,19 @@
       "text": "When seeking feedback on your work, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Ask what needs to change",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Ask how it landed with people",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Ask someone you trust",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Ask for specifics against the standard",
           "value": "C"
         }
       ]
@@ -760,19 +760,19 @@
       "text": "During performance reviews, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Focus on results and what comes next",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Talk about the relationships and the atmosphere",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Appreciate a calm, supportive conversation",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Come prepared with evidence",
           "value": "C"
         }
       ]
@@ -781,19 +781,19 @@
       "text": "When balancing work and personal life, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Push hard, then draw a hard line",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Blur the two and enjoy both",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Keep a steady, predictable rhythm",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Plan and protect the boundaries",
           "value": "C"
         }
       ]
@@ -802,19 +802,19 @@
       "text": "When persuading others, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Make the case and press for a yes",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Bring energy and enthusiasm",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Take the time to bring people with you",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Let the evidence do the work",
           "value": "C"
         }
       ]
@@ -823,19 +823,19 @@
       "text": "When scheduling meetings, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Keep them short and few",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Use them to keep people connected",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Fit them around what suits others",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Set a clear agenda and stick to it",
           "value": "C"
         }
       ]
@@ -844,19 +844,19 @@
       "text": "When confronted with failure, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Own it and move quickly to the fix",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Stay upbeat and rally the team",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Steady the situation and support the others",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Analyse what went wrong in detail",
           "value": "C"
         }
       ]
@@ -865,19 +865,19 @@
       "text": "When working with diverse teams, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Focus on what everyone is here to deliver",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Enjoy the mix and connect people",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Make sure nobody is left out",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Set shared standards everyone can follow",
           "value": "C"
         }
       ]
@@ -886,19 +886,19 @@
       "text": "When faced with ambiguity, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Pick a direction and start",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Stay comfortable and see what emerges",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Wait for things to settle",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Reduce it by finding out more",
           "value": "C"
         }
       ]
@@ -907,19 +907,19 @@
       "text": "When multitasking, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Push several things forward at once",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Follow whatever has your attention",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Protect your focus on one thing at a time",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Keep an ordered system so nothing slips",
           "value": "C"
         }
       ]
@@ -928,40 +928,40 @@
       "text": "When others seek your advice, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Tell them what you would do",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Talk it through and encourage them",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Listen first and help them find their own answer",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Lay out the options and the trade-offs",
           "value": "C"
         }
       ]
     },
     {
-      "text": "When organizing events, you:",
+      "text": "When organising events, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Delegate and keep it moving",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Focus on the atmosphere and the guests",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Make sure everyone is comfortable",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Plan every detail in advance",
           "value": "C"
         }
       ]
@@ -970,19 +970,19 @@
       "text": "At the end of the workday, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Check what actually got finished",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Wind down with other people",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Leave things tidy for tomorrow",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Review your notes and update the list",
           "value": "C"
         }
       ]
@@ -991,19 +991,19 @@
       "text": "In a crisis, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Take command",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Keep spirits up and keep people informed",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Be the calm point people can rely on",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Work out the facts before acting",
           "value": "C"
         }
       ]
@@ -1012,19 +1012,19 @@
       "text": "When people speak over each other in a meeting, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Cut in and take control of the discussion",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Make light of it and keep things friendly",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Wait for a gap rather than push in",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Suggest going through the points in order",
           "value": "C"
         }
       ]
@@ -1033,19 +1033,19 @@
       "text": "When a plan doesn't go as expected, you:",
       "options": [
         {
-          "text": "Direct and results-focused",
+          "text": "Change it and push on",
           "value": "D"
         },
         {
-          "text": "Enthusiastic and people-oriented",
+          "text": "Improvise and stay positive",
           "value": "I"
         },
         {
-          "text": "Steady and supportive",
+          "text": "Adjust gradually and keep everyone steady",
           "value": "S"
         },
         {
-          "text": "Careful and detail-oriented",
+          "text": "Find out why before changing anything",
           "value": "C"
         }
       ]
@@ -1053,1051 +1053,1051 @@
   ],
   "es": [
     {
-      "text": "¿Qué palabra te describe mejor en un entorno de trabajo?",
+      "text": "¿Qué palabra te describe mejor en el trabajo?",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Decidido — empujo hacia el resultado",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Extrovertido — levanto a la gente que me rodea",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Estable — mantengo las cosas en marcha con calma",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Preciso — me aseguro de que esté bien",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Cuando enfrentas un desafío, tiendes a:",
+      "text": "Ante un reto, sueles:",
       "options": [
         {
-          "text": "Tomar el control y seguir adelante",
+          "text": "Tomar el mando y atravesarlo de frente",
           "value": "D"
         },
         {
-          "text": "Reunir a otros y encontrar soluciones creativas",
+          "text": "Reunir a la gente y buscar un ángulo creativo",
           "value": "I"
         },
         {
-          "text": "Buscar consenso y mantener la armonía",
+          "text": "Trabajarlo con paciencia hasta que cede",
           "value": "S"
         },
         {
-          "text": "Analizar a fondo antes de actuar",
+          "text": "Descomponerlo y analizarlo primero",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En las reuniones, es más probable que:",
+      "text": "En las reuniones, lo más probable es que:",
       "options": [
         {
-          "text": "Dirijas la agenda y tomes decisiones",
+          "text": "Lleves la agenda y llegues a una decisión",
           "value": "D"
         },
         {
-          "text": "Generes ideas y energices al grupo",
+          "text": "Aportes ideas y mantengas la energía",
           "value": "I"
         },
         {
-          "text": "Escuches atentamente y apoyes a otros",
+          "text": "Escuches con atención y apoyes a los demás",
           "value": "S"
         },
         {
-          "text": "Hagas preguntas detalladas y asegures la precisión",
+          "text": "Hagas preguntas precisas y compruebes los datos",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al comenzar un nuevo proyecto, sueles:",
+      "text": "Al empezar un proyecto nuevo, sueles:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Fijar el objetivo y ponerte en marcha ya",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Entusiasmar a la gente con lo que es posible",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Mirar primero quién necesita qué",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Trazar el plan y los riesgos",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bajo plazos ajustados, tu reacción típica es:",
+      "text": "Con plazos ajustados, tu reacción típica es:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Recortar el alcance y empujar fuerte al cierre",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Hacer que todos hablen para que nada se atasque",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Mantener un ritmo constante y absorber la presión",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Repriorizar con cuidado para que aguante la calidad",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En una sesión de lluvia de ideas, te gusta:",
+      "text": "En una sesión de lluvia de ideas te gusta:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Dirigir hacia la opción que de verdad funcionará",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Lanzar ideas y construir sobre las de otros",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Dar espacio a los más callados para aportar",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Contrastar cada idea con lo que ya sabemos",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al resolver conflictos, prefieres:",
+      "text": "Para resolver un conflicto prefieres:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Nombrar el problema y zanjarlo ahora",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Aligerar el ambiente y hablarlo",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Buscar un terreno común con el que todos puedan vivir",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Poner los hechos sobre la mesa y quitar suposiciones",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En una situación desconocida, tú:",
+      "text": "En una situación desconocida:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Actúas primero y ajustas mientras aprendes",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Te presentas y preguntas a tu alrededor",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Observas y esperas hasta sentirte cómodo",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Reúnes información antes de comprometerte",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al dar retroalimentación, sueles:",
+      "text": "Cuando das feedback, sueles hacerlo:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Sin rodeos, y sigues adelante",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Envuelto en ánimo",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Eligiendo el momento para que aterrice suave",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Con ejemplos concretos y evidencias",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En un rol de liderazgo, tú:",
+      "text": "En un puesto de responsabilidad:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Marcas el rumbo y mantienes a la gente en él",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Inspiras al equipo y mantienes alta la moral",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Apoyas a cada persona y mantienes el equipo estable",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Fijas estándares claros y les haces seguimiento",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Durante discusiones de grupo, tú:",
+      "text": "En los debates de grupo:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Empujas al grupo hacia una conclusión",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Hablas con soltura y atraes a los demás",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Te aseguras de que todos sean escuchados",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Mantienes la conversación exacta y centrada",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al planificar tu día, tú:",
+      "text": "Cuando planificas tu día:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Atacas primero lo más grande",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Lo dejas suelto y sigues la energía",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Sigues una rutina estable que funciona",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Recorres una lista detallada y ordenada",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Cuando las instrucciones no están claras, tú:",
+      "text": "Cuando las instrucciones no están claras:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Decides tú y sigues adelante",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Preguntas por ahí hasta que encaje",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Esperas una aclaración en vez de suponer",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Anotas las dudas y consigues las respuestas",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al conocer nuevos colegas, tú:",
+      "text": "Al conocer a nuevos compañeros:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Vas directo a aquello en lo que trabajas",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Charlas con facilidad y buscas puntos en común",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Te tomas tu tiempo y dejas que surja",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Te mantienes reservado hasta conocerlos",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Para mantenerte motivado, tú:",
+      "text": "Para mantenerte motivado:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Persigues una meta que merezca ganarse",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Te alimentas de la gente que te rodea",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Te apoyas en la rutina y el avance constante",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Disfrutas del trabajo bien hecho",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Cuando alguien no está de acuerdo contigo, tú:",
+      "text": "Cuando alguien no está de acuerdo contigo:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Defiendes tu postura directamente",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Intentas ganártelo",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Buscas un término medio",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Preguntas cuál es su razonamiento",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Cuando logras un objetivo, tú:",
+      "text": "Cuando alcanzas un objetivo:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Fijas el siguiente, más grande",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Lo compartes con todo el mundo",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Lo disfrutas en silencio y continúas",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Revisas qué funcionó y qué no",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En situaciones estresantes, tú:",
+      "text": "En situaciones de estrés:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Te vuelves más tajante y directo",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Lo hablas con alguien",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Mantienes la calma y sostienes la estabilidad",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Te retiras y lo piensas a fondo",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al delegar tareas, tú:",
+      "text": "Cuando delegas tareas:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Dices lo que quieres y esperas que se haga",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Vendes la tarea para que la quieran",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Compruebas que la persona tenga lo que necesita",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Explicas el estándar y los pasos",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Cuando enfrentas trabajo rutinario, tú:",
+      "text": "Ante el trabajo rutinario:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Lo despachas rápido y sigues",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Buscas la forma de hacerlo más interesante",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Lo sacas adelante con constancia y sin aspavientos",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Buscas la forma de hacerlo mejor",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Antes de tomar una decisión, tú:",
+      "text": "Antes de decidir:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Confías en tu criterio y te comprometes",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Lo comentas con gente de confianza",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Sopesas cómo afecta a cada uno",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Reúnes los datos y los valoras",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al manejar múltiples tareas, tú:",
+      "text": "Con varias tareas a la vez:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Las ordenas por impacto y tiras hacia delante",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Vas saltando según te apetece",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Terminas bien una antes de la siguiente",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Planificas la secuencia antes de empezar",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al presentar información, tú:",
+      "text": "Cuando presentas información:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Empiezas por la conclusión",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Cuentas una historia que se recuerde",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "La mantienes clara y sin prisas",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Das el cuadro completo con las evidencias",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Cuando aprendes una nueva habilidad, tú:",
+      "text": "Al aprender algo nuevo:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Te lanzas y aprendes haciendo",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Lo aprendes junto a otras personas",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Lo construyes despacio y a fondo",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Te documentas antes de empezar",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En interacciones con clientes, tú:",
+      "text": "En el trato con clientes:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Resuelves el problema rápido",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Creas vínculo y mantienes el trato cálido",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Escuchas con paciencia y tranquilizas",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Das respuestas exactas y completas",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Cuando ocurren cambios repentinos, tú:",
+      "text": "Cuando algo cambia de golpe:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Tomas el control de la nueva situación",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Buscas la oportunidad que hay dentro",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Te serenas y serenas a los de alrededor",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Averiguas qué significa antes de reaccionar",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al colaborar a distancia, tú:",
+      "text": "En el trabajo en remoto:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Lo mantienes breve y orientado al resultado",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Enciendes la cámara y mantienes el trato cercano",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Preguntas con regularidad cómo está la gente",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Dejas las cosas por escrito para que nada se pierda",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En situaciones competitivas, tú:",
+      "text": "En situaciones competitivas:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Juegas para ganar",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Disfrutas del ambiente tanto como del resultado",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Compites sin hacerlo personal",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Te preparas más a fondo que nadie",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al celebrar éxitos, tú:",
+      "text": "Cuando celebras un éxito:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Lo reconoces brevemente y miras adelante",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Haces de ello una ocasión",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Te aseguras de agradecer a todos los que ayudaron",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Anotas con precisión qué produjo el resultado",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al tratar con detalles, tú:",
+      "text": "Cuando se trata de detalles:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Los delegas siempre que puedes",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Cubres los que importan y sigues",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Los recorres con paciencia",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Los compruebas todos tú mismo",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al ser mentor de otros, tú:",
+      "text": "Cuando acompañas a otros:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Les pones un reto que les haga estirarse",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Les animas y refuerzas su confianza",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Estás disponible y paciente mientras aprenden",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Les enseñas cómo hacerlo bien",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En celebraciones de equipo, tú:",
+      "text": "En las celebraciones de equipo:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Lo dejas corto antes de volver al trabajo",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Implicas a todo el mundo",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Disfrutas del rato con el equipo",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Prefieres una reunión más pequeña y tranquila",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al medir el éxito, tú:",
+      "text": "Al medir el éxito, te preguntas:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "¿Alcanzamos el objetivo?",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "¿Disfrutó la gente del trabajo?",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "¿Está el equipo en buena forma?",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "¿Aguanta el trabajo una revisión?",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al adaptarte a nueva tecnología, tú:",
+      "text": "Ante una tecnología nueva:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Usas lo que necesitas y dejas el resto",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "La exploras con otros y compartes lo que encuentras",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "La adoptas cuando ya se ha demostrado",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "La aprendes bien antes de depender de ella",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Cuando te enfrentas al riesgo, tú:",
+      "text": "Ante el riesgo:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Lo aceptas si el premio lo merece",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Te mantienes optimista de que saldrá bien",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Prefieres la vía más segura y previsible",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Lo cuantificas antes de decidir",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al buscar retroalimentación sobre tu trabajo, tú:",
+      "text": "Cuando pides feedback sobre tu trabajo:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Preguntas qué hay que cambiar",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Preguntas cómo ha caído entre la gente",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Se lo preguntas a alguien de confianza",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Pides detalles concretos frente al estándar",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Durante evaluaciones de desempeño, tú:",
+      "text": "En las evaluaciones de desempeño:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Te centras en los resultados y en lo que viene",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Hablas de las relaciones y del ambiente",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Agradeces una conversación tranquila y de apoyo",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Llegas preparado con evidencias",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al equilibrar trabajo y vida personal, tú:",
+      "text": "Al equilibrar trabajo y vida personal:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Aprietas fuerte y luego trazas una línea clara",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Los mezclas y disfrutas de ambos",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Mantienes un ritmo estable y previsible",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Planificas y proteges los límites",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al persuadir a otros, tú:",
+      "text": "Cuando quieres convencer a otros:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Construyes el argumento y presionas por un sí",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Aportas energía y entusiasmo",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Te tomas el tiempo de llevarte a la gente contigo",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Dejas que las evidencias hagan el trabajo",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al programar reuniones, tú:",
+      "text": "Cuando organizas reuniones:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Las mantienes cortas y pocas",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Las usas para mantener conectada a la gente",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Las encajas según le venga bien a los demás",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Fijas una agenda clara y te ciñes a ella",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Cuando te enfrentas al fracaso, tú:",
+      "text": "Ante un fracaso:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Lo asumes y vas rápido a la solución",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Te mantienes animado y reactivas al equipo",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Serenas la situación y apoyas a los demás",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Analizas en detalle qué salió mal",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al trabajar con equipos diversos, tú:",
+      "text": "En equipos diversos:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Te centras en lo que cada uno viene a entregar",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Disfrutas de la mezcla y conectas a la gente",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Te aseguras de que nadie quede fuera",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Fijas estándares comunes que todos puedan seguir",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Cuando te enfrentas a la ambigüedad, tú:",
+      "text": "Ante la ambigüedad:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Eliges una dirección y empiezas",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Te quedas cómodo y ves qué emerge",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Esperas a que las cosas se asienten",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "La reduces averiguando más",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al realizar multitarea, tú:",
+      "text": "Cuando llevas varias cosas a la vez:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Haces avanzar varias al mismo tiempo",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Sigues aquello que capta tu atención",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Proteges tu foco en una cosa cada vez",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Mantienes un sistema ordenado para que nada se escape",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Cuando otros buscan tu consejo, tú:",
+      "text": "Cuando otros te piden consejo:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Les dices lo que tú harías",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Lo hablas con ellos y les animas",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Escuchas primero y les ayudas a hallar su respuesta",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Expones las opciones y sus contrapartidas",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al organizar eventos, tú:",
+      "text": "Cuando organizas un evento:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Delegas y lo mantienes en marcha",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Te centras en el ambiente y en los invitados",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Te aseguras de que todos estén a gusto",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Planificas cada detalle por adelantado",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Al final de la jornada laboral, tú:",
+      "text": "Al final de la jornada:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Compruebas qué se terminó de verdad",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Desconectas con otras personas",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Dejas las cosas ordenadas para mañana",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Repasas tus notas y actualizas la lista",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En una crisis, tú:",
+      "text": "En una crisis:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Tomas el mando",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Mantienes el ánimo e informas a la gente",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Eres el punto tranquilo en el que se puede confiar",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Estableces los hechos antes de actuar",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Cuando las personas se interrumpen en una reunión, tú:",
+      "text": "Cuando en una reunión se habla por encima:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Interrumpes y tomas el control de la conversación",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Le quitas hierro y mantienes el tono amable",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Esperas un hueco en vez de meterte a la fuerza",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Propones repasar los puntos por orden",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Cuando un plan no sale como se esperaba, tú:",
+      "text": "Cuando un plan no sale como se esperaba:",
       "options": [
         {
-          "text": "Directo y enfocado en resultados",
+          "text": "Lo cambias y sigues empujando",
           "value": "D"
         },
         {
-          "text": "Entusiasta y orientado a las personas",
+          "text": "Improvisas y te mantienes positivo",
           "value": "I"
         },
         {
-          "text": "Estable y solidario",
+          "text": "Ajustas poco a poco y mantienes a todos serenos",
           "value": "S"
         },
         {
-          "text": "Cuidadoso y orientado a los detalles",
+          "text": "Averiguas por qué antes de cambiar nada",
           "value": "C"
         }
       ]
@@ -2105,22 +2105,22 @@
   ],
   "fr": [
     {
-      "text": "Quel mot vous décrit le mieux dans un environnement de travail ?",
+      "text": "Quel mot vous décrit le mieux au travail ?",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Déterminé — je pousse vers le résultat",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Extraverti — je porte les gens autour de moi",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Stable — je fais tourner les choses au calme",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Précis — je veille à ce que ce soit juste",
           "value": "C"
         }
       ]
@@ -2129,32 +2129,32 @@
       "text": "Face à un défi, vous avez tendance à :",
       "options": [
         {
-          "text": "Prendre les choses en main et aller de l'avant",
+          "text": "Prendre les commandes et foncer",
           "value": "D"
         },
         {
-          "text": "Rallier les autres et trouver des solutions créatives",
+          "text": "Rassembler les gens et chercher un angle créatif",
           "value": "I"
         },
         {
-          "text": "Chercher le consensus et maintenir l'harmonie",
+          "text": "Y travailler patiemment jusqu'à ce que ça cède",
           "value": "S"
         },
         {
-          "text": "Analyser en profondeur avant d'agir",
+          "text": "Le découper et l'analyser d'abord",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En réunion, vous êtes le plus susceptible de :",
+      "text": "En réunion, vous êtes surtout du genre à :",
       "options": [
         {
-          "text": "Diriger l'ordre du jour et prendre des décisions",
+          "text": "Mener l'ordre du jour et aboutir à une décision",
           "value": "D"
         },
         {
-          "text": "Générer des idées et dynamiser le groupe",
+          "text": "Proposer des idées et entretenir l'énergie",
           "value": "I"
         },
         {
@@ -2162,70 +2162,70 @@
           "value": "S"
         },
         {
-          "text": "Poser des questions détaillées et assurer la précision",
+          "text": "Poser des questions précises et vérifier les faits",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Lorsque vous commencez un nouveau projet, vous avez tendance à :",
+      "text": "Au démarrage d'un nouveau projet, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Fixez l'objectif et vous lancez tout de suite",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Enthousiasmez les gens pour ce qui est possible",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Regardez d'abord qui a besoin de quoi",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Cartographiez le plan et les risques",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Sous des délais serrés, votre réaction typique est de :",
+      "text": "Sous forte pression de délai, vous réagissez en :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Réduisant le périmètre et poussant fort vers la fin",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Faisant parler tout le monde pour que rien ne bloque",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Gardant un rythme régulier et absorbant la pression",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Repriorisant soigneusement pour préserver la qualité",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Lors d'une séance de remue‑méninges, vous aimez :",
+      "text": "En séance de brainstorming, vous aimez :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Orienter vers l'option qui marchera vraiment",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Lancer des idées et rebondir sur celles des autres",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Laisser de la place aux plus discrets",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Confronter chaque idée à ce que l'on sait déjà",
           "value": "C"
         }
       ]
@@ -2234,19 +2234,19 @@
       "text": "Pour résoudre un conflit, vous préférez :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Nommer le problème et le régler maintenant",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Détendre l'atmosphère et en parler",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Trouver un terrain d'entente acceptable pour tous",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Poser les faits et supprimer les suppositions",
           "value": "C"
         }
       ]
@@ -2255,61 +2255,61 @@
       "text": "Dans une situation inconnue, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Agissez d'abord et ajustez en apprenant",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Vous présentez et posez des questions autour de vous",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Observez et attendez d'être à l'aise",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Rassemblez de l'information avant de vous engager",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Lorsque vous donnez un feedback, vous :",
+      "text": "Quand vous donnez un retour, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Le dites franchement et passez à autre chose",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "L'enveloppez d'encouragements",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Choisissez le moment pour que ça passe en douceur",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Vous appuyez sur des exemples précis",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Dans un rôle de leadership, vous :",
+      "text": "Dans un rôle de responsable, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Fixez le cap et tenez les gens à ce cap",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Inspirez l'équipe et gardez le moral haut",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Soutenez chacun et gardez l'équipe stable",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Fixez des standards clairs et les suivez",
           "value": "C"
         }
       ]
@@ -2318,61 +2318,61 @@
       "text": "Pendant les discussions de groupe, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Poussez le groupe vers une conclusion",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Parlez librement et embarquez les autres",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Veillez à ce que chacun soit entendu",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Gardez la discussion exacte et centrée",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En planifiant votre journée, vous :",
+      "text": "Quand vous organisez votre journée, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Attaquez le plus gros en premier",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Restez souple et suivez l'énergie",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Suivez une routine stable qui fonctionne",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Déroulez une liste détaillée et ordonnée",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Lorsque les instructions sont floues, vous :",
+      "text": "Quand les consignes sont floues, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Décidez vous-même et avancez",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Demandez autour de vous jusqu'à comprendre",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Attendez une clarification plutôt que de deviner",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Notez les questions et allez chercher les réponses",
           "value": "C"
         }
       ]
@@ -2381,19 +2381,19 @@
       "text": "En rencontrant de nouveaux collègues, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Allez droit à ce sur quoi vous travaillez",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Discutez facilement et cherchez des points communs",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Prenez votre temps et laissez venir",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Restez réservé tant que vous ne les connaissez pas",
           "value": "C"
         }
       ]
@@ -2402,103 +2402,103 @@
       "text": "Pour rester motivé, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Visez un objectif qui vaut la peine d'être gagné",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Puisez de l'énergie chez les autres",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Comptez sur la routine et un progrès régulier",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Tirez satisfaction d'un travail bien fait",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Lorsque quelqu'un n'est pas d'accord avec vous, vous :",
+      "text": "Quand quelqu'un n'est pas d'accord, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Défendez votre position directement",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Essayez de le rallier à votre avis",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Cherchez un compromis",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Demandez quel est son raisonnement",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Lorsque vous atteignez un objectif, vous :",
+      "text": "Quand vous atteignez un objectif, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Fixez le suivant, plus ambitieux",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Le partagez avec tout le monde",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "En profitez discrètement et continuez",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Revoyez ce qui a marché et ce qui non",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Dans des situations stressantes, vous :",
+      "text": "En situation de stress, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Devenez plus tranchant et plus direct",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "En parlez avec quelqu'un",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Restez calme et maintenez la stabilité",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Vous retirez et y réfléchissez",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En déléguant des tâches, vous :",
+      "text": "Quand vous déléguez, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Dites ce que vous voulez et attendez que ce soit fait",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Vendez la tâche pour qu'on ait envie de la prendre",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Vérifiez que la personne a ce qu'il lui faut",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Expliquez le standard et les étapes",
           "value": "C"
         }
       ]
@@ -2507,481 +2507,481 @@
       "text": "Face à un travail routinier, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "L'expédiez vite et passez à la suite",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Cherchez un moyen de le rendre plus intéressant",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "L'abattez régulièrement, sans faire d'histoires",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Cherchez un moyen de mieux le faire",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Avant de prendre une décision, vous :",
+      "text": "Avant de décider, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Faites confiance à votre jugement et vous engagez",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "En parlez avec des gens de confiance",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Pesez ce que cela change pour chacun",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Rassemblez les données et les évaluez",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En gérant plusieurs tâches, vous :",
+      "text": "Avec plusieurs tâches en cours, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Les classez par impact et foncez",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Passez de l'une à l'autre au gré de l'envie",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Finissez proprement l'une avant la suivante",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Planifiez l'ordre avant de commencer",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En présentant des informations, vous :",
+      "text": "Quand vous présentez une information, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Commencez par la conclusion",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Racontez une histoire dont on se souviendra",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Restez clair et sans précipitation",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Donnez le tableau complet avec les preuves",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Lors de l'apprentissage d'une nouvelle compétence, vous :",
+      "text": "Pour apprendre une nouvelle compétence, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Vous lancez et apprenez en faisant",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "L'apprenez avec d'autres",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "La construisez lentement et à fond",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Vous documentez avant de commencer",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Dans les interactions avec les clients, vous :",
+      "text": "Dans la relation client, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Réglez le problème rapidement",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Créez du lien et gardez une relation chaleureuse",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Écoutez patiemment et rassurez",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Donnez des réponses exactes et complètes",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Lorsque des changements surviennent soudainement, vous :",
+      "text": "Quand un changement survient brusquement, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Prenez la main sur la nouvelle situation",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Cherchez l'occasion qui s'y cache",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Vous stabilisez et rassurez les autres",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Analysez ce que cela implique avant de réagir",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En collaborant à distance, vous :",
+      "text": "En collaboration à distance, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Faites court et axé sur le résultat",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Allumez la caméra et gardez du lien",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Prenez régulièrement des nouvelles de chacun",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Écrivez les choses pour que rien ne se perde",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Dans des situations compétitives, vous :",
+      "text": "En situation de compétition, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Jouez pour gagner",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Appréciez l'ambiance autant que le résultat",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Rivalisez sans en faire une affaire personnelle",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Vous préparez plus à fond que quiconque",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En célébrant les succès, vous :",
+      "text": "Quand vous célébrez une réussite, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "La saluez brièvement et regardez devant",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "En faites un vrai moment",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Veillez à remercier tous ceux qui ont aidé",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Notez précisément ce qui a produit le résultat",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En traitant des détails, vous :",
+      "text": "Face aux détails, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Les déléguez dès que possible",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Traitez ceux qui comptent et passez à autre chose",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Les traitez patiemment un par un",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Les vérifiez tous vous-même",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En tant que mentor, vous :",
+      "text": "Quand vous accompagnez quelqu'un, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Lui fixez un défi qui l'oblige à grandir",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "L'encouragez et renforcez sa confiance",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Restez disponible et patient pendant l'apprentissage",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Lui montrez comment bien faire",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Lors des célébrations d'équipe, vous :",
+      "text": "Lors des fêtes d'équipe, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Faites court avant de retourner au travail",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Impliquez tout le monde",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Profitez du moment passé avec l'équipe",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Préférez un rassemblement plus petit et plus calme",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En mesurant le succès, vous :",
+      "text": "Pour mesurer la réussite, vous demandez :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Avons-nous atteint l'objectif ?",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Les gens ont-ils aimé travailler dessus ?",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "L'équipe est-elle en bonne forme ?",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Le travail tient-il à l'examen ?",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En vous adaptant à une nouvelle technologie, vous :",
+      "text": "Face à une nouvelle technologie, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Utilisez ce dont vous avez besoin et laissez le reste",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "L'explorez avec d'autres et partagez vos trouvailles",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "L'adoptez une fois qu'elle a fait ses preuves",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "L'apprenez à fond avant d'en dépendre",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Confronté au risque, vous :",
+      "text": "Face au risque, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "L'acceptez si l'enjeu en vaut la peine",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Restez optimiste sur l'issue",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Préférez la voie la plus sûre et prévisible",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Le quantifiez avant de décider",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Lorsque vous cherchez un retour sur votre travail, vous :",
+      "text": "Quand vous demandez un retour sur votre travail, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Demandez ce qui doit changer",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Demandez comment cela a été reçu",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Le demandez à une personne de confiance",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Demandez des points précis au regard du standard",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Lors d'entretiens d'évaluation, vous :",
+      "text": "Lors des entretiens d'évaluation, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Vous centrez sur les résultats et la suite",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Parlez des relations et de l'ambiance",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Appréciez un échange calme et bienveillant",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Arrivez préparé, éléments à l'appui",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Lors de l'équilibre entre travail et vie privée, vous :",
+      "text": "Pour l'équilibre entre travail et vie privée, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Poussez fort, puis tracez une limite nette",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Mélangez les deux et profitez des deux",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Gardez un rythme régulier et prévisible",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Planifiez et protégez les limites",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Pour persuader les autres, vous :",
+      "text": "Pour convaincre, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Construisez l'argument et poussez vers le oui",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Apportez énergie et enthousiasme",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Prenez le temps d'embarquer les gens",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Laissez les preuves faire le travail",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En planifiant des réunions, vous :",
+      "text": "Quand vous planifiez des réunions, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Les gardez courtes et peu nombreuses",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Les utilisez pour garder le lien",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Les calez selon ce qui arrange les autres",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Fixez un ordre du jour clair et vous y tenez",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Lorsque vous faites face à un échec, vous :",
+      "text": "Face à un échec, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "L'assumez et allez vite à la correction",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Restez positif et remobilisez l'équipe",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Ramenez le calme et soutenez les autres",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Analysez en détail ce qui a mal tourné",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En travaillant avec des équipes diverses, vous :",
+      "text": "Dans une équipe diversifiée, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Vous centrez sur ce que chacun est là pour livrer",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Appréciez le mélange et reliez les gens",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Veillez à ce que personne ne reste de côté",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Posez des standards communs que chacun peut suivre",
           "value": "C"
         }
       ]
@@ -2990,82 +2990,82 @@
       "text": "Face à l'ambiguïté, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Choisissez une direction et démarrez",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Restez à l'aise et regardez ce qui émerge",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Attendez que les choses se stabilisent",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "La réduisez en cherchant à en savoir plus",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En multitâche, vous :",
+      "text": "Quand vous menez plusieurs choses de front, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Faites avancer plusieurs sujets en même temps",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Suivez ce qui capte votre attention",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Protégez votre concentration sur une chose à la fois",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Tenez un système ordonné pour que rien n'échappe",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Lorsque les autres sollicitent votre conseil, vous :",
+      "text": "Quand on vous demande conseil, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Dites ce que vous feriez",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "En discutez et encouragez la personne",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Écoutez d'abord et l'aidez à trouver sa réponse",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Exposez les options et les compromis",
           "value": "C"
         }
       ]
     },
     {
-      "text": "En organisant des événements, vous :",
+      "text": "Quand vous organisez un événement, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Déléguez et gardez le rythme",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Vous centrez sur l'ambiance et les invités",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Veillez à ce que chacun se sente bien",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Planifiez chaque détail à l'avance",
           "value": "C"
         }
       ]
@@ -3074,19 +3074,19 @@
       "text": "À la fin de la journée de travail, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Vérifiez ce qui a vraiment été terminé",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Décompressez avec d'autres",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Laissez les choses en ordre pour demain",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Relisez vos notes et mettez la liste à jour",
           "value": "C"
         }
       ]
@@ -3095,61 +3095,61 @@
       "text": "En situation de crise, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Prenez le commandement",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Gardez le moral et tenez les gens informés",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Êtes le point calme sur lequel on peut compter",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Établissez les faits avant d'agir",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Lorsque les gens se coupent la parole en réunion, vous :",
+      "text": "Quand les gens se coupent la parole en réunion, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Intervenez et reprenez la main sur la discussion",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "En faites une plaisanterie et gardez le ton amical",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Attendez une ouverture plutôt que de forcer",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Proposez de reprendre les points dans l'ordre",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Lorsque qu'un plan ne se déroule pas comme prévu, vous :",
+      "text": "Quand un plan ne se déroule pas comme prévu, vous :",
       "options": [
         {
-          "text": "Direct et axé sur les résultats",
+          "text": "Le changez et poussez",
           "value": "D"
         },
         {
-          "text": "Enthousiaste et orienté vers les gens",
+          "text": "Improvisez et restez positif",
           "value": "I"
         },
         {
-          "text": "Stable et solidaire",
+          "text": "Ajustez progressivement et gardez tout le monde serein",
           "value": "S"
         },
         {
-          "text": "Prudent et soucieux du détail",
+          "text": "Cherchez pourquoi avant de changer quoi que ce soit",
           "value": "C"
         }
       ]
@@ -3157,127 +3157,127 @@
   ],
   "de": [
     {
-      "text": "Welches Wort beschreibt Sie am besten in einer Arbeitsumgebung?",
+      "text": "Welches Wort beschreibt Sie im Arbeitsumfeld am besten?",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Zielstrebig — ich treibe auf das Ergebnis zu",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Kontaktfreudig — ich hebe die Menschen um mich herum",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Beständig — ich halte den Betrieb ruhig am Laufen",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Genau — ich sorge dafür, dass es stimmt",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wenn Sie vor einer Herausforderung stehen, neigen Sie dazu:",
+      "text": "Bei einer Herausforderung neigen Sie dazu:",
       "options": [
         {
-          "text": "Die Führung zu übernehmen und voranzutreiben",
+          "text": "Die Führung zu übernehmen und direkt durchzugehen",
           "value": "D"
         },
         {
-          "text": "Andere zu sammeln und kreative Lösungen zu finden",
+          "text": "Leute zu sammeln und einen kreativen Weg zu suchen",
           "value": "I"
         },
         {
-          "text": "Konsens zu suchen und Harmonie zu bewahren",
+          "text": "Geduldig daran zu arbeiten, bis es nachgibt",
           "value": "S"
         },
         {
-          "text": "Gründlich zu analysieren, bevor Sie handeln",
+          "text": "Sie erst zu zerlegen und zu analysieren",
           "value": "C"
         }
       ]
     },
     {
-      "text": "In Besprechungen werden Sie höchstwahrscheinlich:",
+      "text": "In Besprechungen tun Sie am ehesten:",
       "options": [
         {
-          "text": "Die Agenda vorantreiben und Entscheidungen treffen",
+          "text": "Die Agenda führen und zu einer Entscheidung kommen",
           "value": "D"
         },
         {
-          "text": "Ideen generieren und die Gruppe energetisieren",
+          "text": "Ideen einbringen und die Energie hochhalten",
           "value": "I"
         },
         {
-          "text": "Aufmerksam zuhören und andere unterstützen",
+          "text": "Aufmerksam zuhören und die anderen unterstützen",
           "value": "S"
         },
         {
-          "text": "Detaillierte Fragen stellen und Genauigkeit sicherstellen",
+          "text": "Präzise Fragen stellen und Fakten prüfen",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wenn Sie ein neues Projekt starten, neigen Sie dazu:",
+      "text": "Zu Beginn eines neuen Projekts:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Setzen Sie das Ziel und legen sofort los",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Begeistern Sie die Leute für das Mögliche",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Schauen Sie zuerst, wer was braucht",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Zeichnen Sie Plan und Risiken auf",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Unter engen Fristen ist Ihre typische Reaktion:",
+      "text": "Unter Termindruck reagieren Sie typischerweise:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Umfang kürzen und hart auf den Abschluss drücken",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Alle ins Reden bringen, damit nichts stockt",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Ein gleichmäßiges Tempo halten und den Druck abfedern",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Sorgfältig neu priorisieren, damit die Qualität hält",
           "value": "C"
         }
       ]
     },
     {
-      "text": "In einer Brainstorming‑Sitzung mögen Sie:",
+      "text": "In einem Brainstorming mögen Sie es:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Zu der Option zu lenken, die wirklich trägt",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Ideen herauszuwerfen und auf denen anderer aufzubauen",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Den Stilleren Raum für ihren Beitrag zu geben",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Jede Idee an dem zu prüfen, was wir schon wissen",
           "value": "C"
         }
       ]
@@ -3286,19 +3286,19 @@
       "text": "Beim Lösen von Konflikten bevorzugen Sie:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Das Thema benennen und jetzt klären",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Die Stimmung auflockern und es besprechen",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Eine gemeinsame Basis finden, mit der alle leben können",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Die Fakten auf den Tisch legen und Vermutungen ausräumen",
           "value": "C"
         }
       ]
@@ -3307,40 +3307,40 @@
       "text": "In einer unbekannten Situation:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Handeln Sie zuerst und justieren beim Lernen",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Stellen Sie sich vor und fragen herum",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Beobachten und warten Sie, bis Sie sich sicher fühlen",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Sammeln Sie Informationen, bevor Sie sich festlegen",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wenn Sie Feedback geben, tun Sie:",
+      "text": "Wenn Sie Feedback geben, tun Sie das meist:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Klar und direkt, dann weiter",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "In Ermutigung verpackt",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Zum passenden Moment, damit es sanft ankommt",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Mit konkreten Beispielen und Belegen",
           "value": "C"
         }
       ]
@@ -3349,61 +3349,61 @@
       "text": "In einer Führungsrolle:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Geben Sie die Richtung vor und halten die Leute daran",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Begeistern Sie das Team und halten die Stimmung hoch",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Unterstützen Sie jeden Einzelnen und halten das Team stabil",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Setzen Sie klare Standards und verfolgen sie",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Während Gruppendiskussionen:",
+      "text": "In Gruppendiskussionen:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Drängen Sie die Gruppe zu einem Ergebnis",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Reden Sie frei und ziehen andere hinein",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Sorgen Sie dafür, dass jeder gehört wird",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Halten Sie die Diskussion sachlich und auf Kurs",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bei der Tagesplanung:",
+      "text": "Wenn Sie Ihren Tag planen:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Nehmen Sie zuerst die größte Sache in Angriff",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Halten Sie es locker und folgen der Energie",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Folgen Sie einer festen Routine, die funktioniert",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Arbeiten Sie eine detaillierte, geordnete Liste ab",
           "value": "C"
         }
       ]
@@ -3412,40 +3412,40 @@
       "text": "Wenn Anweisungen unklar sind:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Entscheiden Sie selbst und machen weiter",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Fragen Sie herum, bis es Sinn ergibt",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Warten Sie auf Klärung, statt zu raten",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Notieren Sie die Fragen und holen die Antworten ein",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Beim Kennenlernen neuer Kollegen:",
+      "text": "Beim Kennenlernen neuer Kolleginnen und Kollegen:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Kommen Sie gleich zu dem, woran Sie arbeiten",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Plaudern Sie leicht und finden Gemeinsamkeiten",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Lassen Sie sich Zeit und lassen es wachsen",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Bleiben Sie zurückhaltend, bis Sie sie kennen",
           "value": "C"
         }
       ]
@@ -3454,40 +3454,40 @@
       "text": "Um motiviert zu bleiben:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Jagen Sie ein Ziel, das den Sieg wert ist",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Ziehen Sie Energie aus den Menschen um Sie herum",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Verlassen Sie sich auf Routine und stetigen Fortschritt",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Ziehen Sie Befriedigung aus sauber gemachter Arbeit",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wenn jemand Ihnen widerspricht:",
+      "text": "Wenn jemand anderer Meinung ist:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Vertreten Sie Ihre Position direkt",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Versuchen Sie, die Person zu gewinnen",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Suchen Sie einen Kompromiss",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Fragen Sie nach der Begründung",
           "value": "C"
         }
       ]
@@ -3496,19 +3496,19 @@
       "text": "Wenn Sie ein Ziel erreichen:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Setzen Sie sofort das nächste, größere",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Teilen Sie es mit allen",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Freuen Sie sich still und machen weiter",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Schauen Sie nach, was funktioniert hat und was nicht",
           "value": "C"
         }
       ]
@@ -3517,40 +3517,40 @@
       "text": "In stressigen Situationen:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Werden Sie entschiedener und direkter",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Reden Sie mit jemandem darüber",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Bleiben Sie ruhig und halten alles stabil",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Ziehen Sie sich zurück und denken es durch",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Beim Delegieren von Aufgaben:",
+      "text": "Wenn Sie Aufgaben delegieren:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Sagen Sie, was Sie wollen, und erwarten die Erledigung",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Verkaufen Sie die Aufgabe, damit man sie haben will",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Prüfen Sie, ob die Person hat, was sie braucht",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Erklären Sie den Standard und die Schritte",
           "value": "C"
         }
       ]
@@ -3559,166 +3559,166 @@
       "text": "Bei Routinearbeit:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Erledigen Sie sie schnell und machen weiter",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Suchen Sie einen Weg, sie interessanter zu machen",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Arbeiten Sie sie stetig und ohne Aufhebens ab",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Suchen Sie einen Weg, sie besser zu machen",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bevor Sie eine Entscheidung treffen:",
+      "text": "Bevor Sie entscheiden:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Vertrauen Sie Ihrem Urteil und legen sich fest",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Besprechen Sie es mit Menschen, denen Sie vertrauen",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Wägen Sie ab, was es für alle bedeutet",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Sammeln Sie die Daten und wägen sie ab",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Beim Umgang mit mehreren Aufgaben:",
+      "text": "Wenn Sie mehrere Aufgaben haben:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Ordnen Sie sie nach Wirkung und ziehen durch",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Springen Sie dazwischen, wie es sich ergibt",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Bringen Sie eine sauber zu Ende, bevor die nächste kommt",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Planen Sie die Reihenfolge, bevor Sie starten",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Beim Präsentieren von Informationen:",
+      "text": "Wenn Sie Informationen präsentieren:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Beginnen Sie mit dem Ergebnis",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Erzählen Sie eine Geschichte, die hängen bleibt",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Bleiben Sie klar und ohne Eile",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Geben Sie das ganze Bild mit den Belegen",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Beim Erlernen einer neuen Fähigkeit:",
+      "text": "Wenn Sie etwas Neues lernen:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Springen Sie hinein und lernen im Tun",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Lernen Sie es gemeinsam mit anderen",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Bauen Sie es langsam und gründlich auf",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Lesen Sie sich vorher ein",
           "value": "C"
         }
       ]
     },
     {
-      "text": "In Kundeninteraktionen:",
+      "text": "Im Kundenkontakt:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Lösen Sie das Problem schnell",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Bauen Sie eine Beziehung auf und halten es herzlich",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Hören Sie geduldig zu und beruhigen",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Geben Sie genaue, vollständige Antworten",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wenn Änderungen plötzlich auftreten:",
+      "text": "Wenn sich plötzlich etwas ändert:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Nehmen Sie die neue Lage in die Hand",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Suchen Sie die Chance darin",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Beruhigen Sie sich und die Menschen um Sie herum",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Klären Sie, was es bedeutet, bevor Sie reagieren",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bei der Zusammenarbeit aus der Ferne:",
+      "text": "Bei der Zusammenarbeit auf Distanz:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Halten Sie es kurz und ergebnisorientiert",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Schalten Sie die Kamera ein und halten es persönlich",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Fragen Sie regelmäßig, wie es den Leuten geht",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Schreiben Sie Dinge auf, damit nichts verloren geht",
           "value": "C"
         }
       ]
@@ -3727,82 +3727,82 @@
       "text": "In Wettbewerbssituationen:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Spielen Sie auf Sieg",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Genießen Sie die Stimmung so sehr wie das Ergebnis",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Messen Sie sich, ohne es persönlich zu nehmen",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Bereiten Sie sich gründlicher vor als alle anderen",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Beim Feiern von Erfolgen:",
+      "text": "Wenn Sie Erfolge feiern:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Würdigen Sie sie kurz und schauen nach vorn",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Machen Sie ein Ereignis daraus",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Sorgen Sie dafür, dass alle Helfenden Dank bekommen",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Halten Sie genau fest, was das Ergebnis gebracht hat",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Beim Umgang mit Details:",
+      "text": "Wenn es um Details geht:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Delegieren Sie sie, wo immer es geht",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Decken Sie die wichtigen ab und machen weiter",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Arbeiten Sie sie geduldig durch",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Prüfen Sie jedes einzelne selbst",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Beim Mentoring anderer:",
+      "text": "Wenn Sie andere begleiten:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Setzen Sie ihnen eine fordernde Aufgabe",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Ermutigen Sie sie und stärken ihr Selbstvertrauen",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Bleiben Sie verfügbar und geduldig, während sie lernen",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Zeigen Sie ihnen, wie man es richtig macht",
           "value": "C"
         }
       ]
@@ -3811,61 +3811,61 @@
       "text": "Bei Teamfeiern:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Halten Sie es kurz, bevor es weitergeht",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Beziehen Sie alle mit ein",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Genießen Sie die Zeit mit dem Team",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Bevorzugen Sie eine kleinere, ruhigere Runde",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Beim Messen von Erfolg:",
+      "text": "Wenn Sie Erfolg messen, fragen Sie:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Haben wir das Ziel erreicht?",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Hat die Arbeit den Leuten Freude gemacht?",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Ist das Team in guter Verfassung?",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Hält die Arbeit einer Prüfung stand?",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Beim Anpassen an neue Technologie:",
+      "text": "Bei neuer Technologie:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Nutzen Sie, was Sie brauchen, und lassen den Rest",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Erkunden Sie sie mit anderen und teilen Ihre Funde",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Übernehmen Sie sie, sobald sie sich bewährt hat",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Lernen Sie sie gründlich, bevor Sie sich darauf verlassen",
           "value": "C"
         }
       ]
@@ -3874,208 +3874,208 @@
       "text": "Wenn Sie mit Risiko konfrontiert sind:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Nehmen Sie es an, wenn der Gewinn es wert ist",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Bleiben Sie zuversichtlich, dass es aufgeht",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Bevorzugen Sie den sichereren, planbareren Weg",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Beziffern Sie es, bevor Sie entscheiden",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wenn Sie Feedback zu Ihrer Arbeit suchen:",
+      "text": "Wenn Sie Feedback zu Ihrer Arbeit einholen:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Fragen Sie, was sich ändern muss",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Fragen Sie, wie es angekommen ist",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Fragen Sie jemanden, dem Sie vertrauen",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Fragen Sie nach Konkretem gemessen am Standard",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bei Leistungsbeurteilungen:",
+      "text": "In Mitarbeitergesprächen:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Konzentrieren Sie sich auf Ergebnisse und das Nächste",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Sprechen Sie über Beziehungen und Stimmung",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Schätzen Sie ein ruhiges, unterstützendes Gespräch",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Kommen Sie vorbereitet mit Belegen",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Beim Ausbalancieren von Arbeit und Privatleben:",
+      "text": "Bei der Balance von Arbeit und Privatleben:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Geben Sie Vollgas und ziehen dann eine harte Grenze",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Lassen Sie beides ineinander laufen und genießen beides",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Halten Sie einen gleichmäßigen, planbaren Rhythmus",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Planen und schützen Sie die Grenzen",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Beim Überzeugen anderer:",
+      "text": "Wenn Sie andere überzeugen wollen:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Bauen Sie das Argument auf und drängen auf ein Ja",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Bringen Sie Energie und Begeisterung ein",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Nehmen Sie sich Zeit, die Leute mitzunehmen",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Lassen Sie die Belege die Arbeit machen",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Beim Planen von Meetings:",
+      "text": "Wenn Sie Besprechungen planen:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Halten Sie sie kurz und selten",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Nutzen Sie sie, um Menschen verbunden zu halten",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Legen Sie sie so, wie es anderen passt",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Setzen Sie eine klare Agenda und halten sich daran",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wenn Sie mit Misserfolg konfrontiert sind:",
+      "text": "Wenn etwas scheitert:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Stehen Sie dazu und gehen schnell zur Lösung",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Bleiben Sie zuversichtlich und richten das Team auf",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Beruhigen Sie die Lage und unterstützen die anderen",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Analysieren Sie im Detail, was schiefging",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Beim Arbeiten mit diversen Teams:",
+      "text": "In gemischt zusammengesetzten Teams:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Konzentrieren Sie sich darauf, was jeder liefern soll",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Genießen Sie die Mischung und verbinden die Leute",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Sorgen Sie dafür, dass niemand außen vor bleibt",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Setzen Sie gemeinsame Standards, denen alle folgen können",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bei Unklarheit:",
+      "text": "Bei Unklarheit und Mehrdeutigkeit:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Wählen Sie eine Richtung und fangen an",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Bleiben Sie gelassen und schauen, was entsteht",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Warten Sie, bis sich die Dinge setzen",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Verringern Sie sie, indem Sie mehr herausfinden",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Beim Multitasking:",
+      "text": "Wenn Sie mehrere Dinge gleichzeitig tun:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Bringen Sie mehreres zugleich voran",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Folgen Sie dem, was gerade Ihre Aufmerksamkeit hat",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Schützen Sie Ihren Fokus auf eine Sache nach der anderen",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Halten Sie ein geordnetes System, damit nichts durchrutscht",
           "value": "C"
         }
       ]
@@ -4084,40 +4084,40 @@
       "text": "Wenn andere Ihren Rat suchen:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Sagen Sie, was Sie tun würden",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Sprechen Sie es durch und ermutigen die Person",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Hören Sie zuerst zu und helfen ihr zur eigenen Antwort",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Legen Sie die Optionen und Abwägungen dar",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Beim Organisieren von Veranstaltungen:",
+      "text": "Wenn Sie eine Veranstaltung organisieren:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Delegieren Sie und halten es in Bewegung",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Konzentrieren Sie sich auf Stimmung und Gäste",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Sorgen Sie dafür, dass sich alle wohlfühlen",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Planen Sie jedes Detail im Voraus",
           "value": "C"
         }
       ]
@@ -4126,19 +4126,19 @@
       "text": "Am Ende des Arbeitstages:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Prüfen Sie, was wirklich fertig geworden ist",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Lassen Sie den Tag mit anderen ausklingen",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Hinterlassen Sie alles ordentlich für morgen",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Gehen Sie Ihre Notizen durch und aktualisieren die Liste",
           "value": "C"
         }
       ]
@@ -4147,61 +4147,61 @@
       "text": "In einer Krise:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Übernehmen Sie das Kommando",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Halten Sie die Stimmung und informieren die Leute",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Sind Sie der ruhige Punkt, auf den man sich verlassen kann",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Klären Sie die Fakten, bevor Sie handeln",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wenn in einer Besprechung alle durcheinander reden:",
+      "text": "Wenn in einer Besprechung alle durcheinanderreden:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Gehen Sie dazwischen und übernehmen die Diskussion",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Nehmen Sie es mit Humor und halten den Ton freundlich",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Warten Sie auf eine Lücke, statt sich hineinzudrängen",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Schlagen Sie vor, die Punkte der Reihe nach durchzugehen",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wenn ein Plan nicht wie erwartet läuft:",
+      "text": "Wenn ein Plan anders läuft als gedacht:",
       "options": [
         {
-          "text": "Direkt und ergebnisorientiert",
+          "text": "Ändern Sie ihn und machen weiter",
           "value": "D"
         },
         {
-          "text": "Enthusiastisch und menschenorientiert",
+          "text": "Improvisieren Sie und bleiben positiv",
           "value": "I"
         },
         {
-          "text": "Beständig und unterstützend",
+          "text": "Passen Sie schrittweise an und halten alle ruhig",
           "value": "S"
         },
         {
-          "text": "Vorsichtig und detailorientiert",
+          "text": "Finden Sie erst heraus, warum, bevor Sie etwas ändern",
           "value": "C"
         }
       ]
@@ -4212,145 +4212,145 @@
       "text": "Welk woord beschrijft je het beste in een werkomgeving?",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Gedreven — ik duw door naar het resultaat",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Extravert — ik til de mensen om me heen op",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Stabiel — ik houd de boel rustig draaiende",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Precies — ik zorg dat het klopt",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wanneer je een uitdaging tegenkomt, ben je geneigd om:",
+      "text": "Bij een uitdaging heb je de neiging om:",
       "options": [
         {
-          "text": "De leiding te nemen en vooruit te gaan",
+          "text": "De leiding te nemen en er dwars doorheen te gaan",
           "value": "D"
         },
         {
-          "text": "Anderen te verzamelen en creatieve oplossingen te vinden",
+          "text": "Mensen te verzamelen en een creatieve invalshoek te zoeken",
           "value": "I"
         },
         {
-          "text": "Consensus te zoeken en harmonie te behouden",
+          "text": "Er geduldig aan te werken tot het meegeeft",
           "value": "S"
         },
         {
-          "text": "Grondig te analyseren voordat je handelt",
+          "text": "Het eerst op te delen en te analyseren",
           "value": "C"
         }
       ]
     },
     {
-      "text": "In vergaderingen ben je het meest waarschijnlijk:",
+      "text": "In vergaderingen doe je meestal:",
       "options": [
         {
-          "text": "De agenda te sturen en beslissingen te nemen",
+          "text": "De agenda sturen en naar een beslissing toewerken",
           "value": "D"
         },
         {
-          "text": "Ideeën te genereren en de groep te energeren",
+          "text": "Ideeën aandragen en de energie erin houden",
           "value": "I"
         },
         {
-          "text": "Aandachtig te luisteren en anderen te ondersteunen",
+          "text": "Aandachtig luisteren en de anderen steunen",
           "value": "S"
         },
         {
-          "text": "Gedetailleerde vragen te stellen en nauwkeurigheid te waarborgen",
+          "text": "Precieze vragen stellen en de feiten checken",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wanneer je aan een nieuw project begint, ben je geneigd om:",
+      "text": "Bij de start van een nieuw project:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Zet je het doel en ga je meteen aan de slag",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Maak je mensen enthousiast over de mogelijkheden",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Kijk je eerst wie wat nodig heeft",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Breng je het plan en de risico's in kaart",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Onder strakke deadlines is je typische reactie om:",
+      "text": "Onder tijdsdruk reageer je meestal door:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "De scope te versmallen en hard door te duwen",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Iedereen te laten praten zodat niets stilvalt",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Een gelijkmatig tempo te houden en de druk op te vangen",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Zorgvuldig te herprioriteren zodat de kwaliteit standhoudt",
           "value": "C"
         }
       ]
     },
     {
-      "text": "In een brainstormsessie vind je het prettig om:",
+      "text": "In een brainstorm doe je graag:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Sturen naar de optie die echt gaat werken",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Ideeën eruit gooien en verder bouwen op die van anderen",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "De stillere mensen ruimte geven om bij te dragen",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Elk idee toetsen aan wat we al weten",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het oplossen van conflicten geef je de voorkeur aan:",
+      "text": "Bij het oplossen van conflict verkies je:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Het probleem benoemen en nu uitpraten",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "De sfeer verlichten en het uitpraten",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Gemeenschappelijke grond zoeken waar iedereen mee kan leven",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "De feiten op tafel leggen en het giswerk wegnemen",
           "value": "C"
         }
       ]
@@ -4359,61 +4359,61 @@
       "text": "In een onbekende situatie:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Handel je eerst en stuur je bij terwijl je leert",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Stel je jezelf voor en vraag je rond",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Kijk je de kat uit de boom tot je je op je gemak voelt",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Verzamel je informatie voor je je vastlegt",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het geven van feedback:",
+      "text": "Als je feedback geeft, doe je dat meestal:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Recht voor zijn raap, en dan verder",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Verpakt in aanmoediging",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Op een gekozen moment, zodat het zacht landt",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Met concrete voorbeelden en bewijs",
           "value": "C"
         }
       ]
     },
     {
-      "text": "In een leidersrol:",
+      "text": "In een leidinggevende rol:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Zet je de richting uit en houd je mensen eraan",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Inspireer je het team en houd je het moreel hoog",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Steun je elke persoon en houd je het team stabiel",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Stel je duidelijke normen en volg je ze op",
           "value": "C"
         }
       ]
@@ -4422,61 +4422,61 @@
       "text": "Tijdens groepsdiscussies:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Duw je de groep naar een conclusie",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Praat je vrijuit en trek je anderen erbij",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Zorg je dat iedereen gehoord wordt",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Houd je de discussie accuraat en to the point",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het plannen van je dag:",
+      "text": "Als je je dag plant:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Pak je het grootste eerst aan",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Houd je het los en volg je de energie",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Volg je een vaste routine die werkt",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Werk je een gedetailleerde, geordende lijst af",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wanneer instructies onduidelijk zijn:",
+      "text": "Als instructies onduidelijk zijn:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Beslis je zelf en ga je aan de slag",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Vraag je rond tot het klopt",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Wacht je op verduidelijking in plaats van te gokken",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Schrijf je de vragen op en zorg je dat ze beantwoord worden",
           "value": "C"
         }
       ]
@@ -4485,19 +4485,19 @@
       "text": "Bij het ontmoeten van nieuwe collega's:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Ga je meteen naar waar je mee bezig bent",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Praat je makkelijk en zoek je raakvlakken",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Neem je de tijd en laat je het groeien",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Blijf je gereserveerd tot je ze kent",
           "value": "C"
         }
       ]
@@ -4506,61 +4506,61 @@
       "text": "Om gemotiveerd te blijven:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Jaag je op een doel dat het winnen waard is",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Tank je energie bij de mensen om je heen",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Steun je op routine en gestage vooruitgang",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Haal je voldoening uit werk dat goed gedaan is",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wanneer iemand het niet met je eens is:",
+      "text": "Als iemand het niet met je eens is:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Verdedig je je standpunt rechtstreeks",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Probeer je hem of haar om te praten",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Zoek je een compromis",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Vraag je wat de redenering erachter is",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wanneer je een doel bereikt:",
+      "text": "Als je een doel bereikt:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Zet je meteen het volgende, grotere doel",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Deel je het met iedereen",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Geniet je er stilletjes van en ga je verder",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Bekijk je wat werkte en wat niet",
           "value": "C"
         }
       ]
@@ -4569,208 +4569,208 @@
       "text": "In stressvolle situaties:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Word je besluitvaardiger en directer",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Praat je het uit met iemand",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Blijf je kalm en houd je alles stabiel",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Trek je je terug en denk je het door",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het delegeren van taken:",
+      "text": "Als je taken delegeert:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Zeg je wat je wil en verwacht je dat het gebeurt",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Verkoop je de taak zodat mensen ze willen",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Check je of de persoon heeft wat hij nodig heeft",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Leg je de norm en de stappen uit",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij routinematig werk:",
+      "text": "Bij routinewerk:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Maak je het snel af en ga je verder",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Zoek je een manier om het interessanter te maken",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Werk je het gestaag af zonder ophef",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Zoek je een manier om het beter te doen",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Voordat je een beslissing neemt:",
+      "text": "Voor je een beslissing neemt:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Vertrouw je op je oordeel en ga je ervoor",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Bespreek je het met mensen die je vertrouwt",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Weeg je af wat het voor iedereen betekent",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Verzamel je de data en weeg je die af",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het omgaan met meerdere taken:",
+      "text": "Als je meerdere taken hebt:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Rangschik je ze op impact en duw je door",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Spring je ertussen zoals het uitkomt",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Maak je er één goed af voor je aan de volgende begint",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Plan je de volgorde voor je start",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het presenteren van informatie:",
+      "text": "Als je informatie presenteert:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Begin je met de conclusie",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Vertel je een verhaal dat mensen bijblijft",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Houd je het helder en zonder haast",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Geef je het volledige beeld met de onderbouwing",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het leren van een nieuwe vaardigheid:",
+      "text": "Als je een nieuwe vaardigheid leert:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Spring je erin en leer je al doende",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Leer je het samen met anderen",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Bouw je het langzaam en grondig op",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Lees je je eerst in voor je begint",
           "value": "C"
         }
       ]
     },
     {
-      "text": "In klantinteracties:",
+      "text": "In contact met klanten:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Los je het probleem snel op",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Bouw je een band op en houd je het warm",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Luister je geduldig en stel je gerust",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Geef je accurate, volledige antwoorden",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wanneer er plotseling veranderingen optreden:",
+      "text": "Als er plots iets verandert:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Neem je de nieuwe situatie in handen",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Zoek je de kans die erin zit",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Breng je jezelf en de mensen om je heen tot rust",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Zoek je uit wat het betekent voor je reageert",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het samenwerken op afstand:",
+      "text": "Bij samenwerken op afstand:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Houd je het kort en resultaatgericht",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Zet je de camera aan en houd je het sociaal",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Check je geregeld hoe het met mensen gaat",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Schrijf je zaken op zodat niets verloren gaat",
           "value": "C"
         }
       ]
@@ -4779,397 +4779,397 @@
       "text": "In competitieve situaties:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Speel je om te winnen",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Geniet je even hard van de sfeer als van de uitslag",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Concurreer je zonder het persoonlijk te maken",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Bereid je je grondiger voor dan wie ook",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het vieren van successen:",
+      "text": "Als je successen viert:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Erken je het kort en kijk je vooruit",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Maak je er een gelegenheid van",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Zorg je dat iedereen die hielp bedankt wordt",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Noteer je precies wat het resultaat opleverde",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het omgaan met details:",
+      "text": "Als het om details gaat:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Delegeer je ze waar je kan",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Dek je de belangrijke af en ga je verder",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Werk je ze geduldig door",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Controleer je ze stuk voor stuk zelf",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het coachen van anderen:",
+      "text": "Als je anderen begeleidt:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Geef je ze een uitdaging die hen rekt",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Moedig je ze aan en bouw je hun zelfvertrouwen op",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Blijf je beschikbaar en geduldig terwijl ze leren",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Toon je hoe je het correct doet",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Tijdens teamvieringen:",
+      "text": "Bij teamvieringen:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Houd je het kort voor je weer aan het werk gaat",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Betrek je iedereen erbij",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Geniet je van de tijd samen met het team",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Verkies je een kleinere, rustigere samenkomst",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het meten van succes:",
+      "text": "Als je succes meet, vraag je je af:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Hebben we het doel gehaald?",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Hebben mensen het werk graag gedaan?",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Is het team in goede doen?",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Houdt het werk stand als je het nakijkt?",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het aanpassen aan nieuwe technologie:",
+      "text": "Bij het gebruik van nieuwe technologie:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Gebruik je wat je nodig hebt en sla je de rest over",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Verken je het met anderen en deel je wat je vindt",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Neem je het over zodra het zich bewezen heeft",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Leer je het grondig voor je erop vertrouwt",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wanneer je met risico wordt geconfronteerd:",
+      "text": "Als je met risico te maken krijgt:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Aanvaard je het als de prijs het waard is",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Blijf je optimistisch dat het goed komt",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Verkies je de veiligere, voorspelbaardere weg",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Kwantificeer je het voor je beslist",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wanneer je feedback zoekt over je werk:",
+      "text": "Als je feedback vraagt op je werk:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Vraag je wat er moet veranderen",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Vraag je hoe het bij mensen is geland",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Vraag je het aan iemand die je vertrouwt",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Vraag je concrete punten tegenover de norm",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Tijdens beoordelingsgesprekken:",
+      "text": "Tijdens functioneringsgesprekken:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Focus je op resultaten en op wat volgt",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Praat je over de relaties en de sfeer",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Waardeer je een rustig, ondersteunend gesprek",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Kom je voorbereid met bewijs",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het balanceren van werk en privé:",
+      "text": "Bij de balans tussen werk en privé:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Duw je hard door en trek je dan een harde lijn",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Laat je het door elkaar lopen en geniet je van beide",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Houd je een gelijkmatig, voorspelbaar ritme",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Plan je de grenzen en bewaak je ze",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het overtuigen van anderen:",
+      "text": "Als je anderen wil overtuigen:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Bouw je het argument op en dring je aan op een ja",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Breng je energie en enthousiasme",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Neem je de tijd om mensen mee te krijgen",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Laat je het bewijs het werk doen",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het plannen van vergaderingen:",
+      "text": "Bij het inplannen van vergaderingen:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Houd je ze kort en beperkt in aantal",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Gebruik je ze om mensen verbonden te houden",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Pas je ze in wanneer het anderen uitkomt",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Zet je een duidelijke agenda en houd je je eraan",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wanneer je geconfronteerd wordt met falen:",
+      "text": "Als iets mislukt:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Neem je het op je en ga je snel naar de oplossing",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Blijf je positief en trek je het team weer op gang",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Breng je de situatie tot rust en steun je de anderen",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Analyseer je in detail wat er misging",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het werken met diverse teams:",
+      "text": "In diverse teams:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Focus je op wat iedereen hier komt opleveren",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Geniet je van de mix en verbind je mensen",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Zorg je dat niemand buiten de boot valt",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Stel je gedeelde normen waar iedereen op kan bouwen",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wanneer je geconfronteerd wordt met ambiguïteit:",
+      "text": "Als iets onduidelijk of dubbelzinnig is:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Kies je een richting en begin je",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Blijf je er rustig onder en zie je wat er opduikt",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Wacht je tot de zaken zich uitklaren",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Beperk je de onduidelijkheid door meer uit te zoeken",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij multitasking:",
+      "text": "Als je verschillende dingen tegelijk doet:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Duw je meerdere zaken tegelijk vooruit",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Volg je wat op dat moment je aandacht heeft",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Bescherm je je focus op één ding tegelijk",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Houd je een geordend systeem zodat niets ontsnapt",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wanneer anderen je advies zoeken:",
+      "text": "Als anderen jouw advies vragen:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Zeg je wat jij zou doen",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Praat je het door en moedig je hen aan",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Luister je eerst en help je hen hun eigen antwoord vinden",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Leg je de opties en de afwegingen uit",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Bij het organiseren van evenementen:",
+      "text": "Als je een evenement organiseert:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Delegeer je en houd je het in beweging",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Focus je op de sfeer en de gasten",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Zorg je dat iedereen zich op zijn gemak voelt",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Plan je elk detail op voorhand",
           "value": "C"
         }
       ]
@@ -5178,19 +5178,19 @@
       "text": "Aan het einde van de werkdag:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Check je wat er echt af is geraakt",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Bouw je af samen met anderen",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Laat je alles netjes achter voor morgen",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Overloop je je notities en werk je de lijst bij",
           "value": "C"
         }
       ]
@@ -5199,61 +5199,61 @@
       "text": "In een crisis:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Neem je het commando",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Houd je de moed erin en houd je mensen op de hoogte",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Ben je het rustpunt waarop mensen kunnen rekenen",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Zoek je de feiten uit voor je handelt",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wanneer mensen door elkaar praten in een vergadering:",
+      "text": "Als mensen in een vergadering door elkaar praten:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Kap je erin en neem je de discussie in handen",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Maak je er iets luchtigs van en houd je het vriendelijk",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Wacht je op een opening in plaats van erdoor te duwen",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Stel je voor om de punten één voor één te overlopen",
           "value": "C"
         }
       ]
     },
     {
-      "text": "Wanneer een plan niet verloopt zoals verwacht:",
+      "text": "Als een plan anders loopt dan verwacht:",
       "options": [
         {
-          "text": "Direct en resultaatgericht",
+          "text": "Verander je het en duw je door",
           "value": "D"
         },
         {
-          "text": "Enthousiast en mensgericht",
+          "text": "Improviseer je en blijf je positief",
           "value": "I"
         },
         {
-          "text": "Stabiel en ondersteunend",
+          "text": "Stuur je geleidelijk bij en houd je iedereen rustig",
           "value": "S"
         },
         {
-          "text": "Voorzichtig en detailgericht",
+          "text": "Zoek je uit waarom voor je iets verandert",
           "value": "C"
         }
       ]

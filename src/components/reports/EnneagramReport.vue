@@ -12,7 +12,7 @@
         <div class="type-info">
           <h3 class="type-name">{{ typeData.name }}</h3>
           <p class="type-subtitle">{{ typeData.subtitle }}</p>
-          <p class="type-wing">{{ t('enneagram_wing') }}: {{ scores.dominant }}w{{ scores.wing }} &mdash; {{ enneagramTypes[scores.wing].name }}</p>
+          <p class="type-wing">{{ t('enneagram_wing') }}: {{ scores.dominant }}w{{ scores.wing }} &mdash; {{ content[scores.wing].name }}</p>
         </div>
       </div>
 
@@ -20,11 +20,7 @@
       <div class="enneagram-visualization">
         <h4>{{ t('enneagram_position') }}</h4>
         <div class="enneagram-explanation">
-          <p>
-            The lines inside the symbol are fixed: the triangle joins 3&ndash;6&ndash;9 and the
-            hexad follows 1&ndash;4&ndash;2&ndash;8&ndash;5&ndash;7. Highlighted on top of them are the two
-            lines that belong to your own type.
-          </p>
+          <p>{{ t('enneagram_lines_intro') }}</p>
         </div>
         <div class="enneagram-circle">
           <svg viewBox="0 0 400 400" class="enneagram-svg">
@@ -76,7 +72,7 @@
                 font-size="10"
                 font-weight="500"
               >
-                {{ enneagramTypes[node.number].shortName }}
+                {{ content[node.number].shortName }}
               </text>
             </g>
           </svg>
@@ -90,12 +86,7 @@
         </div>
 
         <div class="enneagram-interpretation">
-          <p>
-            <b>How to interpret:</b> your main type is highlighted, with its wing shaded next to it.
-            The solid green line points to the type whose healthy qualities you tend to pick up when
-            you are doing well; the dashed red line points to the type whose behaviour tends to
-            surface under sustained stress.
-          </p>
+          <p><b>{{ t('enneagram_interpret_label') }}</b> {{ t('enneagram_interpret_body') }}</p>
         </div>
       </div>
 
@@ -110,7 +101,7 @@
             :class="{ dominant: type === scores.dominant }"
           >
             <div class="score-header">
-              <span class="score-type">{{ t('enneagram_type') }} {{ type }} &middot; {{ enneagramTypes[type].shortName }}</span>
+              <span class="score-type">{{ t('enneagram_type') }} {{ type }} &middot; {{ content[type].shortName }}</span>
               <span class="score-value">{{ scores.percentages[type] }}%</span>
             </div>
             <div class="score-bar">
@@ -118,11 +109,7 @@
             </div>
           </div>
         </div>
-        <p class="score-footnote">
-          Each type is scored on the agreement it collected as a share of the agreement it could have
-          collected, then expressed as a percentage of the whole. Based on {{ scores.answered }} answered
-          {{ scores.answered === 1 ? 'question' : 'questions' }}.
-        </p>
+        <p class="score-footnote">{{ t('enneagram_scores_footnote') }} {{ answeredLabel }}</p>
       </div>
 
       <div class="description-section">
@@ -166,6 +153,8 @@ import { computed } from 'vue'
 import { usePdfExport } from '../../composables/usePdfExport'
 import { useTranslations } from '../../composables/useTranslations'
 import questionData from '../../data/enneagram-questions.json'
+import { enneagramContent } from '../../i18n/content/enneagram'
+import { pickLocale } from '../../i18n/content/locale'
 import {
   ENNEAGRAM_TYPES,
   disintegrationOf,
@@ -181,13 +170,19 @@ const props = defineProps<{
 }>()
 
 const { generatePDF, isGeneratingPDF } = usePdfExport()
-const { t } = useTranslations()
+const { t, currentLanguage } = useTranslations()
 
 // Every language file lists the same questions in the same order, so the
 // type mapping can be read from any of them.
 const questions = questionData.en as EnneagramQuestion[]
 
 const scores = computed(() => scoreEnneagram(props.results, questions))
+const content = computed(() => pickLocale(enneagramContent, currentLanguage.value))
+
+const answeredLabel = computed(() => t(
+  scores.value.answered === 1 ? 'based_on_answers_one' : 'based_on_answers_other',
+  { count: scores.value.answered }
+))
 
 const downloadPDF = async () => {
   try {
@@ -198,182 +193,7 @@ const downloadPDF = async () => {
   }
 }
 
-interface TypeProfile {
-  name: string
-  shortName: string
-  subtitle: string
-  motivation: string
-  fear: string
-  traits: string[]
-  growth: string[]
-}
-
-const enneagramTypes: Record<EnneagramType, TypeProfile> = {
-  1: {
-    name: "The Perfectionist",
-    shortName: "Perfectionist",
-    subtitle: "The Rational, Idealistic Type",
-    motivation: "To be good, right, perfect, and to improve everything",
-    fear: "Being corrupt, defective, or wrong",
-    traits: [
-      "Principled and purposeful",
-      "Self-controlled and perfectionistic",
-      "Critical and resentful when stressed",
-      "Well-organized and orderly"
-    ],
-    growth: [
-      "Practice self-compassion and accept imperfection",
-      "Learn to delegate and trust others",
-      "Focus on progress rather than perfection"
-    ]
-  },
-  2: {
-    name: "The Helper",
-    shortName: "Helper",
-    subtitle: "The Caring, Interpersonal Type",
-    motivation: "To feel loved and needed by being helpful to others",
-    fear: "Being unloved or unwanted for themselves",
-    traits: [
-      "Empathetic and sincere",
-      "Warm-hearted and appreciative",
-      "People-pleasing and possessive",
-      "Generous and demonstrative"
-    ],
-    growth: [
-      "Learn to recognize and express your own needs",
-      "Set healthy boundaries with others",
-      "Practice self-care without guilt"
-    ]
-  },
-  3: {
-    name: "The Achiever",
-    shortName: "Achiever",
-    subtitle: "The Success-Oriented, Pragmatic Type",
-    motivation: "To feel valuable and worthwhile through being successful",
-    fear: "Being worthless or without value apart from achievements",
-    traits: [
-      "Adaptable and driven",
-      "Image-conscious and ambitious",
-      "Diplomatic and poised",
-      "Competitive and workaholic tendencies"
-    ],
-    growth: [
-      "Connect with your authentic self beyond achievements",
-      "Value being over doing",
-      "Practice vulnerability and emotional honesty"
-    ]
-  },
-  4: {
-    name: "The Individualist",
-    shortName: "Individualist",
-    subtitle: "The Sensitive, Withdrawn Type",
-    motivation: "To find themselves and their significance",
-    fear: "Having no identity or personal significance",
-    traits: [
-      "Self-aware and sensitive",
-      "Creative and emotionally honest",
-      "Moody and self-conscious",
-      "Withdrawn and temperamental"
-    ],
-    growth: [
-      "Focus on what you have rather than what's missing",
-      "Develop emotional regulation skills",
-      "Practice gratitude and present-moment awareness"
-    ]
-  },
-  5: {
-    name: "The Investigator",
-    shortName: "Investigator",
-    subtitle: "The Intense, Cerebral Type",
-    motivation: "To be capable and understanding of the world",
-    fear: "Being useless, helpless, or incapable",
-    traits: [
-      "Perceptive and innovative",
-      "Independent and secretive",
-      "Isolated and intense",
-      "High-strung and cynical"
-    ],
-    growth: [
-      "Share your knowledge and insights with others",
-      "Practice emotional expression and connection",
-      "Take action on your ideas"
-    ]
-  },
-  6: {
-    name: "The Loyalist",
-    shortName: "Loyalist",
-    subtitle: "The Committed, Security-Oriented Type",
-    motivation: "To have security and support",
-    fear: "Being without support or guidance",
-    traits: [
-      "Engaging and responsible",
-      "Anxious and suspicious",
-      "Committed and hard-working",
-      "Defensive and evasive"
-    ],
-    growth: [
-      "Trust your own inner guidance",
-      "Practice self-reliance and confidence",
-      "Question negative assumptions"
-    ]
-  },
-  7: {
-    name: "The Enthusiast",
-    shortName: "Enthusiast",
-    subtitle: "The Spontaneous, Versatile Type",
-    motivation: "To maintain happiness and avoid pain",
-    fear: "Being trapped in pain or deprivation",
-    traits: [
-      "Spontaneous and versatile",
-      "Distractible and scattered",
-      "Acquisitive and restless",
-      "Optimistic and enthusiastic"
-    ],
-    growth: [
-      "Practice focus and follow-through",
-      "Learn to sit with difficult emotions",
-      "Develop depth over breadth"
-    ]
-  },
-  8: {
-    name: "The Challenger",
-    shortName: "Challenger",
-    subtitle: "The Powerful, Dominating Type",
-    motivation: "To be self-reliant and in control of their own life",
-    fear: "Being controlled or vulnerable to others",
-    traits: [
-      "Self-confident and strong",
-      "Confrontational and intimidating",
-      "Resourceful and decisive",
-      "Protective and controlling"
-    ],
-    growth: [
-      "Practice vulnerability and emotional openness",
-      "Use your power to serve others",
-      "Learn to receive support from others"
-    ]
-  },
-  9: {
-    name: "The Peacemaker",
-    shortName: "Peacemaker",
-    subtitle: "The Easygoing, Self-Effacing Type",
-    motivation: "To maintain inner and outer peace",
-    fear: "Loss of connection and fragmentation",
-    traits: [
-      "Receptive and reassuring",
-      "Agreeable and complacent",
-      "Creative and optimistic",
-      "Stubborn and inattentive"
-    ],
-    growth: [
-      "Develop your own agenda and priorities",
-      "Practice assertiveness and self-advocacy",
-      "Take action on what matters to you"
-    ]
-  }
-}
-
-const typeData = computed(() => enneagramTypes[scores.value.dominant])
+const typeData = computed(() => content.value[scores.value.dominant])
 const growthType = computed(() => integrationOf(scores.value.dominant))
 const stressType = computed(() => disintegrationOf(scores.value.dominant))
 const wingTypes = computed(() => wingsOf(scores.value.dominant))

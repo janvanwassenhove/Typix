@@ -9,10 +9,7 @@
     <div v-else id="insights-report-content" class="report-content">
       <div class="insights-circle">
         <canvas ref="circleCanvas" width="500" height="500"></canvas>
-        <p class="chart-caption">
-          Each colour pulls the marker towards its own quadrant, weighted by how often you chose it.
-          Opposing energies cancel out, so a marker near the centre means a balanced profile.
-        </p>
+        <p class="chart-caption">{{ t('insights_wheel_caption') }}</p>
       </div>
 
       <!-- Colour energy charts -->
@@ -20,19 +17,17 @@
         <h4>{{ t('insights_energy_profile') }}</h4>
         <canvas ref="dynamicsCanvas" width="700" height="330"></canvas>
         <div class="dynamics-labels">
-          <div><strong>Colour energy<br>(0&ndash;6 scale)</strong></div>
-          <div><strong>Distance from a<br>balanced profile</strong></div>
+          <div><strong>{{ t('insights_chart_conscious') }}</strong></div>
+          <div><strong>{{ t('insights_chart_deviation') }}</strong></div>
         </div>
         <p class="chart-caption">
-          The left chart restates your percentages on the 0&ndash;6 preference scale. The right chart
-          shows how far each colour sits from an even 25% split &mdash; your overall spread is
-          {{ spread.toFixed(1) }} points, which reads as <strong>{{ balance }}</strong>.
+          {{ t('insights_energy_caption', { spread: spread.toFixed(1), balance: balanceLabel }) }}
         </p>
       </div>
 
       <div class="primary-color">
-        <h3>{{ t('insights_primary_color') }}: {{ userName ? userName + ", " : '' }}{{ dominantColor.name }}</h3>
-        <div class="color-indicator" :style="{ backgroundColor: dominantColor.hex }"></div>
+        <h3>{{ t('insights_primary_color') }}: {{ userName ? userName + ", " : '' }}{{ dominantColor.label }}</h3>
+        <div class="color-indicator" :style="{ backgroundColor: colorHex[scores.dominant] }"></div>
         <p class="color-description">{{ dominantColor.description }}</p>
         <div class="position-info">
           <span class="position-label">{{ t('insights_profile_position') }}: {{ profilePosition }}</span>
@@ -44,7 +39,7 @@
         <div class="color-bars">
           <div v-for="color in COLOR_KEYS" :key="color" class="color-bar">
             <div class="bar-header">
-              <span class="color-name">{{ color }}</span>
+              <span class="color-name">{{ content.colors[color].label }}</span>
               <span class="color-percentage">{{ scores.percentages[color] }}%</span>
             </div>
             <div class="bar-container">
@@ -58,17 +53,15 @@
             </div>
           </div>
         </div>
-        <p class="score-footnote">
-          Based on {{ scores.answered }} answered {{ scores.answered === 1 ? 'question' : 'questions' }}.
-        </p>
+        <p class="score-footnote">{{ answeredLabel }}</p>
       </div>
 
       <div class="profile-analysis">
         <h4>{{ t('insights_profile_analysis') }}</h4>
         <div class="analysis-content">
-          <p>{{ profileAnalysis.description }}</p>
+          <p>{{ balanceContent.description }}</p>
           <div class="balance-indicator">
-            <span class="balance-label">{{ t('insights_energy_balance') }}: {{ balance }}</span>
+            <span class="balance-label">{{ t('insights_energy_balance') }}: {{ balanceLabel }}</span>
           </div>
         </div>
       </div>
@@ -124,6 +117,8 @@
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { usePdfExport } from '../../composables/usePdfExport'
 import { useTranslations } from '../../composables/useTranslations'
+import { insightsContent } from '../../i18n/content/insights'
+import { pickLocale } from '../../i18n/content/locale'
 import {
   COLOR_KEYS,
   PREFERENCE_MAX,
@@ -142,11 +137,20 @@ const props = defineProps<{
 const circleCanvas = ref<HTMLCanvasElement>()
 const dynamicsCanvas = ref<HTMLCanvasElement>()
 const { generatePDF, isGeneratingPDF } = usePdfExport()
-const { t } = useTranslations()
+const { t, currentLanguage } = useTranslations()
 
 const scores = computed(() => scoreInsights(props.results))
 const spread = computed(() => energySpread(scores.value.percentages))
 const balance = computed(() => energyBalance(scores.value.percentages))
+
+const content = computed(() => pickLocale(insightsContent, currentLanguage.value))
+const balanceContent = computed(() => content.value.balance[balance.value])
+const balanceLabel = computed(() => balanceContent.value.label)
+
+const answeredLabel = computed(() => t(
+  scores.value.answered === 1 ? 'based_on_answers_one' : 'based_on_answers_other',
+  { count: scores.value.answered }
+))
 
 const downloadPDF = async () => {
   try {
@@ -164,133 +168,13 @@ const colorHex: Record<ColorKey, string> = {
   Green: '#96CEB4'
 }
 
-interface ColorProfile {
-  name: ColorKey
-  hex: string
-  description: string
-  strengths: string[]
-  development: string[]
-  pitfalls: string[]
-  goodDay: string
-  strongDay: string
-}
-
-const colorData: Record<ColorKey, ColorProfile> = {
-  Red: {
-    name: "Red",
-    hex: colorHex.Red,
-    description: "Fiery Red energy represents determination, leadership, and results-oriented thinking. You're direct, competitive, and thrive on challenges.",
-    strengths: ["Natural leadership", "Quick decision making", "Results-focused", "Competitive drive"],
-    development: [
-      "Practice patience with others' pace",
-      "Consider others' feelings in decisions",
-      "Delegate more effectively",
-      "Balance task focus with relationship building"
-    ],
-    pitfalls: [
-      "Impulsiveness in decision making",
-      "Overly critical of inefficiency",
-      "Struggle to relax and go with the flow",
-      "Tendency to overlook details"
-    ],
-    goodDay: "A good day for you is one where you can take charge, cut through the noise and close things out. Momentum is your fuel.",
-    strongDay: "At your strongest you turn a stalled situation around: you make the call others are avoiding and give the team a direction to move in."
-  },
-  Yellow: {
-    name: "Yellow",
-    hex: colorHex.Yellow,
-    description: "Sunshine Yellow energy represents enthusiasm, creativity, and people-focused thinking. You're optimistic, persuasive, and energize others.",
-    strengths: ["Inspiring others", "Creative problem solving", "Building relationships", "Positive outlook"],
-    development: [
-      "Follow through on commitments",
-      "Focus on details and accuracy",
-      "Listen more, talk less sometimes",
-      "Manage time and priorities better"
-    ],
-    pitfalls: [
-      "Tendency to avoid conflict, leading to unresolved issues",
-      "Overcommitment due to eagerness to please",
-      "Difficulty in saying no",
-      "May overlook practical details"
-    ],
-    goodDay: "A good day for you involves people, ideas and room to improvise. Collaboration leaves you with more energy than you started with.",
-    strongDay: "At your strongest you get a room engaged: you connect people to an idea and make them want to be part of it."
-  },
-  Blue: {
-    name: "Blue",
-    hex: colorHex.Blue,
-    description: "Cool Blue energy represents analytical thinking, precision, and quality focus. You're logical, systematic, and value accuracy.",
-    strengths: ["Analytical thinking", "Attention to detail", "Quality focus", "Systematic approach"],
-    development: [
-      "Make decisions with incomplete data",
-      "Express emotions more openly",
-      "Take calculated risks",
-      "Communicate in simpler terms"
-    ],
-    pitfalls: [
-      "Overly critical of oneself and others",
-      "Tendency to dwell on problems rather than solutions",
-      "May come across as aloof or detached",
-      "Struggle to adapt to sudden changes"
-    ],
-    goodDay: "A good day for you gives you uninterrupted time with a hard problem and the information you need to do it properly.",
-    strongDay: "At your strongest you find the flaw nobody else saw and produce work that holds up to scrutiny long after it ships."
-  },
-  Green: {
-    name: "Green",
-    hex: colorHex.Green,
-    description: "Earth Green energy represents harmony, support, and steady progress. You're reliable, patient, and create stable environments.",
-    strengths: ["Team collaboration", "Reliable support", "Patient approach", "Creating harmony"],
-    development: [
-      "Assert your opinions more",
-      "Embrace change and new ideas",
-      "Set personal boundaries",
-      "Take initiative when needed"
-    ],
-    pitfalls: [
-      "Tendency to avoid confrontation, leading to pent-up frustration",
-      "Overly accommodating, may neglect personal needs",
-      "Difficulty in making quick decisions",
-      "May resist necessary change or innovation"
-    ],
-    goodDay: "A good day for you is calm and predictable, with time to support the people around you and finish what you started.",
-    strongDay: "At your strongest you are the steady point in a turbulent situation: people trust you, and that trust holds the team together."
-  }
-}
-
-const dominantColor = computed(() => colorData[scores.value.dominant])
-
-const POSITION_NAMES: Record<string, string> = {
-  'Red-Yellow': 'Dynamic Leader',
-  'Red-Blue': 'Analytical Driver',
-  'Red-Green': 'Supportive Leader',
-  'Yellow-Red': 'Inspiring Motivator',
-  'Yellow-Blue': 'Creative Analyst',
-  'Yellow-Green': 'Collaborative Enthusiast',
-  'Blue-Red': 'Strategic Executor',
-  'Blue-Yellow': 'Methodical Communicator',
-  'Blue-Green': 'Systematic Supporter',
-  'Green-Red': 'Steady Achiever',
-  'Green-Yellow': 'Harmonious Facilitator',
-  'Green-Blue': 'Reliable Analyst'
-}
+const dominantColor = computed(() => content.value.colors[scores.value.dominant])
 
 // Derived from the same ranking as the headline colour, so the position label
 // can no longer disagree with "Your Primary Colour".
 const profilePosition = computed(
-  () => POSITION_NAMES[`${scores.value.dominant}-${scores.value.secondary}`] || 'Balanced Profile'
+  () => content.value.positions[`${scores.value.dominant}-${scores.value.secondary}`] || ''
 )
-
-const profileAnalysis = computed(() => {
-  switch (balance.value) {
-    case 'Well Balanced':
-      return { description: 'You show a balanced approach across all colour energies, adapting your style based on the situation. This flexibility is a significant strength in diverse environments.' }
-    case 'Moderately Focused':
-      return { description: 'You have clear preferences while maintaining some flexibility. Your primary colours guide your approach, but you can draw on other energies when needed.' }
-    default:
-      return { description: 'You have very strong preferences in specific colour energies. This focused approach gives you clear strengths, though developing other areas could enhance your versatility.' }
-  }
-})
 
 const redraw = () => nextTick(() => {
   drawInsightsCircle()

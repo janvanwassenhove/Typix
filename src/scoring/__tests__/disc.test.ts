@@ -107,9 +107,27 @@ describe('question data', () => {
       for (const question of questions) {
         expect(question.options.map(o => o.value), lang).toEqual(['D', 'I', 'S', 'C'])
         for (const option of question.options) {
-          expect(option.text.length, lang).toBeGreaterThan(0)
+          expect(option.text.trim().length, lang).toBeGreaterThan(0)
         }
       }
+    }
+  })
+
+  it('asks every question with its own answer options', () => {
+    // 48 of the 50 questions used to share one generic set of options
+    // ("Direct and results-focused", …), so only the question text varied and
+    // the answers told the respondent nothing about what they were choosing.
+    for (const [lang, questions] of Object.entries(discQuestions)) {
+      const optionTexts = questions.flatMap(q => q.options.map(o => o.text))
+      expect(new Set(optionTexts).size, `${lang} has repeated options`).toBe(optionTexts.length)
+      expect(new Set(questions.map(q => q.text)).size, `${lang} has repeated questions`).toBe(questions.length)
+    }
+  })
+
+  it('asks the same questions in the same order in every language', () => {
+    const reference = discQuestions.en.length
+    for (const [lang, questions] of Object.entries(discQuestions)) {
+      expect(questions.length, lang).toBe(reference)
     }
   })
 })
