@@ -55,6 +55,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .container {
@@ -66,6 +67,7 @@ body {
   align-items: center;
   justify-content: center;
   flex: 1;
+  min-width: 0;
 }
 
 .card {
@@ -76,6 +78,26 @@ body {
   width: 100%;
   max-width: 1000px;
   border: 1px solid rgba(249, 166, 7, 0.1);
+  /* As a flex item the card would otherwise refuse to shrink below the
+     min-content width of its contents — and a <canvas> reports its drawing
+     resolution (up to 700px) as min-content, which pushed the whole page
+     wider than a phone screen. */
+  min-width: 0;
+}
+
+/* German compounds like "Teamzusammenarbeit" set a min-content floor wide
+   enough to push a narrow screen into horizontal scrolling, so headings are
+   allowed to break mid-word and body text to wrap on any boundary. */
+.card h3,
+.card h4,
+.card h5 {
+  overflow-wrap: anywhere;
+}
+
+.card p,
+.card li,
+.card span {
+  overflow-wrap: break-word;
 }
 
 .btn {
@@ -138,10 +160,23 @@ body {
     padding: 20px 15px;
     min-height: calc(100vh - 120px);
   }
-  
+
   .card {
     padding: 32px 24px;
     border-radius: 20px;
+  }
+}
+
+/* Reports nest one card inside another, so the padding is charged twice. On
+   the narrowest phones that alone is enough to force horizontal scrolling. */
+@media (max-width: 400px) {
+  .container {
+    padding: 16px 10px;
+  }
+
+  .card {
+    padding: 20px 14px;
+    border-radius: 16px;
   }
 }
 </style>

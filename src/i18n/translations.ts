@@ -97,6 +97,8 @@ export const translations = {
     insights_chart_conscious: 'Colour energy (0-6 scale)',
     insights_chart_deviation: 'Distance from a balanced profile',
     insights_energy_caption: 'The left chart restates your percentages on the 0-6 preference scale. The right chart shows how far each colour sits from an even 25% split. Your overall spread is {spread} points, which reads as {balance}.',
+    insights_you: 'YOU',
+    pdf_failed: 'Could not generate the PDF. Please try again.',
   },
 
   es: {
@@ -197,6 +199,8 @@ export const translations = {
     insights_chart_conscious: 'Energía de color (escala 0-6)',
     insights_chart_deviation: 'Distancia a un perfil equilibrado',
     insights_energy_caption: 'El gráfico de la izquierda traslada tus porcentajes a la escala de preferencia 0-6. El de la derecha muestra cuánto se aleja cada color de un reparto igual del 25%. Tu dispersión global es de {spread} puntos, lo que se lee como {balance}.',
+    insights_you: 'TÚ',
+    pdf_failed: 'No se pudo generar el PDF. Inténtalo de nuevo.',
   },
 
   fr: {
@@ -297,6 +301,8 @@ export const translations = {
     insights_chart_conscious: 'Énergie des couleurs (échelle 0-6)',
     insights_chart_deviation: 'Ecart par rapport a un profil équilibré',
     insights_energy_caption: 'Le graphique de gauche traduit vos pourcentages sur l\'échelle de préférence 0-6. Celui de droite montre l\'écart de chaque couleur par rapport a une répartition égale de 25%. Votre dispersion globale est de {spread} points, ce qui se lit comme {balance}.',
+    insights_you: 'VOUS',
+    pdf_failed: 'Impossible de générer le PDF. Veuillez réessayer.',
   },
 
   de: {
@@ -397,6 +403,8 @@ export const translations = {
     insights_chart_conscious: 'Farbenergie (Skala 0-6)',
     insights_chart_deviation: 'Abstand zu einem ausgewogenen Profil',
     insights_energy_caption: 'Das linke Diagramm überträgt Ihre Prozentwerte auf die Präferenzskala 0-6. Das rechte zeigt, wie weit jede Farbe von einer gleichmäßigen Verteilung von 25% entfernt liegt. Ihre Gesamtstreuung beträgt {spread} Punkte, was als {balance} zu lesen ist.',
+    insights_you: 'SIE',
+    pdf_failed: 'Das PDF konnte nicht erstellt werden. Bitte erneut versuchen.',
   },
 
   nl: {
@@ -497,5 +505,7 @@ export const translations = {
     insights_chart_conscious: 'Kleurenergie (schaal 0-6)',
     insights_chart_deviation: 'Afstand tot een uitgebalanceerd profiel',
     insights_energy_caption: 'De linkergrafiek zet je percentages om naar de voorkeursschaal 0-6. De rechtergrafiek toont hoe ver elke kleur van een gelijke verdeling van 25% ligt. Je totale spreiding is {spread} punten, wat leest als {balance}.',
+    insights_you: 'JIJ',
+    pdf_failed: 'Kon de PDF niet aanmaken. Probeer het opnieuw.',
   }
 }

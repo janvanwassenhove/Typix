@@ -139,7 +139,7 @@ const downloadPDF = async () => {
     await generatePDF('disc-report-content', `DISC-Report-${scores.value.combination.replace('/', '-')}`)
   } catch (error) {
     console.error('Failed to generate PDF:', error)
-    alert('Failed to generate PDF. Please try again.')
+    alert(t('pdf_failed'))
   }
 }
 
@@ -315,6 +315,16 @@ const drawDiscCircle = () => {
   padding: 20px;
   background: #f8f9fa;
   border-radius: 15px;
+}
+
+/* The canvas keeps its own drawing resolution; CSS only scales it down, so a
+   narrow screen never forces the page wider than the viewport. */
+.disc-chart canvas {
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .chart-caption {
@@ -571,9 +581,8 @@ const drawDiscCircle = () => {
 }
 
 @media (max-width: 768px) {
-  .disc-chart canvas {
-    width: 320px !important;
-    height: 320px !important;
+  .disc-chart {
+    padding: 12px;
   }
 
   .primary-style,

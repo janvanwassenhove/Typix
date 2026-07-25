@@ -157,7 +157,7 @@ const downloadPDF = async () => {
     await generatePDF('insights-report-content', `Insights-Report-${scores.value.dominant}`)
   } catch (error) {
     console.error('Failed to generate PDF:', error)
-    alert('Failed to generate PDF. Please try again.')
+    alert(t('pdf_failed'))
   }
 }
 
@@ -182,18 +182,8 @@ const redraw = () => nextTick(() => {
 })
 
 onMounted(redraw)
-watch(() => props.results, redraw, { deep: true })
+watch([() => props.results, currentLanguage], redraw, { deep: true })
 
-const allTypes = [
-  'REFORMER',    // Blue-Red (top)
-  'DIRECTOR',    // Red (top-right)
-  'MOTIVATOR',   // Red-Yellow (right)
-  'INSPIRER',    // Yellow (bottom-right)
-  'HELPER',      // Yellow-Green (bottom)
-  'SUPPORTER',   // Green (bottom-left)
-  'COORDINATOR', // Green-Blue (left)
-  'OBSERVER'     // Blue (top-left)
-]
 const typeColors = [
   '#9B59B6', '#E74C3C', '#E67E22', '#F7CA18',
   '#B6D957', '#27AE60', '#00B5B5', '#3498DB'
@@ -202,6 +192,15 @@ const typeAngles = [
   -Math.PI / 2, -Math.PI / 4, 0, Math.PI / 4,
   Math.PI / 2, 3 * Math.PI / 4, Math.PI, -3 * Math.PI / 4
 ]
+
+function fitText(ctx: CanvasRenderingContext2D, text: string, maxWidth: number, startSize: number) {
+  let size = startSize
+  ctx.font = `bold ${size}px Arial`
+  while (size > 9 && ctx.measureText(text).width > maxWidth) {
+    size -= 1
+    ctx.font = `bold ${size}px Arial`
+  }
+}
 
 const drawInsightsCircle = () => {
   const canvas = circleCanvas.value
@@ -247,7 +246,7 @@ const drawInsightsCircle = () => {
     ctx.rotate(typeAngles[i])
     ctx.textAlign = 'center'
     ctx.textBaseline = 'middle'
-    ctx.font = 'bold 18px Arial'
+    const arcLength = (labelRadius * Math.PI) / 4 - 10
     ctx.beginPath()
     ctx.arc(0, 0, labelRadius, -Math.PI / 8, Math.PI / 8)
     ctx.lineWidth = 38
@@ -259,7 +258,8 @@ const drawInsightsCircle = () => {
     ctx.save()
     ctx.rotate(Math.PI / 2)
     ctx.fillStyle = '#fff'
-    ctx.fillText(allTypes[i], 0, -labelRadius)
+    fitText(ctx, content.value.wheel[i], arcLength, 18)
+    ctx.fillText(content.value.wheel[i], 0, -labelRadius)
     ctx.restore()
     ctx.restore()
   }
@@ -298,7 +298,7 @@ const drawInsightsCircle = () => {
   ctx.font = 'bold 12px Arial'
   ctx.textAlign = 'center'
   ctx.textBaseline = 'middle'
-  ctx.fillText('YOU', profileX, profileY - 32)
+  ctx.fillText(t('insights_you'), profileX, profileY - 32)
 }
 
 /**
@@ -349,7 +349,7 @@ function drawColorLabels(ctx: CanvasRenderingContext2D, x: number, y: number, w:
   COLOR_KEYS.forEach((color, i) => {
     const { centre } = barLayout(x, w, i)
     ctx.fillStyle = '#333'
-    ctx.fillText(color, centre, y + h + 20)
+    ctx.fillText(content.value.colors[color].short, centre, y + h + 20)
     ctx.fillStyle = '#666'
     ctx.fillText(value(color), centre, y + h + 36)
   })
@@ -452,6 +452,20 @@ function drawDeviationChart(ctx: CanvasRenderingContext2D, x: number, y: number,
   border-radius: 15px;
 }
 
+/* The canvas keeps its own drawing resolution; CSS only scales it down, so a
+   narrow screen never forces the page wider than the viewport. */
+.insights-circle canvas,
+.energy-dynamics canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.insights-circle canvas {
+  max-width: 500px;
+}
+
 .chart-caption {
   max-width: 540px;
   margin: 12px auto 0;
@@ -476,7 +490,7 @@ function drawDeviationChart(ctx: CanvasRenderingContext2D, x: number, y: number,
 }
 
 .energy-dynamics canvas {
-  max-width: 100%;
+  max-width: 700px;
 }
 
 .dynamics-labels {
@@ -488,7 +502,11 @@ function drawDeviationChart(ctx: CanvasRenderingContext2D, x: number, y: number,
 }
 
 .dynamics-labels > div {
-  width: 220px;
+  /* Flexible rather than a fixed width, so the pair never sets a
+     min-content floor that a phone screen cannot honour. */
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 220px;
   text-align: center;
   font-weight: 600;
   line-height: 1.2;
@@ -698,11 +716,6 @@ function drawDeviationChart(ctx: CanvasRenderingContext2D, x: number, y: number,
     grid-template-columns: 1fr;
   }
 
-  .insights-circle canvas {
-    width: 320px !important;
-    height: 320px !important;
-  }
-
   .primary-color,
   .profile-analysis {
     padding: 20px;
@@ -710,12 +723,14 @@ function drawDeviationChart(ctx: CanvasRenderingContext2D, x: number, y: number,
 }
 
 @media (max-width: 500px) {
-  .dynamics-labels {
-    margin: 6px 10px 0 10px;
-    font-size: 0.9rem;
+  .insights-circle,
+  .energy-dynamics {
+    padding: 12px;
   }
-  .dynamics-labels > div {
-    width: 120px;
+
+  .dynamics-labels {
+    margin: 6px 0 0 0;
+    font-size: 0.85rem;
   }
 }
 </style>
