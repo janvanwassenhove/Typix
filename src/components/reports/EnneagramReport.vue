@@ -1,85 +1,100 @@
 <template>
   <div class="card">
-    <div id="enneagram-report-content" class="report-content">
+    <div v-if="!scores.hasAnswers" class="empty-state">
+      <h3>{{ t('no_results_title') }}</h3>
+      <p>{{ t('no_results_body') }}</p>
+      <router-link to="/survey/enneagram" class="btn btn-primary">{{ t('start_survey') }}</router-link>
+    </div>
+
+    <div v-else id="enneagram-report-content" class="report-content">
       <div class="type-header">
-        <div class="type-number">{{ dominantType }}</div>
+        <div class="type-number">{{ scores.dominant }}</div>
         <div class="type-info">
           <h3 class="type-name">{{ typeData.name }}</h3>
           <p class="type-subtitle">{{ typeData.subtitle }}</p>
+          <p class="type-wing">{{ t('enneagram_wing') }}: {{ scores.dominant }}w{{ scores.wing }} &mdash; {{ enneagramTypes[scores.wing].name }}</p>
         </div>
       </div>
 
       <!-- Enneagram Visualization -->
       <div class="enneagram-visualization">
         <h4>{{ t('enneagram_position') }}</h4>
-        <!-- Explanation about the lines and connections -->
         <div class="enneagram-explanation">
           <p>
-            The lines inside the Enneagram symbol represent the dynamic connections between types. 
-            The triangle (3-6-9) and hexagon (1-4-2-8-5-7) show how each type is linked to others in patterns of growth, stress, and integration.
+            The lines inside the symbol are fixed: the triangle joins 3&ndash;6&ndash;9 and the
+            hexad follows 1&ndash;4&ndash;2&ndash;8&ndash;5&ndash;7. Highlighted on top of them are the two
+            lines that belong to your own type.
           </p>
         </div>
         <div class="enneagram-circle">
           <svg viewBox="0 0 400 400" class="enneagram-svg">
-            <!-- Outer circle -->
-            <circle cx="200" cy="200" r="180" fill="none" stroke="#e9ecef" stroke-width="2"/>
-            
-            <!-- Rotated lines and positions, but NOT rotating the text/numbers -->
-            <g :transform="`rotate(${rotationAngle} 200 200)`">
-              <g stroke="#dee2e6" stroke-width="1" opacity="0.5">
-                <!-- Triangle: 3-6-9 -->
-                <line :x1="positions[2].x" :y1="positions[2].y" :x2="positions[5].x" :y2="positions[5].y" />
-                <line :x1="positions[5].x" :y1="positions[5].y" :x2="positions[8].x" :y2="positions[8].y" />
-                <line :x1="positions[8].x" :y1="positions[8].y" :x2="positions[2].x" :y2="positions[2].y" />
-                <!-- Hexagon: 1-4-2-8-5-7 -->
-                <line :x1="positions[0].x" :y1="positions[0].y" :x2="positions[3].x" :y2="positions[3].y" />
-                <line :x1="positions[3].x" :y1="positions[3].y" :x2="positions[1].x" :y2="positions[1].y" />
-                <line :x1="positions[1].x" :y1="positions[1].y" :x2="positions[7].x" :y2="positions[7].y" />
-                <line :x1="positions[7].x" :y1="positions[7].y" :x2="positions[4].x" :y2="positions[4].y" />
-                <line :x1="positions[4].x" :y1="positions[4].y" :x2="positions[6].x" :y2="positions[6].y" />
-                <line :x1="positions[6].x" :y1="positions[6].y" :x2="positions[0].x" :y2="positions[0].y" />
-              </g>
+            <circle cx="200" cy="200" r="160" fill="none" stroke="#e9ecef" stroke-width="2"/>
+
+            <!-- Fixed structure: triangle 3-6-9 and hexad 1-4-2-8-5-7 -->
+            <g stroke="#dee2e6" stroke-width="1.5" fill="none">
+              <polygon :points="polygonPoints([3, 6, 9])" />
+              <polygon :points="polygonPoints([1, 4, 2, 8, 5, 7])" />
             </g>
-            <!-- Draw circles and text OUTSIDE the rotation group so they are always upright -->
-            <g v-for="type in positions" :key="type.number">
-              <circle 
-                :cx="type.x" 
-                :cy="type.y" 
-                :r="type.number == dominantType ? 25 : 18"
-                :fill="type.number == dominantType ? '#667eea' : '#f8f9fa'"
-                :stroke="type.number == dominantType ? '#667eea' : '#dee2e6'"
-                :stroke-width="type.number == dominantType ? 3 : 2"
+
+            <!-- The dominant type's own lines -->
+            <line
+              :x1="pointOf(scores.dominant).x" :y1="pointOf(scores.dominant).y"
+              :x2="pointOf(growthType).x" :y2="pointOf(growthType).y"
+              stroke="#2E9E5B" stroke-width="3" stroke-linecap="round"
+            />
+            <line
+              :x1="pointOf(scores.dominant).x" :y1="pointOf(scores.dominant).y"
+              :x2="pointOf(stressType).x" :y2="pointOf(stressType).y"
+              stroke="#E4572E" stroke-width="3" stroke-dasharray="7 5" stroke-linecap="round"
+            />
+
+            <g v-for="node in nodes" :key="node.number">
+              <circle
+                :cx="node.x"
+                :cy="node.y"
+                :r="node.number === scores.dominant ? 25 : 18"
+                :fill="nodeFill(node.number)"
+                :stroke="nodeStroke(node.number)"
+                :stroke-width="node.number === scores.dominant ? 3 : 2"
                 class="type-circle"
               />
-              <text 
-                :x="type.x" 
-                :y="type.y + 6" 
-                text-anchor="middle" 
-                :fill="type.number == dominantType ? 'white' : '#333'"
-                :font-size="type.number == dominantType ? '18' : '14'"
+              <text
+                :x="node.x"
+                :y="node.y + 6"
+                text-anchor="middle"
+                :fill="node.number === scores.dominant ? 'white' : '#333'"
+                :font-size="node.number === scores.dominant ? '18' : '14'"
                 font-weight="bold"
               >
-                {{ type.number }}
+                {{ node.number }}
               </text>
-              <text 
-                :x="type.x" 
-                :y="type.y + (type.number == dominantType ? 45 : 35)" 
-                text-anchor="middle" 
-                :fill="type.number == dominantType ? '#667eea' : '#666'"
+              <text
+                :x="node.x"
+                :y="node.y + (node.number === scores.dominant ? 45 : 35)"
+                text-anchor="middle"
+                :fill="node.number === scores.dominant ? '#667eea' : '#666'"
                 font-size="10"
                 font-weight="500"
               >
-                {{ type.name }}
+                {{ enneagramTypes[node.number].shortName }}
               </text>
             </g>
           </svg>
         </div>
-        <!-- Add interpretation explanation below the visual -->
+
+        <div class="symbol-legend">
+          <span class="legend-item"><span class="swatch dominant"></span>{{ t('enneagram_your_type') }} ({{ scores.dominant }})</span>
+          <span class="legend-item"><span class="swatch wing"></span>{{ t('enneagram_wing') }} ({{ scores.wing }})</span>
+          <span class="legend-item"><span class="line growth"></span>{{ t('enneagram_growth_line') }} &rarr; {{ growthType }}</span>
+          <span class="legend-item"><span class="line stress"></span>{{ t('enneagram_stress_line') }} &rarr; {{ stressType }}</span>
+        </div>
+
         <div class="enneagram-interpretation">
           <p>
-            <b>How to interpret:</b> Your main type is highlighted. The connecting lines show which types you may move toward in times of growth or stress. 
-            For example, when healthy, you may take on the positive traits of the type your line points to (growth), and under stress, you may display behaviors of the other connected type. 
-            Use these connections to better understand your patterns and potential paths for personal development.
+            <b>How to interpret:</b> your main type is highlighted, with its wing shaded next to it.
+            The solid green line points to the type whose healthy qualities you tend to pick up when
+            you are doing well; the dashed red line points to the type whose behaviour tends to
+            surface under sustained stress.
           </p>
         </div>
       </div>
@@ -88,33 +103,35 @@
       <div class="score-breakdown">
         <h4>{{ t('enneagram_type_scores') }}</h4>
         <div class="scores-grid">
-          <div 
-            v-for="(score, type) in typeScores" 
+          <div
+            v-for="type in ENNEAGRAM_TYPES"
             :key="type"
             class="score-item"
-            :class="{ dominant: type == dominantType }"
+            :class="{ dominant: type === scores.dominant }"
           >
             <div class="score-header">
-              <span class="score-type">Type {{ type }}</span>
-              <span class="score-value">{{ score }}%</span>
+              <span class="score-type">{{ t('enneagram_type') }} {{ type }} &middot; {{ enneagramTypes[type].shortName }}</span>
+              <span class="score-value">{{ scores.percentages[type] }}%</span>
             </div>
             <div class="score-bar">
-              <div 
-                class="score-fill" 
-                :style="{ width: score + '%' }"
-              ></div>
+              <div class="score-fill" :style="{ width: scores.percentages[type] + '%' }"></div>
             </div>
           </div>
         </div>
+        <p class="score-footnote">
+          Each type is scored on the agreement it collected as a share of the agreement it could have
+          collected, then expressed as a percentage of the whole. Based on {{ scores.answered }} answered
+          {{ scores.answered === 1 ? 'question' : 'questions' }}.
+        </p>
       </div>
 
       <div class="description-section">
         <h4>{{ t('enneagram_core_motivation') }}</h4>
         <p>{{ typeData.motivation }}</p>
-        
+
         <h4>{{ t('enneagram_basic_fear') }}</h4>
         <p>{{ typeData.fear }}</p>
-        
+
         <h4>{{ t('enneagram_key_characteristics') }}</h4>
         <ul>
           <li v-for="trait in typeData.traits" :key="trait">{{ trait }}</li>
@@ -131,8 +148,8 @@
       </div>
 
       <div class="pdf-actions">
-        <button 
-          @click="downloadPDF" 
+        <button
+          @click="downloadPDF"
           :disabled="isGeneratingPDF"
           class="btn btn-pdf"
         >
@@ -148,32 +165,59 @@
 import { computed } from 'vue'
 import { usePdfExport } from '../../composables/usePdfExport'
 import { useTranslations } from '../../composables/useTranslations'
+import questionData from '../../data/enneagram-questions.json'
+import {
+  ENNEAGRAM_TYPES,
+  disintegrationOf,
+  integrationOf,
+  scoreEnneagram,
+  wingsOf,
+  type EnneagramQuestion,
+  type EnneagramType
+} from '../../scoring/enneagram'
 
 const props = defineProps<{
-  results: Record<number, number>
+  results: unknown
 }>()
 
 const { generatePDF, isGeneratingPDF } = usePdfExport()
 const { t } = useTranslations()
 
+// Every language file lists the same questions in the same order, so the
+// type mapping can be read from any of them.
+const questions = questionData.en as EnneagramQuestion[]
+
+const scores = computed(() => scoreEnneagram(props.results, questions))
+
 const downloadPDF = async () => {
   try {
-    await generatePDF('enneagram-report-content', `Enneagram-Report-Type-${dominantType.value}`)
+    await generatePDF('enneagram-report-content', `Enneagram-Report-Type-${scores.value.dominant}`)
   } catch (error) {
     console.error('Failed to generate PDF:', error)
     alert('Failed to generate PDF. Please try again.')
   }
 }
 
-const enneagramTypes = {
+interface TypeProfile {
+  name: string
+  shortName: string
+  subtitle: string
+  motivation: string
+  fear: string
+  traits: string[]
+  growth: string[]
+}
+
+const enneagramTypes: Record<EnneagramType, TypeProfile> = {
   1: {
     name: "The Perfectionist",
+    shortName: "Perfectionist",
     subtitle: "The Rational, Idealistic Type",
     motivation: "To be good, right, perfect, and to improve everything",
     fear: "Being corrupt, defective, or wrong",
     traits: [
       "Principled and purposeful",
-      "Self-controlled and perfectionistic", 
+      "Self-controlled and perfectionistic",
       "Critical and resentful when stressed",
       "Well-organized and orderly"
     ],
@@ -185,6 +229,7 @@ const enneagramTypes = {
   },
   2: {
     name: "The Helper",
+    shortName: "Helper",
     subtitle: "The Caring, Interpersonal Type",
     motivation: "To feel loved and needed by being helpful to others",
     fear: "Being unloved or unwanted for themselves",
@@ -201,7 +246,8 @@ const enneagramTypes = {
     ]
   },
   3: {
-    name: "The Achiever", 
+    name: "The Achiever",
+    shortName: "Achiever",
     subtitle: "The Success-Oriented, Pragmatic Type",
     motivation: "To feel valuable and worthwhile through being successful",
     fear: "Being worthless or without value apart from achievements",
@@ -219,6 +265,7 @@ const enneagramTypes = {
   },
   4: {
     name: "The Individualist",
+    shortName: "Individualist",
     subtitle: "The Sensitive, Withdrawn Type",
     motivation: "To find themselves and their significance",
     fear: "Having no identity or personal significance",
@@ -236,6 +283,7 @@ const enneagramTypes = {
   },
   5: {
     name: "The Investigator",
+    shortName: "Investigator",
     subtitle: "The Intense, Cerebral Type",
     motivation: "To be capable and understanding of the world",
     fear: "Being useless, helpless, or incapable",
@@ -253,6 +301,7 @@ const enneagramTypes = {
   },
   6: {
     name: "The Loyalist",
+    shortName: "Loyalist",
     subtitle: "The Committed, Security-Oriented Type",
     motivation: "To have security and support",
     fear: "Being without support or guidance",
@@ -270,6 +319,7 @@ const enneagramTypes = {
   },
   7: {
     name: "The Enthusiast",
+    shortName: "Enthusiast",
     subtitle: "The Spontaneous, Versatile Type",
     motivation: "To maintain happiness and avoid pain",
     fear: "Being trapped in pain or deprivation",
@@ -287,6 +337,7 @@ const enneagramTypes = {
   },
   8: {
     name: "The Challenger",
+    shortName: "Challenger",
     subtitle: "The Powerful, Dominating Type",
     motivation: "To be self-reliant and in control of their own life",
     fear: "Being controlled or vulnerable to others",
@@ -304,6 +355,7 @@ const enneagramTypes = {
   },
   9: {
     name: "The Peacemaker",
+    shortName: "Peacemaker",
     subtitle: "The Easygoing, Self-Effacing Type",
     motivation: "To maintain inner and outer peace",
     fear: "Loss of connection and fragmentation",
@@ -321,83 +373,72 @@ const enneagramTypes = {
   }
 }
 
-const enneagramPositions = [
-  { number: 1, x: 285, y: 65, name: "Perfectionist" },
-  { number: 2, x: 355, y: 155, name: "Helper" },
-  { number: 3, x: 355, y: 245, name: "Achiever" },
-  { number: 4, x: 285, y: 335, name: "Individualist" },
-  { number: 5, x: 200, y: 360, name: "Investigator" },
-  { number: 6, x: 115, y: 335, name: "Loyalist" },
-  { number: 7, x: 45, y: 245, name: "Enthusiast" },
-  { number: 8, x: 45, y: 155, name: "Challenger" },
-  { number: 9, x: 200, y: 40, name: "Peacemaker" }
-]
+const typeData = computed(() => enneagramTypes[scores.value.dominant])
+const growthType = computed(() => integrationOf(scores.value.dominant))
+const stressType = computed(() => disintegrationOf(scores.value.dominant))
+const wingTypes = computed(() => wingsOf(scores.value.dominant))
 
-const typeScores = computed(() => {
-  if (!props.results) return { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 }
+const CENTRE = 200
+const RADIUS = 160
 
-  const scores = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 }
-
-  // Assume each answer index maps to a type: 0->1, 1->2, ..., 8->9
-  Object.values(props.results).forEach((answerIndex) => {
-    const type = (Number(answerIndex) % 9) + 1
-    scores[type as keyof typeof scores] += 1
-  })
-
-  // Normalize to percentages
-  const total = Object.values(scores).reduce((sum, v) => sum + v, 0)
-  if (total > 0) {
-    Object.keys(scores).forEach(type => {
-      const typeNum = Number(type) as keyof typeof scores
-      scores[typeNum] = Math.round((scores[typeNum] / total) * 100)
-    })
+/**
+ * Type 9 sits at the top and the remaining types run clockwise, which is the
+ * conventional layout — placing the numbers anywhere else makes the fixed
+ * triangle and hexad meaningless.
+ */
+function pointOf(type: EnneagramType): { x: number; y: number } {
+  const slot = type === 9 ? 0 : type
+  const angle = (slot * 40 * Math.PI) / 180
+  return {
+    x: CENTRE + Math.sin(angle) * RADIUS,
+    y: CENTRE - Math.cos(angle) * RADIUS
   }
-
-  return scores
-})
-
-const dominantType = computed(() => {
-  const scores = typeScores.value
-  return Number(
-    Object.entries(scores).reduce((a, b) =>
-      scores[Number(a[0]) as keyof typeof scores] > scores[Number(b[0]) as keyof typeof scores] ? a : b
-    )[0]
-  )
-})
-
-const typeData = computed(() => enneagramTypes[dominantType.value as keyof typeof enneagramTypes] || enneagramTypes[1])
-
-// Helper: get angle for each type (0 is top, clockwise)
-function getTypeAngles() {
-  const centerX = 200, centerY = 200, radius = 160
-  // Type 9 is at the top, then 1-8 clockwise
-  return Array.from({ length: 9 }, (_, i) => {
-    const angle = ((i - 2) * 40) * Math.PI / 180 // -2 so type 9 is at top
-    return {
-      number: ((i + 8) % 9) + 1, // 9,1,2,3,4,5,6,7,8
-      x: centerX + Math.sin(angle) * radius,
-      y: centerY - Math.cos(angle) * radius,
-      name: enneagramPositions[((i + 8) % 9)].name
-    }
-  })
 }
 
-// Compute rotation so dominantType is at the top (position 9)
-const rotationAngle = computed(() => {
-  // Find index of dominantType in enneagramPositions
-  const idx = enneagramPositions.findIndex(t => t.number === dominantType.value)
-  // Type 9 is at index 0 (top), so rotate by -idx*40 deg
-  return -idx * 40
-})
+const nodes = computed(() =>
+  ([9, 1, 2, 3, 4, 5, 6, 7, 8] as EnneagramType[]).map(number => ({ number, ...pointOf(number) }))
+)
 
-// Rotated positions for SVG
-const positions = computed(() => getTypeAngles())
+function polygonPoints(types: EnneagramType[]): string {
+  return types.map(type => {
+    const { x, y } = pointOf(type)
+    return `${x.toFixed(1)},${y.toFixed(1)}`
+  }).join(' ')
+}
+
+function nodeFill(type: EnneagramType): string {
+  if (type === scores.value.dominant) return '#667eea'
+  if (type === scores.value.wing) return '#dfe3fb'
+  return '#f8f9fa'
+}
+
+function nodeStroke(type: EnneagramType): string {
+  if (type === scores.value.dominant) return '#667eea'
+  if (wingTypes.value.includes(type)) return '#a9b3f0'
+  return '#dee2e6'
+}
 </script>
 
 <style scoped>
 .report-content {
   max-width: 700px;
   margin: 0 auto;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.empty-state h3 {
+  font-size: 1.6rem;
+  color: #1A4731;
+  margin-bottom: 12px;
+}
+
+.empty-state p {
+  color: #666;
+  margin-bottom: 24px;
 }
 
 .type-header {
@@ -420,6 +461,7 @@ const positions = computed(() => getTypeAngles())
   font-size: 2.5rem;
   font-weight: bold;
   margin-right: 25px;
+  flex-shrink: 0;
 }
 
 .type-info h3 {
@@ -432,6 +474,13 @@ const positions = computed(() => getTypeAngles())
   color: #666;
   font-size: 1.1rem;
   font-style: italic;
+}
+
+.type-wing {
+  margin-top: 8px;
+  color: #667eea;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .enneagram-visualization {
@@ -470,11 +519,52 @@ const positions = computed(() => getTypeAngles())
 
 .type-circle {
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
-.type-circle:hover {
-  transform: scale(1.1);
+.symbol-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.swatch.dominant {
+  background: #667eea;
+}
+
+.swatch.wing {
+  background: #dfe3fb;
+  border: 2px solid #a9b3f0;
+}
+
+.line {
+  width: 22px;
+  height: 0;
+  display: inline-block;
+}
+
+.line.growth {
+  border-top: 3px solid #2E9E5B;
+}
+
+.line.stress {
+  border-top: 3px dashed #E4572E;
 }
 
 .score-breakdown {
@@ -536,6 +626,13 @@ const positions = computed(() => getTypeAngles())
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 4px;
   transition: width 0.8s ease;
+}
+
+.score-footnote {
+  margin-top: 15px;
+  color: #888;
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
 
 .description-section {
@@ -638,16 +735,16 @@ const positions = computed(() => getTypeAngles())
     flex-direction: column;
     text-align: center;
   }
-  
+
   .type-number {
     margin-right: 0;
     margin-bottom: 15px;
   }
-  
+
   .enneagram-circle {
-    max-width: 300px;
+    max-width: 320px;
   }
-  
+
   .score-header {
     flex-direction: column;
     align-items: flex-start;

@@ -65,7 +65,7 @@ const answers = ref<Record<number, any>>({})
 const userName = ref('')
 const nameStep = ref(true)
 
-const currentLang = computed(() => currentLanguage || 'en')
+const currentLang = computed(() => currentLanguage.value || 'en')
 
 // Update totalSteps based on survey type
 const totalSteps = computed(() => {
@@ -137,7 +137,7 @@ const resetSurvey = () => {
   localStorage.removeItem(`${surveyType.value}_answers`)
 }
 
-// On mount, try to load name from localStorage
+// Always start fresh, but keep the name the user gave us last time.
 onMounted(() => {
   const stored = localStorage.getItem('user_name')
   if (stored) userName.value = stored
@@ -148,12 +148,6 @@ function startSurvey() {
   nameStep.value = false
   localStorage.setItem('user_name', userName.value)
 }
-
-// Initialize survey on component mount
-onMounted(() => {
-  // Always start fresh - reset any previous selections
-  resetSurvey()
-})
 </script>
 
 <style scoped>
