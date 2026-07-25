@@ -2,8 +2,10 @@ import type { ColorKey } from '../../scoring/insights'
 import type { Localized } from './locale'
 
 export interface ColorContent {
-  /** Display name of the colour energy. */
+  /** Display name of the colour energy, e.g. "Fiery Red". */
   label: string
+  /** One word, for chart axes where the full name does not fit. */
+  short: string
   description: string
   strengths: string[]
   development: string[]
@@ -14,6 +16,11 @@ export interface ColorContent {
 
 export interface InsightsContent {
   colors: Record<ColorKey, ColorContent>
+  /**
+   * The eight positions around the wheel, clockwise from the top. Drawn onto
+   * the canvas, so they need a translation of their own.
+   */
+  wheel: [string, string, string, string, string, string, string, string]
   /** Label for each primary/secondary pair, e.g. `Red-Blue`. */
   positions: Record<string, string>
   balance: Record<'Well Balanced' | 'Moderately Focused' | 'Highly Focused', { label: string; description: string }>
@@ -24,6 +31,7 @@ export const insightsContent: Localized<InsightsContent> = {
     colors: {
       Red: {
         label: 'Fiery Red',
+        short: 'Red',
         description: 'Fiery Red energy stands for determination, leadership and results-oriented thinking. You are direct, competitive and at your best when there is something to win.',
         strengths: ['Natural leadership', 'Quick decision making', 'Results-focused', 'Competitive drive'],
         development: ['Practise patience with other people’s pace', 'Weigh how decisions land with others', 'Delegate more than you do now', 'Balance task focus with relationship building'],
@@ -33,6 +41,7 @@ export const insightsContent: Localized<InsightsContent> = {
       },
       Yellow: {
         label: 'Sunshine Yellow',
+        short: 'Yellow',
         description: 'Sunshine Yellow energy stands for enthusiasm, creativity and people-focused thinking. You are optimistic, persuasive and you lift the energy of a room.',
         strengths: ['Inspiring others', 'Creative problem solving', 'Building relationships', 'Positive outlook'],
         development: ['Follow through on what you commit to', 'Give the detail its due', 'Listen more than you speak sometimes', 'Manage time and priorities deliberately'],
@@ -42,6 +51,7 @@ export const insightsContent: Localized<InsightsContent> = {
       },
       Blue: {
         label: 'Cool Blue',
+        short: 'Blue',
         description: 'Cool Blue energy stands for analytical thinking, precision and a focus on quality. You are logical, systematic and you value getting it right.',
         strengths: ['Analytical thinking', 'Attention to detail', 'Quality focus', 'Systematic approach'],
         development: ['Decide with incomplete information when you must', 'Say more about how you feel', 'Take calculated risks', 'Explain complex things simply'],
@@ -51,6 +61,7 @@ export const insightsContent: Localized<InsightsContent> = {
       },
       Green: {
         label: 'Earth Green',
+        short: 'Green',
         description: 'Earth Green energy stands for harmony, support and steady progress. You are reliable, patient and you create environments where people feel settled.',
         strengths: ['Team collaboration', 'Reliable support', 'Patient approach', 'Creating harmony'],
         development: ['State your own opinion more often', 'Meet change and new ideas with curiosity', 'Set personal boundaries', 'Take the initiative when it is needed'],
@@ -59,6 +70,7 @@ export const insightsContent: Localized<InsightsContent> = {
         strongDay: 'At your strongest you are the steady point in a turbulent situation: people trust you, and that trust holds the team together.'
       }
     },
+    wheel: ['REFORMER', 'DIRECTOR', 'MOTIVATOR', 'INSPIRER', 'HELPER', 'SUPPORTER', 'COORDINATOR', 'OBSERVER'],
     positions: {
       'Red-Yellow': 'Dynamic Leader', 'Red-Blue': 'Analytical Driver', 'Red-Green': 'Supportive Leader',
       'Yellow-Red': 'Inspiring Motivator', 'Yellow-Blue': 'Creative Analyst', 'Yellow-Green': 'Collaborative Enthusiast',
@@ -76,6 +88,7 @@ export const insightsContent: Localized<InsightsContent> = {
     colors: {
       Red: {
         label: 'Vurig Rood',
+        short: 'Rood',
         description: 'Vurig Rood staat voor daadkracht, leiderschap en resultaatgericht denken. Je bent direct, competitief en op je best als er iets te winnen valt.',
         strengths: ['Natuurlijk leiderschap', 'Snelle besluitvorming', 'Resultaatgericht', 'Competitieve drive'],
         development: ['Heb geduld met het tempo van anderen', 'Weeg mee hoe beslissingen bij anderen landen', 'Delegeer meer dan je nu doet', 'Zoek balans tussen taak en relatie'],
@@ -85,6 +98,7 @@ export const insightsContent: Localized<InsightsContent> = {
       },
       Yellow: {
         label: 'Stralend Geel',
+        short: 'Geel',
         description: 'Stralend Geel staat voor enthousiasme, creativiteit en mensgericht denken. Je bent optimistisch, overtuigend en je tilt de energie in een ruimte op.',
         strengths: ['Anderen inspireren', 'Creatief problemen oplossen', 'Relaties opbouwen', 'Positieve kijk'],
         development: ['Maak af waar je ja tegen zegt', 'Geef het detail zijn plek', 'Luister soms meer dan je praat', 'Beheer je tijd en prioriteiten bewust'],
@@ -94,6 +108,7 @@ export const insightsContent: Localized<InsightsContent> = {
       },
       Blue: {
         label: 'Helder Blauw',
+        short: 'Blauw',
         description: 'Helder Blauw staat voor analytisch denken, precisie en kwaliteitsfocus. Je bent logisch, systematisch en je wilt het juist hebben.',
         strengths: ['Analytisch denken', 'Oog voor detail', 'Kwaliteitsfocus', 'Systematische aanpak'],
         development: ['Beslis met onvolledige informatie als het moet', 'Zeg meer over hoe je je voelt', 'Neem berekende risico’s', 'Leg complexe zaken eenvoudig uit'],
@@ -103,6 +118,7 @@ export const insightsContent: Localized<InsightsContent> = {
       },
       Green: {
         label: 'Rustig Groen',
+        short: 'Groen',
         description: 'Rustig Groen staat voor harmonie, ondersteuning en gestage vooruitgang. Je bent betrouwbaar, geduldig en je creëert een omgeving waarin mensen tot rust komen.',
         strengths: ['Samenwerken in een team', 'Betrouwbare steun', 'Geduldige aanpak', 'Harmonie creëren'],
         development: ['Zeg vaker wat je zelf vindt', 'Benader verandering en nieuwe ideeën nieuwsgierig', 'Stel persoonlijke grenzen', 'Neem initiatief wanneer het nodig is'],
@@ -111,6 +127,7 @@ export const insightsContent: Localized<InsightsContent> = {
         strongDay: 'Op je sterkst ben je het rustpunt in een onrustige situatie: mensen vertrouwen je, en dat vertrouwen houdt het team bij elkaar.'
       }
     },
+    wheel: ['HERVORMER', 'DIRECTEUR', 'MOTIVATOR', 'INSPIRATOR', 'HELPER', 'STEUNPILAAR', 'COÖRDINATOR', 'WAARNEMER'],
     positions: {
       'Red-Yellow': 'Dynamische leider', 'Red-Blue': 'Analytische aanjager', 'Red-Green': 'Ondersteunende leider',
       'Yellow-Red': 'Inspirerende motivator', 'Yellow-Blue': 'Creatieve analist', 'Yellow-Green': 'Verbindende enthousiasteling',
@@ -128,6 +145,7 @@ export const insightsContent: Localized<InsightsContent> = {
     colors: {
       Red: {
         label: 'Rouge Ardent',
+        short: 'Rouge',
         description: 'Le Rouge Ardent traduit la détermination, le leadership et une pensée tournée vers les résultats. Vous êtes direct, compétitif et au mieux quand il y a quelque chose à gagner.',
         strengths: ['Leadership naturel', 'Décisions rapides', 'Axé sur les résultats', 'Esprit de compétition'],
         development: ['Ayez de la patience pour le rythme des autres', 'Pesez l’effet de vos décisions sur les autres', 'Déléguez davantage', 'Équilibrez la tâche et la relation'],
@@ -137,6 +155,7 @@ export const insightsContent: Localized<InsightsContent> = {
       },
       Yellow: {
         label: 'Jaune Solaire',
+        short: 'Jaune',
         description: 'Le Jaune Solaire traduit l’enthousiasme, la créativité et l’attention aux personnes. Vous êtes optimiste, persuasif et vous élevez l’énergie d’un groupe.',
         strengths: ['Inspirer les autres', 'Résolution créative des problèmes', 'Créer des relations', 'Regard positif'],
         development: ['Menez à terme ce que vous acceptez', 'Accordez au détail la place qu’il mérite', 'Écoutez parfois plus que vous ne parlez', 'Gérez le temps et les priorités volontairement'],
@@ -146,6 +165,7 @@ export const insightsContent: Localized<InsightsContent> = {
       },
       Blue: {
         label: 'Bleu Profond',
+        short: 'Bleu',
         description: 'Le Bleu Profond traduit l’analyse, la précision et l’exigence de qualité. Vous êtes logique, méthodique et vous tenez à ce que ce soit juste.',
         strengths: ['Pensée analytique', 'Souci du détail', 'Exigence de qualité', 'Approche méthodique'],
         development: ['Décidez avec une information incomplète quand il le faut', 'Exprimez davantage ce que vous ressentez', 'Prenez des risques calculés', 'Expliquez simplement les choses complexes'],
@@ -155,6 +175,7 @@ export const insightsContent: Localized<InsightsContent> = {
       },
       Green: {
         label: 'Vert Terre',
+        short: 'Vert',
         description: 'Le Vert Terre traduit l’harmonie, le soutien et le progrès régulier. Vous êtes fiable, patient et vous créez un cadre où les gens se sentent posés.',
         strengths: ['Collaboration en équipe', 'Soutien fiable', 'Approche patiente', 'Créer de l’harmonie'],
         development: ['Exprimez plus souvent votre propre avis', 'Abordez le changement avec curiosité', 'Posez vos limites personnelles', 'Prenez l’initiative quand c’est nécessaire'],
@@ -163,6 +184,7 @@ export const insightsContent: Localized<InsightsContent> = {
         strongDay: 'Au meilleur de vous-même, vous êtes le point stable dans la tourmente : on vous fait confiance, et cette confiance tient l’équipe.'
       }
     },
+    wheel: ['RÉFORMATEUR', 'DIRECTEUR', 'MOTIVATEUR', 'INSPIRATEUR', 'AIDANT', 'SOUTIEN', 'COORDINATEUR', 'OBSERVATEUR'],
     positions: {
       'Red-Yellow': 'Leader dynamique', 'Red-Blue': 'Moteur analytique', 'Red-Green': 'Leader bienveillant',
       'Yellow-Red': 'Motivateur inspirant', 'Yellow-Blue': 'Analyste créatif', 'Yellow-Green': 'Enthousiaste collaboratif',
@@ -180,6 +202,7 @@ export const insightsContent: Localized<InsightsContent> = {
     colors: {
       Red: {
         label: 'Feuriges Rot',
+        short: 'Rot',
         description: 'Feuriges Rot steht für Entschlossenheit, Führung und ergebnisorientiertes Denken. Sie sind direkt, wettbewerbsorientiert und in Bestform, wenn es etwas zu gewinnen gibt.',
         strengths: ['Natürliche Führung', 'Schnelle Entscheidungen', 'Ergebnisorientiert', 'Wettbewerbsdrang'],
         development: ['Haben Sie Geduld mit dem Tempo anderer', 'Berücksichtigen Sie, wie Entscheidungen ankommen', 'Delegieren Sie mehr als bisher', 'Halten Sie Aufgabe und Beziehung in Balance'],
@@ -189,6 +212,7 @@ export const insightsContent: Localized<InsightsContent> = {
       },
       Yellow: {
         label: 'Sonniges Gelb',
+        short: 'Gelb',
         description: 'Sonniges Gelb steht für Begeisterung, Kreativität und menschenorientiertes Denken. Sie sind optimistisch, überzeugend und heben die Stimmung im Raum.',
         strengths: ['Andere begeistern', 'Kreative Problemlösung', 'Beziehungen aufbauen', 'Positive Grundhaltung'],
         development: ['Bringen Sie zu Ende, wozu Sie Ja sagen', 'Geben Sie dem Detail seinen Platz', 'Hören Sie manchmal mehr zu, als Sie reden', 'Steuern Sie Zeit und Prioritäten bewusst'],
@@ -198,6 +222,7 @@ export const insightsContent: Localized<InsightsContent> = {
       },
       Blue: {
         label: 'Kühles Blau',
+        short: 'Blau',
         description: 'Kühles Blau steht für analytisches Denken, Präzision und Qualitätsanspruch. Sie sind logisch, systematisch und legen Wert darauf, dass es stimmt.',
         strengths: ['Analytisches Denken', 'Sinn für Details', 'Qualitätsanspruch', 'Systematisches Vorgehen'],
         development: ['Entscheiden Sie notfalls mit unvollständigen Informationen', 'Sagen Sie mehr darüber, wie es Ihnen geht', 'Gehen Sie kalkulierte Risiken ein', 'Erklären Sie Komplexes einfach'],
@@ -207,6 +232,7 @@ export const insightsContent: Localized<InsightsContent> = {
       },
       Green: {
         label: 'Erdiges Grün',
+        short: 'Grün',
         description: 'Erdiges Grün steht für Harmonie, Unterstützung und stetigen Fortschritt. Sie sind verlässlich, geduldig und schaffen ein Umfeld, in dem Menschen zur Ruhe kommen.',
         strengths: ['Zusammenarbeit im Team', 'Verlässliche Unterstützung', 'Geduldiges Vorgehen', 'Harmonie schaffen'],
         development: ['Sagen Sie öfter Ihre eigene Meinung', 'Begegnen Sie Veränderung mit Neugier', 'Setzen Sie persönliche Grenzen', 'Ergreifen Sie die Initiative, wenn es nötig ist'],
@@ -215,6 +241,7 @@ export const insightsContent: Localized<InsightsContent> = {
         strongDay: 'In Bestform sind Sie der ruhige Pol in einer turbulenten Lage: Menschen vertrauen Ihnen, und dieses Vertrauen hält das Team zusammen.'
       }
     },
+    wheel: ['REFORMER', 'DIREKTOR', 'MOTIVATOR', 'INSPIRATOR', 'HELFER', 'STÜTZE', 'KOORDINATOR', 'BEOBACHTER'],
     positions: {
       'Red-Yellow': 'Dynamische Führung', 'Red-Blue': 'Analytischer Antreiber', 'Red-Green': 'Unterstützende Führung',
       'Yellow-Red': 'Inspirierender Motivator', 'Yellow-Blue': 'Kreativer Analytiker', 'Yellow-Green': 'Verbindender Enthusiast',
@@ -232,6 +259,7 @@ export const insightsContent: Localized<InsightsContent> = {
     colors: {
       Red: {
         label: 'Rojo Fuego',
+        short: 'Rojo',
         description: 'El Rojo Fuego representa determinación, liderazgo y pensamiento orientado a resultados. Eres directo, competitivo y estás en tu mejor momento cuando hay algo que ganar.',
         strengths: ['Liderazgo natural', 'Decisiones rápidas', 'Orientado a resultados', 'Impulso competitivo'],
         development: ['Ten paciencia con el ritmo de los demás', 'Valora cómo caen tus decisiones en el equipo', 'Delega más de lo que haces ahora', 'Equilibra la tarea con la relación'],
@@ -241,6 +269,7 @@ export const insightsContent: Localized<InsightsContent> = {
       },
       Yellow: {
         label: 'Amarillo Solar',
+        short: 'Amarillo',
         description: 'El Amarillo Solar representa entusiasmo, creatividad y pensamiento centrado en las personas. Eres optimista, persuasivo y elevas la energía de una sala.',
         strengths: ['Inspirar a otros', 'Resolución creativa de problemas', 'Construir relaciones', 'Actitud positiva'],
         development: ['Cumple aquello a lo que dices que sí', 'Dale al detalle el lugar que merece', 'Escucha a veces más de lo que hablas', 'Gestiona tiempo y prioridades con intención'],
@@ -250,6 +279,7 @@ export const insightsContent: Localized<InsightsContent> = {
       },
       Blue: {
         label: 'Azul Sereno',
+        short: 'Azul',
         description: 'El Azul Sereno representa pensamiento analítico, precisión y foco en la calidad. Eres lógico, sistemático y valoras que las cosas estén bien.',
         strengths: ['Pensamiento analítico', 'Atención al detalle', 'Foco en la calidad', 'Enfoque sistemático'],
         development: ['Decide con información incompleta cuando haga falta', 'Expresa más lo que sientes', 'Asume riesgos calculados', 'Explica lo complejo de forma sencilla'],
@@ -259,6 +289,7 @@ export const insightsContent: Localized<InsightsContent> = {
       },
       Green: {
         label: 'Verde Tierra',
+        short: 'Verde',
         description: 'El Verde Tierra representa armonía, apoyo y progreso constante. Eres fiable, paciente y creas entornos donde la gente se siente tranquila.',
         strengths: ['Colaboración en equipo', 'Apoyo fiable', 'Enfoque paciente', 'Crear armonía'],
         development: ['Expresa tu opinión con más frecuencia', 'Recibe el cambio y las ideas nuevas con curiosidad', 'Pon límites personales', 'Toma la iniciativa cuando haga falta'],
@@ -267,6 +298,7 @@ export const insightsContent: Localized<InsightsContent> = {
         strongDay: 'En tu mejor versión eres el punto estable en plena turbulencia: la gente confía en ti, y esa confianza sostiene al equipo.'
       }
     },
+    wheel: ['REFORMADOR', 'DIRECTOR', 'MOTIVADOR', 'INSPIRADOR', 'AYUDANTE', 'APOYO', 'COORDINADOR', 'OBSERVADOR'],
     positions: {
       'Red-Yellow': 'Líder dinámico', 'Red-Blue': 'Impulsor analítico', 'Red-Green': 'Líder cercano',
       'Yellow-Red': 'Motivador inspirador', 'Yellow-Blue': 'Analista creativo', 'Yellow-Green': 'Entusiasta colaborador',

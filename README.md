@@ -38,6 +38,10 @@ The symbol uses the standard layout — 9 at the top, 1 to 8 clockwise, the 3–
 
 ![Discovery wheel](docs/assets/reports/insights-wheel.png)
 
+The chart labels follow the selected language too — the same wheel in Dutch:
+
+![Discovery wheel in Dutch](docs/assets/reports/insights-wheel-nl.png)
+
 The colour energy profile restates your percentages on the 0–6 preference scale and shows how far each colour sits from an even 25% split.
 
 ![Discovery colour energy profile](docs/assets/reports/insights-energy-profile.png)
@@ -92,6 +96,9 @@ for an unanswered assessment — and the content: every language defines the sam
 profile is written in every language, and no two questions share the same answer options.
 
 CI runs the same tests and a production build on every pull request.
+
+Layout and chart rendering are not covered by the suite; they are checked by driving the app in
+a browser. See the Verified section of the release notes for what that pass covers.
 
 ## Release notes
 

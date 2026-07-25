@@ -135,8 +135,44 @@ the build rather than falling back silently.
 The half-finished `disc_style_d_*` and `disc_combo_di_*` keys — which covered only the D style
 and the D/I combination and were never read — are removed.
 
+### Found by a visual pass over the rendered reports
+
+The unit tests cover the numbers; these came out of driving the reports in a browser across
+languages, screen widths and every dominant type.
+
+- **Three labels on the Insights canvas stayed English in every language.** The colour names on
+  the bar chart, the "YOU" marker and the eight positions around the wheel were drawn from
+  hardcoded arrays, so a German report showed "Feuriges Rot" in the bar list and `Red` on the
+  axis directly below it. They now come from the locale, and a label that no longer fits its arc
+  is shrunk to fit rather than overflowing it.
+
+![Discovery wheel in Dutch](assets/reports/insights-wheel-nl.png)
+
+- **The PDF export produced a 31 MB file for one report.** `html2canvas` captured at scale 2 and
+  the result was embedded as a lossless PNG. At scale 1.5 and JPEG the same report is 327 KB, and
+  the page height constant was corrected from 295 mm to A4's 297 mm.
+- **Reports scrolled sideways on a phone.** The charts were pinned to a fixed 320 px, and a
+  `<canvas>` reports its drawing resolution as its min-content width — so the 700 px energy chart
+  pushed the whole page wider than the viewport. The charts are now fluid, the flex ancestors can
+  shrink, long German compounds are allowed to break, and the nested card padding is reduced
+  below 400 px. Verified at 320, 390 and 768 px in English and German, which has the longest
+  words.
+
 ### Continuous integration
 
 The repository had no CI: the only workflow deployed to GitHub Pages on a push to `main`, so
 nothing ran on a pull request. `.github/workflows/ci.yml` now runs `npm test` and a production
 build (which includes `vue-tsc`) on every pull request and every push to `main`.
+
+### Verified
+
+Beyond the unit tests, the reports were driven in Chromium:
+
+- all 12 DISC combinations render their own profile, with percentages summing to 100
+- all 9 Enneagram types draw their growth and stress lines attached to the right nodes
+- all 4 Insights dominant colours place the marker in the matching quadrant
+- all 3 reports in all 5 languages, headings and body copy alike
+- no horizontal scrolling at 320, 390 or 768 px, in English and German
+- empty states for all three assessments, with no `NaN`
+- the PDF button produces a real file
+- no console or page errors throughout

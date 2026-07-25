@@ -1,85 +1,68 @@
 import { ref } from 'vue'
 
+const A4_WIDTH_MM = 210
+const A4_HEIGHT_MM = 297
+
+/**
+ * Rendering scale for the page capture. At scale 2 a full report becomes a
+ * ~1600x6000 pixel image, which lands in the PDF as tens of megabytes; 1.5 is
+ * still comfortably above the 96 DPI the page is laid out at.
+ */
+const CAPTURE_SCALE = 1.5
+
+/** JPEG keeps a report around 1 MB where a lossless PNG of the same page ran to 30 MB. */
+const JPEG_QUALITY = 0.92
+
 export const usePdfExport = () => {
   const isGeneratingPDF = ref(false)
 
   const generatePDF = async (elementId: string, filename: string) => {
     isGeneratingPDF.value = true
-    
+
     try {
-      console.log('Starting PDF generation for element:', elementId)
-      
       // Dynamic imports to avoid startup issues
       const [{ default: jsPDF }, { default: html2canvas }] = await Promise.all([
         import('jspdf'),
         import('html2canvas')
       ])
 
-      console.log('Libraries loaded successfully')
-
       const element = document.getElementById(elementId)
       if (!element) {
-        console.error('Element not found:', elementId)
         throw new Error(`Element with ID "${elementId}" not found`)
       }
 
-      console.log('Element found, creating canvas...')
-
-      // Create canvas from HTML element with better options
       const canvas = await html2canvas(element, {
-        scale: 2,
+        scale: CAPTURE_SCALE,
         useCORS: true,
         allowTaint: true,
         backgroundColor: '#ffffff',
-        logging: true,
+        logging: false,
         width: element.scrollWidth,
         height: element.scrollHeight,
         scrollX: 0,
         scrollY: 0
       })
 
-      console.log('Canvas created, dimensions:', canvas.width, 'x', canvas.height)
+      const imgData = canvas.toDataURL('image/jpeg', JPEG_QUALITY)
+      const imgHeight = (canvas.height * A4_WIDTH_MM) / canvas.width
 
-      const imgData = canvas.toDataURL('image/png', 1.0)
-      console.log('Image data created, length:', imgData.length)
-      
-      // Calculate dimensions for A4
-      const imgWidth = 210 // A4 width in mm
-      const pageHeight = 295 // A4 height in mm
-      const imgHeight = (canvas.height * imgWidth) / canvas.width
-      let heightLeft = imgHeight
-
-      console.log('Creating PDF with dimensions:', imgWidth, 'x', imgHeight)
-
-      // Create PDF
       const pdf = new jsPDF('p', 'mm', 'a4')
-      let position = 0
 
-      // Add first page
-      pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight)
-      heightLeft -= pageHeight
-
-      // Add additional pages if needed
-      while (heightLeft >= 0) {
-        position = heightLeft - imgHeight
-        pdf.addPage()
-        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight)
-        heightLeft -= pageHeight
+      // The report is one tall image; each page shows a different slice of it
+      // by shifting the same image up by a page height.
+      const pageCount = Math.max(1, Math.ceil(imgHeight / A4_HEIGHT_MM))
+      for (let page = 0; page < pageCount; page++) {
+        if (page > 0) pdf.addPage()
+        pdf.addImage(imgData, 'JPEG', 0, -page * A4_HEIGHT_MM, A4_WIDTH_MM, imgHeight)
       }
 
-      console.log('PDF created, attempting to save as:', `${filename}.pdf`)
-
-      // Save the PDF
       pdf.save(`${filename}.pdf`)
-      
-      console.log('PDF save command executed')
-      
-      // Add a small delay to ensure the download starts
+
+      // Give the browser a moment to start the download before the button
+      // becomes clickable again.
       await new Promise(resolve => setTimeout(resolve, 100))
-      
     } catch (error) {
       console.error('Error generating PDF:', error)
-      alert(`Error generating PDF: ${error instanceof Error ? error.message : 'Unknown error'}`)
       throw error
     } finally {
       isGeneratingPDF.value = false

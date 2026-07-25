@@ -189,7 +189,7 @@ const downloadPDF = async () => {
     await generatePDF('enneagram-report-content', `Enneagram-Report-Type-${scores.value.dominant}`)
   } catch (error) {
     console.error('Failed to generate PDF:', error)
-    alert('Failed to generate PDF. Please try again.')
+    alert(t('pdf_failed'))
   }
 }
 
@@ -562,7 +562,7 @@ function nodeStroke(type: EnneagramType): string {
   }
 
   .enneagram-circle {
-    max-width: 320px;
+    max-width: 100%;
   }
 
   .score-header {
