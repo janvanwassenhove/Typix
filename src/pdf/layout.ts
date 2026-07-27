@@ -104,13 +104,19 @@ export function createLayout(doc: jsPDF, meta: DocumentMeta) {
     y += amount
   }
 
-  function sectionTitle(text: string) {
+  /**
+   * @param reserve millimetres of following content to keep on the same page as
+   * the title. Passing the measured height of the whole section moves it across
+   * a page boundary in one piece instead of leaving a stub behind.
+   */
+  function sectionTitle(text: string, reserve?: number) {
     const height = lineHeight(TYPE.sectionTitle)
     // Breathing room above, so a title never butts up against the block before
     // it — but not at the top of a fresh page, where the margin already gives it.
     if (y > PAGE.margin.top + 1) y += SPACE.betweenSections - SPACE.afterParagraph
     // Keep the title with at least two lines of whatever follows it.
-    ensure(height + lineHeight(TYPE.body) * 2)
+    const wanted = reserve ?? lineHeight(TYPE.body) * 2
+    ensure(height + Math.min(wanted, bottomLimit - PAGE.margin.top - height))
     setFill(COLORS.accent)
     doc.rect(PAGE.margin.left, y - 3.4, 1.6, height + 0.6, 'F')
     font('bold', TYPE.sectionTitle, COLORS.ink)
@@ -269,6 +275,32 @@ export function createLayout(doc: jsPDF, meta: DocumentMeta) {
     return wrap(text, width, size).length * lineHeight(size)
   }
 
+  function measureBullets(items: string[]): number {
+    const step = lineHeight(TYPE.body)
+    return items.reduce(
+      (total, item) => total + wrap(item, CONTENT_WIDTH - 6, TYPE.body).length * step + 1.2,
+      0
+    ) + SPACE.afterParagraph - 1.2
+  }
+
+  function measureChips(items: string[], columns = 3): number {
+    const gutter = 3
+    const cellWidth = (CONTENT_WIDTH - gutter * (columns - 1)) / columns
+    const padding = 2.6
+    let total = 0
+    for (let i = 0; i < items.length; i += columns) {
+      const rowLines = Math.max(
+        ...items.slice(i, i + columns).map(item => wrap(item, cellWidth - padding * 2, TYPE.small).length)
+      )
+      total += rowLines * lineHeight(TYPE.small) + padding * 2 + gutter
+    }
+    return total + SPACE.afterParagraph - gutter
+  }
+
+  function measureSubheading(): number {
+    return lineHeight(TYPE.subheading) + 1.5
+  }
+
   function image(dataUrl: string, widthMm: number, aspect: number, options: { caption?: string } = {}) {
     const heightMm = widthMm / aspect
     const captionHeight = options.caption ? lineHeight(TYPE.small) * 2 + 2 : 0
@@ -342,6 +374,9 @@ export function createLayout(doc: jsPDF, meta: DocumentMeta) {
     bars,
     panel,
     measureParagraph,
+    measureBullets,
+    measureChips,
+    measureSubheading,
     image,
     rule,
     finalize

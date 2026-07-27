@@ -93,10 +93,15 @@ export function buildDiscPdf(doc: jsPDF, ctx: PdfContext, data: DiscPdfData): vo
   layout.sectionTitle(ctx.t('disc_behavioral_strengths'))
   layout.chips(style.traits, { columns: 2 })
 
-  layout.sectionTitle(ctx.t('disc_communication_style'))
+  layout.sectionTitle(ctx.t('disc_communication_style'), layout.measureBullets(style.tips))
   layout.bullets(style.tips)
 
-  layout.sectionTitle(ctx.t('disc_team_collaboration'))
+  layout.sectionTitle(
+    ctx.t('disc_team_collaboration'),
+    layout.measureParagraph(combination.teamRole) +
+      layout.measureSubheading() +
+      layout.measureBullets(combination.complements)
+  )
   layout.paragraph(combination.teamRole)
   layout.subheading(ctx.t('disc_works_best_with'))
   layout.bullets(combination.complements)
@@ -153,7 +158,12 @@ export function buildEnneagramPdf(doc: jsPDF, ctx: PdfContext, data: EnneagramPd
     { size: TYPE.small, color: COLORS.brand }
   )
 
-  layout.sectionTitle(ctx.t('enneagram_core_motivation'))
+  layout.sectionTitle(
+    ctx.t('enneagram_core_motivation'),
+    layout.measureParagraph(type.motivation) +
+      layout.measureSubheading() +
+      layout.measureParagraph(type.fear)
+  )
   layout.paragraph(type.motivation)
   layout.subheading(ctx.t('enneagram_basic_fear'))
   layout.paragraph(type.fear)
@@ -161,7 +171,7 @@ export function buildEnneagramPdf(doc: jsPDF, ctx: PdfContext, data: EnneagramPd
   layout.sectionTitle(ctx.t('enneagram_key_characteristics'))
   layout.chips(type.traits, { columns: 2 })
 
-  layout.sectionTitle(ctx.t('enneagram_growth_recommendations'))
+  layout.sectionTitle(ctx.t('enneagram_growth_recommendations'), layout.measureBullets(type.growth))
   layout.bullets(type.growth)
 
   methodology(layout, ctx, 'pdf_method_enneagram')
@@ -239,13 +249,18 @@ export function buildInsightsPdf(doc: jsPDF, ctx: PdfContext, data: InsightsPdfD
   layout.sectionTitle(ctx.t('insights_strengths'))
   layout.chips(dominant.strengths, { columns: 2 })
 
-  layout.sectionTitle(ctx.t('insights_development_areas'))
+  layout.sectionTitle(ctx.t('insights_development_areas'), layout.measureBullets(dominant.development))
   layout.bullets(dominant.development)
 
-  layout.sectionTitle(ctx.t('insights_pitfalls'))
+  layout.sectionTitle(ctx.t('insights_pitfalls'), layout.measureBullets(dominant.pitfalls))
   layout.bullets(dominant.pitfalls)
 
-  layout.sectionTitle(ctx.t('insights_good_day'))
+  layout.sectionTitle(
+    ctx.t('insights_good_day'),
+    layout.measureParagraph(dominant.goodDay) +
+      layout.measureSubheading() +
+      layout.measureParagraph(dominant.strongDay)
+  )
   layout.paragraph(dominant.goodDay)
   layout.subheading(ctx.t('insights_strong_day'))
   layout.paragraph(dominant.strongDay)
