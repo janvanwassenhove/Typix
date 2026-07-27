@@ -46,10 +46,26 @@ The colour energy profile restates your percentages on the 0–6 preference scal
 
 ![Discovery colour energy profile](docs/assets/reports/insights-energy-profile.png)
 
+## The PDF report
+
+Every report exports as a typeset PDF rather than a screenshot of the page: the text is
+selectable and searchable, sections are never split across a page break, and a full report is a
+few hundred kilobytes.
+
+| Cover | Content page |
+|---|---|
+| ![PDF cover](docs/assets/reports/pdf-cover.png) | ![PDF content page](docs/assets/reports/pdf-page.png) |
+
+The document is assembled by `src/pdf/`: a small layout engine over jsPDF with a vertical cursor,
+measured blocks and automatic page breaks. Charts are embedded from the live canvas at twice
+display resolution. Every string is written in the language the report is being read in, and the
+file carries proper PDF metadata.
+
 ## Project Structure
 - `src/components/surveys/`: Survey components for each assessment.
 - `src/components/reports/`: Report components for each assessment.
 - `src/scoring/`: Pure scoring logic for each assessment, plus its unit tests.
+- `src/pdf/`: PDF layout engine, cover page and the per-assessment document builders.
 - `src/data/`: Question sets in five languages. Every option carries the dimension it scores.
 - `src/i18n/`: UI strings, plus the report body copy under `src/i18n/content/`.
 - `src/views/`: Main views, including the homepage, survey wizard, and report page.

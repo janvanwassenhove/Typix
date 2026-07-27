@@ -106,7 +106,7 @@
 
 <script setup lang="ts">
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
-import { usePdfExport } from '../../composables/usePdfExport'
+import { slug, usePdfExport } from '../../composables/usePdfExport'
 import { useTranslations } from '../../composables/useTranslations'
 import {
   DISC_STYLES,
@@ -117,13 +117,17 @@ import {
 } from '../../scoring/disc'
 import { discContent } from '../../i18n/content/disc'
 import { pickLocale } from '../../i18n/content/locale'
+import { canvasToImage, prepareCanvas } from '../../pdf/charts'
+import { buildDiscPdf } from '../../pdf/reports'
+import { reportDate } from '../../pdf/date'
 
 const props = defineProps<{
   results: unknown
+  userName?: string
 }>()
 
 const chartCanvas = ref<HTMLCanvasElement>()
-const { generatePDF, isGeneratingPDF } = usePdfExport()
+const { savePdf, isGeneratingPDF } = usePdfExport()
 const { t, currentLanguage } = useTranslations()
 
 const scores = computed(() => scoreDisc(props.results))
@@ -135,8 +139,30 @@ const answeredLabel = computed(() => t(
 ))
 
 const downloadPDF = async () => {
+  const combination = scores.value.combination.replace('/', '-')
+  const participant = props.userName?.trim() || t('your_results')
+  const title = `${t('disc_title')} - ${participant}`
+
   try {
-    await generatePDF('disc-report-content', `DISC-Report-${scores.value.combination.replace('/', '-')}`)
+    await savePdf(
+      ['Typix', 'DISC', combination, slug(participant)].filter(Boolean).join('-'),
+      { title, subject: t('disc_title'), author: participant },
+      doc => buildDiscPdf(
+        doc,
+        {
+          participant,
+          assessmentTitle: t('disc_title'),
+          generatedOn: reportDate(currentLanguage.value),
+          t
+        },
+        {
+          scores: scores.value,
+          content: content.value,
+          styleColors,
+          chart: canvasToImage(chartCanvas.value)
+        }
+      )
+    )
   } catch (error) {
     console.error('Failed to generate PDF:', error)
     alert(t('pdf_failed'))
@@ -164,20 +190,21 @@ onMounted(redraw)
 // the wheel must follow the scores rather than being painted once on mount.
 watch(() => props.results, redraw, { deep: true })
 
+/** Layout size of the wheel; the backing store is a multiple of this. */
+const WHEEL_SIZE = 440
+
 const drawDiscCircle = () => {
   const canvas = chartCanvas.value
   if (!canvas) return
 
-  const ctx = canvas.getContext('2d')
+  const ctx = prepareCanvas(canvas, WHEEL_SIZE, WHEEL_SIZE)
   if (!ctx) return
 
-  const centerX = canvas.width / 2
-  const centerY = canvas.height / 2
+  const centerX = WHEEL_SIZE / 2
+  const centerY = WHEEL_SIZE / 2
   const outerRadius = 175
   const ringWidth = 40
   const innerRadius = 62
-
-  ctx.clearRect(0, 0, canvas.width, canvas.height)
 
   // Outer ring: one coloured band per style, in wheel order C | D / S | I.
   const quadrants: Array<{ style: DiscStyle; startAngle: number }> = [

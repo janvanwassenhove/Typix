@@ -23,7 +23,7 @@
           <p>{{ t('enneagram_lines_intro') }}</p>
         </div>
         <div class="enneagram-circle">
-          <svg viewBox="0 0 400 400" class="enneagram-svg">
+          <svg ref="symbolSvg" viewBox="0 0 400 400" class="enneagram-svg">
             <circle cx="200" cy="200" r="160" fill="none" stroke="#e9ecef" stroke-width="2"/>
 
             <!-- Fixed structure: triangle 3-6-9 and hexad 1-4-2-8-5-7 -->
@@ -149,10 +149,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { usePdfExport } from '../../composables/usePdfExport'
+import { computed, ref } from 'vue'
+import { slug, usePdfExport } from '../../composables/usePdfExport'
 import { useTranslations } from '../../composables/useTranslations'
 import questionData from '../../data/enneagram-questions.json'
+import { svgToImage } from '../../pdf/charts'
+import { reportDate } from '../../pdf/date'
+import { buildEnneagramPdf } from '../../pdf/reports'
 import { enneagramContent } from '../../i18n/content/enneagram'
 import { pickLocale } from '../../i18n/content/locale'
 import {
@@ -167,9 +170,10 @@ import {
 
 const props = defineProps<{
   results: unknown
+  userName?: string
 }>()
 
-const { generatePDF, isGeneratingPDF } = usePdfExport()
+const { savePdf, isGeneratingPDF } = usePdfExport()
 const { t, currentLanguage } = useTranslations()
 
 // Every language file lists the same questions in the same order, so the
@@ -184,9 +188,38 @@ const answeredLabel = computed(() => t(
   { count: scores.value.answered }
 ))
 
+const symbolSvg = ref<SVGSVGElement>()
+
 const downloadPDF = async () => {
+  const participant = props.userName?.trim() || t('your_results')
+
   try {
-    await generatePDF('enneagram-report-content', `Enneagram-Report-Type-${scores.value.dominant}`)
+    const chart = await svgToImage(symbolSvg.value, 3)
+
+    await savePdf(
+      ['Typix', 'Enneagram', `Type-${scores.value.dominant}`, slug(participant)].join('-'),
+      {
+        title: `${t('enneagram_title')} - ${participant}`,
+        subject: t('enneagram_title'),
+        author: participant
+      },
+      doc => buildEnneagramPdf(
+        doc,
+        {
+          participant,
+          assessmentTitle: t('enneagram_title'),
+          generatedOn: reportDate(currentLanguage.value),
+          t
+        },
+        {
+          scores: scores.value,
+          content: content.value,
+          growthType: growthType.value,
+          stressType: stressType.value,
+          chart
+        }
+      )
+    )
   } catch (error) {
     console.error('Failed to generate PDF:', error)
     alert(t('pdf_failed'))
