@@ -164,6 +164,37 @@ The repository had no CI: the only workflow deployed to GitHub Pages on a push t
 nothing ran on a pull request. `.github/workflows/ci.yml` now runs `npm test` and a production
 build (which includes `vue-tsc`) on every pull request and every push to `main`.
 
+### The PDF export rebuilt
+
+The export was a page screenshot sliced across A4 sheets. That meant a heading could be cut in
+half at a page boundary, nothing was selectable or searchable, and the page carried its
+on-screen styling — dark saturated blocks and card shadows — onto paper.
+
+It is now a typeset document, assembled in `src/pdf/`:
+
+| Cover | Content page |
+|---|---|
+| ![PDF cover](assets/reports/pdf-cover.png) | ![PDF content page](assets/reports/pdf-page.png) |
+
+- **A cover page** with the brand band, the result, the chart and a "prepared for" block.
+- **Running headers and footers** — assessment and participant at the top, the disclaimer and
+  "Page 2 of 3" at the foot.
+- **Page breaks fall between blocks.** A small layout engine measures each block before drawing
+  it, so a section title is never orphaned at the bottom of a page and a panel always encloses
+  its own contents.
+- **Real text.** Selectable, searchable and a fraction of the size: a DISC report is 80 KB where
+  the screenshot version was 31 MB. The document also carries title, subject and author metadata.
+- **Print styling rather than screen styling** — brand colours as accents on white.
+- **Charts at twice display resolution**, which also sharpens them on screen. The Enneagram
+  symbol is rasterised from its SVG at 3x.
+- **Every string translated**, including the cover, the footers and a short "how to read this
+  report" note explaining how the numbers were produced.
+- `html2canvas` is no longer used.
+
+A test asserts that all report copy, in all five languages, survives the WinAnsi encoding the
+built-in PDF fonts use — so a future translation cannot silently introduce a character that
+comes out mangled in the exported file.
+
 ### Verified
 
 Beyond the unit tests, the reports were driven in Chromium:
@@ -174,5 +205,6 @@ Beyond the unit tests, the reports were driven in Chromium:
 - all 3 reports in all 5 languages, headings and body copy alike
 - no horizontal scrolling at 320, 390 or 768 px, in English and German
 - empty states for all three assessments, with no `NaN`
-- the PDF button produces a real file
+- the PDF export driven end to end in three assessments and five languages, then rendered back
+  page by page and inspected
 - no console or page errors throughout

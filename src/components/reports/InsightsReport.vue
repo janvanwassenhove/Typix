@@ -115,8 +115,11 @@
 
 <script setup lang="ts">
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
-import { usePdfExport } from '../../composables/usePdfExport'
+import { slug, usePdfExport } from '../../composables/usePdfExport'
 import { useTranslations } from '../../composables/useTranslations'
+import { canvasToImage, prepareCanvas } from '../../pdf/charts'
+import { reportDate } from '../../pdf/date'
+import { buildInsightsPdf } from '../../pdf/reports'
 import { insightsContent } from '../../i18n/content/insights'
 import { pickLocale } from '../../i18n/content/locale'
 import {
@@ -136,7 +139,7 @@ const props = defineProps<{
 
 const circleCanvas = ref<HTMLCanvasElement>()
 const dynamicsCanvas = ref<HTMLCanvasElement>()
-const { generatePDF, isGeneratingPDF } = usePdfExport()
+const { savePdf, isGeneratingPDF } = usePdfExport()
 const { t, currentLanguage } = useTranslations()
 
 const scores = computed(() => scoreInsights(props.results))
@@ -153,8 +156,37 @@ const answeredLabel = computed(() => t(
 ))
 
 const downloadPDF = async () => {
+  const participant = props.userName?.trim() || t('your_results')
+
   try {
-    await generatePDF('insights-report-content', `Insights-Report-${scores.value.dominant}`)
+    await savePdf(
+      ['Typix', 'Discovery', scores.value.dominant, slug(participant)].join('-'),
+      {
+        title: `${t('insights_title')} - ${participant}`,
+        subject: t('insights_title'),
+        author: participant
+      },
+      doc => buildInsightsPdf(
+        doc,
+        {
+          participant,
+          assessmentTitle: t('insights_title'),
+          generatedOn: reportDate(currentLanguage.value),
+          t
+        },
+        {
+          scores: scores.value,
+          content: content.value,
+          colorHex,
+          profilePosition: profilePosition.value,
+          balanceLabel: balanceLabel.value,
+          balanceDescription: balanceContent.value.description,
+          spread: spread.value,
+          wheel: canvasToImage(circleCanvas.value),
+          energy: canvasToImage(dynamicsCanvas.value)
+        }
+      )
+    )
   } catch (error) {
     console.error('Failed to generate PDF:', error)
     alert(t('pdf_failed'))
@@ -202,16 +234,20 @@ function fitText(ctx: CanvasRenderingContext2D, text: string, maxWidth: number, 
   }
 }
 
+/** Layout sizes of the two charts; the backing stores are multiples of these. */
+const WHEEL_SIZE = 500
+const ENERGY_WIDTH = 700
+const ENERGY_HEIGHT = 330
+
 const drawInsightsCircle = () => {
   const canvas = circleCanvas.value
   if (!canvas) return
-  const ctx = canvas.getContext('2d')
+  const ctx = prepareCanvas(canvas, WHEEL_SIZE, WHEEL_SIZE)
   if (!ctx) return
 
-  const centerX = canvas.width / 2
-  const centerY = canvas.height / 2
-  const radius = Math.min(180, Math.min(canvas.width, canvas.height) / 2 - 60)
-  ctx.clearRect(0, 0, canvas.width, canvas.height)
+  const centerX = WHEEL_SIZE / 2
+  const centerY = WHEEL_SIZE / 2
+  const radius = Math.min(180, WHEEL_SIZE / 2 - 60)
 
   // Quadrants: Blue top-left, Red top-right, Green bottom-left, Yellow bottom-right.
   const quadrants: Array<{ color: ColorKey; startAngle: number }> = [
@@ -313,9 +349,8 @@ const drawInsightsCircle = () => {
 function drawEnergyCharts() {
   const canvas = dynamicsCanvas.value
   if (!canvas) return
-  const ctx = canvas.getContext('2d')
+  const ctx = prepareCanvas(canvas, ENERGY_WIDTH, ENERGY_HEIGHT)
   if (!ctx) return
-  ctx.clearRect(0, 0, canvas.width, canvas.height)
 
   const chartWidth = 200
   const chartHeight = 210
