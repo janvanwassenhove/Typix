@@ -38,10 +38,22 @@
             <div class="score-bar">
               <div class="score-fill" :style="{ width: `${scores.percentages[style]}%`, backgroundColor: getStyleColor(style) }"></div>
             </div>
-            <div class="score-value">{{ scores.percentages[style] }}%</div>
+            <div class="score-value">
+              {{ scores.percentages[style] }}%
+              <span class="score-count">{{ t('score_of_total', { count: scores.counts[style], total: scores.answered }) }}</span>
+            </div>
           </div>
         </div>
         <p class="score-footnote">{{ answeredLabel }}</p>
+      </div>
+
+      <div class="confidence">
+        <h4>{{ t('profile_section_confidence') }}</h4>
+        <p class="confidence-lead">{{ separationText }}</p>
+        <div class="confidence-shape">
+          <span class="confidence-label">{{ t('profile_shape') }}: {{ shape.label }}</span>
+          <p>{{ shape.description }}</p>
+        </div>
       </div>
 
       <div class="profile-explanation">
@@ -65,6 +77,16 @@
         <h4>{{ t('disc_behavioral_strengths') }}</h4>
         <div class="traits-grid">
           <div v-for="trait in dominantStyle.traits" :key="trait" class="trait-item">
+            {{ trait }}
+          </div>
+        </div>
+      </div>
+
+      <div class="secondary-style">
+        <h4>{{ t('disc_secondary_style') }}: {{ secondaryStyle.name }}</h4>
+        <p>{{ secondaryStyle.description }}</p>
+        <div class="traits-grid">
+          <div v-for="trait in secondaryStyle.traits" :key="trait" class="trait-item">
             {{ trait }}
           </div>
         </div>
@@ -115,8 +137,10 @@ import {
   scoreDisc,
   type DiscStyle
 } from '../../scoring/disc'
+import { separationBand, separationPoints, spreadBand } from '../../scoring/profile'
 import { discContent } from '../../i18n/content/disc'
-import { pickLocale } from '../../i18n/content/locale'
+import { profileContent } from '../../i18n/content/profile'
+import { interpolate, pickLocale } from '../../i18n/content/locale'
 import { canvasToImage, prepareCanvas } from '../../pdf/charts'
 import { buildDiscPdf } from '../../pdf/reports'
 import { reportDate } from '../../pdf/date'
@@ -159,6 +183,11 @@ const downloadPDF = async () => {
           scores: scores.value,
           content: content.value,
           styleColors,
+          confidence: {
+            separation: separationText.value,
+            shapeLabel: shape.value.label,
+            shapeDescription: shape.value.description
+          },
           chart: canvasToImage(chartCanvas.value)
         }
       )
@@ -181,7 +210,21 @@ function getStyleColor(style: string): string {
 }
 
 const dominantStyle = computed(() => content.value.styles[scores.value.primary])
+const secondaryStyle = computed(() => content.value.styles[scores.value.secondary])
 const combinationData = computed(() => content.value.combinations[scores.value.combination])
+
+const profile = computed(() => pickLocale(profileContent, currentLanguage.value))
+
+const shape = computed(() => profile.value.shape[spreadBand(scores.value.percentages, DISC_STYLES)])
+
+const separationText = computed(() => {
+  const band = separationBand(scores.value.percentages, scores.value.ranking, DISC_STYLES)
+  return interpolate(profile.value.separation[band], {
+    first: content.value.styles[scores.value.primary].name,
+    second: content.value.styles[scores.value.secondary].name,
+    gap: separationPoints(scores.value.percentages, scores.value.ranking)
+  })
+})
 
 const redraw = () => nextTick(drawDiscCircle)
 
@@ -437,9 +480,75 @@ const drawDiscCircle = () => {
 .score-value {
   font-weight: bold;
   color: #333;
-  width: 50px;
+  /* Wide enough for the raw count beneath the percentage, which is the longer
+     of the two in every language we ship. */
+  width: 84px;
+  flex-shrink: 0;
   text-align: right;
   font-size: 1.1rem;
+}
+
+.score-count {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #999;
+  white-space: nowrap;
+}
+
+.confidence {
+  margin-bottom: 40px;
+  padding: 25px 30px;
+  background: #f4f7f5;
+  border-radius: 15px;
+  border-left: 5px solid #1A4731;
+}
+
+.confidence h4 {
+  color: #1A4731;
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+}
+
+.confidence-lead {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.confidence-label {
+  display: inline-block;
+  background: #1A4731;
+  color: white;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.confidence-shape p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.secondary-style {
+  margin-bottom: 40px;
+}
+
+.secondary-style h4 {
+  color: #333;
+  font-size: 1.5rem;
+  margin: 0 0 12px 0;
+  border-left: 4px solid #F9A607;
+  padding-left: 20px;
+}
+
+.secondary-style > p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 18px;
 }
 
 .score-footnote {

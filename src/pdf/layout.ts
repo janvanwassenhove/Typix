@@ -23,6 +23,8 @@ export interface BarRow {
   sublabel?: string
   value: number
   color: string
+  /** Raw count behind the percentage, set beneath it in small type. */
+  note?: string
 }
 
 /**
@@ -213,7 +215,9 @@ export function createLayout(doc: jsPDF, meta: DocumentMeta) {
   function bars(rows: BarRow[]) {
     const rowHeight = 10
     const labelWidth = 34
-    const valueWidth = 14
+    // The raw count sits under the percentage, so the right column has to be
+    // wide enough for the longer of the two.
+    const valueWidth = rows.some(row => row.note) ? 30 : 14
     const trackX = PAGE.margin.left + labelWidth
     const trackWidth = CONTENT_WIDTH - labelWidth - valueWidth
     const barHeight = 4.2
@@ -239,6 +243,10 @@ export function createLayout(doc: jsPDF, meta: DocumentMeta) {
 
       font('bold', TYPE.body, COLORS.ink)
       doc.text(`${row.value}%`, PAGE.width - PAGE.margin.right, y + 3.4, { align: 'right' })
+      if (row.note) {
+        font('normal', TYPE.micro, COLORS.muted)
+        doc.text(printable(row.note), PAGE.width - PAGE.margin.right, y + 6.8, { align: 'right' })
+      }
 
       y += rowHeight
     }

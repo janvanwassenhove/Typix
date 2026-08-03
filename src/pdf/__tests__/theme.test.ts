@@ -6,6 +6,7 @@ import { translations } from '../../i18n/translations'
 import { discContent } from '../../i18n/content/disc'
 import { enneagramContent } from '../../i18n/content/enneagram'
 import { insightsContent } from '../../i18n/content/insights'
+import { profileContent } from '../../i18n/content/profile'
 
 /**
  * jsPDF's built-in fonts encode text as WinAnsi (cp1252). Anything outside it
@@ -48,7 +49,8 @@ describe('report copy is exportable to PDF', () => {
     ['ui', translations],
     ['disc', discContent],
     ['enneagram', enneagramContent],
-    ['insights', insightsContent]
+    ['insights', insightsContent],
+    ['profile', profileContent]
   ]
 
   it('survives the WinAnsi encoding used by the exported document', () => {

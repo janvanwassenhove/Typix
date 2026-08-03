@@ -2,7 +2,7 @@ import type { jsPDF } from 'jspdf'
 import type { ChartImage } from './charts'
 import { drawCover } from './cover'
 import { createLayout, type Layout } from './layout'
-import { CONTENT_WIDTH, COLORS, TYPE } from './theme'
+import { CONTENT_WIDTH, COLORS, PAGE, TYPE, printable } from './theme'
 import { DISC_STYLES, type DiscScores, type DiscStyle } from '../scoring/disc'
 import { ENNEAGRAM_TYPES, type EnneagramScores } from '../scoring/enneagram'
 import { COLOR_KEYS, type ColorKey, type InsightsScores } from '../scoring/insights'
@@ -37,6 +37,59 @@ function footnote(layout: Layout, text: string) {
   layout.y += 5
 }
 
+/**
+ * How firm the headline result is. The strings are the ones the on-screen
+ * report already renders, so the PDF cannot drift away from what the reader
+ * saw in the browser.
+ */
+export interface ConfidenceBlock {
+  /** How far the leader sits ahead of the runner-up. */
+  separation: string
+  shapeLabel: string
+  shapeDescription: string
+  /** Overrides the "Profile shape" caption where the report names it otherwise. */
+  shapeTitle?: string
+  /** Only set when the answering pattern itself compressed the differences. */
+  note?: string
+}
+
+/** A `subheading` that lines up with the indented text inside a panel. */
+function panelSubheading(layout: Layout, text: string) {
+  layout.font('bold', TYPE.subheading, COLORS.brand)
+  layout.doc.text(printable(text), PAGE.margin.left + 6, layout.y)
+  layout.y += layout.lineHeight(TYPE.subheading) + 1.5
+}
+
+function confidence(layout: Layout, ctx: PdfContext, block: ConfidenceBlock) {
+  const inner = CONTENT_WIDTH - 12
+  const measure = () =>
+    layout.measureParagraph(block.separation, TYPE.body, inner) + 3 +
+    layout.measureSubheading() +
+    layout.measureParagraph(block.shapeDescription, TYPE.small, inner) +
+    (block.note
+      ? layout.measureSubheading() + layout.measureParagraph(block.note, TYPE.small, inner) + 3
+      : 0)
+
+  layout.sectionTitle(ctx.t('profile_section_confidence'), measure())
+  layout.panel(
+    measure,
+    () => {
+      layout.paragraph(block.separation, { indent: 6, width: CONTENT_WIDTH - 6, gap: 3 })
+      panelSubheading(layout, `${block.shapeTitle ?? ctx.t('profile_shape')}: ${block.shapeLabel}`)
+      layout.paragraph(block.shapeDescription, {
+        size: TYPE.small, color: COLORS.body, indent: 6, width: CONTENT_WIDTH - 6, gap: block.note ? 3 : 0
+      })
+      if (block.note) {
+        panelSubheading(layout, ctx.t('profile_answer_pattern'))
+        layout.paragraph(block.note, {
+          size: TYPE.small, color: COLORS.body, indent: 6, width: CONTENT_WIDTH - 6, gap: 0
+        })
+      }
+    },
+    { accent: COLORS.accent }
+  )
+}
+
 /** Closes every report with the same short note on how the numbers were produced. */
 function methodology(layout: Layout, ctx: PdfContext, methodKey: string) {
   layout.sectionTitle(ctx.t('pdf_section_how_to_read'))
@@ -52,12 +105,14 @@ export interface DiscPdfData {
   scores: DiscScores
   content: DiscContent
   styleColors: Record<DiscStyle, string>
+  confidence: ConfidenceBlock
   chart: ChartImage | null
 }
 
 export function buildDiscPdf(doc: jsPDF, ctx: PdfContext, data: DiscPdfData): void {
   const { scores, content } = data
   const style = content.styles[scores.primary]
+  const secondary = content.styles[scores.secondary]
   const combination = content.combinations[scores.combination]
   const layout = startDocument(doc, ctx)
 
@@ -81,9 +136,12 @@ export function buildDiscPdf(doc: jsPDF, ctx: PdfContext, data: DiscPdfData): vo
     label: key,
     sublabel: content.styles[key].name,
     value: scores.percentages[key],
-    color: data.styleColors[key]
+    color: data.styleColors[key],
+    note: ctx.t('score_of_total', { count: scores.counts[key], total: scores.answered })
   })))
   footnote(layout, answeredLabel(ctx, scores.answered))
+
+  confidence(layout, ctx, data.confidence)
 
   layout.sectionTitle(`${scores.combination} · ${combination.name}`)
   layout.paragraph(combination.description)
@@ -92,6 +150,13 @@ export function buildDiscPdf(doc: jsPDF, ctx: PdfContext, data: DiscPdfData): vo
 
   layout.sectionTitle(ctx.t('disc_behavioral_strengths'))
   layout.chips(style.traits, { columns: 2 })
+
+  layout.sectionTitle(
+    `${ctx.t('disc_secondary_style')}: ${secondary.name}`,
+    layout.measureParagraph(secondary.description) + layout.measureChips(secondary.traits, 2)
+  )
+  layout.paragraph(secondary.description)
+  layout.chips(secondary.traits, { columns: 2 })
 
   layout.sectionTitle(ctx.t('disc_communication_style'), layout.measureBullets(style.tips))
   layout.bullets(style.tips)
@@ -117,12 +182,18 @@ export interface EnneagramPdfData {
   content: EnneagramContent
   growthType: number
   stressType: number
+  /** Highest agreement each type could have collected, for the raw counts. */
+  maxPoints: Record<number, number>
+  centre: { label: string; description: string }
+  confidence: ConfidenceBlock
   chart: ChartImage | null
 }
 
 export function buildEnneagramPdf(doc: jsPDF, ctx: PdfContext, data: EnneagramPdfData): void {
   const { scores, content } = data
   const type = content[scores.dominant]
+  const runnerUp = scores.ranking[1]
+  const runnerUpType = content[runnerUp]
   const layout = startDocument(doc, ctx)
 
   drawCover(doc, layout, {
@@ -145,9 +216,15 @@ export function buildEnneagramPdf(doc: jsPDF, ctx: PdfContext, data: EnneagramPd
     label: `${number}`,
     sublabel: content[number].shortName,
     value: scores.percentages[number],
-    color: number === scores.dominant ? COLORS.brand : '#B9C6BF'
+    color: number === scores.dominant ? COLORS.brand : '#B9C6BF',
+    note: ctx.t('enneagram_agreement_points', {
+      raw: scores.raw[number],
+      max: data.maxPoints[number]
+    })
   })))
   footnote(layout, answeredLabel(ctx, scores.answered))
+
+  confidence(layout, ctx, data.confidence)
 
   layout.sectionTitle(ctx.t('enneagram_position'))
   layout.paragraph(ctx.t('enneagram_lines_intro'), { size: TYPE.small, color: COLORS.muted })
@@ -157,6 +234,12 @@ export function buildEnneagramPdf(doc: jsPDF, ctx: PdfContext, data: EnneagramPd
     `${ctx.t('enneagram_wing')}: ${scores.wing} · ${content[scores.wing].shortName}`,
     { size: TYPE.small, color: COLORS.brand }
   )
+
+  layout.sectionTitle(
+    `${ctx.t('enneagram_centre')}: ${data.centre.label}`,
+    layout.measureParagraph(data.centre.description)
+  )
+  layout.paragraph(data.centre.description)
 
   layout.sectionTitle(
     ctx.t('enneagram_core_motivation'),
@@ -174,6 +257,14 @@ export function buildEnneagramPdf(doc: jsPDF, ctx: PdfContext, data: EnneagramPd
   layout.sectionTitle(ctx.t('enneagram_growth_recommendations'), layout.measureBullets(type.growth))
   layout.bullets(type.growth)
 
+  layout.sectionTitle(
+    `${ctx.t('enneagram_runner_up')}: ${runnerUp} · ${runnerUpType.name}`,
+    layout.measureParagraph(runnerUpType.subtitle, TYPE.small) +
+      layout.measureParagraph(runnerUpType.motivation)
+  )
+  layout.paragraph(runnerUpType.subtitle, { size: TYPE.small, style: 'italic', color: COLORS.muted })
+  layout.paragraph(runnerUpType.motivation)
+
   methodology(layout, ctx, 'pdf_method_enneagram')
   layout.finalize()
 }
@@ -187,6 +278,7 @@ export interface InsightsPdfData {
   profilePosition: string
   balanceLabel: string
   balanceDescription: string
+  separation: string
   spread: number
   wheel: ChartImage | null
   energy: ChartImage | null
@@ -195,6 +287,7 @@ export interface InsightsPdfData {
 export function buildInsightsPdf(doc: jsPDF, ctx: PdfContext, data: InsightsPdfData): void {
   const { scores, content } = data
   const dominant = content.colors[scores.dominant]
+  const secondary = content.colors[scores.secondary]
   const layout = startDocument(doc, ctx)
 
   drawCover(doc, layout, {
@@ -217,7 +310,8 @@ export function buildInsightsPdf(doc: jsPDF, ctx: PdfContext, data: InsightsPdfD
     label: content.colors[key].short,
     sublabel: content.colors[key].label,
     value: scores.percentages[key],
-    color: data.colorHex[key]
+    color: data.colorHex[key],
+    note: ctx.t('score_of_total', { count: scores.counts[key], total: scores.answered })
   })))
   footnote(layout, answeredLabel(ctx, scores.answered))
 
@@ -231,23 +325,22 @@ export function buildInsightsPdf(doc: jsPDF, ctx: PdfContext, data: InsightsPdfD
     })
   }
 
-  layout.sectionTitle(ctx.t('insights_profile_analysis'))
-  layout.panel(
-    () => layout.measureParagraph(data.balanceDescription, TYPE.body, CONTENT_WIDTH - 12) + 7,
-    () => {
-      layout.font('bold', TYPE.subheading, COLORS.brand)
-      layout.doc.text(
-        `${ctx.t('insights_energy_balance')}: ${data.balanceLabel}`,
-        26, layout.y
-      )
-      layout.y += 6
-      layout.paragraph(data.balanceDescription, { indent: 6, width: CONTENT_WIDTH - 6, gap: 0 })
-    },
-    { accent: COLORS.accent }
-  )
+  confidence(layout, ctx, {
+    separation: data.separation,
+    shapeTitle: ctx.t('insights_energy_balance'),
+    shapeLabel: data.balanceLabel,
+    shapeDescription: data.balanceDescription
+  })
 
   layout.sectionTitle(ctx.t('insights_strengths'))
   layout.chips(dominant.strengths, { columns: 2 })
+
+  layout.sectionTitle(
+    `${ctx.t('insights_secondary_color')}: ${secondary.label}`,
+    layout.measureParagraph(secondary.description) + layout.measureChips(secondary.strengths, 2)
+  )
+  layout.paragraph(secondary.description)
+  layout.chips(secondary.strengths, { columns: 2 })
 
   layout.sectionTitle(ctx.t('insights_development_areas'), layout.measureBullets(dominant.development))
   layout.bullets(dominant.development)

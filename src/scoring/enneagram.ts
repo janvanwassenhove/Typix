@@ -25,6 +25,35 @@ export interface EnneagramScores {
   ranking: EnneagramType[]
   /** The stronger of the two neighbouring types — the classic "wing". */
   wing: EnneagramType
+  /** Mean agreement across every answer, on the 0..6 scale. */
+  responseMean: number
+  /** Standard deviation of the answers, so a flat response pattern is visible. */
+  responseSpread: number
+  /**
+   * How the questionnaire was answered overall. Agreeing with nearly everything
+   * lifts all nine types together and leaves little between them, which is
+   * worth saying out loud before a reader treats the winner as decisive.
+   */
+  responseStyle: ResponseStyle
+}
+
+export type ResponseStyle = 'agreeable' | 'reserved' | 'uniform' | 'varied'
+
+/** The three Enneagram centres of intelligence. */
+export type Centre = 'gut' | 'heart' | 'head'
+
+const CENTRES: Record<EnneagramType, Centre> = {
+  8: 'gut', 9: 'gut', 1: 'gut',
+  2: 'heart', 3: 'heart', 4: 'heart',
+  5: 'head', 6: 'head', 7: 'head'
+}
+
+export function centreOf(type: EnneagramType): Centre {
+  return CENTRES[type]
+}
+
+export function typesInCentre(centre: Centre): EnneagramType[] {
+  return ENNEAGRAM_TYPES.filter(type => CENTRES[type] === centre)
 }
 
 /** Neighbours on the circle; 9 wraps round to 1. */
@@ -60,6 +89,7 @@ export interface EnneagramQuestion {
 export function scoreEnneagram(stored: StoredAnswers, questions: EnneagramQuestion[]): EnneagramScores {
   const raw = Object.fromEntries(ENNEAGRAM_TYPES.map(t => [t, 0])) as Record<EnneagramType, number>
   const maxPerType = Object.fromEntries(ENNEAGRAM_TYPES.map(t => [t, 0])) as Record<EnneagramType, number>
+  const agreements: number[] = []
   let answered = 0
 
   for (const answer of normalizeAnswers(stored)) {
@@ -72,8 +102,10 @@ export function scoreEnneagram(stored: StoredAnswers, questions: EnneagramQuesti
       : answer.answerIndex
     if (!Number.isFinite(agreement)) continue
 
-    raw[type] += Math.max(0, Math.min(LIKERT_MAX, agreement))
+    const bounded = Math.max(0, Math.min(LIKERT_MAX, agreement))
+    raw[type] += bounded
     maxPerType[type] += LIKERT_MAX
+    agreements.push(bounded)
     answered++
   }
 
@@ -88,6 +120,20 @@ export function scoreEnneagram(stored: StoredAnswers, questions: EnneagramQuesti
   const [left, right] = wingsOf(dominant)
   const wing = intensity[left] >= intensity[right] ? left : right
 
+  const responseMean = agreements.length
+    ? agreements.reduce((sum, value) => sum + value, 0) / agreements.length
+    : 0
+  const responseSpread = agreements.length
+    ? Math.sqrt(agreements.reduce((sum, value) => sum + (value - responseMean) ** 2, 0) / agreements.length)
+    : 0
+
+  let responseStyle: ResponseStyle = 'varied'
+  if (agreements.length) {
+    if (responseMean >= 4.5) responseStyle = 'agreeable'
+    else if (responseMean <= 1.5) responseStyle = 'reserved'
+    else if (responseSpread < 1) responseStyle = 'uniform'
+  }
+
   return {
     raw,
     intensity,
@@ -96,6 +142,9 @@ export function scoreEnneagram(stored: StoredAnswers, questions: EnneagramQuesti
     hasAnswers: answered > 0,
     dominant,
     ranking,
-    wing
+    wing,
+    responseMean,
+    responseSpread,
+    responseStyle
   }
 }

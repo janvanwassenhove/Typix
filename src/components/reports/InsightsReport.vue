@@ -40,7 +40,10 @@
           <div v-for="color in COLOR_KEYS" :key="color" class="color-bar">
             <div class="bar-header">
               <span class="color-name">{{ content.colors[color].label }}</span>
-              <span class="color-percentage">{{ scores.percentages[color] }}%</span>
+              <span class="color-percentage">
+                {{ scores.percentages[color] }}%
+                <span class="score-count">{{ t('score_of_total', { count: scores.counts[color], total: scores.answered }) }}</span>
+              </span>
             </div>
             <div class="bar-container">
               <div
@@ -57,8 +60,9 @@
       </div>
 
       <div class="profile-analysis">
-        <h4>{{ t('insights_profile_analysis') }}</h4>
+        <h4>{{ t('profile_section_confidence') }}</h4>
         <div class="analysis-content">
+          <p>{{ separationText }}</p>
           <p>{{ balanceContent.description }}</p>
           <div class="balance-indicator">
             <span class="balance-label">{{ t('insights_energy_balance') }}: {{ balanceLabel }}</span>
@@ -70,6 +74,16 @@
         <h4>{{ t('insights_strengths') }}</h4>
         <div class="strengths-grid">
           <div v-for="strength in dominantColor.strengths" :key="strength" class="strength-item">
+            {{ strength }}
+          </div>
+        </div>
+      </div>
+
+      <div class="secondary-color">
+        <h4>{{ t('insights_secondary_color') }}: {{ secondaryColor.label }}</h4>
+        <p>{{ secondaryColor.description }}</p>
+        <div class="strengths-grid">
+          <div v-for="strength in secondaryColor.strengths" :key="strength" class="strength-item">
             {{ strength }}
           </div>
         </div>
@@ -121,7 +135,9 @@ import { canvasToImage, prepareCanvas } from '../../pdf/charts'
 import { reportDate } from '../../pdf/date'
 import { buildInsightsPdf } from '../../pdf/reports'
 import { insightsContent } from '../../i18n/content/insights'
-import { pickLocale } from '../../i18n/content/locale'
+import { profileContent } from '../../i18n/content/profile'
+import { separationBand, separationPoints } from '../../scoring/profile'
+import { interpolate, pickLocale } from '../../i18n/content/locale'
 import {
   COLOR_KEYS,
   PREFERENCE_MAX,
@@ -181,6 +197,7 @@ const downloadPDF = async () => {
           profilePosition: profilePosition.value,
           balanceLabel: balanceLabel.value,
           balanceDescription: balanceContent.value.description,
+          separation: separationText.value,
           spread: spread.value,
           wheel: canvasToImage(circleCanvas.value),
           energy: canvasToImage(dynamicsCanvas.value)
@@ -201,6 +218,18 @@ const colorHex: Record<ColorKey, string> = {
 }
 
 const dominantColor = computed(() => content.value.colors[scores.value.dominant])
+const secondaryColor = computed(() => content.value.colors[scores.value.secondary])
+
+const profile = computed(() => pickLocale(profileContent, currentLanguage.value))
+
+const separationText = computed(() => {
+  const band = separationBand(scores.value.percentages, scores.value.ranking, COLOR_KEYS)
+  return interpolate(profile.value.separation[band], {
+    first: content.value.colors[scores.value.dominant].label,
+    second: content.value.colors[scores.value.secondary].label,
+    gap: separationPoints(scores.value.percentages, scores.value.ranking)
+  })
+})
 
 // Derived from the same ranking as the headline colour, so the position label
 // can no longer disagree with "Your Primary Colour".
@@ -673,6 +702,37 @@ function drawDeviationChart(ctx: CanvasRenderingContext2D, x: number, y: number,
   color: #888;
   font-size: 0.85rem;
   text-align: right;
+}
+
+.score-count {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #999;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.analysis-content p + p {
+  margin-top: -8px;
+}
+
+.secondary-color {
+  margin-bottom: 20px;
+}
+
+.secondary-color h4 {
+  color: #333;
+  font-size: 1.3rem;
+  margin: 25px 0 10px 0;
+  border-left: 4px solid #F9A607;
+  padding-left: 15px;
+}
+
+.secondary-color > p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .strengths-grid {
