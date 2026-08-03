@@ -195,6 +195,63 @@ A test asserts that all report copy, in all five languages, survives the WinAnsi
 built-in PDF fonts use — so a future translation cannot silently introduce a character that
 comes out mangled in the exported file.
 
+### More in the report, without inventing anything
+
+The audit removed numbers that were not measuring anything. The reverse question is what a report
+*can* honestly say beyond the ranking, and the answer is: how much weight that ranking carries,
+and what the answers that did not win look like. All of it is arithmetic on percentages the report
+already showed. Everything below appears both on screen and in the exported PDF.
+
+**How firm is this result?**
+
+![Result confidence](assets/reports/result-confidence.png)
+
+A ranked list invites the top entry to be read as *the* answer. Two measures say how settled it
+really is, in `src/scoring/profile.ts`:
+
+- **Separation** — the gap between the leader and the runner-up, judged against an even split
+  rather than in absolute points. Five points means something different when the average key holds
+  25% (DISC, Discovery) than when it holds 11% (Enneagram). Bands: tied, close, distinct.
+- **Profile shape** — mean absolute deviation from an even split, rescaled by the largest
+  deviation that key count allows so a 4-key and a 9-key profile compare. Bands: balanced,
+  clearly leaning, strongly defined.
+
+The Discovery report already had this measure for its four colour energies, under its own
+thresholds. Those thresholds were generalised rather than replaced — `maxSpread(4)` is exactly
+37.5, so the old 7.5 and 15 point boundaries land on 0.2 and 0.4 on the rescaled measure, and the
+Discovery report's existing wording is unchanged.
+
+**The Enneagram answering pattern.** The nine types are scored from the same 0–6 agreement scale,
+so an answering habit moves all of them together: agreeing with almost everything lifts every
+type, disagreeing with almost everything flattens every type, and answering everything the same
+way leaves nothing to rank. Where the pattern compresses the differences, the report says so
+rather than presenting the surviving ranking at face value.
+
+**The second profile.** DISC and Discovery name the style or colour behind the runner-up score
+with its own description and traits; the Enneagram report names the closest other type with its
+subtitle and core motivation. On a typical profile the second entry is a handful of points behind
+the first, which is not visible from a paragraph about the first alone.
+
+![DISC secondary style](assets/reports/disc-secondary-style.png)
+
+**Centres of intelligence.** The Enneagram report names which of the three centres the dominant
+type belongs to — body (8, 9, 1), heart (2, 3, 4), head (5, 6, 7) — and what the types in it
+share. This is fixed theory, read from a lookup table, not a computed result.
+
+![Enneagram centre of intelligence](assets/reports/enneagram-centre.png)
+
+**Raw counts under every percentage.** DISC and Discovery show "19 of 50" beneath each bar; the
+Enneagram shows "30 of 30 agreement points". This makes visible what the methodology note
+already said: that the Enneagram types are covered by different numbers of questions (24 to 42
+points available) and that the percentage is a normalised share, not a count.
+
+![Enneagram type scores](assets/reports/enneagram-raw-scores.png)
+
+**What was deliberately left out.** Percentiles, "roles that suit you", and numeric compatibility
+scores were all considered and rejected. Typix has no norm group and no second instrument, so
+every one of those numbers would have had to be invented — the same defect this release spent its
+first half removing.
+
 ### Verified
 
 Beyond the unit tests, the reports were driven in Chromium:
@@ -207,4 +264,6 @@ Beyond the unit tests, the reports were driven in Chromium:
 - empty states for all three assessments, with no `NaN`
 - the PDF export driven end to end in three assessments and five languages, then rendered back
   page by page and inspected
+- the confidence, secondary-profile, centre and raw-count blocks compared between the on-screen
+  report and the exported PDF, in English, Dutch, German, French and Spanish
 - no console or page errors throughout

@@ -102,7 +102,10 @@
           >
             <div class="score-header">
               <span class="score-type">{{ t('enneagram_type') }} {{ type }} &middot; {{ content[type].shortName }}</span>
-              <span class="score-value">{{ scores.percentages[type] }}%</span>
+              <span class="score-value">
+                {{ scores.percentages[type] }}%
+                <span class="score-count">{{ t('enneagram_agreement_points', { raw: scores.raw[type], max: maxPoints[type] }) }}</span>
+              </span>
             </div>
             <div class="score-bar">
               <div class="score-fill" :style="{ width: scores.percentages[type] + '%' }"></div>
@@ -110,6 +113,30 @@
           </div>
         </div>
         <p class="score-footnote">{{ t('enneagram_scores_footnote') }} {{ answeredLabel }}</p>
+      </div>
+
+      <div class="confidence">
+        <h4>{{ t('profile_section_confidence') }}</h4>
+        <p class="confidence-lead">{{ separationText }}</p>
+        <div class="confidence-shape">
+          <span class="confidence-label">{{ t('profile_shape') }}: {{ shape.label }}</span>
+          <p>{{ shape.description }}</p>
+        </div>
+        <div v-if="responseNote" class="confidence-shape">
+          <span class="confidence-label">{{ t('profile_answer_pattern') }}</span>
+          <p>{{ responseNote }}</p>
+        </div>
+      </div>
+
+      <div class="centre-section">
+        <h4>{{ t('enneagram_centre') }}: {{ centre.label }}</h4>
+        <p>{{ centre.description }}</p>
+      </div>
+
+      <div class="runner-up">
+        <h4>{{ t('enneagram_runner_up') }}: {{ scores.ranking[1] }} &middot; {{ content[scores.ranking[1]].name }}</h4>
+        <p class="runner-up-subtitle">{{ content[scores.ranking[1]].subtitle }}</p>
+        <p>{{ content[scores.ranking[1]].motivation }}</p>
       </div>
 
       <div class="description-section">
@@ -157,9 +184,11 @@ import { svgToImage } from '../../pdf/charts'
 import { reportDate } from '../../pdf/date'
 import { buildEnneagramPdf } from '../../pdf/reports'
 import { enneagramContent } from '../../i18n/content/enneagram'
-import { pickLocale } from '../../i18n/content/locale'
+import { interpolate, pickLocale } from '../../i18n/content/locale'
 import {
   ENNEAGRAM_TYPES,
+  LIKERT_MAX,
+  centreOf,
   disintegrationOf,
   integrationOf,
   scoreEnneagram,
@@ -167,6 +196,8 @@ import {
   type EnneagramQuestion,
   type EnneagramType
 } from '../../scoring/enneagram'
+import { separationBand, separationPoints, spreadBand } from '../../scoring/profile'
+import { profileContent } from '../../i18n/content/profile'
 
 const props = defineProps<{
   results: unknown
@@ -216,6 +247,14 @@ const downloadPDF = async () => {
           content: content.value,
           growthType: growthType.value,
           stressType: stressType.value,
+          maxPoints: maxPoints.value,
+          centre: centre.value,
+          confidence: {
+            separation: separationText.value,
+            shapeLabel: shape.value.label,
+            shapeDescription: shape.value.description,
+            note: responseNote.value || undefined
+          },
           chart
         }
       )
@@ -227,6 +266,35 @@ const downloadPDF = async () => {
 }
 
 const typeData = computed(() => content.value[scores.value.dominant])
+
+const profile = computed(() => pickLocale(profileContent, currentLanguage.value))
+const shape = computed(() => profile.value.shape[spreadBand(scores.value.percentages, ENNEAGRAM_TYPES)])
+const centre = computed(() => profile.value.centres[centreOf(scores.value.dominant)])
+
+const separationText = computed(() => {
+  const [first, second] = scores.value.ranking
+  const band = separationBand(scores.value.percentages, scores.value.ranking, ENNEAGRAM_TYPES)
+  return interpolate(profile.value.separation[band], {
+    first: `${first} · ${content.value[first].shortName}`,
+    second: `${second} · ${content.value[second].shortName}`,
+    gap: separationPoints(scores.value.percentages, scores.value.ranking)
+  })
+})
+
+// Only worth saying when the answering pattern actually compresses the result.
+const responseNote = computed(() =>
+  scores.value.responseStyle === 'varied' ? '' : profile.value.responseStyle[scores.value.responseStyle]
+)
+
+/** Highest agreement each type could have collected, for the raw score line. */
+const maxPoints = computed(() => {
+  const totals = Object.fromEntries(ENNEAGRAM_TYPES.map(t => [t, 0])) as Record<EnneagramType, number>
+  questions.forEach(question => {
+    const type = question.type as EnneagramType
+    if (totals[type] !== undefined) totals[type] += LIKERT_MAX
+  })
+  return totals
+})
 const growthType = computed(() => integrationOf(scores.value.dominant))
 const stressType = computed(() => disintegrationOf(scores.value.dominant))
 const wingTypes = computed(() => wingsOf(scores.value.dominant))
@@ -486,6 +554,80 @@ function nodeStroke(type: EnneagramType): string {
   color: #888;
   font-size: 0.85rem;
   line-height: 1.5;
+}
+
+.score-count {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #999;
+  text-align: right;
+}
+
+.confidence {
+  margin-bottom: 30px;
+  padding: 22px 26px;
+  background: #f4f6fb;
+  border-radius: 12px;
+  border-left: 5px solid #667eea;
+}
+
+.confidence h4 {
+  color: #4453b8;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.confidence-lead {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.confidence-shape + .confidence-shape {
+  margin-top: 14px;
+}
+
+.confidence-label {
+  display: inline-block;
+  background: #667eea;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.confidence-shape p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.centre-section,
+.runner-up {
+  margin-bottom: 30px;
+  padding-left: 15px;
+  border-left: 4px solid #dee2e6;
+}
+
+.centre-section h4,
+.runner-up h4 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.centre-section p,
+.runner-up p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.runner-up-subtitle {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 8px;
 }
 
 .description-section {

@@ -3,6 +3,8 @@ import questionData from '../../data/enneagram-questions.json'
 import {
   ENNEAGRAM_TYPES,
   LIKERT_MAX,
+  centreOf,
+  typesInCentre,
   disintegrationOf,
   integrationOf,
   scoreEnneagram,
@@ -110,6 +112,63 @@ describe('scoreEnneagram', () => {
     const scores = scoreEnneagram(stored, questions)
     expect(scores.dominant).toBe(5)
     expect(scores.wing).toBe(6)
+  })
+})
+
+describe('response pattern', () => {
+  it('flags agreeing with nearly everything, because it flattens the ranking', () => {
+    const scores = scoreEnneagram(answerAll(() => LIKERT_MAX), questions)
+    expect(scores.responseMean).toBe(LIKERT_MAX)
+    expect(scores.responseStyle).toBe('agreeable')
+  })
+
+  it('flags disagreeing with nearly everything', () => {
+    const scores = scoreEnneagram(answerAll(() => 0), questions)
+    expect(scores.responseStyle).toBe('reserved')
+  })
+
+  it('flags answers that barely vary', () => {
+    const scores = scoreEnneagram(answerAll(() => 3), questions)
+    expect(scores.responseSpread).toBe(0)
+    expect(scores.responseStyle).toBe('uniform')
+  })
+
+  it('says nothing when the answers actually discriminate', () => {
+    // A realistic pattern: strong agreement on one type, some on its wing,
+    // mild disagreement elsewhere.
+    const scores = scoreEnneagram(
+      answerAll(question => (question.type === 5 ? 6 : question.type === 4 ? 4 : 2)),
+      questions
+    )
+    expect(scores.responseStyle).toBe('varied')
+  })
+
+  it('still reports "reserved" when a strong preference sits among 45 rejections', () => {
+    // Agreeing with five statements and rejecting the rest is a real signal
+    // about how the questionnaire was answered, not a false positive.
+    const scores = scoreEnneagram(answerAll(question => (question.type === 5 ? 6 : 1)), questions)
+    expect(scores.dominant).toBe(5)
+    expect(scores.responseStyle).toBe('reserved')
+  })
+
+  it('reports a spread of zero for an unanswered assessment rather than NaN', () => {
+    const scores = scoreEnneagram({}, questions)
+    expect(scores.responseMean).toBe(0)
+    expect(scores.responseSpread).toBe(0)
+  })
+})
+
+describe('centres of intelligence', () => {
+  it('groups the types the standard way', () => {
+    expect(typesInCentre('gut')).toEqual([8, 9, 1].sort((a, b) => a - b))
+    expect(typesInCentre('heart')).toEqual([2, 3, 4])
+    expect(typesInCentre('head')).toEqual([5, 6, 7])
+  })
+
+  it('places every type in exactly one centre', () => {
+    const seen = ENNEAGRAM_TYPES.map(centreOf)
+    expect(seen).toHaveLength(9)
+    expect(new Set(seen)).toEqual(new Set(['gut', 'heart', 'head']))
   })
 })
 

@@ -95,16 +95,16 @@ describe('insightsWheelPosition', () => {
 describe('energy balance', () => {
   it('reports zero spread for an even profile', () => {
     expect(energySpread({ Red: 25, Yellow: 25, Blue: 25, Green: 25 })).toBe(0)
-    expect(energyBalance({ Red: 25, Yellow: 25, Blue: 25, Green: 25 })).toBe('Well Balanced')
+    expect(energyBalance({ Red: 25, Yellow: 25, Blue: 25, Green: 25 })).toBe('balanced')
   })
 
   it('reports the maximum spread for a single-colour profile', () => {
     expect(energySpread({ Red: 100, Yellow: 0, Blue: 0, Green: 0 })).toBe(37.5)
-    expect(energyBalance({ Red: 100, Yellow: 0, Blue: 0, Green: 0 })).toBe('Highly Focused')
+    expect(energyBalance({ Red: 100, Yellow: 0, Blue: 0, Green: 0 })).toBe('focused')
   })
 
   it('sits in the middle band for a moderately tilted profile', () => {
-    expect(energyBalance({ Red: 40, Yellow: 25, Blue: 20, Green: 15 })).toBe('Moderately Focused')
+    expect(energyBalance({ Red: 40, Yellow: 25, Blue: 20, Green: 15 })).toBe('moderate')
   })
 })
 

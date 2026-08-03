@@ -1,9 +1,10 @@
 import { describe, expect, it } from 'vitest'
 import { translations } from '../translations'
-import { LANGUAGES, pickLocale, type Localized } from '../content/locale'
+import { LANGUAGES, interpolate, pickLocale, type Localized } from '../content/locale'
 import { discContent } from '../content/disc'
 import { enneagramContent } from '../content/enneagram'
 import { insightsContent } from '../content/insights'
+import { profileContent } from '../content/profile'
 import { DISC_STYLES } from '../../scoring/disc'
 import { ENNEAGRAM_TYPES } from '../../scoring/enneagram'
 import { COLOR_KEYS } from '../../scoring/insights'
@@ -103,6 +104,37 @@ describe('report content', () => {
       }
     }
     expectSameShapeAcrossLanguages('insights', insightsContent)
+  })
+
+  it('covers every profile band and centre in every language', () => {
+    for (const lang of LANGUAGES) {
+      const content = profileContent[lang]
+      expect(Object.keys(content.shape).sort(), lang).toEqual(['balanced', 'focused', 'moderate'])
+      expect(Object.keys(content.separation).sort(), lang).toEqual(['close', 'distinct', 'tied'])
+      expect(Object.keys(content.centres).sort(), lang).toEqual(['gut', 'head', 'heart'])
+    }
+    expectSameShapeAcrossLanguages('profile', profileContent)
+  })
+
+  it('keeps the separation placeholders in every language', () => {
+    // A missing {gap} would leave the sentence claiming a lead it never states.
+    for (const lang of LANGUAGES) {
+      for (const [band, template] of Object.entries(profileContent[lang].separation)) {
+        for (const name of ['first', 'second', 'gap']) {
+          expect(template, `${lang}/${band}`).toContain(`{${name}}`)
+        }
+      }
+    }
+  })
+})
+
+describe('interpolate', () => {
+  it('fills every occurrence of a placeholder', () => {
+    expect(interpolate('{a} and {b}, {a} again', { a: 'x', b: 2 })).toBe('x and 2, x again')
+  })
+
+  it('leaves an unknown placeholder alone rather than blanking it', () => {
+    expect(interpolate('{a} {b}', { a: 'x' })).toBe('x {b}')
   })
 })
 

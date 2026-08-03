@@ -109,6 +109,15 @@ export const translations = {
     pdf_method_disc: 'Each question offers one response per style. Your choices are counted and converted to percentages that add up to 100, and the two strongest styles form your profile combination. A percentage is a share of your own answers, not a comparison against other people.',
     pdf_method_enneagram: 'Every statement belongs to one type and is answered on a 0-6 agreement scale. Each type is scored on the agreement it collected as a share of the agreement it could have collected, which keeps types comparable even though they are covered by different numbers of questions. The result is then expressed as a percentage of the whole.',
     pdf_method_insights: 'Each response carries one colour energy. Your choices are counted and converted to percentages that add up to 100. On the wheel each colour pulls the marker towards its own quadrant, so opposing energies cancel out and a marker near the centre means a balanced profile.',
+    profile_section_confidence: 'How firm is this result?',
+    profile_shape: 'Profile shape',
+    profile_answer_pattern: 'Answer pattern',
+    score_of_total: '{count} of {total}',
+    enneagram_agreement_points: '{raw} of {max} agreement points',
+    enneagram_centre: 'Centre of intelligence',
+    enneagram_runner_up: 'Closest other type',
+    disc_secondary_style: 'Your secondary style',
+    insights_secondary_color: 'Your secondary colour',
   },
 
   es: {
@@ -221,6 +230,15 @@ export const translations = {
     pdf_method_disc: 'Cada pregunta ofrece una respuesta por estilo. Tus elecciones se cuentan y se convierten en porcentajes que suman 100; los dos estilos más fuertes forman tu combinación de perfil. Un porcentaje es una parte de tus propias respuestas, no una comparación con otras personas.',
     pdf_method_enneagram: 'Cada afirmación pertenece a un tipo y se responde en una escala de 0 a 6. Cada tipo se puntúa por el acuerdo recogido en proporción al que podría haber recogido, lo que mantiene los tipos comparables aunque estén cubiertos por distinto número de preguntas. El resultado se expresa después como porcentaje del total.',
     pdf_method_insights: 'Cada respuesta lleva una energía de color. Tus elecciones se cuentan y se convierten en porcentajes que suman 100. En la rueda cada color tira del marcador hacia su propio cuadrante: las energías opuestas se cancelan y un marcador cerca del centro indica un perfil equilibrado.',
+    profile_section_confidence: '¿Qué solidez tiene este resultado?',
+    profile_shape: 'Forma del perfil',
+    profile_answer_pattern: 'Patrón de respuesta',
+    score_of_total: '{count} de {total}',
+    enneagram_agreement_points: '{raw} de {max} puntos de acuerdo',
+    enneagram_centre: 'Centro de inteligencia',
+    enneagram_runner_up: 'Otro tipo más cercano',
+    disc_secondary_style: 'Tu estilo secundario',
+    insights_secondary_color: 'Tu color secundario',
   },
 
   fr: {
@@ -333,6 +351,15 @@ export const translations = {
     pdf_method_disc: 'Chaque question propose une réponse par style. Vos choix sont comptés et convertis en pourcentages dont la somme fait 100 ; les deux styles les plus forts composent votre combinaison de profil. Un pourcentage est une part de vos propres réponses, pas une comparaison avec autrui.',
     pdf_method_enneagram: 'Chaque affirmation appartient à un type et se répond sur une échelle de 0 à 6. Chaque type est noté sur l\'adhésion recueillie rapportée à celle qu\'il aurait pu recueillir, ce qui garde les types comparables même s\'ils sont couverts par un nombre de questions différent. Le résultat est ensuite exprimé en pourcentage de l\'ensemble.',
     pdf_method_insights: 'Chaque réponse porte une énergie de couleur. Vos choix sont comptés et convertis en pourcentages dont la somme fait 100. Sur la roue, chaque couleur attire le repère vers son propre quadrant : les énergies opposées s\'annulent, et un repère proche du centre indique un profil équilibré.',
+    profile_section_confidence: 'Quelle est la solidité de ce résultat ?',
+    profile_shape: 'Forme du profil',
+    profile_answer_pattern: 'Schéma de réponse',
+    score_of_total: '{count} sur {total}',
+    enneagram_agreement_points: '{raw} sur {max} points d\'adhésion',
+    enneagram_centre: 'Centre d\'intelligence',
+    enneagram_runner_up: 'Type le plus proche',
+    disc_secondary_style: 'Votre style secondaire',
+    insights_secondary_color: 'Votre couleur secondaire',
   },
 
   de: {
@@ -445,6 +472,15 @@ export const translations = {
     pdf_method_disc: 'Jede Frage bietet eine Antwort je Stil. Ihre Auswahl wird gezählt und in Prozentwerte umgerechnet, die zusammen 100 ergeben; die beiden stärksten Stile bilden Ihre Profilkombination. Ein Prozentwert ist ein Anteil Ihrer eigenen Antworten, kein Vergleich mit anderen.',
     pdf_method_enneagram: 'Jede Aussage gehört zu einem Typ und wird auf einer Skala von 0 bis 6 beantwortet. Jeder Typ wird an der gesammelten Zustimmung im Verhältnis zur maximal möglichen gemessen, sodass die Typen vergleichbar bleiben, obwohl sie von unterschiedlich vielen Fragen abgedeckt werden. Das Ergebnis wird anschließend als Anteil am Ganzen ausgedrückt.',
     pdf_method_insights: 'Jede Antwort trägt eine Farbenergie. Ihre Auswahl wird gezählt und in Prozentwerte umgerechnet, die zusammen 100 ergeben. Auf dem Rad zieht jede Farbe die Markierung zum eigenen Quadranten: Gegenüberliegende Energien heben sich auf, und eine Markierung nahe der Mitte bedeutet ein ausgewogenes Profil.',
+    profile_section_confidence: 'Wie belastbar ist dieses Ergebnis?',
+    profile_shape: 'Profilform',
+    profile_answer_pattern: 'Antwortmuster',
+    score_of_total: '{count} von {total}',
+    enneagram_agreement_points: '{raw} von {max} Zustimmungspunkten',
+    enneagram_centre: 'Zentrum der Intelligenz',
+    enneagram_runner_up: 'Nächstliegender anderer Typ',
+    disc_secondary_style: 'Ihr sekundärer Stil',
+    insights_secondary_color: 'Ihre sekundäre Farbe',
   },
 
   nl: {
@@ -557,5 +593,14 @@ export const translations = {
     pdf_method_disc: 'Elke vraag biedt één antwoord per stijl. Je keuzes worden geteld en omgezet naar percentages die samen 100 vormen; de twee sterkste stijlen vormen je profielcombinatie. Een percentage is een aandeel van je eigen antwoorden, geen vergelijking met anderen.',
     pdf_method_enneagram: 'Elke stelling hoort bij één type en wordt beantwoord op een schaal van 0 tot 6. Elk type scoort de instemming die het verzamelde als aandeel van de instemming die het had kunnen verzamelen, zodat types vergelijkbaar blijven ook al zijn ze door verschillende aantallen vragen gedekt. Het resultaat wordt daarna uitgedrukt als percentage van het geheel.',
     pdf_method_insights: 'Elk antwoord draagt één kleurenergie. Je keuzes worden geteld en omgezet naar percentages die samen 100 vormen. Op het wiel trekt elke kleur de markering naar het eigen kwadrant, waardoor tegenoverliggende energieën elkaar opheffen en een markering dicht bij het midden een uitgebalanceerd profiel betekent.',
+    profile_section_confidence: 'Hoe stevig is deze uitkomst?',
+    profile_shape: 'Profielvorm',
+    profile_answer_pattern: 'Antwoordpatroon',
+    score_of_total: '{count} van {total}',
+    enneagram_agreement_points: '{raw} van {max} instemmingspunten',
+    enneagram_centre: 'Centrum van intelligentie',
+    enneagram_runner_up: 'Dichtstbijzijnde andere type',
+    disc_secondary_style: 'Jouw secundaire stijl',
+    insights_secondary_color: 'Jouw secundaire kleur',
   }
 }

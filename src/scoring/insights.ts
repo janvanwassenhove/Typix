@@ -1,5 +1,6 @@
 import { normalizeAnswers, type StoredAnswers } from './answers'
 import { rankByScore, toPercentages } from './percentages'
+import { profileSpread, spreadBand, type SpreadBand } from './profile'
 
 export type ColorKey = 'Red' | 'Yellow' | 'Blue' | 'Green'
 
@@ -101,21 +102,16 @@ export function insightsWheelPosition(percentages: Record<ColorKey, number>): { 
   return { angle: Math.atan2(y, x), radius: Math.min(1, magnitude) }
 }
 
-export type EnergyBalance = 'Well Balanced' | 'Moderately Focused' | 'Highly Focused'
-
 /**
- * How concentrated the profile is, measured as the mean absolute deviation from
- * an even 25% split. 0 means perfectly even; 37.5 is the maximum, reached when
- * a single colour takes everything.
+ * How concentrated the profile is, as the mean absolute deviation from an even
+ * 25% split. 0 means perfectly even; 37.5 is the maximum, reached when a single
+ * colour takes everything.
  */
 export function energySpread(percentages: Record<ColorKey, number>): number {
-  const total = COLOR_KEYS.reduce((sum, c) => sum + Math.abs((percentages[c] || 0) - 25), 0)
-  return total / COLOR_KEYS.length
+  return profileSpread(percentages, COLOR_KEYS)
 }
 
-export function energyBalance(percentages: Record<ColorKey, number>): EnergyBalance {
-  const spread = energySpread(percentages)
-  if (spread < 7.5) return 'Well Balanced'
-  if (spread < 15) return 'Moderately Focused'
-  return 'Highly Focused'
+/** Kept as a named export because the wheel and the report both read it. */
+export function energyBalance(percentages: Record<ColorKey, number>): SpreadBand {
+  return spreadBand(percentages, COLOR_KEYS)
 }

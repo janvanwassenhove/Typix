@@ -1,4 +1,5 @@
 import type { ColorKey } from '../../scoring/insights'
+import type { SpreadBand } from '../../scoring/profile'
 import type { Localized } from './locale'
 
 export interface ColorContent {
@@ -23,7 +24,8 @@ export interface InsightsContent {
   wheel: [string, string, string, string, string, string, string, string]
   /** Label for each primary/secondary pair, e.g. `Red-Blue`. */
   positions: Record<string, string>
-  balance: Record<'Well Balanced' | 'Moderately Focused' | 'Highly Focused', { label: string; description: string }>
+  /** Colour-specific wording for the shared spread bands. */
+  balance: Record<SpreadBand, { label: string; description: string }>
 }
 
 export const insightsContent: Localized<InsightsContent> = {
@@ -78,9 +80,9 @@ export const insightsContent: Localized<InsightsContent> = {
       'Green-Red': 'Steady Achiever', 'Green-Yellow': 'Harmonious Facilitator', 'Green-Blue': 'Reliable Analyst'
     },
     balance: {
-      'Well Balanced': { label: 'Well Balanced', description: 'You show a balanced approach across all colour energies, adapting your style to the situation. That flexibility is a real strength in varied environments.' },
-      'Moderately Focused': { label: 'Moderately Focused', description: 'You have clear preferences while keeping some flexibility. Your primary colours guide your approach, but you can draw on the others when you need to.' },
-      'Highly Focused': { label: 'Highly Focused', description: 'You have very strong preferences in specific colour energies. That focus gives you clear strengths, though developing the other energies would widen your range.' }
+      balanced: { label: 'Well Balanced', description: 'You show a balanced approach across all colour energies, adapting your style to the situation. That flexibility is a real strength in varied environments.' },
+      moderate: { label: 'Moderately Focused', description: 'You have clear preferences while keeping some flexibility. Your primary colours guide your approach, but you can draw on the others when you need to.' },
+      focused: { label: 'Highly Focused', description: 'You have very strong preferences in specific colour energies. That focus gives you clear strengths, though developing the other energies would widen your range.' }
     }
   },
 
@@ -135,9 +137,9 @@ export const insightsContent: Localized<InsightsContent> = {
       'Green-Red': 'Standvastige presteerder', 'Green-Yellow': 'Harmonieuze facilitator', 'Green-Blue': 'Betrouwbare analist'
     },
     balance: {
-      'Well Balanced': { label: 'Goed in balans', description: 'Je laat een evenwichtige aanpak zien over alle kleurenergieën en past je stijl aan de situatie aan. Die flexibiliteit is een echte sterkte in wisselende omgevingen.' },
-      'Moderately Focused': { label: 'Matig uitgesproken', description: 'Je hebt duidelijke voorkeuren maar houdt flexibiliteit. Je primaire kleuren sturen je aanpak, en je kunt terugvallen op de andere wanneer dat nodig is.' },
-      'Highly Focused': { label: 'Sterk uitgesproken', description: 'Je hebt zeer sterke voorkeuren in specifieke kleurenergieën. Die focus geeft je duidelijke sterktes, al zou het ontwikkelen van de andere energieën je bereik vergroten.' }
+      balanced: { label: 'Goed in balans', description: 'Je laat een evenwichtige aanpak zien over alle kleurenergieën en past je stijl aan de situatie aan. Die flexibiliteit is een echte sterkte in wisselende omgevingen.' },
+      moderate: { label: 'Matig uitgesproken', description: 'Je hebt duidelijke voorkeuren maar houdt flexibiliteit. Je primaire kleuren sturen je aanpak, en je kunt terugvallen op de andere wanneer dat nodig is.' },
+      focused: { label: 'Sterk uitgesproken', description: 'Je hebt zeer sterke voorkeuren in specifieke kleurenergieën. Die focus geeft je duidelijke sterktes, al zou het ontwikkelen van de andere energieën je bereik vergroten.' }
     }
   },
 
@@ -192,9 +194,9 @@ export const insightsContent: Localized<InsightsContent> = {
       'Green-Red': 'Réalisateur constant', 'Green-Yellow': 'Facilitateur harmonieux', 'Green-Blue': 'Analyste fiable'
     },
     balance: {
-      'Well Balanced': { label: 'Bien équilibré', description: 'Vous montrez une approche équilibrée sur toutes les énergies de couleur et adaptez votre style à la situation. Cette souplesse est un vrai atout dans des environnements variés.' },
-      'Moderately Focused': { label: 'Modérément marqué', description: 'Vous avez des préférences claires tout en gardant de la souplesse. Vos couleurs principales guident votre approche, mais vous pouvez puiser dans les autres au besoin.' },
-      'Highly Focused': { label: 'Fortement marqué', description: 'Vous avez des préférences très marquées sur certaines énergies. Cette concentration vous donne des forces nettes ; développer les autres élargirait votre registre.' }
+      balanced: { label: 'Bien équilibré', description: 'Vous montrez une approche équilibrée sur toutes les énergies de couleur et adaptez votre style à la situation. Cette souplesse est un vrai atout dans des environnements variés.' },
+      moderate: { label: 'Modérément marqué', description: 'Vous avez des préférences claires tout en gardant de la souplesse. Vos couleurs principales guident votre approche, mais vous pouvez puiser dans les autres au besoin.' },
+      focused: { label: 'Fortement marqué', description: 'Vous avez des préférences très marquées sur certaines énergies. Cette concentration vous donne des forces nettes ; développer les autres élargirait votre registre.' }
     }
   },
 
@@ -249,9 +251,9 @@ export const insightsContent: Localized<InsightsContent> = {
       'Green-Red': 'Beständiger Leister', 'Green-Yellow': 'Harmonischer Moderator', 'Green-Blue': 'Verlässlicher Analytiker'
     },
     balance: {
-      'Well Balanced': { label: 'Gut ausbalanciert', description: 'Sie zeigen einen ausgewogenen Zugang über alle Farbenergien und passen Ihren Stil der Situation an. Diese Beweglichkeit ist in wechselnden Umfeldern eine echte Stärke.' },
-      'Moderately Focused': { label: 'Mäßig ausgeprägt', description: 'Sie haben klare Vorlieben und behalten dabei Beweglichkeit. Ihre Hauptfarben leiten Ihr Vorgehen, doch Sie können bei Bedarf auf die anderen zurückgreifen.' },
-      'Highly Focused': { label: 'Stark ausgeprägt', description: 'Sie haben sehr ausgeprägte Vorlieben in bestimmten Farbenergien. Dieser Fokus gibt Ihnen klare Stärken; die anderen Energien zu entwickeln, würde Ihre Bandbreite erweitern.' }
+      balanced: { label: 'Gut ausbalanciert', description: 'Sie zeigen einen ausgewogenen Zugang über alle Farbenergien und passen Ihren Stil der Situation an. Diese Beweglichkeit ist in wechselnden Umfeldern eine echte Stärke.' },
+      moderate: { label: 'Mäßig ausgeprägt', description: 'Sie haben klare Vorlieben und behalten dabei Beweglichkeit. Ihre Hauptfarben leiten Ihr Vorgehen, doch Sie können bei Bedarf auf die anderen zurückgreifen.' },
+      focused: { label: 'Stark ausgeprägt', description: 'Sie haben sehr ausgeprägte Vorlieben in bestimmten Farbenergien. Dieser Fokus gibt Ihnen klare Stärken; die anderen Energien zu entwickeln, würde Ihre Bandbreite erweitern.' }
     }
   },
 
@@ -306,9 +308,9 @@ export const insightsContent: Localized<InsightsContent> = {
       'Green-Red': 'Realizador constante', 'Green-Yellow': 'Facilitador armonioso', 'Green-Blue': 'Analista fiable'
     },
     balance: {
-      'Well Balanced': { label: 'Bien equilibrado', description: 'Muestras un enfoque equilibrado en todas las energías de color y adaptas tu estilo a la situación. Esa flexibilidad es una fortaleza real en entornos variados.' },
-      'Moderately Focused': { label: 'Moderadamente marcado', description: 'Tienes preferencias claras conservando cierta flexibilidad. Tus colores principales guían tu enfoque, pero puedes recurrir a los demás cuando lo necesitas.' },
-      'Highly Focused': { label: 'Muy marcado', description: 'Tienes preferencias muy fuertes en energías concretas. Ese foco te da fortalezas claras, aunque desarrollar las otras ampliaría tu registro.' }
+      balanced: { label: 'Bien equilibrado', description: 'Muestras un enfoque equilibrado en todas las energías de color y adaptas tu estilo a la situación. Esa flexibilidad es una fortaleza real en entornos variados.' },
+      moderate: { label: 'Moderadamente marcado', description: 'Tienes preferencias claras conservando cierta flexibilidad. Tus colores principales guían tu enfoque, pero puedes recurrir a los demás cuando lo necesitas.' },
+      focused: { label: 'Muy marcado', description: 'Tienes preferencias muy fuertes en energías concretas. Ese foco te da fortalezas claras, aunque desarrollar las otras ampliaría tu registro.' }
     }
   }
 }
